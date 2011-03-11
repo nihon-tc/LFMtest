@@ -1,0 +1,730 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0081)http://code.google.com/p/jnaerator/wiki/CommandLineOptionsAndEnvironmentVariables -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="icon" type="image/vnd.microsoft.icon" href="http://www.gstatic.com/codesite/ph/images/phosting.ico">
+ 
+ <script type="text/javascript">
+ 
+ 
+ 
+ var codesite_token = "f7e09c2c2b7cbddf2f8cbbe4173179d3";
+ 
+ 
+ var logged_in_user_email = "kimukou.buzz@gmail.com";
+ 
+ 
+ var relative_base_url = "";
+ 
+ </script>
+ 
+ 
+ <title>CommandLineOptionsAndEnvironmentVariables - 
+ jnaerator -
+ 
+ JNAerator's command-line options &amp; environment variables - Project Hosting on Google Code</title>
+ 
+ 
+ <meta name="ROBOTS" content="NOARCHIVE">
+ 
+ <link type="text/css" rel="stylesheet" href="./CommandLineOptionsAndEnvironmentVariables - jnaerator - JNAerator's command-line options & environment variables - Project Hosting on Google Code_files/ph_core.css">
+ 
+ <link type="text/css" rel="stylesheet" href="./CommandLineOptionsAndEnvironmentVariables - jnaerator - JNAerator's command-line options & environment variables - Project Hosting on Google Code_files/ph_detail.css">
+ 
+ 
+ 
+ <link type="application/atom+xml" rel="alternate" href="http://code.google.com/feeds/p/jnaerator/svnchanges/basic?path=/wiki/CommandLineOptionsAndEnvironmentVariables.wiki">
+ 
+ 
+<!--[if IE]>
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/14921861327831835268/css/d_ie.css" >
+<![endif]-->
+ <style type="text/css">
+ .menuIcon.off { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -42px }
+ .menuIcon.on { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -28px }
+ .menuIcon.down { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 0; }
+ 
+ 
+ </style>
+<script type="text/javascript" async="" src="./CommandLineOptionsAndEnvironmentVariables - jnaerator - JNAerator's command-line options & environment variables - Project Hosting on Google Code_files/ga.js"></script></head>
+<body class="t6">
+ <script type="text/javascript">
+ var _gaq = _gaq || [];
+ _gaq.push(
+ ['siteTracker._setAccount', 'UA-18071-1'],
+ ['siteTracker._trackPageview']);
+ 
+ _gaq.push(
+ ['projectTracker._setAccount', 'UA-3690739-5'],
+ ['projectTracker._trackPageview']);
+ 
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+ })();
+ </script>
+<div class="headbg">
+ <div id="gaia">
+ 
+ <span>
+ 
+ 
+ <b>kimukou.buzz@gmail.com</b>
+ 
+ 
+ | <a href="http://code.google.com/u/kimukou.buzz/" id="projects-dropdown" onclick="return false;"><u>My favorites</u> <small>▼</small></a>
+ | <a href="http://code.google.com/u/kimukou.buzz/" onclick="_CS_click(&#39;/gb/ph/profile&#39;);" title="Profile, Updates, and Settings"><u>Profile</u></a>
+ | <a href="https://www.google.com/accounts/Logout?continue=http%3A%2F%2Fcode.google.com%2Fp%2Fjnaerator%2Fwiki%2FCommandLineOptionsAndEnvironmentVariables" onclick="_CS_click(&#39;/gb/ph/signout&#39;);"><u>Sign out</u></a>
+ 
+ </span>
+
+ </div>
+ <div class="gbh" style="left: 0pt;"></div>
+ <div class="gbh" style="right: 0pt;"></div>
+ 
+ 
+ <div style="height: 1px"></div>
+<!--[if IE 6]>
+<div style="text-align:center;">
+Support browsers that contribute to open source, try <a href="http://www.firefox.com">Firefox</a> or <a href="http://www.google.com/chrome">Google Chrome</a>.
+</div>
+<![endif]-->
+
+
+
+
+ <table style="padding:0px; margin: 0px 0px 10px 0px; width:100%" cellpadding="0" cellspacing="0">
+ <tbody><tr style="height: 58px;">
+ 
+ <td id="plogo">
+ <a href="http://code.google.com/p/jnaerator/">
+ 
+ 
+ <img src="./CommandLineOptionsAndEnvironmentVariables - jnaerator - JNAerator's command-line options & environment variables - Project Hosting on Google Code_files/logo" alt="Logo">
+ 
+ </a>
+ </td>
+ 
+ <td style="padding-left: 0.5em">
+ 
+ <div id="pname">
+ <a href="http://code.google.com/p/jnaerator/">jnaerator</a>
+ </div>
+ <div id="psum">
+ <a id="project_summary_link" href="http://code.google.com/p/jnaerator/">JNAerator - Native C / C++ / Objective-C libraries come to Java !</a>
+ 
+ </div>
+ 
+ </td>
+ <td style="white-space:nowrap;text-align:right; vertical-align:bottom;">
+ 
+ <form action="http://code.google.com/hosting/search">
+ <input size="30" name="q" value="" type="text">
+ <input type="submit" name="projectsearch" value="Search projects">
+ </form>
+ 
+ </td></tr>
+ </tbody></table>
+
+</div>
+
+ 
+<div id="mt" class="gtb"> 
+ <a href="http://code.google.com/p/jnaerator/" class="tab ">Project&nbsp;Home</a> 
+ 
+ 
+ 
+ 
+ <a href="http://code.google.com/p/jnaerator/downloads/list" class="tab ">Downloads</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="http://code.google.com/p/jnaerator/wiki/Documentation?tm=6" class="tab active">Wiki</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="http://code.google.com/p/jnaerator/issues/list" class="tab ">Issues</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="http://code.google.com/p/jnaerator/wiki/Sources?tm=4" class="tab ">Source</a>
+ 
+ 
+ 
+ <div class="gtbc"></div>
+</div>
+<table cellspacing="0" cellpadding="0" width="100%" align="center" border="0" class="st">
+ <tbody><tr>
+ 
+ 
+ 
+ <td class="subt">
+ <div class="issueDetail">
+<div class="isf">
+ 
+ <span class="inIssueList"> 
+ <span>Search</span>
+ <form action="http://code.google.com/p/jnaerator/w/list" method="GET" style="display:inline">
+ <select id="can" name="can" style="font-size:92%">
+ <option disabled="disabled">Search within:</option>
+ 
+ <option value="1">&nbsp;All wiki pages</option>
+ <option value="3">&nbsp;Featured pages</option>
+ <option value="2" selected="selected">&nbsp;Current pages</option>
+ 
+ 
+ <option value="5">&nbsp;My starred pages</option>
+ 
+ <option value="4">&nbsp;Deprecated pages</option>
+ 
+ </select>
+ <span>for</span>
+ <span id="qq"><input type="text" size="38" id="searchq" name="q" value="" autocomplete="off" style="font-size:92%"></span>
+ 
+ 
+ <input type="submit" value="Search" style="font-size:92%">
+ </form>
+ </span>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+</div>
+</div>
+
+ </td>
+ 
+ 
+ 
+ 
+ 
+ 
+ <td align="right" valign="top" class="bevel-right"></td>
+ </tr>
+</tbody></table>
+<script type="text/javascript">
+ var cancelBubble = false;
+ function _go(url) { document.location = url; }
+</script>
+
+
+<div id="maincol" style="padding:0 3px 3px 0; margin:0">
+
+ 
+<!-- IE -->
+
+
+
+
+
+
+ 
+<style type="text/css">
+ #wikisidebar { border-right: 2px solid #e9e9e9;}
+ #wikimaincol { padding-top: 6px; padding-left:1em}
+ #sidebarcontainer { padding: 4px 2px 2px 2px; width:20em; overflow:hidden}
+ .sidebartop ul { margin:0 0 0 .5em; padding-left:0 !important; list-style:none}
+ .sidebartop ul ul { margin-left:1em; padding-left:0; list-style:none; display:none}
+ .sidebartop li { margin:0 0 2px 0; padding:1px; padding-left:14px; cursor:pointer}
+ .sidebartop li a { padding:2px}
+ .sidebartop li { background: url(http://www.gstatic.com/codesite/ph/images/plus.gif) no-repeat 1px 3px}
+ .sidebartop li.treeopen { background: url(http://www.gstatic.com/codesite/ph/images/minus.gif) no-repeat 1px 3px}
+ .sidebartop li.treeleaf { background:none}
+ .currentpagelink { background:#ebeff9}
+ .sidebartop ul.treeleafcontainer { display:block;}
+</style>
+
+
+
+ <style type="text/css">
+ .artifactcomment {
+ margin: .5em 0 0 0;
+ padding: .3em 0 .3em .3em;
+ border-top: 3px solid #c3d9ff;
+ }
+ #commentlist {
+ border-bottom: 3px solid #c3d9ff;
+ }
+ #commentform { padding-top: 1em; }
+ .delcom { background: #e8e8e8 }
+ .commentcontent { margin: 1em 0;}
+ </style>
+
+
+ <div id="wikicontent">
+ <table width="100%" border="0" cellspacing="0" cellpadding="0">
+ <tbody><tr>
+ 
+ <td class="vt expand" id="wikisidebar">
+ <div>
+ 
+ <div style="float:right; padding:0 3px">
+ <a class="ifExpand" style="font-size:130%; color:blue; text-decoration:none" href="http://code.google.com/p/jnaerator/wiki/CommandLineOptionsAndEnvironmentVariables#" onclick="_DW_toggleSidebar(&#39;&#39;, &#39;jnaerator&#39;, this, &#39;f7e09c2c2b7cbddf2f8cbbe4173179d3&#39;); return false;" title="Hide sidebar"><b>‹‹</b></a>
+ </div>
+ <div class="ifCollapse" style="padding:0 2px">
+ <a style="font-size:130%; color:blue; text-decoration:none" href="http://code.google.com/p/jnaerator/wiki/CommandLineOptionsAndEnvironmentVariables#" onclick="_DW_toggleSidebar(&#39;&#39;, &#39;jnaerator&#39;, this, &#39;f7e09c2c2b7cbddf2f8cbbe4173179d3&#39;); return false;" title="Show sidebar"><b>››</b></a>
+ </div>
+ 
+ 
+ <div id="sidebarcontainer" class="sidebartop ifExpand">
+ <ul class="treeleafcontainer"><li class="treeleaf"><a href="http://code.google.com/p/jnaerator/wiki/JNAeratorFAQ">FAQ</a> </li><li>Project </li><ul><li class="treeleaf"><a href="http://code.google.com/p/jnaerator/wiki/AboutJNAerator">AboutJNAerator</a> </li><li class="treeleaf"><a href="http://code.google.com/p/jnaerator/wiki/AboutJNAeratorStudio">AboutJNAeratorStudio</a> </li><li class="treeleaf"><a href="http://code.google.com/p/jnaerator/wiki/CreditsAndLicense">CreditsAndLicense</a> </li><li class="treeleaf"><a href="http://code.google.com/p/jnaerator/wiki/ProjectsUsingJNAerator">ProjectsUsingJNAerator</a> </li><li class="treeleaf"><a href="http://code.google.com/p/jnaerator/wiki/Roadmap">Roadmap</a> </li><li class="treeleaf"><a href="http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/jnaerator/CHANGELOG" rel="nofollow">Changelog</a> </li></ul><li class="treeopen"><a href="http://code.google.com/p/jnaerator/wiki/Documentation">Documentation</a> </li><ul class="treeleafcontainer"><li class="treeleaf"><a href="http://code.google.com/p/jnaerator/wiki/SimpleMeaningfulExample">SimpleMeaningfulExample</a> </li><li class="treeleaf"><a href="http://code.google.com/p/jnaerator/wiki/JNAeratorFiles">JNAeratorFiles</a> </li><li class="treeleaf"><a href="./CommandLineOptionsAndEnvironmentVariables - jnaerator - JNAerator's command-line options & environment variables - Project Hosting on Google Code_files/CommandLineOptionsAndEnvironmentVariables - jnaerator - JNAerator's command-line options & environment variables - Project Hosting on Google Code.htm" class="currentpagelink">CommandLineOptionsAndEnvironmentVariables</a> </li><li class="treeleaf"><a href="http://code.google.com/p/jnaerator/wiki/CToJavaTransformation">CToJavaTransformation</a> </li><li class="treeleaf"><a href="http://code.google.com/p/jnaerator/wiki/ObjectiveC">ObjectiveC</a> </li><li class="treeleaf"><a href="http://code.google.com/p/jnaerator/wiki/EmbeddingJNAerator">EmbeddingJNAerator</a> </li><li class="treeleaf"><a href="http://code.google.com/p/jnaerator/wiki/Reification">Reification</a> </li></ul><li>Hands-on </li><ul><li class="treeleaf"><a href="http://code.google.com/p/jnaerator/downloads/list" rel="nofollow">Download</a> </li><li class="treeleaf"><a href="http://code.google.com/p/jnaerator/wiki/TroubleShootingJNAeration">TroubleShootingJNAeration</a> </li><li class="treeleaf"><a href="http://code.google.com/p/jnaerator/wiki/Maven">Maven</a> </li><li class="treeleaf"><a href="http://code.google.com/p/jnaerator/wiki/Sources">Sources</a> </li><li class="treeleaf"><a href="http://code.google.com/p/jnaerator/wiki/CompilingJNAerator">CompilingJNAerator</a> </li><li class="treeleaf"><a href="http://code.google.com/p/jnaerator/wiki/AutomaticTests">AutomaticTests</a> </li><li class="treeleaf"><a href="https://jna.dev.java.net/servlets/SummarizeList?listName=users" rel="nofollow">Mailing-List</a> </li></ul><li>Misc </li><ul><li class="treeleaf"><a href="http://code.google.com/p/jnaerator/wiki/LanguagesSyntaxLinks">LanguagesSyntaxLinks</a> </li></ul></ul><p>   </p>
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+ </div>
+</td>
+
+ 
+ <td class="vt" id="wikimaincol" width="100%">
+ 
+ <div style="float:right; width:18em" id="wikimeta">
+ <div class="pmeta_bubble_bg">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <table style="padding: 5px">
+ <tbody><tr><td colspan="2" style="padding-bottom:5px">Updated <span title="Thu Aug 26 01:38:48 2010">Aug 26, 2010</span>
+ 
+ by <a style="white-space: nowrap" href="http://code.google.com/u/olivier.chafik/">olivier.chafik</a>
+ </td></tr>
+ 
+ 
+ </tbody></table>
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+ </div>
+ </div>
+ 
+ <div id="wikiheader" style="margin-bottom:1em">
+ 
+ <img width="15" height="15" id="star_img" src="./CommandLineOptionsAndEnvironmentVariables - jnaerator - JNAerator's command-line options & environment variables - Project Hosting on Google Code_files/star_off.gif" style="cursor:pointer" onclick="_CS_toggleStar(this,
+ &#39;&#39;,
+ {&#39;scope&#39;: &#39;wiki&#39;,
+ &#39;user&#39;: &#39;_CURRENT_USER&#39;,
+ &#39;item&#39;: &#39;jnaerator:CommandLineOptionsAndEnvironmentVariables&#39;,
+ &#39;token&#39;: codesite_token
+ });">
+ 
+ &nbsp;
+ <span style="font-size:120%;font-weight:bold">CommandLineOptionsAndEnvironmentVariables</span>
+ &nbsp;
+ 
+ 
+ <div style="font-style:italic; margin-top: 3px">JNAerator's command-line options &amp; environment variables</div>
+ 
+ </div>
+ <p></p><ul><li><a href="http://code.google.com/p/jnaerator/wiki/CommandLineOptionsAndEnvironmentVariables#JNAerator_Files">JNAerator Files</a></li><li><a href="http://code.google.com/p/jnaerator/wiki/CommandLineOptionsAndEnvironmentVariables#Syntax">Syntax</a></li><li><a href="http://code.google.com/p/jnaerator/wiki/CommandLineOptionsAndEnvironmentVariables#Options">Options</a></li><li><a href="http://code.google.com/p/jnaerator/wiki/CommandLineOptionsAndEnvironmentVariables#Environment_Variables">Environment Variables</a></li></ul> <p></p><h1><a name="JNAerator_Files"></a>JNAerator Files<a href="http://code.google.com/p/jnaerator/wiki/CommandLineOptionsAndEnvironmentVariables#JNAerator_Files" class="section_anchor">¶</a></h1><p>As the number of arguments needed for a project might quickly grow and produce insane command lines, you might consider putting some or all of your arguments in a <tt>*.jnaerator</tt> file (preferably, <tt>config.jnaerator</tt>). </p><p>Please read <a href="http://code.google.com/p/jnaerator/wiki/JNAeratorFiles">JNAeratorFiles</a> for more details about these files, and <a href="http://code.google.com/p/jnaerator/wiki/JNAeratorFAQ">JNAeratorFAQ</a> for more general questions. </p><h1><a name="Syntax"></a>Syntax<a href="http://code.google.com/p/jnaerator/wiki/CommandLineOptionsAndEnvironmentVariables#Syntax" class="section_anchor">¶</a></h1><p><tt> java -jar jnaerator.jar options headerFiles dynamicLibrariesFiles </tt> </p><h1><a name="Options"></a>Options<a href="http://code.google.com/p/jnaerator/wiki/CommandLineOptionsAndEnvironmentVariables#Options" class="section_anchor">¶</a></h1><ul><li><strong></strong> &lt;file: OptionalFile&gt; </li><blockquote>Any header (or directory containing headers at any level of hierarchy), shared library, <tt>*</tt>.bridgesupport file or <tt>*</tt>.jnaerator file 
+</blockquote><li><strong>(?i)-noComp</strong> </li><blockquote>Do not compile JNAerated headers 
+</blockquote><li><strong>(?i)-noJar</strong> </li><blockquote>Do not create an output JAR 
+</blockquote><li><strong>(?i)-noLibBundle</strong> </li><blockquote>Do not bundle libraries in output JAR 
+</blockquote><li><strong>-D(^=</strong>)(?:=(.<strong>))?</strong> &lt;name: String&gt; &lt;value: String&gt; </li><blockquote>Define a macro symbol 
+</blockquote><li><strong>-F(.+)?</strong> &lt;dir: File&gt; </li><blockquote>Add a directory to the frameworks path. See doc of JNAERATOR_FRAMEWORKS_PATH 
+</blockquote><li><strong>-I(.+)?</strong> &lt;dir: File&gt; </li><blockquote>Add a directory to the include path. See doc of JNAERATOR_INCLUDE_PATH 
+</blockquote><li><strong>-U(.+)</strong> &lt;symbolName: String&gt; </li><blockquote>Undefine a preprocessor symbol after the autoconfiguration phase. 
+</blockquote><li><strong>-addRootDir</strong> &lt;dir: ExistingDir&gt; </li><blockquote>Remove this directory from the path of descendant source files in the generated documentation. 
+</blockquote><li><strong>-allowedFileExts</strong> &lt;extensions: String&gt; </li><blockquote>Colon-separated list of file extensions used to restrict files used when recursing on directories, or "<tt>*</tt>" to parse all files (by default = h:hpp:hxx) 
+</blockquote><li><strong>-arch</strong> &lt;archName: String&gt; </li><blockquote>Define the current architecture for libraries (state variable) 
+</blockquote><li><strong>-beanStructs</strong> </li><blockquote>Generate getters and setters for struct fields 
+</blockquote><li><strong>-bridgeSupportOut</strong> &lt;outFile: OutputFile&gt; </li><blockquote>Write the definitions extracted from bridgesupport files in a file (automatically set when ${Verbose} is used). 
+</blockquote><li><strong>-choices</strong> &lt;choicesFile: ExistingFile&gt; </li><blockquote>Read the function alternative choices from a file in the format used by -choicesOut. 
+</blockquote><li><strong>-choicesOut</strong> &lt;outFile: OutputFile&gt; </li><blockquote>Write the function alternative choices made (automatically set when ${Verbose} is used). 
+</blockquote><li><strong>-defaultLibrary</strong> &lt;libName: String&gt; </li><blockquote>Name of output library for elements declared in files not covered by a ${CurrentLibrary} switch 
+</blockquote><li><strong>-direct</strong> </li><blockquote>JNAerate libraries that use JNA's faster direct call convention 
+</blockquote><li><strong>-entryClass</strong> &lt;entryClassName: String&gt; </li><blockquote>Generate a class <i>entryclassName.EntryClassName</i> that will contain all of the jnaerated libraries instances. User code will just need to static import or derive from this class to access to the instances. 
+</blockquote><li><strong>-extractionOut</strong> &lt;outFile: OutputFile&gt; </li><blockquote>Write the symbols extracted from libraries in a file (automatically set when ${Verbose} is used). 
+</blockquote><li><strong>-fpreprocessed</strong> </li><blockquote>Consider source files as being already preprocessed (preprocessor won't be run) 
+</blockquote><li><strong>-framework</strong> &lt;frameworkName: String&gt; </li><blockquote>JNAerate a framework using its headers and its <tt>*</tt>.bridgesupport files if available 
+</blockquote><li><strong>-frameworksPath</strong> &lt;path1:path2...: String&gt; </li><blockquote>See doc of JNAERATOR_FRAMEWORKS_PATH 
+</blockquote><li><strong>-gccLong</strong> </li><blockquote>Use GCC convention for size of 'long' (4 bytes on 32 bits platforms, 8 bytes on 64 bits platforms). 
+</blockquote><li><strong>-genCPlusPlus</strong> </li><blockquote>Not working at all Generate C++ classes. 
+</blockquote><li><strong>-genPrivateMembers</strong> </li><blockquote>Generate wrappers for private fields and methods (will be protected and deprecated). 
+</blockquote><li><strong>-gui</strong> </li><blockquote>Show minimalist progression GUI 
+</blockquote><li><strong>-h(?:elp)?</strong> </li><blockquote>Show command line arguments help 
+</blockquote><li><strong>-ifRegexMatch</strong> &lt;javaProperty: String&gt; &lt;regex: String&gt; &lt;thenArg: String&gt; &lt;elseArg: String&gt; </li><blockquote>Conditional evaluation of an argument if a java system property matches a regular expression 
+</blockquote><li><strong>-jar</strong> &lt;outFile: OutputFile&gt; </li><blockquote>Jar file where all generated sources and the compiled classes go 
+</blockquote><li><strong>-libFile</strong> &lt;resourceFile: ExistingFile&gt; </li><blockquote>Bundle the provided file with the JNAerated JAR so that it is extracted with the library when it is first used. 
+</blockquote><li><strong>-library</strong> &lt;libName: String&gt; </li><blockquote>Define the name of the output library. This is a state parameter, it will affect all files listed after it, until another -library switch is provided. It does not affect sources included from a project file (Visual Studio...). 
+C functions exported in library "test" will end up in class "TestLibrary", for instance.  
+The name of the library is the one fed to JNA to find the shared library, so library "test" must be in "test.dll" on Windows, "libtest.dylib" on Mac OS X and  "libtest.so" on other Unices. 
+Note that a special hack is done for library "c" on Windows systems : the output name is set to "msvcrt" instead of "c". 
+</blockquote></ul><p>   </p><ul><li><strong>-limitComments</strong> </li><blockquote>Avoid useless comments (source file + line, skipped items...) 
+</blockquote><li><strong>-macrosOut</strong> &lt;outFile: OutputFile&gt; </li><blockquote>Write the preprocessor macros in a file (automatically set when ${Verbose} is used). 
+</blockquote><li><strong>-maxConstrFields</strong> &lt;fieldCount: Int&gt; </li><blockquote>Maximum number of fields allowed for structure fields constructors. If a struct has more fields, it will only get a default constructor. 
+</blockquote><li><strong>-noAuto</strong> </li><blockquote>No auto-configuration of preprocessor symbols and paths 
+</blockquote><li><strong>-noAutoImport</strong> </li><blockquote>Don't add import statements automatically to output java source files 
+</blockquote><li><strong>-noComments</strong> </li><blockquote>Don't output any member comment. 
+</blockquote><li><strong>-noMangling</strong> </li><blockquote>Don't output any C++ name mangling information (may cause C++-decorated symbols not to be found at execution time). 
+</blockquote><li><strong>-noPrimitiveArrays</strong> </li><blockquote>Never output primitive arrays for function arguments (use NIO buffers instead) 
+</blockquote><li><strong>-noRuntime</strong> </li><blockquote>Don't copy runtime classes to JAR output 
+</blockquote><li><strong>-noStringReturns</strong> </li><blockquote>Prevent const char<tt>*</tt> and const wchar_t<tt>*</tt> return types from being converted to String and WString. 
+</blockquote><li><strong>-nocpp</strong> </li><blockquote>Do not define the <i></i>cplusplus symbol 
+</blockquote><li><strong>-o</strong> &lt;outDir: OutputDir&gt; </li><blockquote>Output directory for all artifacts 
+</blockquote><li><strong>-onlineDoc</strong> &lt;linkDisplayFormat: MessageFormat&gt; &lt;urlMessageFormat: MessageFormat&gt; </li><blockquote>Define a format for online documentation URLs (uses MessageFormat syntax, with arg 0 being the name of the function / structure). 
+</blockquote><li><strong>-package</strong> &lt;forcedPackageName: String&gt; </li><blockquote>Set the Java package in which all the output will reside (by default, set to the library name). 
+</blockquote><li><strong>-preferJavac</strong> </li><blockquote>Use Sun's Javac compiler instead of Eclipse's ecj, if possible 
+</blockquote><li><strong>-preprocessingOut</strong> &lt;outFile: OutputFile&gt; </li><blockquote>Write the preprocessor output in a file (automatically set when ${Verbose} is used). 
+</blockquote><li><strong>-project</strong> &lt;solutionFile: ExistingFile&gt; &lt;"Config|Platform": String&gt; </li><blockquote>Read Visual Studio 2008 project or solution file and use the configuration specified (e.g. "Release|Win32"). 
+</blockquote><li><strong>-root(?:Package)?</strong> &lt;package: String&gt; </li><blockquote>Define the root package for all output classes 
+</blockquote><li><strong>-runtime</strong> &lt;enum: Enum&gt; </li><blockquote>Choose target runtime library between JNA, JNAerator (based on JNA), BridJ (experimental dyncall-based runtime) (default: JNAerator (based on JNA)). 
+</blockquote><li><strong>-scalaOut</strong> &lt;outDir: OutputDir&gt; </li><blockquote>Experimental Output Scala wrappers (callbacks implicits...) 
+</blockquote><li><strong>-scalaStructSetters</strong> </li><blockquote>Generate Scala-style setters for BridJ structs (with a name like fieldName<i>$eq) 
+</i></blockquote><li><i><strong>-scanSymbols</strong> </i></li><blockquote><i>Extract, unmangle and parse the symbols all listed shared libraries 
+</i></blockquote><li><i><strong>-sizeAsLong</strong> </i></li><blockquote><i>Treat size_t and ptrdiff_t values as 'long' values. ONLY HERE FOR COMPATIBILITY WITH PREVIOUS VERSIONS, WILL EVENTUALLY BE REMOVED. 
+</i></blockquote><li><i><strong>-skipIncludedFrameworks</strong> </i></li><blockquote><i>Skip Included Frameworks 
+</i></blockquote><li><i><strong>-skipLibraryInstance</strong> </i></li><blockquote><i>Skip library instance declarations 
+</i></blockquote><li><i><strong>-structsInLibrary</strong> </i></li><blockquote><i>Force structs to be JNAerated as inner classes of their declaring libraries (otherwise, each top-level structure is defined as a top-level class in its library's package) 
+</i></blockquote><li><i><strong>-studio</strong> </i></li><blockquote><i>Launch JNAeratorStudio 
+</i></blockquote><li><i><strong>-v(?:erbose)?</strong> </i></li><blockquote><i>Verbose output (both console and files) 
+</i></blockquote><li><i><strong>-wcharAsShort</strong> </i></li><blockquote><i>Force treatment of wchar_t as short (char by default) 
+</i></blockquote><li><i><strong>-wikiHelp</strong> </i></li><blockquote><i>Output a wiki-friendly help 
+</i></blockquote><li><i><strong>@(.+)?</strong> &lt;argumentsFile.jnaerator: ExistingFile&gt; </i></li><blockquote><i>Read command-line arguments from a file. File may contain multiple lines (those beginning with "//" will be skipped), file wildcards will be resolved within the file content, as well as variables substitutions : $(someEnvOrJavaVarName), with $(DIR) being the parent directory of the current arguments file. 
+</i></blockquote></ul><p></p><h1><a name="Environment_Variables"></a>Environment Variables<a href="http://code.google.com/p/jnaerator/wiki/CommandLineOptionsAndEnvironmentVariables#Environment_Variables" class="section_anchor">¶</a></h1><p>All of these variables may be overridden by setting the environment variable (<tt> set VAR=value </tt> on Windows, <tt> export VAR=value </tt> on most unices) or through Java properties (<tt> java -DVAR=value -jar jnaerator.jar ... </tt>). </p><ul><li>VISUAL_STUDIO_HOME =  </li><pre class="prettyprint"><span class="pln">C</span><span class="pun">:\</span><span class="typ">Program</span><span class="pln"> </span><span class="typ">Files</span><span class="pun">\</span><span class="typ">Microsoft</span><span class="pln"> </span><span class="typ">Visual</span><span class="pln"> </span><span class="typ">Studio</span><span class="pln"> </span><span class="lit">9.0</span><span class="pln"> </span></pre><li>WINDOWS_SDK_HOME </li><pre class="prettyprint"><span class="pln">C</span><span class="pun">:\</span><span class="typ">Program</span><span class="pln"> </span><span class="typ">Files</span><span class="pun">\</span><span class="typ">Microsoft</span><span class="pln"> </span><span class="typ">SDKs</span><span class="pun">\</span><span class="typ">Windows</span><span class="pun">\</span><span class="pln">v6</span><span class="pun">.</span><span class="lit">0A</span></pre><li>VISUAL_STUDIO_INCLUDES = VISUAL_STUDIO_HOME;WINDOWS_SDK_HOME </li><li>JNAERATOR_INCLUDE_PATH : has the following platform-dependent default values : </li><ul><li>Windows : uses VISUAL_STUDIO_INCLUDES </li><li>Mac OS X : <tt> /Developer/SDKs/MacOSX10.4u.sdk/usr/include:. </tt> </li><li>Current dir on any other platform </li></ul></ul><ul><li>JNAERATOR_FRAMEWORKS_PATH is only set on Mac OS X :  </li><pre class="prettyprint"><span class="str">/System/</span><span class="typ">Library</span><span class="pun">/</span><span class="typ">Frameworks</span><span class="pun">/</span><span class="typ">CoreServices</span><span class="pun">.</span><span class="pln">framework</span><span class="pun">/</span><span class="typ">Versions</span><span class="pun">/</span><span class="typ">Current</span><span class="pun">/</span><span class="typ">Frameworks</span><span class="pun">:\</span><span class="pln"><br></span><span class="pun">/</span><span class="typ">System</span><span class="pun">/</span><span class="typ">Library</span><span class="pun">/</span><span class="typ">Frameworks</span><span class="pun">/</span><span class="typ">ApplicationServices</span><span class="pun">.</span><span class="pln">framework</span><span class="pun">/</span><span class="typ">Versions</span><span class="pun">/</span><span class="typ">Current</span><span class="pun">/</span><span class="typ">Frameworks</span><span class="pun">:\</span><span class="pln"><br></span><span class="pun">/</span><span class="typ">System</span><span class="pun">/</span><span class="typ">Library</span><span class="pun">/</span><span class="typ">Frameworks</span><span class="pun">:\</span><span class="pln"><br></span><span class="pun">/</span><span class="typ">Library</span><span class="pun">/</span><span class="typ">Frameworks</span><span class="pun">:\</span><span class="pln"><br></span><span class="pun">~</span><span class="str">/Library/</span><span class="typ">Frameworks</span><span class="pln"> </span></pre><li>library.Xxx (Java property) or XXX_LIBRARY (env. variable) : path to the binary  of library Xxx. </li></ul>
+ </td> 
+ </tr>
+ </tbody></table>
+ </div>
+
+
+ 
+ <br>
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+<div class="collapse">
+
+
+ 
+
+
+<div id="commentlist">
+
+ 
+ <div class="artifactcomment">
+ 
+ 
+ 
+ 
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ <a style="white-space: nowrap" href="http://code.google.com/u/kai.hackemesser/">kai.hackemesser</a>,
+ 
+ </span>
+ <span class="date" title="Sat Jun 19 15:36:56 2010">Jun 19, 2010</span>
+ <div>
+<div class="commentcontent">
+<p>what exactly means the syntax "(?i)-noJar"? trying -noJar seems to be ignored. </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment">
+ 
+ 
+ 
+ 
+ 
+ 
+ <span class="author">Comment
+ 
+ by  project member 
+ 
+ <a style="white-space: nowrap" href="http://code.google.com/u/olivier.chafik/">olivier.chafik</a>,
+ 
+ </span>
+ <span class="date" title="Wed Aug  4 10:07:24 2010">Aug 04, 2010</span>
+ <div>
+<div class="commentcontent">
+<p>Hi Kai, </p><p>The -noJar switch is currently buggy, it only works when combined to -noComp Cheers -- Olivier </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment">
+ 
+ 
+ 
+ 
+ 
+ 
+ <span class="author">Comment
+ 
+ by  project member 
+ 
+ <a style="white-space: nowrap" href="http://code.google.com/u/olivier.chafik/">olivier.chafik</a>,
+ 
+ </span>
+ <span class="date" title="Wed Aug  4 10:08:39 2010">Aug 04, 2010</span>
+ <div>
+<div class="commentcontent">
+<p>(and the (?i) stuff is a regular expression : means "switch case-insensitive mode on", see <a href="http://download.oracle.com/javase/1.4.2/docs/api/java/util/regex/Pattern.html" rel="nofollow">http://download.oracle.com/javase/1.4.2/docs/api/java/util/regex/Pattern.html</a>) </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment">
+ 
+ 
+ 
+ 
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ <a style="white-space: nowrap" href="http://code.google.com/u/sameeh.harfoush/">sameeh.harfoush</a>,
+ 
+ </span>
+ <span class="date" title="Fri Aug  6 09:50:21 2010">Aug 06, 2010</span>
+ <div>
+<div class="commentcontent">
+<p>hello, i am getting the below error in the generated native declaration "Conversion Error : WINAPI" </p><blockquote>/<strong></strong> 
+<ul><li>&lt;i&gt;native declaration : D:\SaM\Projects\mcgeorgeconsulting\crossmatch\API\LScanEssentialsApi.h:693&lt;/i&gt;&lt;br&gt; </li><li>Conversion Error : WINAPI </li><li> </li></ul>/<strong></strong> 
+<ul><li>&lt;i&gt;native declaration : D:\SaM\Projects\mcgeorgeconsulting\crossmatch\API\LScanEssentialsApi.h:709&lt;/i&gt;&lt;br&gt; </li><li>Conversion Error : WINAPI </li><li> </li></ul>/<strong></strong> 
+<ul><li>&lt;i&gt;native declaration : D:\SaM\Projects\mcgeorgeconsulting\crossmatch\API\LScanEssentialsApi.h:728&lt;/i&gt;&lt;br&gt; </li><li>Conversion Error : WINAPI </li><li> </li></ul></blockquote><p>...etc </p><p>command line entry: java -jar jnaerator-0.9.4.jar -preferJavac -package com.crossmatch.lscan -library LScanEssentials D:\SaM\Projects\mcgeorgeconsulting\crossmatch\API\ImageData<a href="http://code.google.com/p/jnaerator/w/edit/ImageData">?</a>.h D:\SaM\Projects\mcgeorgeconsulting\crossmatch\API\LScanEssentialsApi_defs.h D:\SaM\Projects\mcgeorgeconsulting\crossmatch\API\LScanEssentialsApi_err.h D:\SaM\Projects\mcgeorgeconsulting\crossmatch\API\WinDef<a href="http://code.google.com/p/jnaerator/w/edit/WinDef">?</a>.h D:\SaM\Projects\mcgeorgeconsulting\crossmatch\API\LScanEssentialsApi.h </p><p>any idea why ? thanks </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment">
+ 
+ 
+ 
+ 
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ <a style="white-space: nowrap" href="http://code.google.com/u/sameeh.harfoush/">sameeh.harfoush</a>,
+ 
+ </span>
+ <span class="date" title="Fri Aug  6 10:07:18 2010">Aug 06, 2010</span>
+ <div>
+<div class="commentcontent">
+<p>i added the "WinDef<a href="http://code.google.com/p/jnaerator/w/edit/WinDef">?</a>.h" to recognize WINAPI but still didnt work. </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment">
+ 
+ 
+ 
+ 
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ <a style="white-space: nowrap" href="http://code.google.com/u/@VRRXRFFXBxNFXAJ1/">lars-e...@brase.net</a>,
+ 
+ </span>
+ <span class="date" title="Thu Aug 12 08:33:50 2010">Aug 12, 2010</span>
+ <div>
+<div class="commentcontent">
+<p>I got the following error message from jnaerator "winnt.h:18:2034: error: #error Must define a target architecture" </p><p>I try to use the -arch option with value i386 but i got the same error </p><p>Any solutions? thanks </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+</div>
+</div>
+
+ 
+
+
+ <script type="text/javascript">
+ function delComment(sequence_num, create_time, delete_mode) {
+ var f = document.forms["delcom"];
+ f.sequence_num.value = sequence_num;
+ f.create_time.value = create_time;
+ f.mode.value = delete_mode;
+ f.submit();
+ return false;
+ }
+ </script>
+
+
+ 
+ 
+ 
+ 
+ 
+ <div id="commentform">
+ <form action="http://code.google.com/p/jnaerator/w/detail.do" method="post">
+ <table>
+ <tbody><tr><td class="vt">
+ <input type="hidden" name="pagename" value="CommandLineOptionsAndEnvironmentVariables">
+ <input type="hidden" name="token" value="f7e09c2c2b7cbddf2f8cbbe4173179d3">
+ <div>Enter a comment:</div>
+ <textarea name="content" rows="6" cols="80"></textarea><br><br>
+ <input type="submit" name="submit" value="Submit">
+ </td>
+ <td class="vt">
+ <div id="whb" class="tip" style="width:15em">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner opened" id="entrybubble">
+ <a class="ifClosed" href="http://code.google.com/p/jnaerator/wiki/CommandLineOptionsAndEnvironmentVariables#whb" style="float:right" onclick="_toggleHidden(this); document.getElementById(&#39;wikihelp&#39;).value=&#39;opened&#39;">show</a>
+ <a class="ifOpened" href="http://code.google.com/p/jnaerator/wiki/CommandLineOptionsAndEnvironmentVariables#whb" style="float:right" onclick="_toggleHidden(this); document.getElementById(&#39;wikihelp&#39;).value=&#39;closed&#39;">hide</a>
+ <b>Wiki markup help</b>
+ <div class="ifOpened">
+ <div style="padding:2px; font-size:96%">
+ =Heading1=<br>
+ ==Heading2==<br>
+ ===Heading3===<br>
+ <br>
+ *bold* &nbsp; &nbsp;
+ _italic_<br>
+ `inline code`<br>
+ escape: `*`<br>
+ <br>
+ Indent lists 2 spaces:<br>
+ &nbsp;&nbsp;* bullet item<br>
+ &nbsp;&nbsp;# numbered list<br>
+ <br>
+ {{{<br>
+ verbatim code block<br>
+ }}}<br>
+ <br>
+ Horizontal rule<br>
+ ----
+ <br>
+ <br>
+ WikiWordLink<br>
+ [http://domain/page&nbsp;label]<br>
+ http://domain/page<br>
+ <br>
+ || table || cells ||<br>
+ 
+ </div><br>
+ <a href="http://code.google.com/p/support/wiki/WikiSyntax" target="new">More
+ examples</a>
+ <a href="http://code.google.com/p/support/wiki/WikiSyntax" target="new"><img src="./CommandLineOptionsAndEnvironmentVariables - jnaerator - JNAerator's command-line options & environment variables - Project Hosting on Google Code_files/tearoff_icon.gif" width="16" height="16"></a>
+ </div>
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+</div>
+<input type="hidden" name="wikihelp" id="wikihelp" value="opened">
+
+ </td></tr>
+ </tbody></table>
+ </form>
+ </div>
+ 
+ 
+ 
+
+<form name="delcom" action="http://code.google.com/p/jnaerator/w/delComment.do" method="POST">
+ <input type="hidden" name="sequence_num" value="">
+ <input type="hidden" name="create_time" value="">
+ <input type="hidden" name="mode" value="">
+ <input type="hidden" name="pagename" value="CommandLineOptionsAndEnvironmentVariables">
+ <input type="hidden" name="token" value="f7e09c2c2b7cbddf2f8cbbe4173179d3">
+</form>
+
+
+ <script src="./CommandLineOptionsAndEnvironmentVariables - jnaerator - JNAerator's command-line options & environment variables - Project Hosting on Google Code_files/dwiki_scripts_20081003.js"></script>
+
+
+ <script src="./CommandLineOptionsAndEnvironmentVariables - jnaerator - JNAerator's command-line options & environment variables - Project Hosting on Google Code_files/prettify.js"></script>
+ <script type="text/javascript">
+ prettyPrint();
+ </script>
+
+<script type="text/javascript" src="./CommandLineOptionsAndEnvironmentVariables - jnaerator - JNAerator's command-line options & environment variables - Project Hosting on Google Code_files/dit_scripts.js"></script>
+
+
+
+  
+ 
+ <script type="text/javascript" src="./CommandLineOptionsAndEnvironmentVariables - jnaerator - JNAerator's command-line options & environment variables - Project Hosting on Google Code_files/core_scripts_20081103.js"></script>
+ <script type="text/javascript" src="./CommandLineOptionsAndEnvironmentVariables - jnaerator - JNAerator's command-line options & environment variables - Project Hosting on Google Code_files/codesite_product_dictionary_ph.pack.04102009.js"></script>
+ </div>
+<div id="footer" dir="ltr">
+ 
+ <div class="text">
+ 
+ ©2010 Google -
+ <a href="http://code.google.com/projecthosting/terms.html">Terms</a> -
+ <a href="http://www.google.com/privacy.html">Privacy</a> -
+ <a href="http://code.google.com/p/support/">Project Hosting Help</a>
+ 
+ </div>
+</div>
+
+ <div class="hostedBy" style="margin-top: -20px;">
+ <span style="vertical-align: top;">Powered by <a href="http://code.google.com/projecthosting/">Google Project Hosting</a></span>
+ </div>
+ 
+ 
+
+
+ 
+ 
+
+
+
+<div class="menuDiv instance0" id="menuDiv-projects-dropdown" style="position: absolute; display: none; top: 19px; left: 942px; "><b class="categoryTitle projects" style="display: block; ">Projects</b><div class="menuCategory projects first"><a class="menuItem" style="display: block; " href="http://code.google.com/p/lfm-database-applications/">lfm-database-applications</a></div><div class="menuCategory controls"><hr class="menuSeparator"><a class="menuItem" style="display: block; " href="http://code.google.com/more/">Find developer products...</a><a class="menuItem" style="display: block; " href="http://code.google.com/hosting/">Find open source projects...</a></div></div></body></html>

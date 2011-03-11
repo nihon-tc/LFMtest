@@ -1,0 +1,30 @@
+//runtest.groovy
+import rdi5api.*
+import rdi5numeric.*
+import rdi5apiext.*
+
+
+//DLLPATH="./lib"
+//com.sun.jna.NativeLibrary.addSearchPath("rdi5api",DLLPATH)
+//com.sun.jna.NativeLibrary.addSearchPath("rdi5numeric",DLLPATH)
+//com.sun.jna.NativeLibrary.addSearchPath("rdi5apiext",DLLPATH)
+//com.sun.jna.NativeLibrary.addSearchPath("Di5Numeric",DLLPATH)
+
+
+import com.sun.jna.ptr.*
+import com.sun.jna.*
+
+IntByReference version = new IntByReference()
+Rdi5apiextLibrary.INSTANCE.RD5GetVersionR1(version)
+println "version=${version.getValue()}"
+
+Pointer serial = Rdi5apiextLibrary.INSTANCE.RD5GetSerialR1()
+println "serial=${serial.dump()}"
+
+
+IntByReference version2 = new IntByReference()
+Pointer serial2 = new Pointer()
+
+Rdi5apiLibrary.INSTANCE.RD5GetVersion(version2,serial2)
+println "version2=${version2.getValue()}"
+println "serial2=${serial2.dump()}"

@@ -1,0 +1,2436 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>LFM API: rdi5apiext.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 作成： Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>rdi5apiext.h</h1>LFMテーブル拡張API.  
+<a href="#_details">[詳細]</a>
+<p>
+<code>#include &quot;di5api.h&quot;</code><br>
+
+<p>
+<a href="rdi5apiext_8h-source.html">ソースコードを見る。</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>関数</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#411d6d23c42c2ba4f7cc1b624c59e123">RD5GetVersionR1</a> (int *anVersion)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">バージョン情報を取得します。  <a href="#411d6d23c42c2ba4f7cc1b624c59e123"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#04e0ee4046dc9a3fcd6c73b4e58222f7">RD5GetCopyRightR1</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">コピーライトメッセージを取得します。  <a href="#04e0ee4046dc9a3fcd6c73b4e58222f7"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#0126441f47d9abba32f3721794f84219">RD5GetDBPathR1</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ワークスペースのパスを取得します。  <a href="#0126441f47d9abba32f3721794f84219"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#2394da290564b2e47eae47f82887712f">RD5GetDBNameR1</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ワークスペースの名称を取得します。  <a href="#2394da290564b2e47eae47f82887712f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#5c487ce8ea31869b362c5c1c98bc142c">RD5GenerateTableNameR1</a> (char *szSeedName)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">登録可能なテーブル名称を生成します。  <a href="#5c487ce8ea31869b362c5c1c98bc142c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c08a5b8fc1abcab125428921f9bbd876"></a><!-- doxytag: member="rdi5apiext.h::RD5GenTableNameR1" ref="c08a5b8fc1abcab125428921f9bbd876" args="(char *szSeedName)" -->
+char *D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><b>RD5GenTableNameR1</b> (char *szSeedName)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#d2403b6a6c699fc8c3f352bbda3a9eab">RD5GetTableNameR1</a> (int nTableID)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">テーブル名称を取得します。  <a href="#d2403b6a6c699fc8c3f352bbda3a9eab"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#0eb54db41e69ee463d2f624f6c6b0de4">RD5SearchByFieldStrR1</a> (int nTableID, int nFilterID, int nSetID, int nOpeNo, char *szX, char *szY)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定した項目(文字列)のデータによる検索を行います。  <a href="#0eb54db41e69ee463d2f624f6c6b0de4"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#426ff2674c4c3ab1073048f0a74e899d">RD5SearchByFieldIntR1</a> (int nTableID, int nFilterID, int nSetID, int nOpeNo, int nX, int nY)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定した項目(整数)のデータによる検索を行います。  <a href="#426ff2674c4c3ab1073048f0a74e899d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#3e3c6e5c6a8117fbd8b0ad6d76fedca2">RD5SearchByFieldDblR1</a> (int nTableID, int nFilterID, int nSetID, int nOpeNo, double dX, double dY)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定した項目(浮動少数)のデータによる検索を行います。  <a href="#3e3c6e5c6a8117fbd8b0ad6d76fedca2"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#6ede90bbf319aa69cc7c6c8e1f8392e9">RD5SearchByFieldNumericR1</a> (int nTableID, int nFilterID, int nSetID, int nOpeNo, Numeric *pNumericX, Numeric *pNumericY)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定した項目(Numeric)のデータによる検索を行います。  <a href="#6ede90bbf319aa69cc7c6c8e1f8392e9"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#b20d561bc4692cc086f565697d39a829">RD5SearchByFieldSJISR1</a> (int nTableID, int nFilterID, int nSetID, int nOpeNo, char *szX, char *szY)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定した項目の、マルチバイト文字コードを使った検索を行います。  <a href="#b20d561bc4692cc086f565697d39a829"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#b64a2e51965cfd0709da878002b3c69d">RD5SearchByFieldLocaleR1</a> (int nTableID, int nFilterID, int nSetID, int nOpeNo, char *szX, char *szY, int nLocaleID)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定した項目の、マルチバイト文字コードを使った検索を行います。  <a href="#b64a2e51965cfd0709da878002b3c69d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="279c8132d74649efa69d3690ea213a04"></a><!-- doxytag: member="rdi5apiext.h::RD5GetDataIntR1" ref="279c8132d74649efa69d3690ea213a04" args="(int nTableID, int nFilterID, int nSetID, int nRowNo)" -->
+int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><b>RD5GetDataIntR1</b> (int nTableID, int nFilterID, int nSetID, int nRowNo)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="910caaf2b46bf5dd9b7a46d23a6ffd0a"></a><!-- doxytag: member="rdi5apiext.h::RD5GetDataDblR1" ref="910caaf2b46bf5dd9b7a46d23a6ffd0a" args="(int nTableID, int nFilterID, int nSetID, int nRowNo)" -->
+double D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><b>RD5GetDataDblR1</b> (int nTableID, int nFilterID, int nSetID, int nRowNo)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="5379ba89d3293d2bf432c631ffb65d58"></a><!-- doxytag: member="rdi5apiext.h::RD5GetDataStrR1" ref="5379ba89d3293d2bf432c631ffb65d58" args="(int nTableID, int nFilterID, int nSetID, int nRowNo)" -->
+char *D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><b>RD5GetDataStrR1</b> (int nTableID, int nFilterID, int nSetID, int nRowNo)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="e8a64ea8d7849bc7530b2a491cf0c64d"></a><!-- doxytag: member="rdi5apiext.h::RD5GetDataNumericR1" ref="e8a64ea8d7849bc7530b2a491cf0c64d" args="(int nTableID, int nFilterID, int nSetID, int nRowNo, Numeric *pNumeric)" -->
+int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><b>RD5GetDataNumericR1</b> (int nTableID, int nFilterID, int nSetID, int nRowNo, Numeric *pNumeric)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#b975a1dde4e587088995631faaf8450d">RD5GetNumericInfoR1</a> (int nTableID, int nFilterID, NumericInfo *pNumericInfo)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">NUMERIC項目情報を取得します。.  <a href="#b975a1dde4e587088995631faaf8450d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#e9c16ab07c192c13dbc386fd4eb67eab">RD5GetData1IntR1</a> (int nTableID, int nFilterID, int nSetID, int nRowNo)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">単一データ(整数)を取得します。  <a href="#e9c16ab07c192c13dbc386fd4eb67eab"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">double D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#72cec716385057d9159c1ac791e72d35">RD5GetData1DblR1</a> (int nTableID, int nFilterID, int nSetID, int nRowNo)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">単一データ(浮動少数)を取得します。  <a href="#72cec716385057d9159c1ac791e72d35"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#617bc24270ec8fd8d659397f2f72244a">RD5GetData1StrR1</a> (int nTableID, int nFilterID, int nSetID, int nRowNo)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">単一データ(文字列)を取得します。  <a href="#617bc24270ec8fd8d659397f2f72244a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#63680b3b4989f54abd1a8fe898d7341a">RD5GetData1NumericR1</a> (int nTableID, int nFilterID, int nSetID, int nRowNo, Numeric *pNumeric)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">単一データ(Numeric)を取得します。  <a href="#63680b3b4989f54abd1a8fe898d7341a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#4c9e7208cd226efb0449f4581eb9c017">RD5GetFilterNameR1</a> (int nTableID, int nFilterID)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">項目IDから項目名称を取得します。  <a href="#4c9e7208cd226efb0449f4581eb9c017"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="cd22434dd4649348862af9453570f187"></a><!-- doxytag: member="rdi5apiext.h::RD5GetSerialR1" ref="cd22434dd4649348862af9453570f187" args="()" -->
+char *D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><b>RD5GetSerialR1</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c1655628f89286f5592aa6a2cf2cacb2"></a><!-- doxytag: member="rdi5apiext.h::RD5CategoryReadR1" ref="c1655628f89286f5592aa6a2cf2cacb2" args="(int nSumHandle, int nDimNo, int nCatNo)" -->
+char *D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><b>RD5CategoryReadR1</b> (int nSumHandle, int nDimNo, int nCatNo)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#d8e9be94177808576f9a3be520252f93">RD5OverwriteRealExIntR1</a> (int nTableID, int nSetID, int nFilterID, int nWritePos, int nWriteData)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">データ(整数)を上書きします。  <a href="#d8e9be94177808576f9a3be520252f93"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#e9ec1d00bde72632993f33d016783633">RD5OverwriteRealExDblR1</a> (int nTableID, int nSetID, int nFilterID, int nWritePos, double dWriteData)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">データ(浮動少数)を上書きします。  <a href="#e9ec1d00bde72632993f33d016783633"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#e94eb987d502d6661d24723956973ee9">RD5OverwriteRealExNumericR1</a> (int nTableID, int nSetID, int nFilterID, int nWritePos, Numeric *pWriteData)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">データ(Numeric)を上書きします。  <a href="#e94eb987d502d6661d24723956973ee9"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#51f9e8339a2fc9e711079484212a26ec">RD5OverwriteRealExStrR1</a> (int nTableID, int nSetID, int nFilterID, int nWritePos, char *szWriteData)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">データ(文字列)を上書きします。  <a href="#51f9e8339a2fc9e711079484212a26ec"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#80d38516c1ccad876d32cc3b814e3cfc">RD5FillRealExIntR1</a> (int nTableID, int nSetID, int nFilterID, int nWriteStart, int nWriteCount, int nWriteData)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">データ(整数)を上書きします。  <a href="#80d38516c1ccad876d32cc3b814e3cfc"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#d6f8274e1208dddce7957aa6d78a61f8">RD5FillRealExDblR1</a> (int nTableID, int nSetID, int nFilterID, int nWriteStart, int nWriteCount, double dWriteData)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">データ(浮動少数)を上書きします。  <a href="#d6f8274e1208dddce7957aa6d78a61f8"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#9b4a3b18cdd29a2511a4d66779067fbb">RD5FillRealExNumericR1</a> (int nTableID, int nSetID, int nFilterID, int nWriteStart, int nWriteCount, Numeric *pWriteData)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">データ(Numeric)を上書きします。  <a href="#9b4a3b18cdd29a2511a4d66779067fbb"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#85927fc6786e1adc2602bfbe4c324126">RD5FillRealExStrR1</a> (int nTableID, int nSetID, int nFilterID, int nWriteStart, int nWriteCount, char *szWriteData)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">データ(文字列)を上書きします。  <a href="#85927fc6786e1adc2602bfbe4c324126"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#167005485574b56d9352116c65cfed3e">RD5GetData1Cnv2StrR1</a> (int nTableID, int nFilterID, int nSetID, int nRowNo)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">単一データを文字列に変換して取得します。  <a href="#167005485574b56d9352116c65cfed3e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#a4433ed3cd86fb32fe6a4c5edf5eaddb">RD5Double2DateStrR1</a> (double dData)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">浮動少数データを文字列(日付)に変換して取得します。  <a href="#a4433ed3cd86fb32fe6a4c5edf5eaddb"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#a2c7f12bcc1fa9712dea2ea36ce9d971">RD5Double2TimeStrR1</a> (double dData)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">浮動少数データを文字列(時刻)に変換して取得します。  <a href="#a2c7f12bcc1fa9712dea2ea36ce9d971"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#0204dd741e861a3de75cb2a102522f13">RD5Double2DateTimeStrR1</a> (double dData)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">浮動少数データを文字列(日付時刻)に変換して取得します。  <a href="#0204dd741e861a3de75cb2a102522f13"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#4e46916ad8f0e9bff13f82648dec22f4">RD5NumericNum2StrR1</a> (const Numeric *pNumeric, const NumericInfo *pNumericInfo, int nScale, int nPrec)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Numericデータを文字列に変換します。.  <a href="#4e46916ad8f0e9bff13f82648dec22f4"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">double D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#83c9851acabe68800118ae1a158a65e5">RD5Str2DateR1</a> (char *szData)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">文字列(日付)を浮動少数に変換して取得します。  <a href="#83c9851acabe68800118ae1a158a65e5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">double D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#b4da96ad9a58f632c1397a1694a744a2">RD5Str2TimeR1</a> (char *szData)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">文字列(時刻)を浮動少数に変換して取得します。  <a href="#b4da96ad9a58f632c1397a1694a744a2"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">double D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#8d03ee97720157dedc0f016691e4fa38">RD5Str2DateTimeR1</a> (char *szData)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">文字列(日付時刻)を浮動少数に変換して取得します。  <a href="#8d03ee97720157dedc0f016691e4fa38"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#a0f5e0ec617701ecdb63be686952c1a2">RD5GetData1MIntR1</a> (int nTableID, int nFilterID, int nSetID, int nRowNo, int *pnGotCount, int *pnBuf)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">複数データ(整数)を取得します。  <a href="#a0f5e0ec617701ecdb63be686952c1a2"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#b40342ee780755ce27c1c8e5734ee776">RD5GetData1MDblR1</a> (int nTableID, int nFilterID, int nSetID, int nRowNo, int *pnGotCount, double *pdBuf)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">複数データ(浮動少数)を取得します。  <a href="#b40342ee780755ce27c1c8e5734ee776"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#5a9dc1ee3b58a40af3997f6a6bb02c42">RD5GetData1MNumericR1</a> (int nTableID, int nFilterID, int nSetID, int nRowNo, int *pnGotCount, Numeric *pNumericBuf)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">複数データ(Numeric)を取得します。  <a href="#5a9dc1ee3b58a40af3997f6a6bb02c42"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#29cb25895ed18c9602ec909369354cfc">RD5GetData1MStrR1</a> (int nTableID, int nFilterID, int nSetID, int nRowNo, int *pnGotCount, int *pnOffset, void *pvBuf)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">複数データ(文字列)を取得します。  <a href="#29cb25895ed18c9602ec909369354cfc"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#21f3d1839536215481f5b8baa09aa5e4">RD5GetSetNameR1</a> (int nTableID, int nSetID)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セット名称を取得します。  <a href="#21f3d1839536215481f5b8baa09aa5e4"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="cb00929ebc7dbdb6b2fb8edf8329601e"></a><!-- doxytag: member="rdi5apiext.h::RD5GetJoinInfoR1" ref="cb00929ebc7dbdb6b2fb8edf8329601e" args="(int nTableID, int *pnMasterTableID, int *pnMasterSetID, int *pnMasterFilterID, int *pnSlaveTableID, int *pnSlaveSetID, int *pnSlaveFilterID)" -->
+int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><b>RD5GetJoinInfoR1</b> (int nTableID, int *pnMasterTableID, int *pnMasterSetID, int *pnMasterFilterID, int *pnSlaveTableID, int *pnSlaveSetID, int *pnSlaveFilterID)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdi5apiext_8h.html#8d4726bca5bf4dda744d977687f47a5f">RD5GetJoinInfoExR1</a> (int nTableID, int *pnIsOuter, int *pnJoinKeyCount, int *pnMasterTableID, int *pnMasterSetID, int anMasterFilterIDs[D5_MAX_JOIN_KEY], int *pnSlaveTableID, int *pnSlaveSetID, int anSlaveFilterIDs[D5_MAX_JOIN_KEY])</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">JOINテーブルの情報を取得します。.  <a href="#8d4726bca5bf4dda744d977687f47a5f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="e5cd27d1b6daef1d3c7b892180f8eb1c"></a><!-- doxytag: member="rdi5apiext.h::RD5Connect2LFMServer" ref="e5cd27d1b6daef1d3c7b892180f8eb1c" args="(int nOpt, char *szIdentity)" -->
+int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><b>RD5Connect2LFMServer</b> (int nOpt, char *szIdentity)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="13e595a81546595c9694d0cf769bd019"></a><!-- doxytag: member="rdi5apiext.h::RD5DisconnectFromLFMServer" ref="13e595a81546595c9694d0cf769bd019" args="()" -->
+int D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><b>RD5DisconnectFromLFMServer</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="fa7b6da10c26cf12c8bdfd78005719cb"></a><!-- doxytag: member="rdi5apiext.h::RD5GetNamingServiceIdentity" ref="fa7b6da10c26cf12c8bdfd78005719cb" args="()" -->
+char *D5APICALL&nbsp;</td><td class="memItemRight" valign="bottom"><b>RD5GetNamingServiceIdentity</b> ()</td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>説明</h2>
+LFMテーブル拡張API. 
+<p>
+(C)2009 Turbo Data Laboratories, Inc. <hr><h2>関数</h2>
+<a class="anchor" name="a4433ed3cd86fb32fe6a4c5edf5eaddb"></a><!-- doxytag: member="rdi5apiext.h::RD5Double2DateStrR1" ref="a4433ed3cd86fb32fe6a4c5edf5eaddb" args="(double dData)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* D5APICALL RD5Double2DateStrR1           </td>
+          <td>(</td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>dData</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+浮動少数データを文字列(日付)に変換して取得します。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>dData</em>&nbsp;</td><td>浮動少数データ </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>変換後の文字列</em>&nbsp;</td><td></td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="0204dd741e861a3de75cb2a102522f13"></a><!-- doxytag: member="rdi5apiext.h::RD5Double2DateTimeStrR1" ref="0204dd741e861a3de75cb2a102522f13" args="(double dData)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* D5APICALL RD5Double2DateTimeStrR1           </td>
+          <td>(</td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>dData</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+浮動少数データを文字列(日付時刻)に変換して取得します。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>dData</em>&nbsp;</td><td>浮動少数データ </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>変換後の文字列</em>&nbsp;</td><td></td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a2c7f12bcc1fa9712dea2ea36ce9d971"></a><!-- doxytag: member="rdi5apiext.h::RD5Double2TimeStrR1" ref="a2c7f12bcc1fa9712dea2ea36ce9d971" args="(double dData)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* D5APICALL RD5Double2TimeStrR1           </td>
+          <td>(</td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>dData</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+浮動少数データを文字列(時刻)に変換して取得します。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>dData</em>&nbsp;</td><td>浮動少数データ </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>変換後の文字列</em>&nbsp;</td><td></td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d6f8274e1208dddce7957aa6d78a61f8"></a><!-- doxytag: member="rdi5apiext.h::RD5FillRealExDblR1" ref="d6f8274e1208dddce7957aa6d78a61f8" args="(int nTableID, int nSetID, int nFilterID, int nWriteStart, int nWriteCount, double dWriteData)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int D5APICALL RD5FillRealExDblR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nSetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nFilterID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nWriteStart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nWriteCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>dWriteData</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+データ(浮動少数)を上書きします。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>テーブルID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nSetID</em>&nbsp;</td><td>セットID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nFilterID</em>&nbsp;</td><td>項目ID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nWriteStart</em>&nbsp;</td><td>書き込み開始位置 </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nWriteCount</em>&nbsp;</td><td>書き込み数 </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>dWriteData</em>&nbsp;</td><td>書き込みデータ </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>0以上</em>&nbsp;</td><td>書き込みに成功したデータ数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>負</em>&nbsp;</td><td>エラーコード</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="80d38516c1ccad876d32cc3b814e3cfc"></a><!-- doxytag: member="rdi5apiext.h::RD5FillRealExIntR1" ref="80d38516c1ccad876d32cc3b814e3cfc" args="(int nTableID, int nSetID, int nFilterID, int nWriteStart, int nWriteCount, int nWriteData)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int D5APICALL RD5FillRealExIntR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nSetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nFilterID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nWriteStart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nWriteCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nWriteData</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+データ(整数)を上書きします。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>テーブルID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nSetID</em>&nbsp;</td><td>セットID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nFilterID</em>&nbsp;</td><td>項目ID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nWriteStart</em>&nbsp;</td><td>書き込み開始位置 </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nWriteCount</em>&nbsp;</td><td>書き込み数 </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nWriteData</em>&nbsp;</td><td>書き込みデータ </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>0以上</em>&nbsp;</td><td>書き込みに成功したデータ数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>負</em>&nbsp;</td><td>エラーコード</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="9b4a3b18cdd29a2511a4d66779067fbb"></a><!-- doxytag: member="rdi5apiext.h::RD5FillRealExNumericR1" ref="9b4a3b18cdd29a2511a4d66779067fbb" args="(int nTableID, int nSetID, int nFilterID, int nWriteStart, int nWriteCount, Numeric *pWriteData)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int D5APICALL RD5FillRealExNumericR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nSetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nFilterID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nWriteStart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nWriteCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Numeric *&nbsp;</td>
+          <td class="paramname"> <em>pWriteData</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+データ(Numeric)を上書きします。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>テーブルID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nSetID</em>&nbsp;</td><td>セットID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nFilterID</em>&nbsp;</td><td>項目ID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nWriteStart</em>&nbsp;</td><td>書き込み開始位置 </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nWriteCount</em>&nbsp;</td><td>書き込み数 </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>pWriteData</em>&nbsp;</td><td>書き込みデータ </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>0以上</em>&nbsp;</td><td>書き込みに成功したデータ数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>負</em>&nbsp;</td><td>エラーコード</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>pWriteDataは、lfmutilの<a class="el" href="class_c_numeric.html">CNumeric</a>を使用してポインタを指定してください。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="85927fc6786e1adc2602bfbe4c324126"></a><!-- doxytag: member="rdi5apiext.h::RD5FillRealExStrR1" ref="85927fc6786e1adc2602bfbe4c324126" args="(int nTableID, int nSetID, int nFilterID, int nWriteStart, int nWriteCount, char *szWriteData)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int D5APICALL RD5FillRealExStrR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nSetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nFilterID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nWriteStart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nWriteCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>szWriteData</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+データ(文字列)を上書きします。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>テーブルID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nSetID</em>&nbsp;</td><td>セットID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nFilterID</em>&nbsp;</td><td>項目ID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nWriteStart</em>&nbsp;</td><td>書き込み開始位置 </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nWriteCount</em>&nbsp;</td><td>書き込み数 </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>szWriteData</em>&nbsp;</td><td>書き込みデータ </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>0以上</em>&nbsp;</td><td>書き込みに成功したデータ数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>負</em>&nbsp;</td><td>エラーコード</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="5c487ce8ea31869b362c5c1c98bc142c"></a><!-- doxytag: member="rdi5apiext.h::RD5GenerateTableNameR1" ref="5c487ce8ea31869b362c5c1c98bc142c" args="(char *szSeedName)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* D5APICALL RD5GenerateTableNameR1           </td>
+          <td>(</td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>szSeedName</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+登録可能なテーブル名称を生成します。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>szSeedName</em>&nbsp;</td><td>生成されるテーブル名称の元となる文字列 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>登録可能なテーブル名称</em>&nbsp;</td><td></td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="04e0ee4046dc9a3fcd6c73b4e58222f7"></a><!-- doxytag: member="rdi5apiext.h::RD5GetCopyRightR1" ref="04e0ee4046dc9a3fcd6c73b4e58222f7" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* D5APICALL RD5GetCopyRightR1           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+コピーライトメッセージを取得します。 
+<p>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>コピーライトメッセージ</em>&nbsp;</td><td></td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="167005485574b56d9352116c65cfed3e"></a><!-- doxytag: member="rdi5apiext.h::RD5GetData1Cnv2StrR1" ref="167005485574b56d9352116c65cfed3e" args="(int nTableID, int nFilterID, int nSetID, int nRowNo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* D5APICALL RD5GetData1Cnv2StrR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nFilterID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nSetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nRowNo</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+単一データを文字列に変換して取得します。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>テーブルID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nFilterID</em>&nbsp;</td><td>項目ID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nSetID</em>&nbsp;</td><td>セットID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nRowNo</em>&nbsp;</td><td>セット内順序番号 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>取得したデータ</em>&nbsp;</td><td></td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="72cec716385057d9159c1ac791e72d35"></a><!-- doxytag: member="rdi5apiext.h::RD5GetData1DblR1" ref="72cec716385057d9159c1ac791e72d35" args="(int nTableID, int nFilterID, int nSetID, int nRowNo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double D5APICALL RD5GetData1DblR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nFilterID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nSetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nRowNo</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+単一データ(浮動少数)を取得します。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>テーブルID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nFilterID</em>&nbsp;</td><td>項目ID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nSetID</em>&nbsp;</td><td>セットID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nRowNo</em>&nbsp;</td><td>セット内順序番号 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>取得したデータ</em>&nbsp;</td><td></td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e9c16ab07c192c13dbc386fd4eb67eab"></a><!-- doxytag: member="rdi5apiext.h::RD5GetData1IntR1" ref="e9c16ab07c192c13dbc386fd4eb67eab" args="(int nTableID, int nFilterID, int nSetID, int nRowNo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int D5APICALL RD5GetData1IntR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nFilterID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nSetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nRowNo</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+単一データ(整数)を取得します。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>テーブルID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nFilterID</em>&nbsp;</td><td>項目ID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nSetID</em>&nbsp;</td><td>セットID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nRowNo</em>&nbsp;</td><td>セット内順序番号 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>取得したデータ</em>&nbsp;</td><td></td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="b40342ee780755ce27c1c8e5734ee776"></a><!-- doxytag: member="rdi5apiext.h::RD5GetData1MDblR1" ref="b40342ee780755ce27c1c8e5734ee776" args="(int nTableID, int nFilterID, int nSetID, int nRowNo, int *pnGotCount, double *pdBuf)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int D5APICALL RD5GetData1MDblR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nFilterID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nSetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nRowNo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>pnGotCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&nbsp;</td>
+          <td class="paramname"> <em>pdBuf</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+複数データ(浮動少数)を取得します。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>テーブルID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nFilterID</em>&nbsp;</td><td>項目ID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nSetID</em>&nbsp;</td><td>セットID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nRowNo</em>&nbsp;</td><td>セット内順序番号 </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>pnGotCount</em>&nbsp;</td><td>取得したデータ数 </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>pdBuf</em>&nbsp;</td><td>取得したデータ格納領域へのポインタ </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>0以上</em>&nbsp;</td><td>取得した行のうち、単一で最大のデータサイズ(byte) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>負</em>&nbsp;</td><td>エラーコード</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>pnGotCountは、lfmutilの<a class="el" href="class_c_type_int_ar.html">CTypeIntAr</a>を使用してポインタを指定してください。 pdBufは、lfmutilの<a class="el" href="class_c_type_dbl_ar.html">CTypeDblAr</a>を使用してポインタを指定してください。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a0f5e0ec617701ecdb63be686952c1a2"></a><!-- doxytag: member="rdi5apiext.h::RD5GetData1MIntR1" ref="a0f5e0ec617701ecdb63be686952c1a2" args="(int nTableID, int nFilterID, int nSetID, int nRowNo, int *pnGotCount, int *pnBuf)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int D5APICALL RD5GetData1MIntR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nFilterID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nSetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nRowNo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>pnGotCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>pnBuf</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+複数データ(整数)を取得します。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>テーブルID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nFilterID</em>&nbsp;</td><td>項目ID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nSetID</em>&nbsp;</td><td>セットID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nRowNo</em>&nbsp;</td><td>セット内順序番号 </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>pnGotCount</em>&nbsp;</td><td>取得したデータ数 </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>pnBuf</em>&nbsp;</td><td>取得したデータ格納領域へのポインタ </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>0以上</em>&nbsp;</td><td>取得した行のうち、単一で最大のデータサイズ(byte) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>負</em>&nbsp;</td><td>エラーコード</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>pnGotCount,pnBufは、lfmutilの<a class="el" href="class_c_type_int_ar.html">CTypeIntAr</a>を使用してポインタを指定してください。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="5a9dc1ee3b58a40af3997f6a6bb02c42"></a><!-- doxytag: member="rdi5apiext.h::RD5GetData1MNumericR1" ref="5a9dc1ee3b58a40af3997f6a6bb02c42" args="(int nTableID, int nFilterID, int nSetID, int nRowNo, int *pnGotCount, Numeric *pNumericBuf)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int D5APICALL RD5GetData1MNumericR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nFilterID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nSetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nRowNo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>pnGotCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Numeric *&nbsp;</td>
+          <td class="paramname"> <em>pNumericBuf</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+複数データ(Numeric)を取得します。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>テーブルID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nFilterID</em>&nbsp;</td><td>項目ID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nSetID</em>&nbsp;</td><td>セットID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nRowNo</em>&nbsp;</td><td>セット内順序番号 </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>pnGotCount</em>&nbsp;</td><td>取得したデータ数 </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>pNumericBuf</em>&nbsp;</td><td>取得したデータ格納領域へのポインタ </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>0以上</em>&nbsp;</td><td>取得した行のうち、単一で最大のデータサイズ(byte) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>負</em>&nbsp;</td><td>エラーコード</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>pnGotCountは、lfmutilの<a class="el" href="class_c_type_int_ar.html">CTypeIntAr</a>を使用してポインタを指定してください。 pNumericBufは、lfmutilの<a class="el" href="class_c_type_num_ar.html">CTypeNumAr</a>を使用してポインタを指定してください。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="29cb25895ed18c9602ec909369354cfc"></a><!-- doxytag: member="rdi5apiext.h::RD5GetData1MStrR1" ref="29cb25895ed18c9602ec909369354cfc" args="(int nTableID, int nFilterID, int nSetID, int nRowNo, int *pnGotCount, int *pnOffset, void *pvBuf)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int D5APICALL RD5GetData1MStrR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nFilterID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nSetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nRowNo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>pnGotCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>pnOffset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>pvBuf</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+複数データ(文字列)を取得します。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>テーブルID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nFilterID</em>&nbsp;</td><td>項目ID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nSetID</em>&nbsp;</td><td>セットID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nRowNo</em>&nbsp;</td><td>セット内順序番号 </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>pnGotCount</em>&nbsp;</td><td>取得したデータ数 </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>pnOffset</em>&nbsp;</td><td>buf内での単一データの開始位置(4バイト)の配列 </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>pvBuf</em>&nbsp;</td><td>取得したデータ格納領域へのポインタ </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>0以上</em>&nbsp;</td><td>NULL終端を含まない最終行のデータサイズ(byte) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>負</em>&nbsp;</td><td>エラーコード</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>pnGotCountは、lfmutilの<a class="el" href="class_c_type_int_ar.html">CTypeIntAr</a>を使用してポインタを指定してください。 pnOffsetは、lfmutilの<a class="el" href="class_c_type_int_ar.html">CTypeIntAr</a>を使用してポインタを指定してください。 pvBufは、lfmutilの<a class="el" href="class_c_type_char_ar.html">CTypeCharAr</a>を使用してポインタを指定してください。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="63680b3b4989f54abd1a8fe898d7341a"></a><!-- doxytag: member="rdi5apiext.h::RD5GetData1NumericR1" ref="63680b3b4989f54abd1a8fe898d7341a" args="(int nTableID, int nFilterID, int nSetID, int nRowNo, Numeric *pNumeric)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int D5APICALL RD5GetData1NumericR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nFilterID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nSetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nRowNo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Numeric *&nbsp;</td>
+          <td class="paramname"> <em>pNumeric</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+単一データ(Numeric)を取得します。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>テーブルID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nFilterID</em>&nbsp;</td><td>項目ID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nSetID</em>&nbsp;</td><td>セットID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nRowNo</em>&nbsp;</td><td>セット内順序番号 </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>pNumeric</em>&nbsp;</td><td>取得したデータ </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>0</em>&nbsp;</td><td>成功 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>負</em>&nbsp;</td><td>エラーコード</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>pNumericは、lfmutilの<a class="el" href="class_c_numeric.html">CNumeric</a>を使用してポインタを指定してください。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="617bc24270ec8fd8d659397f2f72244a"></a><!-- doxytag: member="rdi5apiext.h::RD5GetData1StrR1" ref="617bc24270ec8fd8d659397f2f72244a" args="(int nTableID, int nFilterID, int nSetID, int nRowNo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* D5APICALL RD5GetData1StrR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nFilterID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nSetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nRowNo</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+単一データ(文字列)を取得します。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>テーブルID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nFilterID</em>&nbsp;</td><td>項目ID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nSetID</em>&nbsp;</td><td>セットID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nRowNo</em>&nbsp;</td><td>セット内順序番号 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>取得したデータ</em>&nbsp;</td><td></td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="2394da290564b2e47eae47f82887712f"></a><!-- doxytag: member="rdi5apiext.h::RD5GetDBNameR1" ref="2394da290564b2e47eae47f82887712f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* D5APICALL RD5GetDBNameR1           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+ワークスペースの名称を取得します。 
+<p>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>ワークスペースの名称</em>&nbsp;</td><td></td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="0126441f47d9abba32f3721794f84219"></a><!-- doxytag: member="rdi5apiext.h::RD5GetDBPathR1" ref="0126441f47d9abba32f3721794f84219" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* D5APICALL RD5GetDBPathR1           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+ワークスペースのパスを取得します。 
+<p>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>ワークスペースのパス</em>&nbsp;</td><td></td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="4c9e7208cd226efb0449f4581eb9c017"></a><!-- doxytag: member="rdi5apiext.h::RD5GetFilterNameR1" ref="4c9e7208cd226efb0449f4581eb9c017" args="(int nTableID, int nFilterID)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* D5APICALL RD5GetFilterNameR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nFilterID</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+項目IDから項目名称を取得します。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>テーブルID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nFilterID</em>&nbsp;</td><td>項目ID </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>項目名称</em>&nbsp;</td><td></td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="8d4726bca5bf4dda744d977687f47a5f"></a><!-- doxytag: member="rdi5apiext.h::RD5GetJoinInfoExR1" ref="8d4726bca5bf4dda744d977687f47a5f" args="(int nTableID, int *pnIsOuter, int *pnJoinKeyCount, int *pnMasterTableID, int *pnMasterSetID, int anMasterFilterIDs[D5_MAX_JOIN_KEY], int *pnSlaveTableID, int *pnSlaveSetID, int anSlaveFilterIDs[D5_MAX_JOIN_KEY])" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int D5APICALL RD5GetJoinInfoExR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>pnIsOuter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>pnJoinKeyCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>pnMasterTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>pnMasterSetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>anMasterFilterIDs</em>[D5_MAX_JOIN_KEY], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>pnSlaveTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>pnSlaveSetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>anSlaveFilterIDs</em>[D5_MAX_JOIN_KEY]</td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+JOINテーブルの情報を取得します。. 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>情報を取得するJOINテーブルID </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>pnIsOuter</em>&nbsp;</td><td>JOINテーブルの種類 </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>pnJoinKeyCount</em>&nbsp;</td><td>JOINキーの数 </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>pnMasterTableID</em>&nbsp;</td><td>マスタテーブルID </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>pnMasterSetID</em>&nbsp;</td><td>マスタテーブルセットID </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>anMasterFilterIDs</em>&nbsp;</td><td>マスタテーブルのJOINキーの一覧 </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>pnSlaveTableID</em>&nbsp;</td><td>スレーブテーブルID </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>pnSlaveSetID</em>&nbsp;</td><td>スレーブテーブルセットID </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>anSlaveFilterIDs</em>&nbsp;</td><td>スレーブテーブルのJOINキーの一覧 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>0</em>&nbsp;</td><td>成功 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>負</em>&nbsp;</td><td>エラーコード</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>pnIsOuter,pnJoinKeyCount,pnMasterTableID,pnMasterSetID,anMasterFilterIDs,pnSlaveTableID,pnSlaveSetID,anSlaveFilterIDsは、 lfmutilの<a class="el" href="class_c_type_int_ar.html">CTypeIntAr</a>を使用してポインタを指定してください。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="b975a1dde4e587088995631faaf8450d"></a><!-- doxytag: member="rdi5apiext.h::RD5GetNumericInfoR1" ref="b975a1dde4e587088995631faaf8450d" args="(int nTableID, int nFilterID, NumericInfo *pNumericInfo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int D5APICALL RD5GetNumericInfoR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nFilterID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">NumericInfo *&nbsp;</td>
+          <td class="paramname"> <em>pNumericInfo</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+NUMERIC項目情報を取得します。. 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>テーブルID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nFilterID</em>&nbsp;</td><td>フィルタID </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>pNumericInfo</em>&nbsp;</td><td>NUMERIC項目情報 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>0</em>&nbsp;</td><td>成功 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>負</em>&nbsp;</td><td>エラーコード</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>pNumericInfoは、lfmutilの<a class="el" href="class_c_numeric_info.html">CNumericInfo</a>を使用してポインタを指定してください。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="21f3d1839536215481f5b8baa09aa5e4"></a><!-- doxytag: member="rdi5apiext.h::RD5GetSetNameR1" ref="21f3d1839536215481f5b8baa09aa5e4" args="(int nTableID, int nSetID)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* D5APICALL RD5GetSetNameR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nSetID</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+セット名称を取得します。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>セットの属するテーブルID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nSetID</em>&nbsp;</td><td>セットID </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>セット名称</em>&nbsp;</td><td></td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d2403b6a6c699fc8c3f352bbda3a9eab"></a><!-- doxytag: member="rdi5apiext.h::RD5GetTableNameR1" ref="d2403b6a6c699fc8c3f352bbda3a9eab" args="(int nTableID)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* D5APICALL RD5GetTableNameR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+テーブル名称を取得します。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>テーブルID </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>テーブル名称</em>&nbsp;</td><td></td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="411d6d23c42c2ba4f7cc1b624c59e123"></a><!-- doxytag: member="rdi5apiext.h::RD5GetVersionR1" ref="411d6d23c42c2ba4f7cc1b624c59e123" args="(int *anVersion)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int D5APICALL RD5GetVersionR1           </td>
+          <td>(</td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>anVersion</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+バージョン情報を取得します。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>anVersion</em>&nbsp;</td><td>バージョン配列 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>0</em>&nbsp;</td><td>常に0</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>anVersionは、lfmutilの<a class="el" href="class_c_type_int_ar.html">CTypeIntAr</a>を使用してポインタを指定してください。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="4e46916ad8f0e9bff13f82648dec22f4"></a><!-- doxytag: member="rdi5apiext.h::RD5NumericNum2StrR1" ref="4e46916ad8f0e9bff13f82648dec22f4" args="(const Numeric *pNumeric, const NumericInfo *pNumericInfo, int nScale, int nPrec)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* D5APICALL RD5NumericNum2StrR1           </td>
+          <td>(</td>
+          <td class="paramtype">const Numeric *&nbsp;</td>
+          <td class="paramname"> <em>pNumeric</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const NumericInfo *&nbsp;</td>
+          <td class="paramname"> <em>pNumericInfo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nScale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nPrec</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Numericデータを文字列に変換します。. 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>pNumeric</em>&nbsp;</td><td>Numericデータ </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>pNumericInfo</em>&nbsp;</td><td>Numeric項目情報 </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nScale</em>&nbsp;</td><td>スケール（小数点以下桁数） </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nPrec</em>&nbsp;</td><td>精度 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>変換後の文字列</em>&nbsp;</td><td></td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>pNumericは、lfmutilの<a class="el" href="class_c_numeric.html">CNumeric</a>を使用してポインタを指定してください。 pNumericInfoは、lfmutilの<a class="el" href="class_c_numeric_info.html">CNumericInfo</a>を使用してポインタを指定してください。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e9ec1d00bde72632993f33d016783633"></a><!-- doxytag: member="rdi5apiext.h::RD5OverwriteRealExDblR1" ref="e9ec1d00bde72632993f33d016783633" args="(int nTableID, int nSetID, int nFilterID, int nWritePos, double dWriteData)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int D5APICALL RD5OverwriteRealExDblR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nSetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nFilterID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nWritePos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>dWriteData</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+データ(浮動少数)を上書きします。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>テーブルID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nSetID</em>&nbsp;</td><td>セットID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nFilterID</em>&nbsp;</td><td>項目ID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nWritePos</em>&nbsp;</td><td>書き込み位置 </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>dWriteData</em>&nbsp;</td><td>書き込みデータ </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>0以上</em>&nbsp;</td><td>書き込みに成功したデータ数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>負</em>&nbsp;</td><td>エラーコード</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d8e9be94177808576f9a3be520252f93"></a><!-- doxytag: member="rdi5apiext.h::RD5OverwriteRealExIntR1" ref="d8e9be94177808576f9a3be520252f93" args="(int nTableID, int nSetID, int nFilterID, int nWritePos, int nWriteData)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int D5APICALL RD5OverwriteRealExIntR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nSetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nFilterID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nWritePos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nWriteData</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+データ(整数)を上書きします。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>テーブルID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nSetID</em>&nbsp;</td><td>セットID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nFilterID</em>&nbsp;</td><td>項目ID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nWritePos</em>&nbsp;</td><td>書き込み位置 </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nWriteData</em>&nbsp;</td><td>書き込みデータ </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>0以上</em>&nbsp;</td><td>書き込みに成功したデータ数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>負</em>&nbsp;</td><td>エラーコード</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e94eb987d502d6661d24723956973ee9"></a><!-- doxytag: member="rdi5apiext.h::RD5OverwriteRealExNumericR1" ref="e94eb987d502d6661d24723956973ee9" args="(int nTableID, int nSetID, int nFilterID, int nWritePos, Numeric *pWriteData)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int D5APICALL RD5OverwriteRealExNumericR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nSetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nFilterID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nWritePos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Numeric *&nbsp;</td>
+          <td class="paramname"> <em>pWriteData</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+データ(Numeric)を上書きします。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>テーブルID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nSetID</em>&nbsp;</td><td>セットID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nFilterID</em>&nbsp;</td><td>項目ID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nWritePos</em>&nbsp;</td><td>書き込み位置 </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>pWriteData</em>&nbsp;</td><td>書き込みデータ </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>0以上</em>&nbsp;</td><td>書き込みに成功したデータ数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>負</em>&nbsp;</td><td>エラーコード</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>pWriteDataは、lfmutilの<a class="el" href="class_c_numeric.html">CNumeric</a>を使用してポインタを指定してください。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="51f9e8339a2fc9e711079484212a26ec"></a><!-- doxytag: member="rdi5apiext.h::RD5OverwriteRealExStrR1" ref="51f9e8339a2fc9e711079484212a26ec" args="(int nTableID, int nSetID, int nFilterID, int nWritePos, char *szWriteData)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int D5APICALL RD5OverwriteRealExStrR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nSetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nFilterID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nWritePos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>szWriteData</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+データ(文字列)を上書きします。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>テーブルID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nSetID</em>&nbsp;</td><td>セットID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nFilterID</em>&nbsp;</td><td>項目ID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nWritePos</em>&nbsp;</td><td>書き込み位置 </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>szWriteData</em>&nbsp;</td><td>書き込みデータ </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>0以上</em>&nbsp;</td><td>書き込みに成功したデータ数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>負</em>&nbsp;</td><td>エラーコード</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="3e3c6e5c6a8117fbd8b0ad6d76fedca2"></a><!-- doxytag: member="rdi5apiext.h::RD5SearchByFieldDblR1" ref="3e3c6e5c6a8117fbd8b0ad6d76fedca2" args="(int nTableID, int nFilterID, int nSetID, int nOpeNo, double dX, double dY)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int D5APICALL RD5SearchByFieldDblR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nFilterID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nSetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nOpeNo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>dX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>dY</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定した項目(浮動少数)のデータによる検索を行います。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>テーブルID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nFilterID</em>&nbsp;</td><td>項目ID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nSetID</em>&nbsp;</td><td>セットID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nOpeNo</em>&nbsp;</td><td>検索条件式 </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>dX</em>&nbsp;</td><td>1番目の検索条件データ </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>dY</em>&nbsp;</td><td>2番目の検索条件データ </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>0</em>&nbsp;</td><td>成功 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>負</em>&nbsp;</td><td>エラーコード</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="426ff2674c4c3ab1073048f0a74e899d"></a><!-- doxytag: member="rdi5apiext.h::RD5SearchByFieldIntR1" ref="426ff2674c4c3ab1073048f0a74e899d" args="(int nTableID, int nFilterID, int nSetID, int nOpeNo, int nX, int nY)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int D5APICALL RD5SearchByFieldIntR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nFilterID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nSetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nOpeNo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nY</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定した項目(整数)のデータによる検索を行います。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>テーブルID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nFilterID</em>&nbsp;</td><td>項目ID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nSetID</em>&nbsp;</td><td>セットID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nOpeNo</em>&nbsp;</td><td>検索条件式 </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nX</em>&nbsp;</td><td>1番目の検索条件データ </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nY</em>&nbsp;</td><td>2番目の検索条件データ </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>0</em>&nbsp;</td><td>成功 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>負</em>&nbsp;</td><td>エラーコード</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="b64a2e51965cfd0709da878002b3c69d"></a><!-- doxytag: member="rdi5apiext.h::RD5SearchByFieldLocaleR1" ref="b64a2e51965cfd0709da878002b3c69d" args="(int nTableID, int nFilterID, int nSetID, int nOpeNo, char *szX, char *szY, int nLocaleID)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int D5APICALL RD5SearchByFieldLocaleR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nFilterID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nSetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nOpeNo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>szX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>szY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nLocaleID</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定した項目の、マルチバイト文字コードを使った検索を行います。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>テーブルID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nFilterID</em>&nbsp;</td><td>項目ID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nSetID</em>&nbsp;</td><td>セットID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nOpeNo</em>&nbsp;</td><td>検索条件式 </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>szX</em>&nbsp;</td><td>1番目の検索条件データ </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>szY</em>&nbsp;</td><td>2番目の検索条件データ </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nLocaleID</em>&nbsp;</td><td>文字コードID </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>1以上</em>&nbsp;</td><td>検索結果で新規に生成されたセットID </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>負</em>&nbsp;</td><td>エラーコード</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="6ede90bbf319aa69cc7c6c8e1f8392e9"></a><!-- doxytag: member="rdi5apiext.h::RD5SearchByFieldNumericR1" ref="6ede90bbf319aa69cc7c6c8e1f8392e9" args="(int nTableID, int nFilterID, int nSetID, int nOpeNo, Numeric *pNumericX, Numeric *pNumericY)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int D5APICALL RD5SearchByFieldNumericR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nFilterID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nSetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nOpeNo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Numeric *&nbsp;</td>
+          <td class="paramname"> <em>pNumericX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Numeric *&nbsp;</td>
+          <td class="paramname"> <em>pNumericY</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定した項目(Numeric)のデータによる検索を行います。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>テーブルID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nFilterID</em>&nbsp;</td><td>項目ID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nSetID</em>&nbsp;</td><td>セットID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nOpeNo</em>&nbsp;</td><td>検索条件式 </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>pNumericX</em>&nbsp;</td><td>1番目の検索条件データ </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>pNumericY</em>&nbsp;</td><td>2番目の検索条件データ </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>0</em>&nbsp;</td><td>成功 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>負</em>&nbsp;</td><td>エラーコード</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>pcX,pcYは、lfmutilの<a class="el" href="class_c_numeric.html">CNumeric</a>を使用してポインタを指定してください。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="b20d561bc4692cc086f565697d39a829"></a><!-- doxytag: member="rdi5apiext.h::RD5SearchByFieldSJISR1" ref="b20d561bc4692cc086f565697d39a829" args="(int nTableID, int nFilterID, int nSetID, int nOpeNo, char *szX, char *szY)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int D5APICALL RD5SearchByFieldSJISR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nFilterID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nSetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nOpeNo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>szX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>szY</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定した項目の、マルチバイト文字コードを使った検索を行います。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>テーブルID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nFilterID</em>&nbsp;</td><td>項目ID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nSetID</em>&nbsp;</td><td>セットID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nOpeNo</em>&nbsp;</td><td>検索条件式 </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>szX</em>&nbsp;</td><td>1番目の検索条件データ </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>szY</em>&nbsp;</td><td>2番目の検索条件データ </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>1以上</em>&nbsp;</td><td>検索結果で新規に生成されたセットID </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>負</em>&nbsp;</td><td>エラーコード</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="0eb54db41e69ee463d2f624f6c6b0de4"></a><!-- doxytag: member="rdi5apiext.h::RD5SearchByFieldStrR1" ref="0eb54db41e69ee463d2f624f6c6b0de4" args="(int nTableID, int nFilterID, int nSetID, int nOpeNo, char *szX, char *szY)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int D5APICALL RD5SearchByFieldStrR1           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nTableID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nFilterID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nSetID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nOpeNo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>szX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>szY</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定した項目(文字列)のデータによる検索を行います。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nTableID</em>&nbsp;</td><td>テーブルID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nFilterID</em>&nbsp;</td><td>項目ID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nSetID</em>&nbsp;</td><td>セットID </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>nOpeNo</em>&nbsp;</td><td>検索条件式 </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>szX</em>&nbsp;</td><td>1番目の検索条件データ </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>szY</em>&nbsp;</td><td>2番目の検索条件データ </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>0</em>&nbsp;</td><td>成功 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>負</em>&nbsp;</td><td>エラーコード</td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="83c9851acabe68800118ae1a158a65e5"></a><!-- doxytag: member="rdi5apiext.h::RD5Str2DateR1" ref="83c9851acabe68800118ae1a158a65e5" args="(char *szData)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double D5APICALL RD5Str2DateR1           </td>
+          <td>(</td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>szData</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+文字列(日付)を浮動少数に変換して取得します。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>szData</em>&nbsp;</td><td>文字列データ </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>変換後の浮動少数データ</em>&nbsp;</td><td></td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="8d03ee97720157dedc0f016691e4fa38"></a><!-- doxytag: member="rdi5apiext.h::RD5Str2DateTimeR1" ref="8d03ee97720157dedc0f016691e4fa38" args="(char *szData)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double D5APICALL RD5Str2DateTimeR1           </td>
+          <td>(</td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>szData</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+文字列(日付時刻)を浮動少数に変換して取得します。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>szData</em>&nbsp;</td><td>文字列データ </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>変換後の浮動少数データ</em>&nbsp;</td><td></td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="b4da96ad9a58f632c1397a1694a744a2"></a><!-- doxytag: member="rdi5apiext.h::RD5Str2TimeR1" ref="b4da96ad9a58f632c1397a1694a744a2" args="(char *szData)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double D5APICALL RD5Str2TimeR1           </td>
+          <td>(</td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>szData</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+文字列(時刻)を浮動少数に変換して取得します。 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>szData</em>&nbsp;</td><td>文字列データ </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>変換後の浮動少数データ</em>&nbsp;</td><td></td></tr>
+  </table>
+</dl>
+<dl class="user" compact><dt><b>スクリプト言語から使用する際の注意事項:</b></dt><dd>特になし </dd></dl>
+
+</div>
+</div><p>
+</div>
+<hr size="1"><address style="text-align: right;"><small>LFM APIに対してTue Jun 30 09:34:28 2009に生成されました。&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

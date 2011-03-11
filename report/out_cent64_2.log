@@ -1,0 +1,19 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x000000364407950e, pid=4764, tid=1082566976
+#
+# JRE version: 6.0_23-b05
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (19.0-b09 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [libc.so.6+0x7950e]  strcpy+0x4e
+#
+# An error report file with more information is saved as:
+# /opt/dist/hs_err_pid4764.log
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+./run.sh: line 4:  4764 アボートしました$JAVA_HOME -cp '.:./*' groovy.ui.GroovyMain runtest.groovy

@@ -1,0 +1,10 @@
+//CSV
+//UTF8
+I	01	int
+F	01	dbl
+D	01	date
+T	01	time
+E	01	datetime
+A	01	str
+N	01	num	6	ROUNDHALFUP
+A	01	str2

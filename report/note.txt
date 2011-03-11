@@ -1,0 +1,26 @@
+out_win32.log
+	XPSP3 		 32bit
+	jdk6u24
+
+out_win64.log   
+	Win2008R2 64bit
+	jdk6u24
+
+out_cent64_1.log 
+	CentOS    64bit
+	jdk6u23(prepare install /opt/jdk)
+	runtest.groovy all
+out_cent64_2.log 
+	CentOS    64bit
+	jdk6u23(prepare install /opt/jdk)
+	RD5GetVersion Call only
+
+out_ubuntu64_1.log 
+	UbuntuOS    64bit
+	jdk6u20
+	runtest.groovy all
+out_ubuntu64_2.log 
+	UbuntuOS    64bit
+	jdk6u20
+	RD5GetVersion Call only
+

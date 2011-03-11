@@ -1,0 +1,92 @@
+<com.ochafik.lang.jnaerator.JNAeratorConfig@ef4599 
+features=[
+Compile,
+ FileComments,
+ UsageComments,
+ EnumTypeLocationComments,
+ LibrariesAutoExtraction,
+CPlusPlusMangling,
+ StructConstructors,
+ TypedPointersForForwardDeclarations,
+ OriginalFunctionSignatures,
+ FunctionArgsJavaDoc] 
+
+cPlusPlusManglers=[] 
+runtime=JNAerator (based on JNA) 
+preprocessorConfig=com.ochafik.lang.jnaerator.JNAeratorConfig$PreprocessorConfig@1c66ec7 
+followIncludes=false 
+preprocessingOutFile=null 
+macrosOutFile=null 
+choicesOutFile=null 
+choicesInputFile=null 
+useJNADirectCalls=false 
+limitComments=false 
+noComments=false 
+putTopStructs
+InSeparateFiles=true 
+bundleRuntime=true 
+beautifyNames=false 
+libraryNamingPrefixes=null 
+extractLibSymbols=false 
+onlineDocumentationURLFormats=[] 
+entryName=null 
+maxConstructedFields=10 
+beanStructs=false 
+reification=false 
+extraJavaSourceFilesContents=[:] 
+frameworks=[] 
+skipIncludedFrameworks=false 
+fileFilter=com.ochafik.lang.jnaerator.JNAeratorConfigUtils$FileExtensionFilter@1fcd402 
+libraryFilesByArch=[:] 
+libraryFiles=[] 
+libraryByFile=[:] 
+verbose=false 
+outputDir=null 
+rootDirectoriesPrefixesForSourceComments=[] 
+functionsAccepter=null 
+packageName=null 
+rootPackageName=null 
+defaultLibrary=null 
+libraryProjectSources=[:] 
+fileToLibrary=com.ochafik.lang.jnaerator.JNAeratorConfig$1@1c2ec05 
+symbolsAccepter=com.ochafik.lang.jnaerator.JNAeratorConfig$2@1558dc 
+libraryForElementsInNullFile=null 
+cPlusPlusNameSpaceSeparator=_ 
+preferJavac=false 
+bridgeSupportFiles=[] 
+outputJar=null 
+cacheDir=null 
+autoConf=true
+ 
+undefines=[] 
+gccLong=false 
+sizeAsLong=false 
+compile=true 
+noAutoImports=false 
+bundleSources=true 
+noCPlusPlus=false 
+sourceFiles=[] 
+bundleLibraries=true
+ 
+wcharAsShort=false 
+charPtrAsString=false 
+genCPlusPlus=false 
+extractedSymbolsOut=null 
+stringifyConstCStringReturnValues=true 
+bridgesupportOutFile=null
+ 
+noMangling=false 
+scalaStructSetters=false 
+noPrimitiveArrays=false 
+synchronizedMethods=false 
+scalaOut=null 
+skipPrivateMembers=true 
+rawParsedSourcesOut
+File=null 
+normalizedParsedSourcesOutFile=null 
+skipLibraryInstanceDeclarations=false 
+callbackInvokeMethodName=apply
+>
+
+Auto-configuring parser...
+os.arch = x86
