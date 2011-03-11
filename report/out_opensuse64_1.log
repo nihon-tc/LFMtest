@@ -1,0 +1,2 @@
+Caught: java.lang.UnsatisfiedLinkError: Error looking up 'RD5GetVersionR1': /home/test/.jnaerator/extractedLibraries/libDi5Engine3.so: undefined symbol: RD5GetVersionR1
+	at runtest.run(runtest.groovy:9)
