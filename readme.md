@@ -17,13 +17,18 @@ need enviroments
 
 
 win32JNA
-	1)jnaer.bat running
-	2)dist folder copy to test enviroments
-
+	testing 
+		dist folder copy to test enviroments
+	recompile
+		1)dll(so) master change?
+			you gets dll/so from turbo-data
+			master into copy
+		2)jnaer.bat running
+		3)create dist foloder
 
 report:
 	dist
 		run.bat > out_win32.log 2>&1
 		run.bat > out_win64.log 2>&1
 		sh run.sh >& out_cent64.log
-		sh run.sh >& out_cent64.log
+		sh run.sh >& out_ubuntu64.log
