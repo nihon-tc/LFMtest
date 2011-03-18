@@ -7,15 +7,15 @@ import com.sun.jna.*
 
 IntByReference version = new IntByReference()
 Di5Engine3Library.INSTANCE.RD5GetVersionR1(version)
-println "version=${version.getValue()}"
+println "[version=${version.getValue()}]"
 
 Pointer serial = Di5Engine3Library.INSTANCE.RD5GetSerialR1()
-println "serial=${serial.dump()}"
+println "[serial=${serial.dump()}/${serial.getString(0)}]"
 
 
 IntByReference version2 = new IntByReference()
 Pointer serial2 = new Pointer()
 
 Di5Engine3Library.INSTANCE.RD5GetVersion(version2,serial2)
-println "version2=${version2.getValue()}"
-println "serial2=${serial2.dump()}"
+println "[version2=${version2.getValue()}]"
+println "[serial2=${serial2.dump()}/${serial2.getString(0)}]"
