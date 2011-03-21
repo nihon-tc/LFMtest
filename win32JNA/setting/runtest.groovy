@@ -14,7 +14,7 @@ println "[serial=${serial.dump()}/${serial.getString(0)}]"
 
 
 IntByReference version2 = new IntByReference()
-Pointer serial2 = new Pointer()
+Pointer serial2 = new Memory(1024)
 
 Di5Engine3Library.INSTANCE.RD5GetVersion(version2,serial2)
 println "[version2=${version2.getValue()}]"
