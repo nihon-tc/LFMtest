@@ -2,7 +2,7 @@
 D:\workspace36_\_github\LFMtest\win32JNA\dist>set JAVA_HOME=c:\opt\jdk 
 
 D:\workspace36_\_github\LFMtest\win32JNA\dist>c:\opt\jdk/bin/java -cp ".;./*" groovy.ui.GroovyMain runtest.groovy 
-version=50463235
-serial=<com.sun.jna.Pointer@40b24b0 peer=67839152>
-version2=50463235
-serial2=<com.sun.jna.Pointer@0 peer=0>
+[version=50463235]
+[serial=<com.sun.jna.Pointer@40b24b0 peer=67839152>/]
+[version2=50463235]
+[serial2=<com.sun.jna.Memory@3cf4648 size=1024 peer=63915592>/(C)2001-2010 Turbo Data Laboratories, Inc.]
