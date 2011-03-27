@@ -1093,57 +1093,75 @@ public interface Di5Engine3Library extends Library {
 	 */
 	int RD5AddRealFilter2(int nTableID, int nLoc, byte szFilterName[], int nDataType, int nDataArraySize, int nDataUnitSize, byte szFilePath[], byte szFileName[]);
 	/**
-	 * カタログ定義ファイルからテーブルを生成します。	 * @param[in]	szCatalogPath	カタログ定義ファイルの存在するパス	 * @param[in]	szCatalogName	カタログ定義ファイルの名称	 * @retval	0以上	生成されたテーブルのID	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 特になし	 * Original signature : <code>__stdcall D5RESULT RD5AddCatalogFile(const char[D5_MAX_PATH], const char[D5_MAX_PATH])</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1501</i>	 * @deprecated use the safer methods {@link #RD5AddCatalogFile(byte[], byte[])} and {@link #RD5AddCatalogFile(com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
+	 * カタログ定義ファイルからテーブルを生成します。	 * @param[in]	szCatalogPath	カタログ定義ファイルの存在するパス	 * @param[in]	szCatalogName	カタログ定義ファイルの名称	 * @retval	0以上	生成されたテーブルのID	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 特になし	 * Original signature : <code>__stdcall D5RESULT RD5AddCatalogFile(const char[D5_MAX_PATH], const char[D5_MAX_PATH])</code>	
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1501</i>
+	 * @deprecated use the safer methods {@link #RD5AddCatalogFile(byte[], byte[])} and {@link #RD5AddCatalogFile(com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
 	 */
 	@java.lang.Deprecated 
 	int RD5AddCatalogFile(Pointer szCatalogPath, Pointer szCatalogName);
 	/**
 	 * カタログ定義ファイルからテーブルを生成します。	 * @param[in]	szCatalogPath	カタログ定義ファイルの存在するパス	 * @param[in]	szCatalogName	カタログ定義ファイルの名称	 * @retval	0以上	生成されたテーブルのID	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 特になし	 * Original signature : <code>__stdcall D5RESULT RD5AddCatalogFile(const char[D5_MAX_PATH], const char[D5_MAX_PATH])</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1501</i>
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1501</i>
 	 */
 	int RD5AddCatalogFile(byte szCatalogPath[], byte szCatalogName[]);
 	/**
-	 * スレーブ側テーブルの項目一覧を取得します。	 * @param[in]	nJoinTableID		JOINテーブルID	 * @param[out]	pnMasterTableID		マスタテーブルID	 * @param[out]	pnMasterSetID		JOIN作成時に使用したマスタテーブルのセットID	 * @param[out]	pnSlaveTableID		スレーブテーブルID	 * @param[out]	pnSlaveSetID		JOIN作成時に使用したスレーブテーブルのセットID	 * @param[out]	pnSlaveFilterCount	スレーブテーブルの項目数	 * @param[out]	anSlaveFilterIDs	スレーブテーブルの項目ID一覧	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pnMasterTableID,pnMasterSetID,pnSlaveTableID,pnSlaveSetID,pnSlaveFilterCount,anSlaveFilterIDsは、	 * lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。	 * Original signature : <code>__stdcall D5RESULT RD5GetSlaveInfo(const int, int*, int*, int*, int*, int*, int[D5_MAX_FILTER_COUNT_REAL])</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1522</i>	 * @deprecated use the safer methods {@link #RD5GetSlaveInfo(int, java.nio.IntBuffer, java.nio.IntBuffer, java.nio.IntBuffer, java.nio.IntBuffer, java.nio.IntBuffer, java.nio.IntBuffer)} and {@link #RD5GetSlaveInfo(int, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference)} instead
+	 * スレーブ側テーブルの項目一覧を取得します。	 * @param[in]	nJoinTableID		JOINテーブルID	 * @param[out]	pnMasterTableID		マスタテーブルID	 * @param[out]	pnMasterSetID		JOIN作成時に使用したマスタテーブルのセットID	 * @param[out]	pnSlaveTableID		スレーブテーブルID	 * @param[out]	pnSlaveSetID		JOIN作成時に使用したスレーブテーブルのセットID	 * @param[out]	pnSlaveFilterCount	スレーブテーブルの項目数	 * @param[out]	anSlaveFilterIDs	スレーブテーブルの項目ID一覧	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pnMasterTableID,pnMasterSetID,pnSlaveTableID,pnSlaveSetID,pnSlaveFilterCount,anSlaveFilterIDsは、	 * lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。
+	 * Original signature : <code>__stdcall D5RESULT RD5GetSlaveInfo(const int, int*, int*, int*, int*, int*, int[D5_MAX_FILTER_COUNT_REAL])</code>	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1522</i>
+	 * @deprecated use the safer methods {@link #RD5GetSlaveInfo(int, java.nio.IntBuffer, java.nio.IntBuffer, java.nio.IntBuffer, java.nio.IntBuffer, java.nio.IntBuffer, java.nio.IntBuffer)} and {@link #RD5GetSlaveInfo(int, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference)} instead
 	 */
 	@java.lang.Deprecated 
 	int RD5GetSlaveInfo(int nJoinTableID, IntByReference pnMasterTableID, IntByReference pnMasterSetID, IntByReference pnSlaveTableID, IntByReference pnSlaveSetID, IntByReference pnSlaveFilterCount, IntByReference anSlaveFilterIDs);
 	/**
-	 * スレーブ側テーブルの項目一覧を取得します。	 * @param[in]	nJoinTableID		JOINテーブルID	 * @param[out]	pnMasterTableID		マスタテーブルID	 * @param[out]	pnMasterSetID		JOIN作成時に使用したマスタテーブルのセットID	 * @param[out]	pnSlaveTableID		スレーブテーブルID	 * @param[out]	pnSlaveSetID		JOIN作成時に使用したスレーブテーブルのセットID	 * @param[out]	pnSlaveFilterCount	スレーブテーブルの項目数	 * @param[out]	anSlaveFilterIDs	スレーブテーブルの項目ID一覧	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pnMasterTableID,pnMasterSetID,pnSlaveTableID,pnSlaveSetID,pnSlaveFilterCount,anSlaveFilterIDsは、	 * lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。	 * Original signature : <code>__stdcall D5RESULT RD5GetSlaveInfo(const int, int*, int*, int*, int*, int*, int[D5_MAX_FILTER_COUNT_REAL])</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1522</i>
+	 * スレーブ側テーブルの項目一覧を取得します。	 * @param[in]	nJoinTableID		JOINテーブルID	 * @param[out]	pnMasterTableID		マスタテーブルID	 * @param[out]	pnMasterSetID		JOIN作成時に使用したマスタテーブルのセットID	 * @param[out]	pnSlaveTableID		スレーブテーブルID	 * @param[out]	pnSlaveSetID		JOIN作成時に使用したスレーブテーブルのセットID	 * @param[out]	pnSlaveFilterCount	スレーブテーブルの項目数	 * @param[out]	anSlaveFilterIDs	スレーブテーブルの項目ID一覧	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pnMasterTableID,pnMasterSetID,pnSlaveTableID,pnSlaveSetID,pnSlaveFilterCount,anSlaveFilterIDsは、	 * lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。
+	 * Original signature : <code>__stdcall D5RESULT RD5GetSlaveInfo(const int, int*, int*, int*, int*, int*, int[D5_MAX_FILTER_COUNT_REAL])</code>	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1522</i>
 	 */
 	int RD5GetSlaveInfo(int nJoinTableID, IntBuffer pnMasterTableID, IntBuffer pnMasterSetID, IntBuffer pnSlaveTableID, IntBuffer pnSlaveSetID, IntBuffer pnSlaveFilterCount, IntBuffer anSlaveFilterIDs);
 	/**
-	 * スレーブテーブルの項目をマスタテーブルに転送します。	 * @param[in]	nJoinTableID	JOINテーブルID	 * @param[in]	nSlaveFilterID	転送元のスレーブテーブルの項目ID	 * @retval	0以上	追加作成された項目ID	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 特になし	 * Original signature : <code>__stdcall D5RESULT RD5MoveSlaveFlt2Master(const int, const int)</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1542</i>
+	 * スレーブテーブルの項目をマスタテーブルに転送します。	 * @param[in]	nJoinTableID	JOINテーブルID	 * @param[in]	nSlaveFilterID	転送元のスレーブテーブルの項目ID	 * @retval	0以上	追加作成された項目ID	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 特になし	 * Original signature : <code>__stdcall D5RESULT RD5MoveSlaveFlt2Master(const int, const int)</code>
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1542</i>
 	 */
 	int RD5MoveSlaveFlt2Master(int nJoinTableID, int nSlaveFilterID);
 	/**
 	 * 行番号からセット内順序番号を検索します。	 * @param[in]	nTableID		テーブルID	 * @param[in]	nSetID			セットID	 * @param[in]	nTargetRecNo	検索対象の行番号	 * @retval	0		条件に一致する行が見つからなかった	 * @retval	1以上	条件に一致するセット内順序番号	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 特になし	 * Original signature : <code>__stdcall D5RESULT RD5FindRecNoReal(const int, const int, const int)</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1559</i>
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1559</i>
 	 */
 	int RD5FindRecNoReal(int nTableID, int nSetID, int nTargetRecNo);
 	/**
-	 * 文字列型の項目を条件として、値ジャンプ機能をオープンします。	 * @param[in]	nTableID		検索するテーブルID	 * @param[in]	nFilterID		検索対象となる文字列型の項目ID	 * @param[in]	nStrSrchKind	検索条件式を指定する値	 * @param[in]	szSrchStr1		1番目の検索条件文字列	 * @param[in]	szSrchStr2		2番目の検索条件文字列	 * @retval	0以上	検索ID	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 特になし	 * Original signature : <code>__stdcall D5RESULT RD5OpenStrFindReal(const int, const int, const int, const char[D5_MAX_STRING_SIZE], const char[D5_MAX_STRING_SIZE])</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1578</i>	 * @deprecated use the safer methods {@link #RD5OpenStrFindReal(int, int, int, byte[], byte[])} and {@link #RD5OpenStrFindReal(int, int, int, com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
+	 * 文字列型の項目を条件として、値ジャンプ機能をオープンします。	 * @param[in]	nTableID		検索するテーブルID	 * @param[in]	nFilterID		検索対象となる文字列型の項目ID	 * @param[in]	nStrSrchKind	検索条件式を指定する値	 * @param[in]	szSrchStr1		1番目の検索条件文字列	 * @param[in]	szSrchStr2		2番目の検索条件文字列	 * @retval	0以上	検索ID	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 特になし
+	 * Original signature : <code>__stdcall D5RESULT RD5OpenStrFindReal(const int, const int, const int, const char[D5_MAX_STRING_SIZE], const char[D5_MAX_STRING_SIZE])</code>	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1578</i>
+	 * @deprecated use the safer methods {@link #RD5OpenStrFindReal(int, int, int, byte[], byte[])} and {@link #RD5OpenStrFindReal(int, int, int, com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
 	 */
 	@java.lang.Deprecated 
 	int RD5OpenStrFindReal(int nTableID, int nFilterID, int nStrSrchKind, Pointer szSrchStr1, Pointer szSrchStr2);
 	/**
-	 * 文字列型の項目を条件として、値ジャンプ機能をオープンします。	 * @param[in]	nTableID		検索するテーブルID	 * @param[in]	nFilterID		検索対象となる文字列型の項目ID	 * @param[in]	nStrSrchKind	検索条件式を指定する値	 * @param[in]	szSrchStr1		1番目の検索条件文字列	 * @param[in]	szSrchStr2		2番目の検索条件文字列	 * @retval	0以上	検索ID	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 特になし	 * Original signature : <code>__stdcall D5RESULT RD5OpenStrFindReal(const int, const int, const int, const char[D5_MAX_STRING_SIZE], const char[D5_MAX_STRING_SIZE])</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1578</i>
+	 * 文字列型の項目を条件として、値ジャンプ機能をオープンします。	 * @param[in]	nTableID		検索するテーブルID	 * @param[in]	nFilterID		検索対象となる文字列型の項目ID	 * @param[in]	nStrSrchKind	検索条件式を指定する値	 * @param[in]	szSrchStr1		1番目の検索条件文字列	 * @param[in]	szSrchStr2		2番目の検索条件文字列	 * @retval	0以上	検索ID	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 特になし
+	 * Original signature : <code>__stdcall D5RESULT RD5OpenStrFindReal(const int, const int, const int, const char[D5_MAX_STRING_SIZE], const char[D5_MAX_STRING_SIZE])</code>	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1578</i>
 	 */
 	int RD5OpenStrFindReal(int nTableID, int nFilterID, int nStrSrchKind, byte szSrchStr1[], byte szSrchStr2[]);
 	/**
 	 * SJISコードの文字列型の項目を条件として、値ジャンプ機能をオープンします。	 * @param[in]	nTableID		テーブルID	 * @param[in]	nFilterID		検索対象となる文字列型の項目ID	 * @param[in]	nStrSrchKind	検索条件式を指定する値	 * @param[in]	szSrchStr1		1番目の検索条件文字列	 * @param[in]	szSrchStr2		2番目の検索条件文字列	 * @retval	0以上	検索ID	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 特になし	 * Original signature : <code>__stdcall D5RESULT RD5OpenStrFindRealSJIS(const int, const int, const int, const char[D5_MAX_STRING_SIZE], const char[D5_MAX_STRING_SIZE])</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1599</i>	 * @deprecated use the safer methods {@link #RD5OpenStrFindRealSJIS(int, int, int, byte[], byte[])} and {@link #RD5OpenStrFindRealSJIS(int, int, int, com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1599</i>
+	 * @deprecated use the safer methods {@link #RD5OpenStrFindRealSJIS(int, int, int, byte[], byte[])} and {@link #RD5OpenStrFindRealSJIS(int, int, int, com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
 	 */
 	@java.lang.Deprecated 
 	int RD5OpenStrFindRealSJIS(int nTableID, int nFilterID, int nStrSrchKind, Pointer szSrchStr1, Pointer szSrchStr2);
 	/**
 	 * SJISコードの文字列型の項目を条件として、値ジャンプ機能をオープンします。	 * @param[in]	nTableID		テーブルID	 * @param[in]	nFilterID		検索対象となる文字列型の項目ID	 * @param[in]	nStrSrchKind	検索条件式を指定する値	 * @param[in]	szSrchStr1		1番目の検索条件文字列	 * @param[in]	szSrchStr2		2番目の検索条件文字列	 * @retval	0以上	検索ID	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 特になし	 * Original signature : <code>__stdcall D5RESULT RD5OpenStrFindRealSJIS(const int, const int, const int, const char[D5_MAX_STRING_SIZE], const char[D5_MAX_STRING_SIZE])</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1599</i>
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1599</i>
 	 */
 	int RD5OpenStrFindRealSJIS(int nTableID, int nFilterID, int nStrSrchKind, byte szSrchStr1[], byte szSrchStr2[]);
 	/**
@@ -1157,7 +1175,8 @@ public interface Di5Engine3Library extends Library {
 	int RD5OpenStrFindRealLocale(int nTableID, int nFilterID, int nStrSrchKind, Pointer szSrchStr1, Pointer szSrchStr2, int nLocaleID);
 	/**
 	 * 文字列型の項目を条件として、値ジャンプ機能をオープンします。	 * @param[in]	nTableID		テーブルID	 * @param[in]	nFilterID		検索対象となる文字列型の項目ID	 * @param[in]	nStrSrchKind	検索条件式を指定する値	 * @param[in]	szSrchStr1		1番目の検索条件文字列	 * @param[in]	szSrchStr2		2番目の検索条件文字列	 * @param[in]	nLocaleID		文字コードID	 * @retval	0以上	検索ID	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 特になし	 * Original signature : <code>__stdcall D5RESULT RD5OpenStrFindRealLocale(const int, const int, const int, const char[D5_MAX_STRING_SIZE], const char[D5_MAX_STRING_SIZE], const int)</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1621</i>
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1621</i>
 	 */
 	int RD5OpenStrFindRealLocale(int nTableID, int nFilterID, int nStrSrchKind, byte szSrchStr1[], byte szSrchStr2[], int nLocaleID);
 	/**
@@ -1177,51 +1196,72 @@ public interface Di5Engine3Library extends Library {
 	 */
 	int RD5OpenFloatFindReal(int nTableID, int nFilterID, int nValSrchKind, double dSrchVal1, double dSrchVal2);
 	/**
-	 * 検索ステータスを取得します。	 * @param[in]	nTableID	検索するテーブルID	 * @param[out]	pnHitCount	ルートセットで、検索条件に一致した件数	 * @param[out]	pnFilterID	検索対象の項目ID	 * @retval	0		検索条件が登録されていない	 * @retval	1以上	検索ID	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pnHitCount,pnFilterIDは、lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。	 * Original signature : <code>__stdcall D5RESULT RD5GetFindStatus(const int, int*, int*)</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1684</i>	 * @deprecated use the safer methods {@link #RD5GetFindStatus(int, java.nio.IntBuffer, java.nio.IntBuffer)} and {@link #RD5GetFindStatus(int, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference)} instead
+	 * 検索ステータスを取得します。	 * @param[in]	nTableID	検索するテーブルID	 * @param[out]	pnHitCount	ルートセットで、検索条件に一致した件数	 * @param[out]	pnFilterID	検索対象の項目ID	 * @retval	0		検索条件が登録されていない	 * @retval	1以上	検索ID	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pnHitCount,pnFilterIDは、lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。
+	 * Original signature : <code>__stdcall D5RESULT RD5GetFindStatus(const int, int*, int*)</code>	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1684</i>
+	 * @deprecated use the safer methods {@link #RD5GetFindStatus(int, java.nio.IntBuffer, java.nio.IntBuffer)} and {@link #RD5GetFindStatus(int, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference)} instead
 	 */
 	@java.lang.Deprecated 
 	int RD5GetFindStatus(int nTableID, IntByReference pnHitCount, IntByReference pnFilterID);
 	/**
-	 * 検索ステータスを取得します。	 * @param[in]	nTableID	検索するテーブルID	 * @param[out]	pnHitCount	ルートセットで、検索条件に一致した件数	 * @param[out]	pnFilterID	検索対象の項目ID	 * @retval	0		検索条件が登録されていない	 * @retval	1以上	検索ID	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pnHitCount,pnFilterIDは、lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。	 * Original signature : <code>__stdcall D5RESULT RD5GetFindStatus(const int, int*, int*)</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1684</i>
+	 * 検索ステータスを取得します。	 * @param[in]	nTableID	検索するテーブルID	 * @param[out]	pnHitCount	ルートセットで、検索条件に一致した件数	 * @param[out]	pnFilterID	検索対象の項目ID	 * @retval	0		検索条件が登録されていない	 * @retval	1以上	検索ID	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pnHitCount,pnFilterIDは、lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。
+	 * Original signature : <code>__stdcall D5RESULT RD5GetFindStatus(const int, int*, int*)</code>	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1684</i>
 	 */
 	int RD5GetFindStatus(int nTableID, IntBuffer pnHitCount, IntBuffer pnFilterID);
 	/**
-	 * 値ジャンプで条件に一致する行を見つけます。	 * @param[in]	nTableID	テーブルID	 * @param[in]	nSrchID		検索ID	 * @param[in]	nSetID		検索対象のセットID	 * @param[in]	nCurPos		現在の位置	 * @param[in]	nDir		検索方向	 * @param[out]	pnFilterID	検索対象の項目ID	 * @param[out]	pnNextPos	検索条件に一致するセット内順序番号	 * @retval	0	条件に一致する行が見つからなかった	 * @retval	1	条件に一致する行が見つかった	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pnFilterID,pnNextPosは、lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。	 * Original signature : <code>__stdcall D5RESULT RD5GetNextHitReal(const int, const int, const int, const int, const int, int*, int*)</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1706</i>	 * @deprecated use the safer methods {@link #RD5GetNextHitReal(int, int, int, int, int, java.nio.IntBuffer, java.nio.IntBuffer)} and {@link #RD5GetNextHitReal(int, int, int, int, int, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference)} instead
+	 * 値ジャンプで条件に一致する行を見つけます。	 * @param[in]	nTableID	テーブルID	 * @param[in]	nSrchID		検索ID	 * @param[in]	nSetID		検索対象のセットID	 * @param[in]	nCurPos		現在の位置	 * @param[in]	nDir		検索方向	 * @param[out]	pnFilterID	検索対象の項目ID	 * @param[out]	pnNextPos	検索条件に一致するセット内順序番号	 * @retval	0	条件に一致する行が見つからなかった	 * @retval	1	条件に一致する行が見つかった	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pnFilterID,pnNextPosは、lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。
+	 * Original signature : <code>__stdcall D5RESULT RD5GetNextHitReal(const int, const int, const int, const int, const int, int*, int*)</code>
+	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1706</i>
+	 * @deprecated use the safer methods {@link #RD5GetNextHitReal(int, int, int, int, int, java.nio.IntBuffer, java.nio.IntBuffer)} and {@link #RD5GetNextHitReal(int, int, int, int, int, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference)} instead
 	 */
 	@java.lang.Deprecated 
 	int RD5GetNextHitReal(int nTableID, int nSrchID, int nSetID, int nCurPos, int nDir, IntByReference pnFilterID, IntByReference pnNextPos);
 	/**
-	 * 値ジャンプで条件に一致する行を見つけます。	 * @param[in]	nTableID	テーブルID	 * @param[in]	nSrchID		検索ID	 * @param[in]	nSetID		検索対象のセットID	 * @param[in]	nCurPos		現在の位置	 * @param[in]	nDir		検索方向	 * @param[out]	pnFilterID	検索対象の項目ID	 * @param[out]	pnNextPos	検索条件に一致するセット内順序番号	 * @retval	0	条件に一致する行が見つからなかった	 * @retval	1	条件に一致する行が見つかった	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pnFilterID,pnNextPosは、lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。	 * Original signature : <code>__stdcall D5RESULT RD5GetNextHitReal(const int, const int, const int, const int, const int, int*, int*)</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1706</i>
+	 * 値ジャンプで条件に一致する行を見つけます。	 * @param[in]	nTableID	テーブルID	 * @param[in]	nSrchID		検索ID	 * @param[in]	nSetID		検索対象のセットID	 * @param[in]	nCurPos		現在の位置	 * @param[in]	nDir		検索方向	 * @param[out]	pnFilterID	検索対象の項目ID	 * @param[out]	pnNextPos	検索条件に一致するセット内順序番号	 * @retval	0	条件に一致する行が見つからなかった	 * @retval	1	条件に一致する行が見つかった	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pnFilterID,pnNextPosは、lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。
+	 * Original signature : <code>__stdcall D5RESULT RD5GetNextHitReal(const int, const int, const int, const int, const int, int*, int*)</code>	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1706</i>
 	 */
 	int RD5GetNextHitReal(int nTableID, int nSrchID, int nSetID, int nCurPos, int nDir, IntBuffer pnFilterID, IntBuffer pnNextPos);
 	/**
 	 * 値ジャンプをクローズします。	 * @param[in]	nTableID	テーブルID	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 特になし	 * Original signature : <code>__stdcall D5RESULT RD5CloseFindReal(const int)</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1725</i>
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1725</i>
 	 */
 	int RD5CloseFindReal(int nTableID);
 	/**
 	 * カテゴリ定義に基づき分類を行います。	 * @param[in]	nTableID			テーブルID	 * @param[in]	nFilterID			項目ID	 * @param[in]	nCategoryTableID	カテゴリ定義テーブルID	 * @retval	0以上	分類し、新規に作成された項目ID	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 特になし	 * Original signature : <code>__stdcall D5RESULT RD5AddCategoryReal(const int, const int, const int)</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1740</i>
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1740</i>
 	 */
 	int RD5AddCategoryReal(int nTableID, int nFilterID, int nCategoryTableID);
 	/**
-	 * 計算処理を行います。	 * @param[in]	nTableID	計算を行うテーブルID	 * @param[in]	nSetID		計算を行うセットID	 * @param[in]	nFilterID	計算を行う項目ID	 * @param[in]	nCalStart	計算開始位置	 * @param[in]	nCalCount	計算するレコード数	 * @param[in]	szFormula	計算式	 * @param[out]	szErrorRep	エラー説明	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * ErrorRepは無効なので空文字列を指定してください。	 * Original signature : <code>__stdcall D5RESULT RD5CalcReal(const int, const int, const int, const int, const int, const char[D5_MAX_STRING_SIZE], char[D5_MAX_STRING_SIZE])</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1761</i>	 * @deprecated use the safer methods {@link #RD5CalcReal(int, int, int, int, int, byte[], java.nio.ByteBuffer)} and {@link #RD5CalcReal(int, int, int, int, int, com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
+	 * 計算処理を行います。	 * @param[in]	nTableID	計算を行うテーブルID	 * @param[in]	nSetID		計算を行うセットID	 * @param[in]	nFilterID	計算を行う項目ID	 * @param[in]	nCalStart	計算開始位置	 * @param[in]	nCalCount	計算するレコード数	 * @param[in]	szFormula	計算式	 * @param[out]	szErrorRep	エラー説明	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * ErrorRepは無効なので空文字列を指定してください。
+	 * Original signature : <code>__stdcall D5RESULT RD5CalcReal(const int, const int, const int, const int, const int, const char[D5_MAX_STRING_SIZE], char[D5_MAX_STRING_SIZE])</code>	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1761</i>
+	 * @deprecated use the safer methods {@link #RD5CalcReal(int, int, int, int, int, byte[], java.nio.ByteBuffer)} and {@link #RD5CalcReal(int, int, int, int, int, com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
 	 */
 	@java.lang.Deprecated 
 	int RD5CalcReal(int nTableID, int nSetID, int nFilterID, int nCalStart, int nCalCount, Pointer szFormula, Pointer szErrorRep);
 	/**
-	 * 計算処理を行います。	 * @param[in]	nTableID	計算を行うテーブルID	 * @param[in]	nSetID		計算を行うセットID	 * @param[in]	nFilterID	計算を行う項目ID	 * @param[in]	nCalStart	計算開始位置	 * @param[in]	nCalCount	計算するレコード数	 * @param[in]	szFormula	計算式	 * @param[out]	szErrorRep	エラー説明	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * ErrorRepは無効なので空文字列を指定してください。	 * Original signature : <code>__stdcall D5RESULT RD5CalcReal(const int, const int, const int, const int, const int, const char[D5_MAX_STRING_SIZE], char[D5_MAX_STRING_SIZE])</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1761</i>
+	 * 計算処理を行います。	 * @param[in]	nTableID	計算を行うテーブルID	 * @param[in]	nSetID		計算を行うセットID	 * @param[in]	nFilterID	計算を行う項目ID	 * @param[in]	nCalStart	計算開始位置	 * @param[in]	nCalCount	計算するレコード数	 * @param[in]	szFormula	計算式	 * @param[out]	szErrorRep	エラー説明	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * ErrorRepは無効なので空文字列を指定してください。
+	 * Original signature : <code>__stdcall D5RESULT RD5CalcReal(const int, const int, const int, const int, const int, const char[D5_MAX_STRING_SIZE], char[D5_MAX_STRING_SIZE])</code>	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1761</i>
 	 */
 	int RD5CalcReal(int nTableID, int nSetID, int nFilterID, int nCalStart, int nCalCount, byte szFormula[], ByteBuffer szErrorRep);
 	/**
-	 * テーブルが編集可能であるかを調べます。	 * @param[in]	nTableID	調べる対象のテーブルID	 * @param[out]	anReferIDs	このテーブルを参照しているテーブルIDの一覧	 * @retval	0		anReferIDsの有効サイズ（編集可能）	 * @retval	1以上	anReferIDsの有効サイズ（編集不可）	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * anReferIDsは、lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。	 * Original signature : <code>__stdcall D5RESULT RD5TableCanEdit(const int, int[D5_MAX_TABLE_COUNT])</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1782</i>	 * @deprecated use the safer methods {@link #RD5TableCanEdit(int, java.nio.IntBuffer)} and {@link #RD5TableCanEdit(int, com.sun.jna.ptr.IntByReference)} instead
+	 * テーブルが編集可能であるかを調べます。	 * @param[in]	nTableID	調べる対象のテーブルID	 * @param[out]	anReferIDs	このテーブルを参照しているテーブルIDの一覧	 * @retval	0		anReferIDsの有効サイズ（編集可能）	 * @retval	1以上	anReferIDsの有効サイズ（編集不可）	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * anReferIDsは、lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。
+	 * Original signature : <code>__stdcall D5RESULT RD5TableCanEdit(const int, int[D5_MAX_TABLE_COUNT])</code>	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1782</i>
+	 * @deprecated use the safer methods {@link #RD5TableCanEdit(int, java.nio.IntBuffer)} and {@link #RD5TableCanEdit(int, com.sun.jna.ptr.IntByReference)} instead
 	 */
 	@java.lang.Deprecated 
 	int RD5TableCanEdit(int nTableID, IntByReference anReferIDs);
@@ -1236,13 +1276,16 @@ public interface Di5Engine3Library extends Library {
 	 */
 	int RD5DeleteRealRows(int nTableID, int nDelStart, int nDelCount);
 	/**
-	 * 行を削除します。	 * @param[in]	nTableID	テーブルID	 * @param[in]	nSetID		セットID	 * @param[in]	nDelStart	削除開始行	 * @param[in]	nDelCount	削除する行数	 * @retval	0以上	実際に削除された数	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 特になし	 * Original signature : <code>__stdcall D5RESULT RD5DeleteRealRowsEx(const int, const int, const int, const int)</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1816</i>
+	 * 行を削除します。	 * @param[in]	nTableID	テーブルID	 * @param[in]	nSetID		セットID	 * @param[in]	nDelStart	削除開始行	 * @param[in]	nDelCount	削除する行数	 * @retval	0以上	実際に削除された数	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 特になし
+	 * Original signature : <code>__stdcall D5RESULT RD5DeleteRealRowsEx(const int, const int, const int, const int)</code>	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1816</i>
 	 */
 	int RD5DeleteRealRowsEx(int nTableID, int nSetID, int nDelStart, int nDelCount);
 	/**
 	 * 行を挿入します。	 * @param[in]	nTableID	テーブルID	 * @param[in]	nInsPos		挿入位置	 * @param[in]	nInsCount	挿入する行数	 * @retval	0以上	実際に削除された数	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 特になし	 * Original signature : <code>__stdcall D5RESULT RD5InsertRealRows(const int, const int, const int)</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1834</i>
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1834</i>
 	 */
 	int RD5InsertRealRows(int nTableID, int nInsPos, int nInsCount);
 	/**
@@ -1289,18 +1332,22 @@ public interface Di5Engine3Library extends Library {
 	int RD5GetData1M(int nTableID, int nFilterID, int nSetID, int nRowNo, IntBuffer pnDataType, IntBuffer pnGotCount, ByteBuffer acBuf, ByteBuffer acCharBuf);
 	/**
 	 * Original signature : <code>__stdcall D5RESULT RD5GetRowNo(const int, const int, const int, int*, int*)</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1939</i>	 * @deprecated use the safer methods {@link #RD5GetRowNo(int, int, int, java.nio.IntBuffer, java.nio.IntBuffer)} and {@link #RD5GetRowNo(int, int, int, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference)} instead
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1939</i>	 * @deprecated use the safer methods {@link #RD5GetRowNo(int, int, int, java.nio.IntBuffer, java.nio.IntBuffer)} and {@link #RD5GetRowNo(int, int, int, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference)} instead
 	 */
 	@java.lang.Deprecated 
 	int RD5GetRowNo(int nTableID, int nSetID, int nRowNo, IntByReference pnRow1, IntByReference pnRow2);
 	/**
 	 * Original signature : <code>__stdcall D5RESULT RD5GetRowNo(const int, const int, const int, int*, int*)</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1939</i>
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1939</i>
 	 */
 	int RD5GetRowNo(int nTableID, int nSetID, int nRowNo, IntBuffer pnRow1, IntBuffer pnRow2);
 	/**
 	 * ルートセットにおける行位置を取得します。	 * @param[in]	nTableID	テーブルID	 * @param[in]	nSetID		セットID	 * @param[in]	nRowNo		取得したいセット内順序番号(1から始まる)	 * @param[out]	pnRow1		REALテーブル：取得する行番号 JOINテーブル：マスタ側の行番号	 * @param[out]	pnRow2		REALテーブル：使用しない JOINテーブル：スレーブ側行番号	 * @retval	4	REALテーブルの場合の成功	 * @retval	8	JOINテーブルの場合の成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pnRow1,pnRow2は、lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。	 * Original signature : <code>__stdcall D5RESULT RD5GetRowNo1(const int, const int, const int, int*, int*)</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1961</i>	 * @deprecated use the safer methods {@link #RD5GetRowNo1(int, int, int, java.nio.IntBuffer, java.nio.IntBuffer)} and {@link #RD5GetRowNo1(int, int, int, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference)} instead
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1961</i>	
+	 * @deprecated use the safer methods {@link #RD5GetRowNo1(int, int, int, java.nio.IntBuffer, java.nio.IntBuffer)} and {@link #RD5GetRowNo1(int, int, int, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference)} instead
 	 */
 	@java.lang.Deprecated 
 	int RD5GetRowNo1(int nTableID, int nSetID, int nRowNo, IntByReference pnRow1, IntByReference pnRow2);
