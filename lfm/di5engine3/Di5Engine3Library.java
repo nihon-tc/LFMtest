@@ -1344,7 +1344,8 @@ public interface Di5Engine3Library extends Library {
 	 */
 	int RD5GetRowNo(int nTableID, int nSetID, int nRowNo, IntBuffer pnRow1, IntBuffer pnRow2);
 	/**
-	 * ルートセットにおける行位置を取得します。	 * @param[in]	nTableID	テーブルID	 * @param[in]	nSetID		セットID	 * @param[in]	nRowNo		取得したいセット内順序番号(1から始まる)	 * @param[out]	pnRow1		REALテーブル：取得する行番号 JOINテーブル：マスタ側の行番号	 * @param[out]	pnRow2		REALテーブル：使用しない JOINテーブル：スレーブ側行番号	 * @retval	4	REALテーブルの場合の成功	 * @retval	8	JOINテーブルの場合の成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pnRow1,pnRow2は、lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。	 * Original signature : <code>__stdcall D5RESULT RD5GetRowNo1(const int, const int, const int, int*, int*)</code>	 *
+	 * ルートセットにおける行位置を取得します。	 * @param[in]	nTableID	テーブルID	 * @param[in]	nSetID		セットID	 * @param[in]	nRowNo		取得したいセット内順序番号(1から始まる)	 * @param[out]	pnRow1		REALテーブル：取得する行番号 JOINテーブル：マスタ側の行番号	 * @param[out]	pnRow2		REALテーブル：使用しない JOINテーブル：スレーブ側行番号	 * @retval	4	REALテーブルの場合の成功	 * @retval	8	JOINテーブルの場合の成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pnRow1,pnRow2は、lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。
+	 * Original signature : <code>__stdcall D5RESULT RD5GetRowNo1(const int, const int, const int, int*, int*)</code>	 *
 	 *
 	 * <i>native declaration : inc\rdi5api.h:1961</i>	
 	 * @deprecated use the safer methods {@link #RD5GetRowNo1(int, int, int, java.nio.IntBuffer, java.nio.IntBuffer)} and {@link #RD5GetRowNo1(int, int, int, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference)} instead
@@ -1352,13 +1353,18 @@ public interface Di5Engine3Library extends Library {
 	@java.lang.Deprecated 
 	int RD5GetRowNo1(int nTableID, int nSetID, int nRowNo, IntByReference pnRow1, IntByReference pnRow2);
 	/**
-	 * ルートセットにおける行位置を取得します。	 * @param[in]	nTableID	テーブルID	 * @param[in]	nSetID		セットID	 * @param[in]	nRowNo		取得したいセット内順序番号(1から始まる)	 * @param[out]	pnRow1		REALテーブル：取得する行番号 JOINテーブル：マスタ側の行番号	 * @param[out]	pnRow2		REALテーブル：使用しない JOINテーブル：スレーブ側行番号	 * @retval	4	REALテーブルの場合の成功	 * @retval	8	JOINテーブルの場合の成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pnRow1,pnRow2は、lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。	 * Original signature : <code>__stdcall D5RESULT RD5GetRowNo1(const int, const int, const int, int*, int*)</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1961</i>
+	 * ルートセットにおける行位置を取得します。	 * @param[in]	nTableID	テーブルID	 * @param[in]	nSetID		セットID	 * @param[in]	nRowNo		取得したいセット内順序番号(1から始まる)	 * @param[out]	pnRow1		REALテーブル：取得する行番号 JOINテーブル：マスタ側の行番号	 * @param[out]	pnRow2		REALテーブル：使用しない JOINテーブル：スレーブ側行番号	 * @retval	4	REALテーブルの場合の成功	 * @retval	8	JOINテーブルの場合の成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pnRow1,pnRow2は、lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。
+	 * Original signature : <code>__stdcall D5RESULT RD5GetRowNo1(const int, const int, const int, int*, int*)</code>	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1961</i>
 	 */
 	int RD5GetRowNo1(int nTableID, int nSetID, int nRowNo, IntBuffer pnRow1, IntBuffer pnRow2);
 	/**
-	 * ルートセットにおける複数の行位置を取得します。	 * @param[in]	nTableID	テーブルID	 * @param[in]	nSetID		セットID	 * @param[in]	nRowNo		取得したいセット内順序番号(1から始まる)	 * @param[out]	pnGotCount	取得した行数	 * @param[out]	anRow1		REALテーブル：取得する行番号 JOINテーブル：マスタ側の行番号	 * @param[out]	anRow2		REALテーブル：使用しない JOINテーブル：スレーブ側行番号	 * @retval	4	REALテーブルの場合の成功	 * @retval	8	JOINテーブルの場合の成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pnGotCount,anRow1,anRow2は、lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。	 * Original signature : <code>__stdcall D5RESULT RD5GetRowNo1M(const int, const int, const int, int*, int[D5_MAX_CACHE], int[D5_MAX_CACHE])</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:1984</i>	 * @deprecated use the safer methods {@link #RD5GetRowNo1M(int, int, int, java.nio.IntBuffer, java.nio.IntBuffer, java.nio.IntBuffer)} and {@link #RD5GetRowNo1M(int, int, int, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference)} instead
+	 * ルートセットにおける複数の行位置を取得します。	 * @param[in]	nTableID	テーブルID	 * @param[in]	nSetID		セットID	 * @param[in]	nRowNo		取得したいセット内順序番号(1から始まる)	 * @param[out]	pnGotCount	取得した行数	 * @param[out]	anRow1		REALテーブル：取得する行番号 JOINテーブル：マスタ側の行番号	 * @param[out]	anRow2		REALテーブル：使用しない JOINテーブル：スレーブ側行番号	 * @retval	4	REALテーブルの場合の成功	 * @retval	8	JOINテーブルの場合の成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pnGotCount,anRow1,anRow2は、lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。
+	 * Original signature : <code>__stdcall D5RESULT RD5GetRowNo1M(const int, const int, const int, int*, int[D5_MAX_CACHE], int[D5_MAX_CACHE])</code>	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:1984</i>
+	 * @deprecated use the safer methods {@link #RD5GetRowNo1M(int, int, int, java.nio.IntBuffer, java.nio.IntBuffer, java.nio.IntBuffer)} and {@link #RD5GetRowNo1M(int, int, int, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference)} instead
 	 */
 	@java.lang.Deprecated 
 	int RD5GetRowNo1M(int nTableID, int nSetID, int nRowNo, IntByReference pnGotCount, IntByReference anRow1, IntByReference anRow2);
@@ -1474,8 +1480,10 @@ public interface Di5Engine3Library extends Library {
 	@java.lang.Deprecated 
 	int RD5OpenDetailInfo(int nTableID, int nSetID, int nFilterID, IntByReference pnDataType, IntByReference pnRangeSize, IntByReference pnNonZeroCount);
 	/**
-	 * 項目詳細情報取得機能をオープンします。	 * @param[in]	nTableID		テーブルID	 * @param[in]	nSetID			セットID	 * @param[in]	nFilterID		項目ID	 * @param[out]	pnDataType		データ型	 * @param[out]	pnRangeSize		登録されている値の総数	 * @param[out]	pnNonZeroCount	ゼロでない値を持つレコード数	 * @retval	1以上	成功（詳細表示ハンドル）	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pnDataType,pnRangeSize,pnNonZeroCountは、lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。	 * Original signature : <code>__stdcall D5RESULT RD5OpenDetailInfo(const int, const int, const int, int*, int*, int*)</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:2234</i>
+	 * 項目詳細情報取得機能をオープンします。	 * @param[in]	nTableID		テーブルID	 * @param[in]	nSetID			セットID	 * @param[in]	nFilterID		項目ID	 * @param[out]	pnDataType		データ型	 * @param[out]	pnRangeSize		登録されている値の総数	 * @param[out]	pnNonZeroCount	ゼロでない値を持つレコード数	 * @retval	1以上	成功（詳細表示ハンドル）	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pnDataType,pnRangeSize,pnNonZeroCountは、lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。
+	 * Original signature : <code>__stdcall D5RESULT RD5OpenDetailInfo(const int, const int, const int, int*, int*, int*)</code>	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:2234</i>
 	 */
 	int RD5OpenDetailInfo(int nTableID, int nSetID, int nFilterID, IntBuffer pnDataType, IntBuffer pnRangeSize, IntBuffer pnNonZeroCount);
 	/**
@@ -1483,7 +1491,8 @@ public interface Di5Engine3Library extends Library {
 	 * Original signature : <code>__stdcall D5RESULT RD5GetDetailValue(const int, const int, const int, const int, const int, int*, void*)</code>
 	 *
 	 *
-	 * <i>native declaration : inc\rdi5api.h:2260</i>	 * @deprecated use the safer methods {@link #RD5GetDetailValue(int, int, int, int, int, java.nio.IntBuffer, com.sun.jna.Pointer)} and {@link #RD5GetDetailValue(int, int, int, int, int, com.sun.jna.ptr.IntByReference, com.sun.jna.Pointer)} instead
+	 * <i>native declaration : inc\rdi5api.h:2260</i>
+	 * @deprecated use the safer methods {@link #RD5GetDetailValue(int, int, int, int, int, java.nio.IntBuffer, com.sun.jna.Pointer)} and {@link #RD5GetDetailValue(int, int, int, int, int, com.sun.jna.ptr.IntByReference, com.sun.jna.Pointer)} instead
 	 */
 	@java.lang.Deprecated 
 	int RD5GetDetailValue(int nHandle, int nOrderByN, int nReverse, int nZeroSuppress, int nRow, IntByReference pnDataType, Pointer pvData);
@@ -1506,18 +1515,24 @@ public interface Di5Engine3Library extends Library {
 	@java.lang.Deprecated 
 	int RD5GetDetailCount(int nHandle, int nOrderByN, int nReverse, int nZeroSuppress, int nRow, IntByReference pnCount);
 	/**
-	 * オープンした項目詳細情報の存在数を取得します。	 * @param[in]	nHandle			オープン時に取得したハンドル	 * @param[in]	nOrderByN		存在数順に並べるかどうかを指定	 * @param[in]	nReverse		逆順にするかどうかを指定	 * @param[in]	nZeroSuppress	存在数が0のデータを含めるかどうかを指定	 * @param[in]	nRow			項目値の順序番号	 * @param[out]	pnCount			取得データ	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pnCountは、lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。	 * Original signature : <code>__stdcall D5RESULT RD5GetDetailCount(const int, const int, const int, const int, const int, int*)</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:2284</i>
+	 * オープンした項目詳細情報の存在数を取得します。	 * @param[in]	nHandle			オープン時に取得したハンドル	 * @param[in]	nOrderByN		存在数順に並べるかどうかを指定	 * @param[in]	nReverse		逆順にするかどうかを指定	 * @param[in]	nZeroSuppress	存在数が0のデータを含めるかどうかを指定	 * @param[in]	nRow			項目値の順序番号	 * @param[out]	pnCount			取得データ	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pnCountは、lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。
+	 * Original signature : <code>__stdcall D5RESULT RD5GetDetailCount(const int, const int, const int, const int, const int, int*)</code>	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:2284</i>
 	 */
 	int RD5GetDetailCount(int nHandle, int nOrderByN, int nReverse, int nZeroSuppress, int nRow, IntBuffer pnCount);
 	/**
-	 * オープンした項目詳細情報をクローズします。	 * @param[in]	nHandle	オープン時に取得したハンドル	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 特になし	 * Original signature : <code>__stdcall D5RESULT RD5CloseDetailInfo(const int)</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:2302</i>
+	 * オープンした項目詳細情報をクローズします。	 * @param[in]	nHandle	オープン時に取得したハンドル	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 特になし
+	 * Original signature : <code>__stdcall D5RESULT RD5CloseDetailInfo(const int)</code>	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:2302</i>
 	 */
 	int RD5CloseDetailInfo(int nHandle);
 	/**
-	 * 集計を行い、集計テーブルを作成します。	 * @param[in]	nTableID			テーブルID	 * @param[in]	nSetID				セットID	 * @param[in]	nDimCount			集計次元数	 * @param[in]	pnDimFilterIDs		集計次元となる項目ID配列	 * @param[in]	nMeasureCount		集計測度の数	 * @param[in]	pnMeasureFilterIDs	集計測度となる項目ID配列	 * @param[in]	pnSummaryTypes		pnMeasureFilterIDsの各項目に集計種別を指定する配列	 * @param[in]	pnFloatFormats		pnMeasureFilterIDsの各項目に固定小数点を使用するかしないかを指定する配列	 * @retval	1以上	生成された集計結果の新規テーブルID	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pnDimFilterIDs,pnMeasureFilterIDs,pnSummaryTypes,pnFloatFormatsは、lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。	 * Original signature : <code>__stdcall D5RESULT RD5NonCubeSum(const int, const int, const int, const int*, const int, const int*, const int*, const int*)</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:2322</i>	 * @deprecated use the safer methods {@link #RD5NonCubeSum(int, int, int, int[], int, int[], int[], int[])} and {@link #RD5NonCubeSum(int, int, int, com.sun.jna.ptr.IntByReference, int, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference)} instead
+	 * 集計を行い、集計テーブルを作成します。	 * @param[in]	nTableID			テーブルID	 * @param[in]	nSetID				セットID	 * @param[in]	nDimCount			集計次元数	 * @param[in]	pnDimFilterIDs		集計次元となる項目ID配列	 * @param[in]	nMeasureCount		集計測度の数	 * @param[in]	pnMeasureFilterIDs	集計測度となる項目ID配列	 * @param[in]	pnSummaryTypes		pnMeasureFilterIDsの各項目に集計種別を指定する配列	 * @param[in]	pnFloatFormats		pnMeasureFilterIDsの各項目に固定小数点を使用するかしないかを指定する配列	 * @retval	1以上	生成された集計結果の新規テーブルID	 * @retval	負		エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pnDimFilterIDs,pnMeasureFilterIDs,pnSummaryTypes,pnFloatFormatsは、lfmutilの{@link CTypeIntAr}を使用してポインタを指定してください。	 * Original signature : <code>__stdcall D5RESULT RD5NonCubeSum(const int, const int, const int, const int*, const int, const int*, const int*, const int*)</code>		 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:2322</i>
+	 * @deprecated use the safer methods {@link #RD5NonCubeSum(int, int, int, int[], int, int[], int[], int[])} and {@link #RD5NonCubeSum(int, int, int, com.sun.jna.ptr.IntByReference, int, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference, com.sun.jna.ptr.IntByReference)} instead
 	 */
 	@java.lang.Deprecated 
 	int RD5NonCubeSum(int nTableID, int nSetID, int nDimCount, IntByReference pnDimFilterIDs, int nMeasureCount, IntByReference pnMeasureFilterIDs, IntByReference pnSummaryTypes, IntByReference pnFloatFormats);
@@ -1602,13 +1617,17 @@ public interface Di5Engine3Library extends Library {
 	@java.lang.Deprecated 
 	int RD5GetFilterName(int nTableID, int nFilterID, Pointer szFilterName);
 	/**
-	 * 項目IDから項目名称を取得します。	 * @param[in]	nTableID		テーブルID	 * @param[in]	nFilterID		項目ID	 * @param[out]	szFilterName	項目名称	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 本APIは使用せず、{@link #RD5GetFilterNameR1}を使用してください。	 * Original signature : <code>__stdcall D5RESULT RD5GetFilterName(const int, const int, char[D5_MAX_NAME_LENGTH])</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:2438</i>
+	 * 項目IDから項目名称を取得します。	 * @param[in]	nTableID		テーブルID	 * @param[in]	nFilterID		項目ID	 * @param[out]	szFilterName	項目名称	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 本APIは使用せず、{@link #RD5GetFilterNameR1}を使用してください。
+	 * Original signature : <code>__stdcall D5RESULT RD5GetFilterName(const int, const int, char[D5_MAX_NAME_LENGTH])</code>	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:2438</i>
 	 */
 	int RD5GetFilterName(int nTableID, int nFilterID, ByteBuffer szFilterName);
 	/**
-	 * セット名称を取得します。	 * @param[in]	nTableID	セットの属するテーブルID	 * @param[in]	nSetID		セットID	 * @param[out]	szSetName	セット名称	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 本APIは使用せず、{@link #RD5GetSetNameR1}を使用してください。	 * Original signature : <code>__stdcall D5RESULT RD5GetSetName(const int, const int, char[D5_MAX_NAME_LENGTH])</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:2455</i>	 * @deprecated use the safer methods {@link #RD5GetSetName(int, int, java.nio.ByteBuffer)} and {@link #RD5GetSetName(int, int, com.sun.jna.Pointer)} instead
+	 * セット名称を取得します。	 * @param[in]	nTableID	セットの属するテーブルID	 * @param[in]	nSetID		セットID	 * @param[out]	szSetName	セット名称	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 本APIは使用せず、{@link #RD5GetSetNameR1}を使用してください。
+	 * Original signature : <code>__stdcall D5RESULT RD5GetSetName(const int, const int, char[D5_MAX_NAME_LENGTH])</code>	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:2455</i>	 * @deprecated use the safer methods {@link #RD5GetSetName(int, int, java.nio.ByteBuffer)} and {@link #RD5GetSetName(int, int, com.sun.jna.Pointer)} instead
 	 */
 	@java.lang.Deprecated 
 	int RD5GetSetName(int nTableID, int nSetID, Pointer szSetName);
@@ -1619,18 +1638,24 @@ public interface Di5Engine3Library extends Library {
 	int RD5GetSetName(int nTableID, int nSetID, ByteBuffer szSetName);
 	/**
 	 * 文字列の末尾のスペースを削除するかどうかについてフラグを設定します。	 * @param[in]	nFlag	文字列末尾のスペース削除チェックフラグ	 * @retval	0	常に0	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 特になし	 * Original signature : <code>__stdcall D5RESULT RD5SetTailSpaceFlag(const int)</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:2469</i>
+	 *
+	 * <i>native declaration : inc\rdi5api.h:2469</i>
 	 */
 	int RD5SetTailSpaceFlag(int nFlag);
 	/**
-	 * サーバのIPアドレスを取得します。	 * @param[out]	szIPAddress	IPアドレス	 * @retval	0	ローカルサーバ	 * @retval	1	リモートサーバ	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * スクリプト言語ではサポートしません。	 * Original signature : <code>__stdcall D5RESULT RD5GetServerIPAddress(char[D5_MAX_NAME_LENGTH])</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:2483</i>	 * @deprecated use the safer methods {@link #RD5GetServerIPAddress(java.nio.ByteBuffer)} and {@link #RD5GetServerIPAddress(com.sun.jna.Pointer)} instead
+	 * サーバのIPアドレスを取得します。	 * @param[out]	szIPAddress	IPアドレス	 * @retval	0	ローカルサーバ	 * @retval	1	リモートサーバ	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * スクリプト言語ではサポートしません。
+	 * Original signature : <code>__stdcall D5RESULT RD5GetServerIPAddress(char[D5_MAX_NAME_LENGTH])</code>	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:2483</i>
+	 * @deprecated use the safer methods {@link #RD5GetServerIPAddress(java.nio.ByteBuffer)} and {@link #RD5GetServerIPAddress(com.sun.jna.Pointer)} instead
 	 */
 	@java.lang.Deprecated 
 	int RD5GetServerIPAddress(Pointer szIPAddress);
 	/**
-	 * サーバのIPアドレスを取得します。	 * @param[out]	szIPAddress	IPアドレス	 * @retval	0	ローカルサーバ	 * @retval	1	リモートサーバ	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * スクリプト言語ではサポートしません。	 * Original signature : <code>__stdcall D5RESULT RD5GetServerIPAddress(char[D5_MAX_NAME_LENGTH])</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:2483</i>
+	 * サーバのIPアドレスを取得します。	 * @param[out]	szIPAddress	IPアドレス	 * @retval	0	ローカルサーバ	 * @retval	1	リモートサーバ	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * スクリプト言語ではサポートしません。
+	 * Original signature : <code>__stdcall D5RESULT RD5GetServerIPAddress(char[D5_MAX_NAME_LENGTH])</code>	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:2483</i>
 	 */
 	int RD5GetServerIPAddress(ByteBuffer szIPAddress);
 	/**
@@ -1640,57 +1665,78 @@ public interface Di5Engine3Library extends Library {
 	int RD5GetEnvironment(di5engine3.TREnvironment pEnvironment);
 	/**
 	 * エンジンのDB文字コードを設定します。	 * @param[in]	szDBCode	DB文字コード	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 特になし	 * Original signature : <code>__stdcall D5RESULT RD5SetDBCharCode(const char*)</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:2505</i>	 * @deprecated use the safer methods {@link #RD5SetDBCharCode(java.lang.String)} and {@link #RD5SetDBCharCode(com.sun.jna.Pointer)} instead
+	 *
+	 * <i>native declaration : inc\rdi5api.h:2505</i>
+	 * @deprecated use the safer methods {@link #RD5SetDBCharCode(java.lang.String)} and {@link #RD5SetDBCharCode(com.sun.jna.Pointer)} instead
 	 */
 	@java.lang.Deprecated 
 	int RD5SetDBCharCode(Pointer szDBCode);
 	/**
 	 * エンジンのDB文字コードを設定します。	 * @param[in]	szDBCode	DB文字コード	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * 特になし	 * Original signature : <code>__stdcall D5RESULT RD5SetDBCharCode(const char*)</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:2505</i>
+	 *
+	 * <i>native declaration : inc\rdi5api.h:2505</i>
 	 */
 	int RD5SetDBCharCode(java.lang.String szDBCode);
 	/**
-	 * 指定されたD5DファイルのヘッダからDBコード、バージョンを読み出します。	 * @param[in]	szDBPath		D5Dファイルの存在するパス	 * @param[in]	szDBName		D5Dファイルの名称	 * @param[out]	pD5FileInfo		D5Dファイル情報	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pD5FileInfo->Versionの各要素取得には、lfmutilの{@link #int_at}を使用してください。	 * Original signature : <code>__stdcall D5RESULT RD5GetD5DFileInfo(const char[D5_MAX_PATH], const char[D5_MAX_PATH], D5FileInfo*)</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:2518</i>	 * @deprecated use the safer methods {@link #RD5GetD5DFileInfo(byte[], byte[], di5engine3.D5FileInfo)} and {@link #RD5GetD5DFileInfo(com.sun.jna.Pointer, com.sun.jna.Pointer, di5engine3.D5FileInfo)} instead
+	 * 指定されたD5DファイルのヘッダからDBコード、バージョンを読み出します。	 * @param[in]	szDBPath		D5Dファイルの存在するパス	 * @param[in]	szDBName		D5Dファイルの名称	 * @param[out]	pD5FileInfo		D5Dファイル情報	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pD5FileInfo->Versionの各要素取得には、lfmutilの{@link #int_at}を使用してください。
+	 * Original signature : <code>__stdcall D5RESULT RD5GetD5DFileInfo(const char[D5_MAX_PATH], const char[D5_MAX_PATH], D5FileInfo*)</code>	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:2518</i>
+	 * @deprecated use the safer methods {@link #RD5GetD5DFileInfo(byte[], byte[], di5engine3.D5FileInfo)} and {@link #RD5GetD5DFileInfo(com.sun.jna.Pointer, com.sun.jna.Pointer, di5engine3.D5FileInfo)} instead
 	 */
 	@java.lang.Deprecated 
 	int RD5GetD5DFileInfo(Pointer szDBPath, Pointer szDBName, di5engine3.D5FileInfo pD5FileInfo);
 	/**
-	 * 指定されたD5DファイルのヘッダからDBコード、バージョンを読み出します。	 * @param[in]	szDBPath		D5Dファイルの存在するパス	 * @param[in]	szDBName		D5Dファイルの名称	 * @param[out]	pD5FileInfo		D5Dファイル情報	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pD5FileInfo->Versionの各要素取得には、lfmutilの{@link #int_at}を使用してください。	 * Original signature : <code>__stdcall D5RESULT RD5GetD5DFileInfo(const char[D5_MAX_PATH], const char[D5_MAX_PATH], D5FileInfo*)</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:2518</i>
+	 * 指定されたD5DファイルのヘッダからDBコード、バージョンを読み出します。	 * @param[in]	szDBPath		D5Dファイルの存在するパス	 * @param[in]	szDBName		D5Dファイルの名称	 * @param[out]	pD5FileInfo		D5Dファイル情報	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pD5FileInfo->Versionの各要素取得には、lfmutilの{@link #int_at}を使用してください。
+	 * Original signature : <code>__stdcall D5RESULT RD5GetD5DFileInfo(const char[D5_MAX_PATH], const char[D5_MAX_PATH], D5FileInfo*)</code>	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:2518</i>
 	 */
 	int RD5GetD5DFileInfo(byte szDBPath[], byte szDBName[], di5engine3.D5FileInfo pD5FileInfo);
 	/**
-	 * 指定されたD5TファイルのヘッダからDBコード、バージョンを読み出します。	 * @param[in]	szTablePath		D5Tファイルの存在するパス	 * @param[in]	szTableName		D5Tファイルの名称	 * @param[out]	pD5FileInfo		D5Tファイル情報	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pD5FileInfo->Versionの各要素取得には、lfmutilの{@link #int_at}を使用してください。	 * Original signature : <code>__stdcall D5RESULT RD5GetD5TFileInfo(const char[D5_MAX_PATH], const char[D5_MAX_PATH], D5FileInfo*)</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:2534</i>	 * @deprecated use the safer methods {@link #RD5GetD5TFileInfo(byte[], byte[], di5engine3.D5FileInfo)} and {@link #RD5GetD5TFileInfo(com.sun.jna.Pointer, com.sun.jna.Pointer, di5engine3.D5FileInfo)} instead
+	 * 指定されたD5TファイルのヘッダからDBコード、バージョンを読み出します。	 * @param[in]	szTablePath		D5Tファイルの存在するパス	 * @param[in]	szTableName		D5Tファイルの名称	 * @param[out]	pD5FileInfo		D5Tファイル情報	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pD5FileInfo->Versionの各要素取得には、lfmutilの{@link #int_at}を使用してください。
+	 * Original signature : <code>__stdcall D5RESULT RD5GetD5TFileInfo(const char[D5_MAX_PATH], const char[D5_MAX_PATH], D5FileInfo*)</code>	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:2534</i>	 * @deprecated use the safer methods {@link #RD5GetD5TFileInfo(byte[], byte[], di5engine3.D5FileInfo)} and {@link #RD5GetD5TFileInfo(com.sun.jna.Pointer, com.sun.jna.Pointer, di5engine3.D5FileInfo)} instead
 	 */
 	@java.lang.Deprecated 
 	int RD5GetD5TFileInfo(Pointer szTablePath, Pointer szTableName, di5engine3.D5FileInfo pD5FileInfo);
 	/**
-	 * 指定されたD5TファイルのヘッダからDBコード、バージョンを読み出します。	 * @param[in]	szTablePath		D5Tファイルの存在するパス	 * @param[in]	szTableName		D5Tファイルの名称	 * @param[out]	pD5FileInfo		D5Tファイル情報	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pD5FileInfo->Versionの各要素取得には、lfmutilの{@link #int_at}を使用してください。	 * Original signature : <code>__stdcall D5RESULT RD5GetD5TFileInfo(const char[D5_MAX_PATH], const char[D5_MAX_PATH], D5FileInfo*)</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:2534</i>
+	 * 指定されたD5TファイルのヘッダからDBコード、バージョンを読み出します。	 * @param[in]	szTablePath		D5Tファイルの存在するパス	 * @param[in]	szTableName		D5Tファイルの名称	 * @param[out]	pD5FileInfo		D5Tファイル情報	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * pD5FileInfo->Versionの各要素取得には、lfmutilの{@link #int_at}を使用してください。
+	 * Original signature : <code>__stdcall D5RESULT RD5GetD5TFileInfo(const char[D5_MAX_PATH], const char[D5_MAX_PATH], D5FileInfo*)</code>	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:2534</i>
 	 */
 	int RD5GetD5TFileInfo(byte szTablePath[], byte szTableName[], di5engine3.D5FileInfo pD5FileInfo);
 	/**
 	 * サーバ側のカレントディレクトリを取得します。	 * @param[out]	szDirectory	カレントディレクトリ名称	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * スクリプト言語ではサポートしません。	 * Original signature : <code>__stdcall D5RESULT RD5BrowserGetCurrentDirectory(char[D5_MAX_PATH])</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:2548</i>	 * @deprecated use the safer methods {@link #RD5BrowserGetCurrentDirectory(java.nio.ByteBuffer)} and {@link #RD5BrowserGetCurrentDirectory(com.sun.jna.Pointer)} instead
+	 *
+	 * <i>native declaration : inc\rdi5api.h:2548</i>
+	 * @deprecated use the safer methods {@link #RD5BrowserGetCurrentDirectory(java.nio.ByteBuffer)} and {@link #RD5BrowserGetCurrentDirectory(com.sun.jna.Pointer)} instead
 	 */
 	@java.lang.Deprecated 
 	int RD5BrowserGetCurrentDirectory(Pointer szDirectory);
 	/**
-	 * サーバ側のカレントディレクトリを取得します。	 * @param[out]	szDirectory	カレントディレクトリ名称	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * スクリプト言語ではサポートしません。	 * Original signature : <code>__stdcall D5RESULT RD5BrowserGetCurrentDirectory(char[D5_MAX_PATH])</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:2548</i>
+	 * サーバ側のカレントディレクトリを取得します。	 * @param[out]	szDirectory	カレントディレクトリ名称	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * スクリプト言語ではサポートしません。
+	 * Original signature : <code>__stdcall D5RESULT RD5BrowserGetCurrentDirectory(char[D5_MAX_PATH])</code>	 *
+	 *	
+	 * <i>native declaration : inc\rdi5api.h:2548</i>
 	 */
 	int RD5BrowserGetCurrentDirectory(ByteBuffer szDirectory);
 	/**
-	 * サーバ側のカレントディレクトリを変更します。	 * @param[in]	szDirectory	変更先ディレクトリ名称	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * スクリプト言語ではサポートしません。	 * Original signature : <code>__stdcall D5RESULT RD5BrowserSetCurrentDirectory(const char[D5_MAX_PATH])</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:2561</i>	 * @deprecated use the safer methods {@link #RD5BrowserSetCurrentDirectory(byte[])} and {@link #RD5BrowserSetCurrentDirectory(com.sun.jna.Pointer)} instead
+	 * サーバ側のカレントディレクトリを変更します。	 * @param[in]	szDirectory	変更先ディレクトリ名称	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * スクリプト言語ではサポートしません。
+	 * Original signature : <code>__stdcall D5RESULT RD5BrowserSetCurrentDirectory(const char[D5_MAX_PATH])</code>	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:2561</i>
+	 * @deprecated use the safer methods {@link #RD5BrowserSetCurrentDirectory(byte[])} and {@link #RD5BrowserSetCurrentDirectory(com.sun.jna.Pointer)} instead
 	 */
 	@java.lang.Deprecated 
 	int RD5BrowserSetCurrentDirectory(Pointer szDirectory);
 	/**
-	 * サーバ側のカレントディレクトリを変更します。	 * @param[in]	szDirectory	変更先ディレクトリ名称	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * スクリプト言語ではサポートしません。	 * Original signature : <code>__stdcall D5RESULT RD5BrowserSetCurrentDirectory(const char[D5_MAX_PATH])</code>	 *
- *	 * <i>native declaration : inc\rdi5api.h:2561</i>
+	 * サーバ側のカレントディレクトリを変更します。	 * @param[in]	szDirectory	変更先ディレクトリ名称	 * @retval	0	成功	 * @retval	負	エラーコード	 * 	 * @par	スクリプト言語から使用する際の注意事項:	 * スクリプト言語ではサポートしません。
+	 * Original signature : <code>__stdcall D5RESULT RD5BrowserSetCurrentDirectory(const char[D5_MAX_PATH])</code>	 *
+	 *
+	 * <i>native declaration : inc\rdi5api.h:2561</i>
 	 */
 	int RD5BrowserSetCurrentDirectory(byte szDirectory[]);
 	/**
