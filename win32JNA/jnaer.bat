@@ -8,4 +8,4 @@ set PATH=%GRADLE_HOME%/bin;%JAVA_HOME%/bin
 
 ::call gradle clean jar
 ::call gradle jar
-gradle
+gradle %*
