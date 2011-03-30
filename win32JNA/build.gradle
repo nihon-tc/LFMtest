@@ -18,7 +18,7 @@ buildscript {
       //mavenCentral()
   }
   dependencies {
-    classpath("com.ochafik.lang.jnaerator:jnaerator:0.9.5")
+    classpath("com.ochafik.lang.jnaerator:jnaerator:0.9.7")
   }
 }
 
@@ -131,8 +131,12 @@ task jnaerator_cnv(depensOn:jnaerator_clean) {
   env_init()
   lib_copy()
   String[] argsArray=[
-                  '-library','Di5Engine3',"$INCPATH/rdi5api.h","$INCPATH/di5api.h","$INCPATH/rdi5apiext.h","master/win32/Di5Engine3.dll",
-                  '-library','Di5Numeric',"$INCPATH/numeric.h","master/win32/Di5Numeric.dll",
+                  '-library','Di5Engine3'
+									,"$INCPATH/rdi5api.h","$INCPATH/di5api.h","$INCPATH/rdi5apiext.h"
+									,"master/win32/Di5Engine3.dll",
+                  '-library','Di5Numeric'
+									,"$INCPATH/numeric.h"
+									,"master/win32/Di5Numeric.dll",
                   '-o', './tmp',
                   '-I./inc',
                   '-jar','dist/lfm.jar',
@@ -142,7 +146,7 @@ task jnaerator_cnv(depensOn:jnaerator_clean) {
 
   ant.exec(executable:"java") {
           arg(value:"-jar")
-          arg(value:"libs/jnaerator-0.9.5.jar")
+          arg(value:"libs/jnaerator-0.9.7.jar")
           argsArray.each{arg(value:it)}
   }
 /*
