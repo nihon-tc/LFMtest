@@ -52,7 +52,7 @@ sourceSets {
 import com.sun.jna.Platform
 def getCurrentOSAndArchString() {
     String os = System.getProperty("os.name")
-		String arch = System.getProperty("os.arch");
+    String arch = System.getProperty("os.arch");
     if (os.equals("Mac OS X")) {
       os = "darwin";
       arch = "fat";
@@ -61,7 +61,7 @@ def getCurrentOSAndArchString() {
       return "win" + (Platform.is64Bit() ? "64" : "32");
     } else if (os.matches("SunOS|Solaris")){
       os = "solaris";
-		}
+    }
     return os + "-" + arch;
 }
 
@@ -85,7 +85,7 @@ def lib_copy(){
                   ,'win64':'win64'
                   ,'Linux-amd64':'x86_64'
                   ,'Linux-x86_64':'x86_64'
-                  //,'darwin-fat':'x86_64'		//Mac(yet not provider so)
+                  //,'darwin-fat':'x86_64'    //Mac(yet not provider so)
                 ]
   lib_dir.each{k,v->
     srcDir = "master/$v"
@@ -137,9 +137,13 @@ task jnaerator_cnv(depensOn:jnaerator_clean) {
   env_init()
   lib_copy()
   String[] argsArray=[
-                  '-library','Di5Engine3',"$INCPATH/rdi5api.h","$INCPATH/di5api.h","$INCPATH/rdi5apiext.h","master/win32/Di5Engine3.dll",
-                  '-library','Di5Numeric',"$INCPATH/numeric.h","master/win32/Di5Numeric.dll",
-                  '-o', './tmp',
+                  '-library','Di5Engine3'
+                  ,"$INCPATH/rdi5api.h","$INCPATH/rdi5apiext.h","$INCPATH/di5api.h","$INCPATH/numeric.h","$INCPATH/di5error.h"
+                  ,"master/win32/Di5Engine3.dll"
+                  ,'-library','Di5Numeric'
+                  ,"$INCPATH/numeric.h","$INCPATH/numconv.h"
+                  ,"master/win32/Di5Numeric.dll"
+                  ,'-o', './tmp',
                   '-I./inc',
                   '-jar','dist/lfm.jar',
                   '-v',
