@@ -6,6 +6,10 @@ dll(so) Provider
 	English Page : http://www.turbo-data.co.jp/english/english.html
 	Japanise Page : http://www.turbo-data.co.jp/index.html
 
+DL version
+	2010/11/10
+	2011/03/12		=> 2011/04/01 download
+
 
 ----
 need enviroments 

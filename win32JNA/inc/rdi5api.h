@@ -4142,6 +4142,20 @@ D5RESULT D5APICALL RD5LoadDBFromMem(
 									void** pEndMemPtr
 									);
 
+
+
+/**
+* テーブルのSetID作成を設定するsetＩＤから始める。
+* @param[in]	　nTableID	格納したいテーブルのID
+* @param[in]	　nNewSetID	始めるＳｅｔＩＤ番号
+* @retval	0 　成功
+* @retval	負	エラーコード
+* 
+*/
+D5RESULT D5APICALL RD5ResetSetID(const int nTableID,
+								 const int nNewSetID
+								 );
+
 #ifdef __cplusplus
 }
 #endif // __cplusplus
