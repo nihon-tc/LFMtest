@@ -25,17 +25,17 @@
 #define	 D5_MAX_STRING_LENGTH_OS	256
 #define  RD5_MAX_CATSIZE			256
 
-// ãƒ©ã‚¤ã‚»ãƒ³ã‚¹æƒ…å ±å–å¾—å‡¦ç†
+// ƒ‰ƒCƒZƒ“ƒXî•ñæ“¾ˆ—
 #define	D5_LICENSE_DATE_SIZE		(9)
 
 #define D5RESULT					int
 #define D5RESULTL					INT64
 
-#define D5_MAX_STRING_SIZE      (4096)		//  æ–‡å­—åˆ—ã®æœ€å¤§é•·
-#define	D5_MAX_TEXT_SIZE		(8192)		//	Browserã§æ‰±ãˆã‚‹Textãƒ‡ãƒ¼ã‚¿ã®æœ€å¤§é•·
-#define D5_MAX_NAME_LENGTH      (256)       //  ãƒ†ãƒ¼ãƒ–ãƒ«åãªã©ã®åç§°ã®æœ€å¤§é•·  32->256 2001.10.16
-#define	D5_MAX_JOIN_KEY			(32)		//	JOINã‚­ãƒ¼æ•°ã®æœ€å¤§å€¤
-#define	D5_MAX_COMBINE			(64)		//	D5CombineTableListã®æœ€å¤§ï¾ƒï½°ï¾Œï¾ï¾™æ•°
+#define D5_MAX_STRING_SIZE      (4096)		//  •¶š—ñ‚ÌÅ‘å’·
+#define	D5_MAX_TEXT_SIZE		(8192)		//	Browser‚Åˆµ‚¦‚éTextƒf[ƒ^‚ÌÅ‘å’·
+#define D5_MAX_NAME_LENGTH      (256)       //  ƒe[ƒuƒ‹–¼‚È‚Ç‚Ì–¼Ì‚ÌÅ‘å’·  32->256 2001.10.16
+#define	D5_MAX_JOIN_KEY			(32)		//	JOINƒL[”‚ÌÅ‘å’l
+#define	D5_MAX_COMBINE			(64)		//	D5CombineTableList‚ÌÅ‘åÃ°ÌŞÙ”
 
 #if defined(WIN32) || defined(WIN64)
   #define D5APICALL   __stdcall
@@ -51,10 +51,10 @@
 #define D5_MAX_TABLE_COUNT       (10000)	
 #define D5_SHORT_STRING_SZ       (128)
 
-#define D5_MAX_LONG_STRING_SIZE (1024*1024)	//  æ–‡å­—åˆ—ã®æœ€å¤§é•· (1M)
+#define D5_MAX_LONG_STRING_SIZE (1024*1024)	//  •¶š—ñ‚ÌÅ‘å’· (1M)
 
 
-// ---- ãƒ‡ãƒ¼ã‚¿ç¨®é¡ ----
+// ---- ƒf[ƒ^í—Ş ----
 #define D5_DT_ERROR             (0)
 #define D5_DT_BLANK             (1)
 #define D5_DT_INTEGER           (2)
@@ -70,17 +70,17 @@
 #define	D5_MAX_CHAIN_ASSOCIATION	(4)
 #define	D5_MAX_TREE_QUALIFY			(D5_MAX_JOIN_CHAIN)
 
-// ---- ãƒ†ãƒ¼ãƒ–ãƒ«ã®ç¨®é¡ ----
+// ---- ƒe[ƒuƒ‹‚Ìí—Ş ----
 #define D5_TABLEKIND_REAL       (0)
 #define D5_TABLEKIND_MASTER     (1)
 #define D5_TABLEKIND_JOIN       (2)
 
-// ----	ãƒ•ã‚£ãƒ«ã‚¿ãƒ¼ã®ã‚¢ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ãƒˆé ˜åŸŸã‚µã‚¤ã‚º ----
+// ----	ƒtƒBƒ‹ƒ^[‚ÌƒAƒgƒŠƒrƒ…[ƒg—ÌˆæƒTƒCƒY ----
 #define	D5_FILTER_ATTR_SIZE		(64)
 
-#define	D5_MAX_CACHE			(128)		//	ï¾Šï¾ï¾™ï½¸èª­å‡ºæ™‚ã®æœ€å¤§ï½»ï½²ï½½ï¾
+#define	D5_MAX_CACHE			(128)		//	ÊŞÙ¸“Ço‚ÌÅ‘å»²½Ş
 
-// ----- å¤šé …ç›®ã®æ¤œç´¢æ¡ä»¶æ–‡å­—åˆ—ã®æœ€å¤§é•·
+// ----- ‘½€–Ú‚ÌŒŸõğŒ•¶š—ñ‚ÌÅ‘å’·
 #define D5_MAX_SEARCH_TEXT_SIZE 4096
 
 //#define	D5_N_SUMMARY_DIM		(4)
@@ -90,12 +90,12 @@
 #define D5_SERIALNUM_SIZE		(60)	
 
 
-//  æ‹¡å¼µå­ä¸€è¦§
+//  Šg’£qˆê——
 #define  DB_FILE_EXTENSION      ".D5D"
 #define  TABLE_FILE_EXTENSION   ".D5T"
 
 
-// ---- æ¤œç´¢æ–¹æ³• ----
+// ---- ŒŸõ•û–@ ----
 #define D5_OPETYPE_EQUAL        (0)         // pcX == v
 #define D5_OPETYPE_BETWEEN      (1)         // pcX =< v && v= < pcY
 #define D5_OPETYPE_LESSEQUAL    (2)         // v =< pcX
@@ -104,15 +104,15 @@
 #define D5_OPETYPE_WITHIN       (5)         // pcX < v && v < pcY
 #define D5_OPETYPE_LESS         (6)         // v < pcX
 #define D5_OPETYPE_GREATER      (7)         // pcX < v
-#define	D5_OPETYPE_STR_LEFT		(8)			//	STRING	å‰æ–¹ä¸€è‡´
-#define	D5_OPETYPE_STR_MID		(9)			//	STRING	ä¸­é–“ä¸€è‡´
-#define	D5_OPETYPE_STR_RIGHT	(10)		//	STRING	å¾Œæ–¹ä¸€è‡´
+#define	D5_OPETYPE_STR_LEFT		(8)			//	STRING	‘O•ûˆê’v
+#define	D5_OPETYPE_STR_MID		(9)			//	STRING	’†ŠÔˆê’v
+#define	D5_OPETYPE_STR_RIGHT	(10)		//	STRING	Œã•ûˆê’v
 
-// ---- ã‚½ãƒ¼ãƒˆæ–¹æ³• ----
+// ---- ƒ\[ƒg•û–@ ----
 #define D5_SORT_ASCENDANT       (0)
 #define D5_SORT_DESCENDANT      (1)
 
-// LocaleIDå®šç¾©
+// LocaleID’è‹`
 #define D5_LOCALE_SJIS			(0)
 #define D5_LOCALE_MS932			(1)
 #define D5_LOCALE_MS949			(2)
@@ -123,7 +123,7 @@
 #define D5_LOCALE_DEFAULT		(99)
 
 
-// DBCharCodeæ–‡å­—ã‚³ãƒ¼ãƒ‰å®šç¾©
+// DBCharCode•¶šƒR[ƒh’è‹`
 #define D5_DBCODE_SJIS			"Shift_JIS"
 #define D5_DBCODE_MS932			"MS932"
 #define D5_DBCODE_MS949			"MS949"
@@ -134,15 +134,15 @@
 #define D5_DBCODE_UNKNOWN		"NotDefined"	// forDBCC8
 
 
-#define	D5_SUMMARY_NONE		(0)		// é›†è¨ˆæ–¹æ³•ãŒä½•ã‚‚å®šç¾©ã•ã‚Œã¦ã„ãªã„
-#define	D5_SUMMARY_COUNT	(1)		// å€‹æ•°ã®é›†è¨ˆ
-#define	D5_SUMMARY_MAX		(2)		// æœ€å¤§å€¤ã®é›†è¨ˆ
-#define	D5_SUMMARY_MIN		(4)		// æœ€å°å€¤ã®é›†è¨ˆ
-#define	D5_SUMMARY_SUM		(8)		// åˆè¨ˆå€¤ã®é›†è¨ˆ
-#define	D5_SUMMARY_AVERAGE	(16)	// å¹³å‡å€¤ã®é›†è¨ˆ
+#define	D5_SUMMARY_NONE		(0)		// WŒv•û–@‚ª‰½‚à’è‹`‚³‚ê‚Ä‚¢‚È‚¢
+#define	D5_SUMMARY_COUNT	(1)		// ŒÂ”‚ÌWŒv
+#define	D5_SUMMARY_MAX		(2)		// Å‘å’l‚ÌWŒv
+#define	D5_SUMMARY_MIN		(4)		// Å¬’l‚ÌWŒv
+#define	D5_SUMMARY_SUM		(8)		// ‡Œv’l‚ÌWŒv
+#define	D5_SUMMARY_AVERAGE	(16)	// •½‹Ï’l‚ÌWŒv
 
 
-// ---- é›†åˆæ¼”ç®—ã®æ–¹æ³• ----
+// ---- W‡‰‰Z‚Ì•û–@ ----
 #define D5_SETOPE_AND           (0)
 #define D5_SETOPE_OR            (1)
 #define D5_SETOPE_SUB           (2)
@@ -157,19 +157,19 @@
 #endif
 
 #define	D5_MIN_JOIN_CHAIN		16
-#define	D5_MAX_JOIN_CHAIN		510 // æœ€å¤§Joinãƒã‚§ãƒ¼ãƒ³è¨­å®š
+#define	D5_MAX_JOIN_CHAIN		510 // Å‘åJoinƒ`ƒF[ƒ“İ’è
 
 #define MAX_SHMTBL_ENTRIES		(20000)
 
 
-// ---- ãƒ†ãƒ¼ãƒ–ãƒ«æƒ…å ± ----
+// ---- ƒe[ƒuƒ‹î•ñ ----
 typedef struct _TTableInfo{
-    int TableID;            //  Table ã®IDç•ªå·
-    int TableKind;          //  Tableã®ç¨®é¡ 0:Real 1:Master 2:Join
-    int nFilter;            //  å­˜åœ¨ã™ã‚‹ãƒ•ã‚£ãƒ«ã‚¿ãƒ¼ã®æ•°
-    int nSet;               //  ä¿æŒã™ã‚‹é›†åˆã®æ•°(ç¾åœ¨å€¤)
-    int TotalRows;          //  å…¨è¡Œæ•°
-    char TableName[D5_MAX_NAME_LENGTH + 8];     //  ãƒ†ãƒ¼ãƒ–ãƒ«åç§°(0ã§çµ‚ã‚ã‚‹æ–‡å­—åˆ—)
+    int TableID;            //  Table ‚ÌID”Ô†
+    int TableKind;          //  Table‚Ìí—Ş 0:Real 1:Master 2:Join
+    int nFilter;            //  ‘¶İ‚·‚éƒtƒBƒ‹ƒ^[‚Ì”
+    int nSet;               //  •Û‚·‚éW‡‚Ì”(Œ»İ’l)
+    int TotalRows;          //  ‘Ss”
+    char TableName[D5_MAX_NAME_LENGTH + 8];     //  ƒe[ƒuƒ‹–¼Ì(0‚ÅI‚í‚é•¶š—ñ)
 }TTableInfo;
 
 #endif //_D5API_H
