@@ -7,18 +7,18 @@ import com.ochafik.lang.jnaerator.runtime.Structure;
  * For help, please visit <a href="http://nativelibs4java.googlecode.com/">NativeLibs4Java</a> , <a href="http://rococoa.dev.java.net/">Rococoa</a>, or <a href="http://jna.dev.java.net/">JNA</a>.
  */
 public class TTableInfo extends Structure<TTableInfo, TTableInfo.ByValue, TTableInfo.ByReference > {
-	/// Table ‚ÌID”Ô†
+	/// Table ã®IDç•ªå·
 	public int TableID;
-	/// Table‚Ìí—Ş 0:Real 1:Master 2:Join
+	/// Tableã®ç¨®é¡ 0:Real 1:Master 2:Join
 	public int TableKind;
-	/// ‘¶İ‚·‚éƒtƒBƒ‹ƒ^[‚Ì”
+	/// å­˜åœ¨ã™ã‚‹ãƒ•ã‚£ãƒ«ã‚¿ãƒ¼ã®æ•°
 	public int nFilter;
-	/// •Û‚·‚éW‡‚Ì”(Œ»İ’l)
+	/// ä¿æŒã™ã‚‹é›†åˆã®æ•°(ç¾åœ¨å€¤)
 	public int nSet;
-	/// ‘Ss”
+	/// å…¨è¡Œæ•°
 	public int TotalRows;
 	/**
-	 * ƒe[ƒuƒ‹–¼Ì(0‚ÅI‚í‚é•¶š—ñ)<br>
+	 * ãƒ†ãƒ¼ãƒ–ãƒ«åç§°(0ã§çµ‚ã‚ã‚‹æ–‡å­—åˆ—)<br>
 	 * C type : char[(256) + 8]
 	 */
 	public byte[] TableName = new byte[((256) + 8)];
@@ -26,12 +26,12 @@ public class TTableInfo extends Structure<TTableInfo, TTableInfo.ByValue, TTable
 		super();
 	}
 	/**
-	 * @param TableID Table ‚ÌID”Ô†<br>
-	 * @param TableKind Table‚Ìí—Ş 0:Real 1:Master 2:Join<br>
-	 * @param nFilter ‘¶İ‚·‚éƒtƒBƒ‹ƒ^[‚Ì”<br>
-	 * @param nSet •Û‚·‚éW‡‚Ì”(Œ»İ’l)<br>
-	 * @param TotalRows ‘Ss”<br>
-	 * @param TableName ƒe[ƒuƒ‹–¼Ì(0‚ÅI‚í‚é•¶š—ñ)<br>
+	 * @param TableID Table ã®IDç•ªå·<br>
+	 * @param TableKind Tableã®ç¨®é¡ 0:Real 1:Master 2:Join<br>
+	 * @param nFilter å­˜åœ¨ã™ã‚‹ãƒ•ã‚£ãƒ«ã‚¿ãƒ¼ã®æ•°<br>
+	 * @param nSet ä¿æŒã™ã‚‹é›†åˆã®æ•°(ç¾åœ¨å€¤)<br>
+	 * @param TotalRows å…¨è¡Œæ•°<br>
+	 * @param TableName ãƒ†ãƒ¼ãƒ–ãƒ«åç§°(0ã§çµ‚ã‚ã‚‹æ–‡å­—åˆ—)<br>
 	 * C type : char[(256) + 8]
 	 */
 	public TTableInfo(int TableID, int TableKind, int nFilter, int nSet, int TotalRows, byte TableName[]) {

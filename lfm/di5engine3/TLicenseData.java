@@ -9,26 +9,26 @@ import com.sun.jna.NativeLong;
  */
 public class TLicenseData extends Structure<TLicenseData, TLicenseData.ByValue, TLicenseData.ByReference > {
 	/**
-	 * < MACƒAƒhƒŒƒX<br>
+	 * < MACã‚¢ãƒ‰ãƒ¬ã‚¹<br>
 	 * C type : char[D5_MAX_NAME_LENGTH]
 	 */
 	public byte[] LicenseMacAddr = new byte[(di5engine3.Di5Engine3Library.D5_MAX_NAME_LENGTH)];
 	/**
-	 * < Å‘ås”i’PˆÊFçsj<br>
+	 * < æœ€å¤§è¡Œæ•°ï¼ˆå˜ä½ï¼šåƒè¡Œï¼‰<br>
 	 * C type : INT64
 	 */
 	public NativeLong MaxRow;
 	/**
-	 * < Å‘åƒƒ‚ƒŠ—Êi’PˆÊFMBj<br>
+	 * < æœ€å¤§ãƒ¡ãƒ¢ãƒªé‡ï¼ˆå˜ä½ï¼šMBï¼‰<br>
 	 * C type : INT64
 	 */
 	public NativeLong MaxMemory;
-	/// < ƒ‰ƒCƒZƒ“ƒX’†CPU”
+	/// < ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ä¸­CPUæ•°
 	public int CpuNum;
-	/// < ƒ}ƒ‹ƒ`ƒ†[ƒU”
+	/// < ãƒžãƒ«ãƒãƒ¦ãƒ¼ã‚¶æ•°
 	public int UserNum;
 	/**
-	 * < —LŒøŠúŒÀiYYYYMMDDj<br>
+	 * < æœ‰åŠ¹æœŸé™ï¼ˆYYYYMMDDï¼‰<br>
 	 * C type : char[D5_LICENSE_DATE_SIZE]
 	 */
 	public byte[] ExpirationDate = new byte[(di5engine3.Di5Engine3Library.D5_LICENSE_DATE_SIZE)];
@@ -36,15 +36,15 @@ public class TLicenseData extends Structure<TLicenseData, TLicenseData.ByValue, 
 		super();
 	}
 	/**
-	 * @param LicenseMacAddr < MACƒAƒhƒŒƒX<br>
+	 * @param LicenseMacAddr < MACã‚¢ãƒ‰ãƒ¬ã‚¹<br>
 	 * C type : char[D5_MAX_NAME_LENGTH]<br>
-	 * @param MaxRow < Å‘ås”i’PˆÊFçsj<br>
+	 * @param MaxRow < æœ€å¤§è¡Œæ•°ï¼ˆå˜ä½ï¼šåƒè¡Œï¼‰<br>
 	 * C type : INT64<br>
-	 * @param MaxMemory < Å‘åƒƒ‚ƒŠ—Êi’PˆÊFMBj<br>
+	 * @param MaxMemory < æœ€å¤§ãƒ¡ãƒ¢ãƒªé‡ï¼ˆå˜ä½ï¼šMBï¼‰<br>
 	 * C type : INT64<br>
-	 * @param CpuNum < ƒ‰ƒCƒZƒ“ƒX’†CPU”<br>
-	 * @param UserNum < ƒ}ƒ‹ƒ`ƒ†[ƒU”<br>
-	 * @param ExpirationDate < —LŒøŠúŒÀiYYYYMMDDj<br>
+	 * @param CpuNum < ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ä¸­CPUæ•°<br>
+	 * @param UserNum < ãƒžãƒ«ãƒãƒ¦ãƒ¼ã‚¶æ•°<br>
+	 * @param ExpirationDate < æœ‰åŠ¹æœŸé™ï¼ˆYYYYMMDDï¼‰<br>
 	 * C type : char[D5_LICENSE_DATE_SIZE]
 	 */
 	public TLicenseData(byte LicenseMacAddr[], NativeLong MaxRow, NativeLong MaxMemory, int CpuNum, int UserNum, byte ExpirationDate[]) {

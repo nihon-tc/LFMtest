@@ -9,12 +9,12 @@ import com.sun.jna.NativeLong;
  */
 public class TRMemInfo extends Structure<TRMemInfo, TRMemInfo.ByValue, TRMemInfo.ByReference > {
 	/**
-	 * < トータルメモリサイズ<br>
+	 * < 繝医�ｼ繧ｿ繝ｫ繝｡繝｢繝ｪ繧ｵ繧､繧ｺ<br>
 	 * C type : INT64
 	 */
 	public NativeLong TotalPhys;
 	/**
-	 * < 使用可能メモリサイズ<br>
+	 * < 菴ｿ逕ｨ蜿ｯ閭ｽ繝｡繝｢繝ｪ繧ｵ繧､繧ｺ<br>
 	 * C type : INT64
 	 */
 	public NativeLong AvailPhys;
@@ -22,9 +22,9 @@ public class TRMemInfo extends Structure<TRMemInfo, TRMemInfo.ByValue, TRMemInfo
 		super();
 	}
 	/**
-	 * @param TotalPhys < トータルメモリサイズ<br>
+	 * @param TotalPhys < 繝医�ｼ繧ｿ繝ｫ繝｡繝｢繝ｪ繧ｵ繧､繧ｺ<br>
 	 * C type : INT64<br>
-	 * @param AvailPhys < 使用可能メモリサイズ<br>
+	 * @param AvailPhys < 菴ｿ逕ｨ蜿ｯ閭ｽ繝｡繝｢繝ｪ繧ｵ繧､繧ｺ<br>
 	 * C type : INT64
 	 */
 	public TRMemInfo(NativeLong TotalPhys, NativeLong AvailPhys) {

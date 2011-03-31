@@ -8,33 +8,33 @@ import com.ochafik.lang.jnaerator.runtime.Structure;
  */
 public class TREnvironment extends Structure<TREnvironment, TREnvironment.ByValue, TREnvironment.ByReference > {
 	/**
-	 * < ƒRƒ“ƒsƒ…[ƒ^–¼Ì<br>
+	 * < ã‚³ãƒ³ãƒ”ãƒ¥ãƒ¼ã‚¿åç§°<br>
 	 * C type : char[D5_MAX_STRING_LENGTH_OS]
 	 */
 	public byte[] HostName = new byte[(di5engine3.Di5Engine3Library.D5_MAX_STRING_LENGTH_OS)];
-	/// < OSƒ^ƒCƒv
+	/// < OSã‚¿ã‚¤ãƒ—
 	public int OSType;
-	/// < OS‚ÌƒƒWƒƒ[Eƒo[ƒWƒ‡ƒ“”Ô†
+	/// < OSã®ãƒ¡ã‚¸ãƒ£ãƒ¼ãƒ»ãƒãƒ¼ã‚¸ãƒ§ãƒ³ç•ªå·
 	public int OSMajorVersion;
-	/// < OS‚Ìƒ}ƒCƒi[Eƒo[ƒWƒ‡ƒ“”Ô†
+	/// < OSã®ãƒžã‚¤ãƒŠãƒ¼ãƒ»ãƒãƒ¼ã‚¸ãƒ§ãƒ³ç•ªå·
 	public int OSMinorVersion;
-	/// < ƒVƒXƒeƒ€‚ÌƒvƒƒZƒbƒT¥ƒA[ƒLƒeƒNƒ`ƒƒ
+	/// < ã‚·ã‚¹ãƒ†ãƒ ã®ãƒ—ãƒ­ã‚»ãƒƒã‚µï½¥ã‚¢ãƒ¼ã‚­ãƒ†ã‚¯ãƒãƒ£
 	public int MachineArchitecture;
-	/// < ƒVƒXƒeƒ€‚ÌƒGƒ“ƒfƒBƒAƒ“Eƒ^ƒCƒv
+	/// < ã‚·ã‚¹ãƒ†ãƒ ã®ã‚¨ãƒ³ãƒ‡ã‚£ã‚¢ãƒ³ãƒ»ã‚¿ã‚¤ãƒ—
 	public int Endian;
-	/// < LFMƒGƒ“ƒWƒ“‚Ìƒrƒbƒg”
+	/// < LFMã‚¨ãƒ³ã‚¸ãƒ³ã®ãƒ“ãƒƒãƒˆæ•°
 	public int ELF;
-	/// < ƒVƒXƒeƒ€‚ÌƒvƒƒZƒbƒT”
+	/// < ã‚·ã‚¹ãƒ†ãƒ ã®ãƒ—ãƒ­ã‚»ãƒƒã‚µæ•°
 	public int ProcessorCount;
-	/// < –¢Žg—p
+	/// < æœªä½¿ç”¨
 	public int ProcessType;
 	/**
-	 * < OS‚ÌŠ¿ŽšƒR[ƒh<br>
+	 * < OSã®æ¼¢å­—ã‚³ãƒ¼ãƒ‰<br>
 	 * C type : char[32]
 	 */
 	public byte[] OSCharCode = new byte[(32)];
 	/**
-	 * < DB•¶ŽšƒR[ƒh<br>
+	 * < DBæ–‡å­—ã‚³ãƒ¼ãƒ‰<br>
 	 * C type : char[32]
 	 */
 	public byte[] DBCharCode = new byte[(32)];

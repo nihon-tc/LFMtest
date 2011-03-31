@@ -7,18 +7,18 @@ import com.ochafik.lang.jnaerator.runtime.Structure;
  * For help, please visit <a href="http://nativelibs4java.googlecode.com/">NativeLibs4Java</a> , <a href="http://rococoa.dev.java.net/">Rococoa</a>, or <a href="http://jna.dev.java.net/">JNA</a>.
  */
 public class TRFilterInfo extends Structure<TRFilterInfo, TRFilterInfo.ByValue, TRFilterInfo.ByReference > {
-	/// < ˆÊ’uî•ñ‚ÌƒTƒCƒY
+	/// < ä½ç½®æƒ…å ±ã®ã‚µã‚¤ã‚º
 	public int PVSize;
-	/// < ’lƒŠƒXƒg‚Ìƒf[ƒ^Œ^‚ð®”‰»‚µ‚½‚à‚Ì
+	/// < å€¤ãƒªã‚¹ãƒˆã®ãƒ‡ãƒ¼ã‚¿åž‹ã‚’æ•´æ•°åŒ–ã—ãŸã‚‚ã®
 	public int VLType;
-	/// < ’lƒŠƒXƒg‚ÌŠe’l‚Ì•
+	/// < å€¤ãƒªã‚¹ãƒˆã®å„å€¤ã®å¹…
 	public int VLWidth;
-	/// < ’lƒŠƒXƒg‚ÌƒTƒCƒYiŒÂ”j
+	/// < å€¤ãƒªã‚¹ãƒˆã®ã‚µã‚¤ã‚ºï¼ˆå€‹æ•°ï¼‰
 	public int VLSize;
-	/// < ’lƒŠƒXƒg‚ª•¶Žš—ñ‚Ìê‡A•¶Žš—ñŠi”[—Ìˆæ‚ÌƒTƒCƒY
+	/// < å€¤ãƒªã‚¹ãƒˆãŒæ–‡å­—åˆ—ã®å ´åˆã€æ–‡å­—åˆ—æ ¼ç´é ˜åŸŸã®ã‚µã‚¤ã‚º
 	public int CharAreaSize;
 	/**
-	 * < €–Ú–¼Ì<br>
+	 * < é …ç›®åç§°<br>
 	 * C type : char[D5_MAX_NAME_LENGTH + 8]
 	 */
 	public byte[] FilterName = new byte[(di5engine3.Di5Engine3Library.D5_MAX_NAME_LENGTH + 8)];
@@ -26,12 +26,12 @@ public class TRFilterInfo extends Structure<TRFilterInfo, TRFilterInfo.ByValue, 
 		super();
 	}
 	/**
-	 * @param PVSize < ˆÊ’uî•ñ‚ÌƒTƒCƒY<br>
-	 * @param VLType < ’lƒŠƒXƒg‚Ìƒf[ƒ^Œ^‚ð®”‰»‚µ‚½‚à‚Ì<br>
-	 * @param VLWidth < ’lƒŠƒXƒg‚ÌŠe’l‚Ì•<br>
-	 * @param VLSize < ’lƒŠƒXƒg‚ÌƒTƒCƒYiŒÂ”j<br>
-	 * @param CharAreaSize < ’lƒŠƒXƒg‚ª•¶Žš—ñ‚Ìê‡A•¶Žš—ñŠi”[—Ìˆæ‚ÌƒTƒCƒY<br>
-	 * @param FilterName < €–Ú–¼Ì<br>
+	 * @param PVSize < ä½ç½®æƒ…å ±ã®ã‚µã‚¤ã‚º<br>
+	 * @param VLType < å€¤ãƒªã‚¹ãƒˆã®ãƒ‡ãƒ¼ã‚¿åž‹ã‚’æ•´æ•°åŒ–ã—ãŸã‚‚ã®<br>
+	 * @param VLWidth < å€¤ãƒªã‚¹ãƒˆã®å„å€¤ã®å¹…<br>
+	 * @param VLSize < å€¤ãƒªã‚¹ãƒˆã®ã‚µã‚¤ã‚ºï¼ˆå€‹æ•°ï¼‰<br>
+	 * @param CharAreaSize < å€¤ãƒªã‚¹ãƒˆãŒæ–‡å­—åˆ—ã®å ´åˆã€æ–‡å­—åˆ—æ ¼ç´é ˜åŸŸã®ã‚µã‚¤ã‚º<br>
+	 * @param FilterName < é …ç›®åç§°<br>
 	 * C type : char[D5_MAX_NAME_LENGTH + 8]
 	 */
 	public TRFilterInfo(int PVSize, int VLType, int VLWidth, int VLSize, int CharAreaSize, byte FilterName[]) {

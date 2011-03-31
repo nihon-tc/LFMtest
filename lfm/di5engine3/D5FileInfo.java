@@ -7,19 +7,19 @@ import com.ochafik.lang.jnaerator.runtime.Structure;
  * For help, please visit <a href="http://nativelibs4java.googlecode.com/">NativeLibs4Java</a> , <a href="http://rococoa.dev.java.net/">Rococoa</a>, or <a href="http://jna.dev.java.net/">JNA</a>.
  */
 public class D5FileInfo extends Structure<D5FileInfo, D5FileInfo.ByValue, D5FileInfo.ByReference > {
-	/// < D5Dƒtƒ@ƒCƒ‹‚ðì¬‚µ‚½OSƒ^ƒCƒv
+	/// < D5Dãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œæˆã—ãŸOSã‚¿ã‚¤ãƒ—
 	public byte OSType;
-	/// < D5Dƒtƒ@ƒCƒ‹‚ðì¬‚µ‚½ƒVƒXƒeƒ€‚ÌƒGƒ“ƒfƒBƒAƒ“Eƒ^ƒCƒv
+	/// < D5Dãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œæˆã—ãŸã‚·ã‚¹ãƒ†ãƒ ã®ã‚¨ãƒ³ãƒ‡ã‚£ã‚¢ãƒ³ãƒ»ã‚¿ã‚¤ãƒ—
 	public byte Endian;
-	/// < D5Dƒtƒ@ƒCƒ‹‚ðì¬‚µ‚½Û‚ÌLFMƒGƒ“ƒWƒ“‚Ìƒrƒbƒg”
+	/// < D5Dãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œæˆã—ãŸéš›ã®LFMã‚¨ãƒ³ã‚¸ãƒ³ã®ãƒ“ãƒƒãƒˆæ•°
 	public byte ELF;
 	/**
-	 * < D5Dƒtƒ@ƒCƒ‹‚ÌDB•¶ŽšƒR[ƒh<br>
+	 * < D5Dãƒ•ã‚¡ã‚¤ãƒ«ã®DBæ–‡å­—ã‚³ãƒ¼ãƒ‰<br>
 	 * C type : char[32]
 	 */
 	public byte[] DBCharCode = new byte[(32)];
 	/**
-	 * < D5Dƒtƒ@ƒCƒ‹‚Ìƒo[ƒWƒ‡ƒ“<br>
+	 * < D5Dãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³<br>
 	 * C type : int[D5_VERSION_SIZE]
 	 */
 	public int[] Version = new int[(di5engine3.Di5Engine3Library.D5_VERSION_SIZE)];
@@ -27,12 +27,12 @@ public class D5FileInfo extends Structure<D5FileInfo, D5FileInfo.ByValue, D5File
 		super();
 	}
 	/**
-	 * @param OSType < D5Dƒtƒ@ƒCƒ‹‚ðì¬‚µ‚½OSƒ^ƒCƒv<br>
-	 * @param Endian < D5Dƒtƒ@ƒCƒ‹‚ðì¬‚µ‚½ƒVƒXƒeƒ€‚ÌƒGƒ“ƒfƒBƒAƒ“Eƒ^ƒCƒv<br>
-	 * @param ELF < D5Dƒtƒ@ƒCƒ‹‚ðì¬‚µ‚½Û‚ÌLFMƒGƒ“ƒWƒ“‚Ìƒrƒbƒg”<br>
-	 * @param DBCharCode < D5Dƒtƒ@ƒCƒ‹‚ÌDB•¶ŽšƒR[ƒh<br>
+	 * @param OSType < D5Dãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œæˆã—ãŸOSã‚¿ã‚¤ãƒ—<br>
+	 * @param Endian < D5Dãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œæˆã—ãŸã‚·ã‚¹ãƒ†ãƒ ã®ã‚¨ãƒ³ãƒ‡ã‚£ã‚¢ãƒ³ãƒ»ã‚¿ã‚¤ãƒ—<br>
+	 * @param ELF < D5Dãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œæˆã—ãŸéš›ã®LFMã‚¨ãƒ³ã‚¸ãƒ³ã®ãƒ“ãƒƒãƒˆæ•°<br>
+	 * @param DBCharCode < D5Dãƒ•ã‚¡ã‚¤ãƒ«ã®DBæ–‡å­—ã‚³ãƒ¼ãƒ‰<br>
 	 * C type : char[32]<br>
-	 * @param Version < D5Dƒtƒ@ƒCƒ‹‚Ìƒo[ƒWƒ‡ƒ“<br>
+	 * @param Version < D5Dãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³<br>
 	 * C type : int[D5_VERSION_SIZE]
 	 */
 	public D5FileInfo(byte OSType, byte Endian, byte ELF, byte DBCharCode[], int Version[]) {

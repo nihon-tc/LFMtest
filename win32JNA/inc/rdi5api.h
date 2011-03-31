@@ -1,5 +1,5 @@
 /** @file
- * LFMƒe[ƒuƒ‹API
+ * LFMãƒ†ãƒ¼ãƒ–ãƒ«API
  *
  * (C)2009 Turbo Data Laboratories, Inc.
  */
@@ -16,56 +16,56 @@
 #define _RD5API_H
 #include "di5api.h"
 
-/** €–Úî•ñ */
+/** é …ç›®æƒ…å ± */
 typedef struct _TRFilterInfo {
-	int		PVSize;			/**< ˆÊ’uî•ñ‚ÌƒTƒCƒY */
-	int		VLType;			/**< ’lƒŠƒXƒg‚Ìƒf[ƒ^Œ^‚ğ®”‰»‚µ‚½‚à‚Ì */
-	int		VLWidth;		/**< ’lƒŠƒXƒg‚ÌŠe’l‚Ì• */
-	int		VLSize;			/**< ’lƒŠƒXƒg‚ÌƒTƒCƒYiŒÂ”j */
-	int		CharAreaSize;	/**< ’lƒŠƒXƒg‚ª•¶š—ñ‚Ìê‡A•¶š—ñŠi”[—Ìˆæ‚ÌƒTƒCƒY */
-	char	FilterName[D5_MAX_NAME_LENGTH + 8];	/**< €–Ú–¼Ì */
+	int		PVSize;			/**< ä½ç½®æƒ…å ±ã®ã‚µã‚¤ã‚º */
+	int		VLType;			/**< å€¤ãƒªã‚¹ãƒˆã®ãƒ‡ãƒ¼ã‚¿å‹ã‚’æ•´æ•°åŒ–ã—ãŸã‚‚ã® */
+	int		VLWidth;		/**< å€¤ãƒªã‚¹ãƒˆã®å„å€¤ã®å¹… */
+	int		VLSize;			/**< å€¤ãƒªã‚¹ãƒˆã®ã‚µã‚¤ã‚ºï¼ˆå€‹æ•°ï¼‰ */
+	int		CharAreaSize;	/**< å€¤ãƒªã‚¹ãƒˆãŒæ–‡å­—åˆ—ã®å ´åˆã€æ–‡å­—åˆ—æ ¼ç´é ˜åŸŸã®ã‚µã‚¤ã‚º */
+	char	FilterName[D5_MAX_NAME_LENGTH + 8];	/**< é …ç›®åç§° */
 } TRFilterInfo;
 
-/** ƒƒ‚ƒŠî•ñ */
+/** ãƒ¡ãƒ¢ãƒªæƒ…å ± */
 typedef struct _TRMemInfo {
-	INT64  TotalPhys;	/**< ƒg[ƒ^ƒ‹ƒƒ‚ƒŠƒTƒCƒY */
-	INT64  AvailPhys;	/**< g—p‰Â”\ƒƒ‚ƒŠƒTƒCƒY */
+	INT64  TotalPhys;	/**< ãƒˆãƒ¼ã‚¿ãƒ«ãƒ¡ãƒ¢ãƒªã‚µã‚¤ã‚º */
+	INT64  AvailPhys;	/**< ä½¿ç”¨å¯èƒ½ãƒ¡ãƒ¢ãƒªã‚µã‚¤ã‚º */
 } TRMemInfo;
 
 #define D5_MAX_STRING_LENGTH_CHAR_CODE 32
 
-/** ƒT[ƒoŠÂ‹«î•ñ */
+/** ã‚µãƒ¼ãƒç’°å¢ƒæƒ…å ± */
 typedef struct _TREnvironment {
-	char HostName[D5_MAX_STRING_LENGTH_OS];	/**< ƒRƒ“ƒsƒ…[ƒ^–¼Ì */
-	int  OSType;						/**< OSƒ^ƒCƒv */
-	int  OSMajorVersion;				/**< OS‚ÌƒƒWƒƒ[Eƒo[ƒWƒ‡ƒ“”Ô† */
-	int  OSMinorVersion;				/**< OS‚Ìƒ}ƒCƒi[Eƒo[ƒWƒ‡ƒ“”Ô† */
-	int  MachineArchitecture;			/**< ƒVƒXƒeƒ€‚ÌƒvƒƒZƒbƒT¥ƒA[ƒLƒeƒNƒ`ƒƒ */
-	int  Endian;						/**< ƒVƒXƒeƒ€‚ÌƒGƒ“ƒfƒBƒAƒ“Eƒ^ƒCƒv */
-	int  ELF;							/**< LFMƒGƒ“ƒWƒ“‚Ìƒrƒbƒg” */
-	int  ProcessorCount;				/**< ƒVƒXƒeƒ€‚ÌƒvƒƒZƒbƒT” */
-	int  ProcessType;					/**< –¢g—p */
-	char OSCharCode[D5_MAX_STRING_LENGTH_CHAR_CODE];	/**< OS‚ÌŠ¿šƒR[ƒh */
-	char DBCharCode[D5_MAX_STRING_LENGTH_CHAR_CODE];	/**< DB•¶šƒR[ƒh */
+	char HostName[D5_MAX_STRING_LENGTH_OS];	/**< ã‚³ãƒ³ãƒ”ãƒ¥ãƒ¼ã‚¿åç§° */
+	int  OSType;						/**< OSã‚¿ã‚¤ãƒ— */
+	int  OSMajorVersion;				/**< OSã®ãƒ¡ã‚¸ãƒ£ãƒ¼ãƒ»ãƒãƒ¼ã‚¸ãƒ§ãƒ³ç•ªå· */
+	int  OSMinorVersion;				/**< OSã®ãƒã‚¤ãƒŠãƒ¼ãƒ»ãƒãƒ¼ã‚¸ãƒ§ãƒ³ç•ªå· */
+	int  MachineArchitecture;			/**< ã‚·ã‚¹ãƒ†ãƒ ã®ãƒ—ãƒ­ã‚»ãƒƒã‚µï½¥ã‚¢ãƒ¼ã‚­ãƒ†ã‚¯ãƒãƒ£ */
+	int  Endian;						/**< ã‚·ã‚¹ãƒ†ãƒ ã®ã‚¨ãƒ³ãƒ‡ã‚£ã‚¢ãƒ³ãƒ»ã‚¿ã‚¤ãƒ— */
+	int  ELF;							/**< LFMã‚¨ãƒ³ã‚¸ãƒ³ã®ãƒ“ãƒƒãƒˆæ•° */
+	int  ProcessorCount;				/**< ã‚·ã‚¹ãƒ†ãƒ ã®ãƒ—ãƒ­ã‚»ãƒƒã‚µæ•° */
+	int  ProcessType;					/**< æœªä½¿ç”¨ */
+	char OSCharCode[D5_MAX_STRING_LENGTH_CHAR_CODE];	/**< OSã®æ¼¢å­—ã‚³ãƒ¼ãƒ‰ */
+	char DBCharCode[D5_MAX_STRING_LENGTH_CHAR_CODE];	/**< DBæ–‡å­—ã‚³ãƒ¼ãƒ‰ */
 } TREnvironment;
 
-/** D5ƒtƒ@ƒCƒ‹î•ñ */
+/** D5ãƒ•ã‚¡ã‚¤ãƒ«æƒ…å ± */
 typedef struct _D5FileInfo {
-	unsigned char	OSType;										/**< D5Dƒtƒ@ƒCƒ‹‚ğì¬‚µ‚½OSƒ^ƒCƒv */
-	unsigned char	Endian;										/**< D5Dƒtƒ@ƒCƒ‹‚ğì¬‚µ‚½ƒVƒXƒeƒ€‚ÌƒGƒ“ƒfƒBƒAƒ“Eƒ^ƒCƒv */
-	unsigned char	ELF;										/**< D5Dƒtƒ@ƒCƒ‹‚ğì¬‚µ‚½Û‚ÌLFMƒGƒ“ƒWƒ“‚Ìƒrƒbƒg” */
-	char			DBCharCode[D5_MAX_STRING_LENGTH_CHAR_CODE];	/**< D5Dƒtƒ@ƒCƒ‹‚ÌDB•¶šƒR[ƒh */
-	int				Version[D5_VERSION_SIZE];					/**< D5Dƒtƒ@ƒCƒ‹‚Ìƒo[ƒWƒ‡ƒ“ */
+	unsigned char	OSType;										/**< D5Dãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œæˆã—ãŸOSã‚¿ã‚¤ãƒ— */
+	unsigned char	Endian;										/**< D5Dãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œæˆã—ãŸã‚·ã‚¹ãƒ†ãƒ ã®ã‚¨ãƒ³ãƒ‡ã‚£ã‚¢ãƒ³ãƒ»ã‚¿ã‚¤ãƒ— */
+	unsigned char	ELF;										/**< D5Dãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œæˆã—ãŸéš›ã®LFMã‚¨ãƒ³ã‚¸ãƒ³ã®ãƒ“ãƒƒãƒˆæ•° */
+	char			DBCharCode[D5_MAX_STRING_LENGTH_CHAR_CODE];	/**< D5Dãƒ•ã‚¡ã‚¤ãƒ«ã®DBæ–‡å­—ã‚³ãƒ¼ãƒ‰ */
+	int				Version[D5_VERSION_SIZE];					/**< D5Dãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ */
 } D5FileInfo;
 
-/** ƒ‰ƒCƒZƒ“ƒXî•ñ */
+/** ãƒ©ã‚¤ã‚»ãƒ³ã‚¹æƒ…å ± */
 typedef struct _TLicenseData {
-	char	LicenseMacAddr[D5_MAX_NAME_LENGTH];		/**< MACƒAƒhƒŒƒX */
-	INT64	MaxRow;									/**< Å‘ås”i’PˆÊFçsj */
-	INT64	MaxMemory;								/**< Å‘åƒƒ‚ƒŠ—Êi’PˆÊFMBj */
-	int		CpuNum;									/**< ƒ‰ƒCƒZƒ“ƒX’†CPU” */
-	int		UserNum;								/**< ƒ}ƒ‹ƒ`ƒ†[ƒU” */
-	char	ExpirationDate[D5_LICENSE_DATE_SIZE];	/**< —LŒøŠúŒÀiYYYYMMDDj */
+	char	LicenseMacAddr[D5_MAX_NAME_LENGTH];		/**< MACã‚¢ãƒ‰ãƒ¬ã‚¹ */
+	INT64	MaxRow;									/**< æœ€å¤§è¡Œæ•°ï¼ˆå˜ä½ï¼šåƒè¡Œï¼‰ */
+	INT64	MaxMemory;								/**< æœ€å¤§ãƒ¡ãƒ¢ãƒªé‡ï¼ˆå˜ä½ï¼šMBï¼‰ */
+	int		CpuNum;									/**< ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ä¸­CPUæ•° */
+	int		UserNum;								/**< ãƒãƒ«ãƒãƒ¦ãƒ¼ã‚¶æ•° */
+	char	ExpirationDate[D5_LICENSE_DATE_SIZE];	/**< æœ‰åŠ¹æœŸé™ï¼ˆYYYYMMDDï¼‰ */
 } TLicenseData;
 
 
@@ -74,13 +74,13 @@ extern "C" {
 #endif // __cplusplus
 
 /**
- * ƒo[ƒWƒ‡ƒ“î•ñ‚âAƒRƒs[ƒ‰ƒCƒgƒƒbƒZ[ƒW‚ğæ“¾‚µ‚Ü‚·B
- * @param[out]	anVersion	ƒo[ƒWƒ‡ƒ“”z—ñ
- * @param[out]	szCopyright	ƒRƒs[ƒ‰ƒCƒgƒƒbƒZ[ƒW
- * @retval	0	í‚É0
+ * ãƒãƒ¼ã‚¸ãƒ§ãƒ³æƒ…å ±ã‚„ã€ã‚³ãƒ”ãƒ¼ãƒ©ã‚¤ãƒˆãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[out]	anVersion	ãƒãƒ¼ã‚¸ãƒ§ãƒ³é…åˆ—
+ * @param[out]	szCopyright	ã‚³ãƒ”ãƒ¼ãƒ©ã‚¤ãƒˆãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
+ * @retval	0	å¸¸ã«0
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * –{API‚Íg—p‚¹‚¸A{@link #RD5GetVersionR1},{@link #RD5GetCopyRightR1}‚ğg—p‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * æœ¬APIã¯ä½¿ç”¨ã›ãšã€{@link #RD5GetVersionR1},{@link #RD5GetCopyRightR1}ã‚’ä½¿ç”¨ã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5GetVersion(
 		 int  anVersion[D5_VERSION_SIZE],
@@ -88,24 +88,24 @@ D5RESULT D5APICALL RD5GetVersion(
 		  );
 
 /**
- * ƒ[ƒNƒXƒy[ƒX‚ğƒNƒŠƒA‚µ‚Ü‚·B
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ãƒ¯ãƒ¼ã‚¯ã‚¹ãƒšãƒ¼ã‚¹ã‚’ã‚¯ãƒªã‚¢ã—ã¾ã™ã€‚
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT  D5APICALL  RD5ClearDB();
 
 /**
- * w’è‚³‚ê‚½ƒpƒX‚¨‚æ‚Ñƒtƒ@ƒCƒ‹–¼Ì‚ÌAƒ[ƒNƒXƒy[ƒX‚ğ“Ç‚İ‚İ‚Ü‚·B
- * @param[in]	szDBPath	D5Dƒtƒ@ƒCƒ‹‚Ì‘¶İ‚·‚éƒpƒX
- * @param[in]	szDBName	D5Dƒtƒ@ƒCƒ‹‚Ì–¼Ì
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * æŒ‡å®šã•ã‚ŒãŸãƒ‘ã‚¹ãŠã‚ˆã³ãƒ•ã‚¡ã‚¤ãƒ«åç§°ã®ã€ãƒ¯ãƒ¼ã‚¯ã‚¹ãƒšãƒ¼ã‚¹ã‚’èª­ã¿è¾¼ã¿ã¾ã™ã€‚
+ * @param[in]	szDBPath	D5Dãƒ•ã‚¡ã‚¤ãƒ«ã®å­˜åœ¨ã™ã‚‹ãƒ‘ã‚¹
+ * @param[in]	szDBName	D5Dãƒ•ã‚¡ã‚¤ãƒ«ã®åç§°
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5LoadDB(
 		 const char szDBPath[D5_MAX_PATH],
@@ -113,14 +113,14 @@ D5RESULT D5APICALL RD5LoadDB(
 	   );
 
 /**
- * w’è‚³‚ê‚½ƒpƒX‚Éw’è‚³‚ê‚½ƒtƒ@ƒCƒ‹–¼Ì‚ÅAƒ[ƒNƒXƒy[ƒX‚ğD5Dƒtƒ@ƒCƒ‹‚Æ‚µ‚Ä‘‚«o‚µ‚Ü‚·B
- * @param[in]	szDBPath	D5Dƒtƒ@ƒCƒ‹‚ğ‘‚«o‚·ƒpƒX
- * @param[in]	szDBName	D5Dƒtƒ@ƒCƒ‹‚Ì–¼Ì
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * æŒ‡å®šã•ã‚ŒãŸãƒ‘ã‚¹ã«æŒ‡å®šã•ã‚ŒãŸãƒ•ã‚¡ã‚¤ãƒ«åç§°ã§ã€ãƒ¯ãƒ¼ã‚¯ã‚¹ãƒšãƒ¼ã‚¹ã‚’D5Dãƒ•ã‚¡ã‚¤ãƒ«ã¨ã—ã¦æ›¸ãå‡ºã—ã¾ã™ã€‚
+ * @param[in]	szDBPath	D5Dãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ›¸ãå‡ºã™ãƒ‘ã‚¹
+ * @param[in]	szDBName	D5Dãƒ•ã‚¡ã‚¤ãƒ«ã®åç§°
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5SaveDBAs(
 		 const char szDBPath[D5_MAX_PATH],
@@ -128,20 +128,20 @@ D5RESULT D5APICALL RD5SaveDBAs(
 		 );
 
 /**
- * ƒJƒ“ƒ}‹æØ‚èƒtƒ@ƒCƒ‹‚Öƒf[ƒ^‚ğƒGƒNƒXƒ|[ƒg‚µ‚Ü‚·B
- * @param[in]	nTableID		ƒe[ƒuƒ‹ID
- * @param[in]	nSetID			ƒZƒbƒgID
- * @param[in]	anFilterIDList	€–ÚIDƒŠƒXƒg
- * @param[in]	nRowFrom		o—Í‚ğŠJn‚·‚és
- * @param[in]	nRowTo			o—Í‚ÌI—¹s
- * @param[in]	nDateSep		“ú•tƒf[ƒ^‚Ì‹æØ‚è•¶š‚ğw’è
- * @param[in]	szDBPath		o—Íƒtƒ@ƒCƒ‹‚Ö‚ÌƒpƒX
- * @param[in]	szDBName		o—Íƒtƒ@ƒCƒ‹–¼Ì
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚«ãƒ³ãƒåŒºåˆ‡ã‚Šãƒ•ã‚¡ã‚¤ãƒ«ã¸ãƒ‡ãƒ¼ã‚¿ã‚’ã‚¨ã‚¯ã‚¹ãƒãƒ¼ãƒˆã—ã¾ã™ã€‚
+ * @param[in]	nTableID		ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID			ã‚»ãƒƒãƒˆID
+ * @param[in]	anFilterIDList	é …ç›®IDãƒªã‚¹ãƒˆ
+ * @param[in]	nRowFrom		å‡ºåŠ›ã‚’é–‹å§‹ã™ã‚‹è¡Œ
+ * @param[in]	nRowTo			å‡ºåŠ›ã®çµ‚äº†è¡Œ
+ * @param[in]	nDateSep		æ—¥ä»˜ãƒ‡ãƒ¼ã‚¿ã®åŒºåˆ‡ã‚Šæ–‡å­—ã‚’æŒ‡å®š
+ * @param[in]	szDBPath		å‡ºåŠ›ãƒ•ã‚¡ã‚¤ãƒ«ã¸ã®ãƒ‘ã‚¹
+ * @param[in]	szDBName		å‡ºåŠ›ãƒ•ã‚¡ã‚¤ãƒ«åç§°
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * anFilterIDList‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * anFilterIDListã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5ExportAsCSV(
 		const int nTableID,
@@ -155,20 +155,20 @@ D5RESULT D5APICALL RD5ExportAsCSV(
 		);
 
 /**
- * TAB‹æØ‚èƒtƒ@ƒCƒ‹‚Öƒf[ƒ^‚ğƒGƒNƒXƒ|[ƒg‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nSetID	ƒZƒbƒgID
- * @param[in]	anFilterIDList	€–ÚIDƒŠƒXƒg
- * @param[in]	nRowFrom	o—Í‚ğŠJn‚·‚és
- * @param[in]	nRowTo	o—Í‚ÌI—¹s
- * @param[in]	nDateSep	“ú•tƒf[ƒ^‚Ì‹æØ‚è•¶š‚ğw’è
- * @param[in]	szDBPath	o—Íƒtƒ@ƒCƒ‹‚Ö‚ÌƒpƒX
- * @param[in]	szDBName	o—Íƒtƒ@ƒCƒ‹–¼Ì
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * TABåŒºåˆ‡ã‚Šãƒ•ã‚¡ã‚¤ãƒ«ã¸ãƒ‡ãƒ¼ã‚¿ã‚’ã‚¨ã‚¯ã‚¹ãƒãƒ¼ãƒˆã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID	ã‚»ãƒƒãƒˆID
+ * @param[in]	anFilterIDList	é …ç›®IDãƒªã‚¹ãƒˆ
+ * @param[in]	nRowFrom	å‡ºåŠ›ã‚’é–‹å§‹ã™ã‚‹è¡Œ
+ * @param[in]	nRowTo	å‡ºåŠ›ã®çµ‚äº†è¡Œ
+ * @param[in]	nDateSep	æ—¥ä»˜ãƒ‡ãƒ¼ã‚¿ã®åŒºåˆ‡ã‚Šæ–‡å­—ã‚’æŒ‡å®š
+ * @param[in]	szDBPath	å‡ºåŠ›ãƒ•ã‚¡ã‚¤ãƒ«ã¸ã®ãƒ‘ã‚¹
+ * @param[in]	szDBName	å‡ºåŠ›ãƒ•ã‚¡ã‚¤ãƒ«åç§°
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * anFilterIDList‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * anFilterIDListã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5ExportAsTAB(
 		const int nTableID,
@@ -182,21 +182,21 @@ D5RESULT D5APICALL RD5ExportAsTAB(
 		);
 
 /**
- * ƒe[ƒuƒ‹‚Ìƒf[ƒ^‚ğƒJƒ^ƒƒO’è‹`ƒtƒ@ƒCƒ‹‚ÖƒGƒNƒXƒ|[ƒg‚µ‚Ü‚·B
- * @param[in]	nTableID		ƒe[ƒuƒ‹ID
- * @param[in]	nSetID			ƒZƒbƒgID
- * @param[in]	anFilterIDList	o—Í‚·‚é€–ÚIDƒŠƒXƒg
- * @param[in]	nFileType		o—Í‚·‚éƒtƒ@ƒCƒ‹ƒ^ƒCƒv
- * @param[in]	nRowFrom		o—Í‚·‚és‚ÌŠJnˆÊ’u
- * @param[in]	nRowTo			o—Í‚·‚és‚ÌI—¹ˆÊ’u
- * @param[in]	nDateSep		“ú•tƒf[ƒ^‚Ì‹æØ‚è•¶š‚ğw’è
- * @param[in]	szCatalogPath	ƒJƒ^ƒƒO’è‹`ƒtƒ@ƒCƒ‹‚ğo—Í‚·‚éƒpƒX
- * @param[in]	szCatalogName	ƒJƒ^ƒƒO’è‹`ƒtƒ@ƒCƒ‹‚Ì–¼Ì
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ãƒ†ãƒ¼ãƒ–ãƒ«ã®ãƒ‡ãƒ¼ã‚¿ã‚’ã‚«ã‚¿ãƒ­ã‚°å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã¸ã‚¨ã‚¯ã‚¹ãƒãƒ¼ãƒˆã—ã¾ã™ã€‚
+ * @param[in]	nTableID		ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID			ã‚»ãƒƒãƒˆID
+ * @param[in]	anFilterIDList	å‡ºåŠ›ã™ã‚‹é …ç›®IDãƒªã‚¹ãƒˆ
+ * @param[in]	nFileType		å‡ºåŠ›ã™ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«ã‚¿ã‚¤ãƒ—
+ * @param[in]	nRowFrom		å‡ºåŠ›ã™ã‚‹è¡Œã®é–‹å§‹ä½ç½®
+ * @param[in]	nRowTo			å‡ºåŠ›ã™ã‚‹è¡Œã®çµ‚äº†ä½ç½®
+ * @param[in]	nDateSep		æ—¥ä»˜ãƒ‡ãƒ¼ã‚¿ã®åŒºåˆ‡ã‚Šæ–‡å­—ã‚’æŒ‡å®š
+ * @param[in]	szCatalogPath	ã‚«ã‚¿ãƒ­ã‚°å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã‚’å‡ºåŠ›ã™ã‚‹ãƒ‘ã‚¹
+ * @param[in]	szCatalogName	ã‚«ã‚¿ãƒ­ã‚°å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã®åç§°
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * anFilterIDList‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * anFilterIDListã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5SaveAsCatalog(
 		const int nTableID,
@@ -211,23 +211,23 @@ D5RESULT D5APICALL RD5SaveAsCatalog(
 		);
 
 /**
- * ƒe[ƒuƒ‹‚Ìƒf[ƒ^‚ğƒJƒ^ƒƒO’è‹`ƒtƒ@ƒCƒ‹‚ÖƒGƒNƒXƒ|[ƒg‚µ‚Ü‚·B
- * @param[in]	nTableID		ƒe[ƒuƒ‹ID
- * @param[in]	nSetID			ƒZƒbƒgID
- * @param[in]	anFilterIDList	o—Í‚·‚é€–ÚIDƒŠƒXƒg
- * @param[in]	nFileType		o—Í‚·‚éƒtƒ@ƒCƒ‹ƒ^ƒCƒv
- * @param[in]	nRowFrom		o—Í‚·‚és‚ÌŠJnˆÊ’u
- * @param[in]	nRowTo			o—Í‚·‚és‚ÌI—¹ˆÊ’u
- * @param[in]	nDateSep		“ú•tƒf[ƒ^‚Ì‹æØ‚è•¶š‚ğw’è
- * @param[in]	szCatalogPath	\‘¢’è‹`ƒtƒ@ƒCƒ‹‚ğo—Í‚·‚éƒpƒX
- * @param[in]	szCatalogName	\‘¢’è‹`ƒtƒ@ƒCƒ‹‚Ì–¼Ì
- * @param[in]	szSourcePath	Œ´nƒf[ƒ^ƒtƒ@ƒCƒ‹‚Ì‘¶İ‚·‚éƒpƒX
- * @param[in]	szSourceName	Œ´nƒf[ƒ^ƒtƒ@ƒCƒ‹‚Ì–¼Ì
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ãƒ†ãƒ¼ãƒ–ãƒ«ã®ãƒ‡ãƒ¼ã‚¿ã‚’ã‚«ã‚¿ãƒ­ã‚°å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã¸ã‚¨ã‚¯ã‚¹ãƒãƒ¼ãƒˆã—ã¾ã™ã€‚
+ * @param[in]	nTableID		ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID			ã‚»ãƒƒãƒˆID
+ * @param[in]	anFilterIDList	å‡ºåŠ›ã™ã‚‹é …ç›®IDãƒªã‚¹ãƒˆ
+ * @param[in]	nFileType		å‡ºåŠ›ã™ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«ã‚¿ã‚¤ãƒ—
+ * @param[in]	nRowFrom		å‡ºåŠ›ã™ã‚‹è¡Œã®é–‹å§‹ä½ç½®
+ * @param[in]	nRowTo			å‡ºåŠ›ã™ã‚‹è¡Œã®çµ‚äº†ä½ç½®
+ * @param[in]	nDateSep		æ—¥ä»˜ãƒ‡ãƒ¼ã‚¿ã®åŒºåˆ‡ã‚Šæ–‡å­—ã‚’æŒ‡å®š
+ * @param[in]	szCatalogPath	æ§‹é€ å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã‚’å‡ºåŠ›ã™ã‚‹ãƒ‘ã‚¹
+ * @param[in]	szCatalogName	æ§‹é€ å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã®åç§°
+ * @param[in]	szSourcePath	åŸå§‹ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã®å­˜åœ¨ã™ã‚‹ãƒ‘ã‚¹
+ * @param[in]	szSourceName	åŸå§‹ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã®åç§°
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * anFilterIDList‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * anFilterIDListã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5SaveAsCatalogEx(
 		const int nTableID,
@@ -244,24 +244,24 @@ D5RESULT D5APICALL RD5SaveAsCatalogEx(
 		);
 
 /**
- * ƒ[ƒNƒXƒy[ƒX‚ğã‘‚«•Û‘¶‚µ‚Ü‚·B
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ãƒ¯ãƒ¼ã‚¯ã‚¹ãƒšãƒ¼ã‚¹ã‚’ä¸Šæ›¸ãä¿å­˜ã—ã¾ã™ã€‚
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5SaveDB();
 
 /**
- * ƒ[ƒNƒXƒy[ƒX‚ÌƒpƒX‚Æ–¼Ì‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	szDBPath	D5Dƒtƒ@ƒCƒ‹‚ÌƒpƒX
- * @param[in]	szDBName	D5Dƒtƒ@ƒCƒ‹‚Ì–¼Ì
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ãƒ¯ãƒ¼ã‚¯ã‚¹ãƒšãƒ¼ã‚¹ã®ãƒ‘ã‚¹ã¨åç§°ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	szDBPath	D5Dãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ‘ã‚¹
+ * @param[in]	szDBName	D5Dãƒ•ã‚¡ã‚¤ãƒ«ã®åç§°
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * –{API‚Íg—p‚¹‚¸A{@link #RD5GetDBPathR1},{@link #RD5GetDBNameR1}‚ğg—p‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * æœ¬APIã¯ä½¿ç”¨ã›ãšã€{@link #RD5GetDBPathR1},{@link #RD5GetDBNameR1}ã‚’ä½¿ç”¨ã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5GetPathName(
 		 char szDBPath[D5_MAX_PATH],
@@ -269,37 +269,37 @@ D5RESULT D5APICALL RD5GetPathName(
 		 );
 
 /**
- * ‘¶İ‚·‚éƒe[ƒuƒ‹”‚ğæ“¾‚µ‚Ü‚·B
- * @retval	0ˆÈã	ƒe[ƒuƒ‹”
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * å­˜åœ¨ã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«æ•°ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @retval	0ä»¥ä¸Š	ãƒ†ãƒ¼ãƒ–ãƒ«æ•°
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5GetNTable();
 
 /**
- * ƒe[ƒuƒ‹ID‚Ìˆê——‚ğæ“¾‚µ‚Ü‚·B
- * @param[out]	anTableIDList	ƒe[ƒuƒ‹ID‚Ìˆê——
- * @retval	0ˆÈã	ƒe[ƒuƒ‹”
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * ãƒ†ãƒ¼ãƒ–ãƒ«IDã®ä¸€è¦§ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[out]	anTableIDList	ãƒ†ãƒ¼ãƒ–ãƒ«IDã®ä¸€è¦§
+ * @retval	0ä»¥ä¸Š	ãƒ†ãƒ¼ãƒ–ãƒ«æ•°
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * anTableIDList‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * anTableIDListã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5GetTableIDList(
 			int anTableIDList[D5_MAX_TABLE_COUNT]
 		  );
 
 /**
- * “o˜^‰Â”\‚Èƒe[ƒuƒ‹–¼Ì‚ğ¶¬‚µ‚Ü‚·B
- * @param[in]	szSeedName	¶¬‚³‚ê‚éƒe[ƒuƒ‹–¼Ì‚ÌŒ³‚Æ‚È‚é•¶š—ñ
- * @param[out]	szGenName	¶¬‚³‚ê‚½“o˜^‰Â”\‚Èƒe[ƒuƒ‹–¼Ì
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ç™»éŒ²å¯èƒ½ãªãƒ†ãƒ¼ãƒ–ãƒ«åç§°ã‚’ç”Ÿæˆã—ã¾ã™ã€‚
+ * @param[in]	szSeedName	ç”Ÿæˆã•ã‚Œã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«åç§°ã®å…ƒã¨ãªã‚‹æ–‡å­—åˆ—
+ * @param[out]	szGenName	ç”Ÿæˆã•ã‚ŒãŸç™»éŒ²å¯èƒ½ãªãƒ†ãƒ¼ãƒ–ãƒ«åç§°
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * –{API‚Íg—p‚¹‚¸A{@link #RD5GenerateTableNameR1}‚ğg—p‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * æœ¬APIã¯ä½¿ç”¨ã›ãšã€{@link #RD5GenerateTableNameR1}ã‚’ä½¿ç”¨ã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5GenerateTableName(
 		 const char   szSeedName[D5_MAX_NAME_LENGTH],
@@ -307,14 +307,14 @@ D5RESULT D5APICALL RD5GenerateTableName(
 		  );
 
 /**
- * REALƒe[ƒuƒ‹‚ğƒ[ƒh‚µ‚Ü‚·B
- * @param[in]	szTablePath		D5Tƒtƒ@ƒCƒ‹‚Ì‘¶İ‚·‚éƒpƒX
- * @param[in]	szTableName		ƒe[ƒuƒ‹–¼Ì
- * @retval	1ˆÈã	ƒ[ƒh‚³‚ê‚½ƒe[ƒuƒ‹‚ÌID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * REALãƒ†ãƒ¼ãƒ–ãƒ«ã‚’ãƒ­ãƒ¼ãƒ‰ã—ã¾ã™ã€‚
+ * @param[in]	szTablePath		D5Tãƒ•ã‚¡ã‚¤ãƒ«ã®å­˜åœ¨ã™ã‚‹ãƒ‘ã‚¹
+ * @param[in]	szTableName		ãƒ†ãƒ¼ãƒ–ãƒ«åç§°
+ * @retval	1ä»¥ä¸Š	ãƒ­ãƒ¼ãƒ‰ã•ã‚ŒãŸãƒ†ãƒ¼ãƒ–ãƒ«ã®ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5LoadRealTable(
 		 const char   szTablePath[D5_MAX_PATH],
@@ -322,14 +322,14 @@ D5RESULT D5APICALL RD5LoadRealTable(
 		 );
 
 /**
- * REALƒe[ƒuƒ‹‚ğV‹Kì¬‚µ‚Ü‚·B
- * @param[in]	szTableName	ì¬‚·‚éƒe[ƒuƒ‹–¼Ì
- * @param[in]	nRowCount	s”
- * @retval	1ˆÈã	V‹K‚Éì¬‚³‚ê‚½ƒe[ƒuƒ‹ID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * REALãƒ†ãƒ¼ãƒ–ãƒ«ã‚’æ–°è¦ä½œæˆã—ã¾ã™ã€‚
+ * @param[in]	szTableName	ä½œæˆã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«åç§°
+ * @param[in]	nRowCount	è¡Œæ•°
+ * @retval	1ä»¥ä¸Š	æ–°è¦ã«ä½œæˆã•ã‚ŒãŸãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5AddRealTable(
 		  const char szTableName[D5_MAX_NAME_LENGTH],
@@ -337,14 +337,14 @@ D5RESULT D5APICALL RD5AddRealTable(
 		 );
 
 /**
- * REALƒe[ƒuƒ‹‚ğ•Û‘¶‚µ‚Ü‚·B
- * @param[in]	szTablePath	REALƒe[ƒuƒ‹‚ğ•Û‘¶‚·‚éƒpƒX
- * @param[in]	nTableID	•Û‘¶‚µ‚½‚¢ƒe[ƒuƒ‹‚ÌID
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * REALãƒ†ãƒ¼ãƒ–ãƒ«ã‚’ä¿å­˜ã—ã¾ã™ã€‚
+ * @param[in]	szTablePath	REALãƒ†ãƒ¼ãƒ–ãƒ«ã‚’ä¿å­˜ã™ã‚‹ãƒ‘ã‚¹
+ * @param[in]	nTableID	ä¿å­˜ã—ãŸã„ãƒ†ãƒ¼ãƒ–ãƒ«ã®ID
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5SaveRealTable(
 		 const char	szTablePath[D5_MAX_PATH],
@@ -359,20 +359,20 @@ D5RESULT D5APICALL RD5SaveRealTableAs(
 		 );
 
 /**
- * JOINƒe[ƒuƒ‹‚ğì¬‚µ‚Ü‚·B
- * @param[in]	szTableName			V‹K‚Éì¬‚·‚éJOINƒe[ƒuƒ‹–¼Ì
- * @param[in]	nIsOuter			ƒe[ƒuƒ‹‹æ•ª
- * @param[in]	nMasterTableID		ƒ}ƒXƒ^ƒe[ƒuƒ‹ID
- * @param[in]	nMasterSetID		ƒ}ƒXƒ^ƒe[ƒuƒ‹‚ÌƒZƒbƒgID
- * @param[in]	anMasterFilterIDs	JOINƒL[‚Æ‚È‚éƒ}ƒXƒ^ƒe[ƒuƒ‹‚Ì€–ÚIDƒŠƒXƒg
- * @param[in]	nSlaveTableID		ƒXƒŒ[ƒuƒe[ƒuƒ‹ID
- * @param[in]	nSlaveSetID			ƒXƒŒ[ƒuƒe[ƒuƒ‹‚ÌƒZƒbƒgID
- * @param[in]	anSlaveFilterIDs	JOINƒL[‚Æ‚È‚éƒXƒŒ[ƒuƒe[ƒuƒ‹‚Ì€–ÚIDƒŠƒXƒg
- * @retval	1ˆÈã	ì¬‚³‚ê‚½JOINƒe[ƒuƒ‹ID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * JOINãƒ†ãƒ¼ãƒ–ãƒ«ã‚’ä½œæˆã—ã¾ã™ã€‚
+ * @param[in]	szTableName			æ–°è¦ã«ä½œæˆã™ã‚‹JOINãƒ†ãƒ¼ãƒ–ãƒ«åç§°
+ * @param[in]	nIsOuter			ãƒ†ãƒ¼ãƒ–ãƒ«åŒºåˆ†
+ * @param[in]	nMasterTableID		ãƒã‚¹ã‚¿ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nMasterSetID		ãƒã‚¹ã‚¿ãƒ†ãƒ¼ãƒ–ãƒ«ã®ã‚»ãƒƒãƒˆID
+ * @param[in]	anMasterFilterIDs	JOINã‚­ãƒ¼ã¨ãªã‚‹ãƒã‚¹ã‚¿ãƒ†ãƒ¼ãƒ–ãƒ«ã®é …ç›®IDãƒªã‚¹ãƒˆ
+ * @param[in]	nSlaveTableID		ã‚¹ãƒ¬ãƒ¼ãƒ–ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSlaveSetID			ã‚¹ãƒ¬ãƒ¼ãƒ–ãƒ†ãƒ¼ãƒ–ãƒ«ã®ã‚»ãƒƒãƒˆID
+ * @param[in]	anSlaveFilterIDs	JOINã‚­ãƒ¼ã¨ãªã‚‹ã‚¹ãƒ¬ãƒ¼ãƒ–ãƒ†ãƒ¼ãƒ–ãƒ«ã®é …ç›®IDãƒªã‚¹ãƒˆ
+ * @retval	1ä»¥ä¸Š	ä½œæˆã•ã‚ŒãŸJOINãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * anMasterFilterIDs,anSlaveFilterIDs‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * anMasterFilterIDs,anSlaveFilterIDsã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5AddJoinTable(
 			const char	szTableName[D5_MAX_NAME_LENGTH],
@@ -386,19 +386,19 @@ D5RESULT D5APICALL RD5AddJoinTable(
 		  );
 
 /**
- * JOIN IN/OUTƒZƒbƒg‚ğ¶¬‚µ‚Ü‚·B
- * @param[in]	nDestTableID	JOIN IN/OUTƒZƒbƒg¶¬‚Ìƒ^[ƒQƒbƒg‚Ìƒe[ƒuƒ‹ID
- * @param[in]	nDestSetID		JOIN IN/OUTƒZƒbƒg‚ğZo‚·‚éƒ^[ƒQƒbƒg‚ÌƒZƒbƒgID
- * @param[in]	nDestFilterID	JOIN IN/OUTƒZƒbƒg‚ğZo‚·‚éƒ^[ƒQƒbƒg‚Ì€–ÚID
- * @param[in]	nSrcTableID		JOIN IN/OUTƒZƒbƒg‚ÌZoŒ³‚É‚È‚é[ƒuƒ‹ID
- * @param[in]	nSrcSetID		JOIN IN/OUTƒZƒbƒg‚ÌZoŒ³‚É‚È‚é‚ÌƒZƒbƒgID
- * @param[in]	nSrcFilterID	JOIN IN/OUTƒZƒbƒg‚ÌZoŒ³‚É‚È‚é€–ÚID
- * @param[in]	nIsJoinIn		IN/OUT‚ğw’è‚·‚é
- * @retval	0ˆÈã	¶¬‚³‚ê‚½ƒZƒbƒgID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * JOIN IN/OUTã‚»ãƒƒãƒˆã‚’ç”Ÿæˆã—ã¾ã™ã€‚
+ * @param[in]	nDestTableID	JOIN IN/OUTã‚»ãƒƒãƒˆç”Ÿæˆã®ã‚¿ãƒ¼ã‚²ãƒƒãƒˆã®ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nDestSetID		JOIN IN/OUTã‚»ãƒƒãƒˆã‚’ç®—å‡ºã™ã‚‹ã‚¿ãƒ¼ã‚²ãƒƒãƒˆã®ã‚»ãƒƒãƒˆID
+ * @param[in]	nDestFilterID	JOIN IN/OUTã‚»ãƒƒãƒˆã‚’ç®—å‡ºã™ã‚‹ã‚¿ãƒ¼ã‚²ãƒƒãƒˆã®é …ç›®ID
+ * @param[in]	nSrcTableID		JOIN IN/OUTã‚»ãƒƒãƒˆã®ç®—å‡ºå…ƒã«ãªã‚‹ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSrcSetID		JOIN IN/OUTã‚»ãƒƒãƒˆã®ç®—å‡ºå…ƒã«ãªã‚‹ã®ã‚»ãƒƒãƒˆID
+ * @param[in]	nSrcFilterID	JOIN IN/OUTã‚»ãƒƒãƒˆã®ç®—å‡ºå…ƒã«ãªã‚‹é …ç›®ID
+ * @param[in]	nIsJoinIn		IN/OUTã‚’æŒ‡å®šã™ã‚‹
+ * @retval	0ä»¥ä¸Š	ç”Ÿæˆã•ã‚ŒãŸã‚»ãƒƒãƒˆID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT  D5APICALL RD5ExtractJoinInOut(
 			const int	nDestTableID,
@@ -411,19 +411,19 @@ D5RESULT  D5APICALL RD5ExtractJoinInOut(
 		);
 
 /**
- * JOINƒe[ƒuƒ‹‚ğREALƒe[ƒuƒ‹‚É•ÏŠ·‚µ‚Ü‚·B
- * @param[in]	szTableName		V‹K‚Éì¬‚·‚éREALƒe[ƒuƒ‹–¼Ì
- * @param[in]	nJoinTableID	JOINƒe[ƒuƒ‹ID
- * @param[in]	nJoinSetID		JOINƒe[ƒuƒ‹‚ÌƒZƒbƒgID
- * @param[in]	nIncludeRowNoM	ƒ}ƒXƒ^‘¤s”Ô†‚Ì€–Ú‰»‚Ìİ’è
- * @param[in]	nIncludeRowNoS	ƒXƒŒ[ƒu‘¤s”Ô†‚Ì€–Ú‰»‚Ìİ’è
- * @param[in]	anFilterIDList	REALƒe[ƒuƒ‹‚Ì€–Ú‚É•ÏŠ·‚·‚é€–ÚIDƒŠƒXƒg
- * @param[in]	nVLIsLinked		í‚É0‚ğw’è
- * @retval	1ˆÈã	ì¬‚³‚ê‚½REALƒe[ƒuƒ‹ID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * JOINãƒ†ãƒ¼ãƒ–ãƒ«ã‚’REALãƒ†ãƒ¼ãƒ–ãƒ«ã«å¤‰æ›ã—ã¾ã™ã€‚
+ * @param[in]	szTableName		æ–°è¦ã«ä½œæˆã™ã‚‹REALãƒ†ãƒ¼ãƒ–ãƒ«åç§°
+ * @param[in]	nJoinTableID	JOINãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nJoinSetID		JOINãƒ†ãƒ¼ãƒ–ãƒ«ã®ã‚»ãƒƒãƒˆID
+ * @param[in]	nIncludeRowNoM	ãƒã‚¹ã‚¿å´è¡Œç•ªå·ã®é …ç›®åŒ–ã®è¨­å®š
+ * @param[in]	nIncludeRowNoS	ã‚¹ãƒ¬ãƒ¼ãƒ–å´è¡Œç•ªå·ã®é …ç›®åŒ–ã®è¨­å®š
+ * @param[in]	anFilterIDList	REALãƒ†ãƒ¼ãƒ–ãƒ«ã®é …ç›®ã«å¤‰æ›ã™ã‚‹é …ç›®IDãƒªã‚¹ãƒˆ
+ * @param[in]	nVLIsLinked		å¸¸ã«0ã‚’æŒ‡å®š
+ * @retval	1ä»¥ä¸Š	ä½œæˆã•ã‚ŒãŸREALãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * anFilterIDList‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * anFilterIDListã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT  D5APICALL RD5ConvertJoinToReal(
 			const char szTableName[D5_MAX_NAME_LENGTH],
@@ -436,16 +436,16 @@ D5RESULT  D5APICALL RD5ConvertJoinToReal(
 		  );
 
 /**
- * JOINƒ`ƒF[ƒ“‚ğÀ‘Ì‰»‚µ‚Ü‚·B
- * @param[in]	szTableName		V‹Kƒe[ƒuƒ‹–¼Ì
- * @param[in]	anJoinTableIDs	ƒ`ƒF[ƒ“‚·‚éƒe[ƒuƒ‹IDƒŠƒXƒg
- * @param[out]	anRealTableIDs	ƒ`ƒF[ƒ“‚³‚ê‚½ƒe[ƒuƒ‹IDƒŠƒXƒg
- * @param[out]	aanRealSetIDs	ƒ`ƒF[ƒ“‚³‚ê‚½REALƒe[ƒuƒ‹IDƒŠƒXƒg
- * @retval	1ˆÈã	¶¬‚³‚ê‚½ƒe[ƒuƒ‹ID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * JOINãƒã‚§ãƒ¼ãƒ³ã‚’å®Ÿä½“åŒ–ã—ã¾ã™ã€‚
+ * @param[in]	szTableName		æ–°è¦ãƒ†ãƒ¼ãƒ–ãƒ«åç§°
+ * @param[in]	anJoinTableIDs	ãƒã‚§ãƒ¼ãƒ³ã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«IDãƒªã‚¹ãƒˆ
+ * @param[out]	anRealTableIDs	ãƒã‚§ãƒ¼ãƒ³ã•ã‚ŒãŸãƒ†ãƒ¼ãƒ–ãƒ«IDãƒªã‚¹ãƒˆ
+ * @param[out]	aanRealSetIDs	ãƒã‚§ãƒ¼ãƒ³ã•ã‚ŒãŸREALãƒ†ãƒ¼ãƒ–ãƒ«IDãƒªã‚¹ãƒˆ
+ * @retval	1ä»¥ä¸Š	ç”Ÿæˆã•ã‚ŒãŸãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ƒXƒNƒŠƒvƒgŒ¾Œê‚Å‚ÍƒTƒ|[ƒg‚µ‚Ü‚¹‚ñB
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã§ã¯ã‚µãƒãƒ¼ãƒˆã—ã¾ã›ã‚“ã€‚
  */
 D5RESULT  D5APICALL RD5RealizeJoinChain(
 			const char  szTableName[D5_MAX_NAME_LENGTH],
@@ -455,18 +455,18 @@ D5RESULT  D5APICALL RD5RealizeJoinChain(
 	   );
 
 /**
- * JOINƒ`ƒF[ƒ“‚ğÀ‘Ì‰»‚µA¶¬‚³‚ê‚½ƒcƒŠ[ƒe[ƒuƒ‹‚ÉŒ³ƒe[ƒuƒ‹‚Ì®”€–Ú‚ğ’Ç‰Á‚µ‚Ü‚·B
- * @param[in]	szTableName			V‹Kƒe[ƒuƒ‹–¼Ì
- * @param[in]	anJoinTableIDs		ƒ`ƒF[ƒ“‚·‚éƒe[ƒuƒ‹IDƒŠƒXƒg
- * @param[in]	nAssociation		o—Í‚ÉŠÜ‚ß‚éŠeREALƒe[ƒuƒ‹‚Ì€–ÚID”
- * @param[in]	aanRealFilterIDs		o—Í‚·‚éŠeREALƒe[ƒuƒ‹‚Ì€–ÚIDƒŠƒXƒg
- * @param[out]	anRealTableIDs		ƒ`ƒF[ƒ“‚³‚ê‚½ƒe[ƒuƒ‹IDƒŠƒXƒg
- * @param[out]	aanRealSetIDs		ƒ`ƒF[ƒ“‚³‚ê‚½REALƒe[ƒuƒ‹IDƒŠƒXƒg
- * @retval	1ˆÈã	¶¬‚³‚ê‚½ƒe[ƒuƒ‹ID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * JOINãƒã‚§ãƒ¼ãƒ³ã‚’å®Ÿä½“åŒ–ã—ã€ç”Ÿæˆã•ã‚ŒãŸãƒ„ãƒªãƒ¼ãƒ†ãƒ¼ãƒ–ãƒ«ã«å…ƒãƒ†ãƒ¼ãƒ–ãƒ«ã®æ•´æ•°é …ç›®ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+ * @param[in]	szTableName			æ–°è¦ãƒ†ãƒ¼ãƒ–ãƒ«åç§°
+ * @param[in]	anJoinTableIDs		ãƒã‚§ãƒ¼ãƒ³ã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«IDãƒªã‚¹ãƒˆ
+ * @param[in]	nAssociation		å‡ºåŠ›ã«å«ã‚ã‚‹å„REALãƒ†ãƒ¼ãƒ–ãƒ«ã®é …ç›®IDæ•°
+ * @param[in]	aanRealFilterIDs		å‡ºåŠ›ã™ã‚‹å„REALãƒ†ãƒ¼ãƒ–ãƒ«ã®é …ç›®IDãƒªã‚¹ãƒˆ
+ * @param[out]	anRealTableIDs		ãƒã‚§ãƒ¼ãƒ³ã•ã‚ŒãŸãƒ†ãƒ¼ãƒ–ãƒ«IDãƒªã‚¹ãƒˆ
+ * @param[out]	aanRealSetIDs		ãƒã‚§ãƒ¼ãƒ³ã•ã‚ŒãŸREALãƒ†ãƒ¼ãƒ–ãƒ«IDãƒªã‚¹ãƒˆ
+ * @retval	1ä»¥ä¸Š	ç”Ÿæˆã•ã‚ŒãŸãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ƒXƒNƒŠƒvƒgŒ¾Œê‚Å‚ÍƒTƒ|[ƒg‚µ‚Ü‚¹‚ñB
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã§ã¯ã‚µãƒãƒ¼ãƒˆã—ã¾ã›ã‚“ã€‚
  */
 D5RESULT  D5APICALL RD5RealizeJoinChainEx(
 			const char   szTableName[D5_MAX_NAME_LENGTH],
@@ -478,17 +478,17 @@ D5RESULT  D5APICALL RD5RealizeJoinChainEx(
 	   );
 
 /**
- * À‘Ì‰»‚³‚ê‚½JOINƒ`ƒF[ƒ“‚Éƒ\[ƒXî•ñ‚ğ•t‰Á‚µ‚Ü‚·B
- * @param[in]	nTableID		ƒcƒŠ[ƒe[ƒuƒ‹‚ÌID
- * @param[in]	nDepth			ƒ^[ƒQƒbƒg‚Æ‚·‚é[‚³
- * @param[in]	nSrcTableID		•t‰Á‚·‚éî•ñŒ³‚Ìƒe[ƒuƒ‹ID
- * @param[in]	anSrcFilterIDs	•t‰Á‚·‚éî•ñŒ³‚Ì€–ÚIDƒŠƒXƒg
- * @param[in]	nFillAncestor	ƒ‹[ƒg‚Ìê‡‚É’l‚ğ[“–‚·‚é‚©‚Ç‚¤‚©‚ğw’è
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * å®Ÿä½“åŒ–ã•ã‚ŒãŸJOINãƒã‚§ãƒ¼ãƒ³ã«ã‚½ãƒ¼ã‚¹æƒ…å ±ã‚’ä»˜åŠ ã—ã¾ã™ã€‚
+ * @param[in]	nTableID		ãƒ„ãƒªãƒ¼ãƒ†ãƒ¼ãƒ–ãƒ«ã®ID
+ * @param[in]	nDepth			ã‚¿ãƒ¼ã‚²ãƒƒãƒˆã¨ã™ã‚‹æ·±ã•
+ * @param[in]	nSrcTableID		ä»˜åŠ ã™ã‚‹æƒ…å ±å…ƒã®ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	anSrcFilterIDs	ä»˜åŠ ã™ã‚‹æƒ…å ±å…ƒã®é …ç›®IDãƒªã‚¹ãƒˆ
+ * @param[in]	nFillAncestor	ãƒ«ãƒ¼ãƒˆã®å ´åˆã«å€¤ã‚’å……å½“ã™ã‚‹ã‹ã©ã†ã‹ã‚’æŒ‡å®š
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ƒXƒNƒŠƒvƒgŒ¾Œê‚Å‚ÍƒTƒ|[ƒg‚µ‚Ü‚¹‚ñB
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã§ã¯ã‚µãƒãƒ¼ãƒˆã—ã¾ã›ã‚“ã€‚
  */
 D5RESULT  D5APICALL RD5QualifyTree(
 			const int	nTableID,
@@ -499,40 +499,40 @@ D5RESULT  D5APICALL RD5QualifyTree(
 			);
 
 /**
- * JOINƒ`ƒFƒCƒ“Å‘å’l‚ğİ’è‚µ‚Ü‚·B
- * @param[in]	nMaxJoinChain	Å‘åŠK‘w”(16`510)
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * JOINãƒã‚§ã‚¤ãƒ³æœ€å¤§å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
+ * @param[in]	nMaxJoinChain	æœ€å¤§éšå±¤æ•°(16ï½510)
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT  D5APICALL RD5SetMaxJoinChain (
 			const int	nMaxJoinChain
 							 );
 
 /**
- * ƒe[ƒuƒ‹‚ğíœ‚µ‚Ü‚·B
- * @param[in]	nTableID	íœ‚·‚éƒe[ƒuƒ‹ID
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’å‰Šé™¤ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	å‰Šé™¤ã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5DeleteTable(
 			const int nTableID
 		   );
 
 /**
- * ƒe[ƒuƒ‹–¼Ì‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[out]	szTableName	ƒe[ƒuƒ‹–¼Ì
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ãƒ†ãƒ¼ãƒ–ãƒ«åç§°ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[out]	szTableName	ãƒ†ãƒ¼ãƒ–ãƒ«åç§°
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * –{API‚Íg—p‚¹‚¸A{@link #RD5GetTableNameR1}‚ğg—p‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * æœ¬APIã¯ä½¿ç”¨ã›ãšã€{@link #RD5GetTableNameR1}ã‚’ä½¿ç”¨ã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5GetTableName(
 			const int nTableID,
@@ -540,14 +540,14 @@ D5RESULT D5APICALL RD5GetTableName(
 		   );
 
 /**
- * ƒe[ƒuƒ‹‚Ìî•ñ‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID		ƒe[ƒuƒ‹ID
- * @param[out]	pTableInfo	ƒe[ƒuƒ‹î•ñ‚ÌƒAƒhƒŒƒX
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ãƒ†ãƒ¼ãƒ–ãƒ«ã®æƒ…å ±ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID		ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[out]	pTableInfo	ãƒ†ãƒ¼ãƒ–ãƒ«æƒ…å ±ã®ã‚¢ãƒ‰ãƒ¬ã‚¹
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5GetTableProperty(
 			const int nTableID,
@@ -567,22 +567,22 @@ D5RESULT D5APICALL RD5GetJoinInfo(
 		   );
 
 /**
- * JOINƒe[ƒuƒ‹‚Ìî•ñ‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID			î•ñ‚ğæ“¾‚·‚éJOINƒe[ƒuƒ‹ID
- * @param[out]	szTableName			ƒe[ƒuƒ‹–¼Ì
- * @param[out]	pnIsOuter			JOINƒe[ƒuƒ‹‚Ìí—Ş
- * @param[out]	pnJoinKeyCount		JOINƒL[‚Ì”
- * @param[out]	pnMasterTableID		ƒ}ƒXƒ^ƒe[ƒuƒ‹ID
- * @param[out]	pnMasterSetID		ƒ}ƒXƒ^ƒe[ƒuƒ‹ƒZƒbƒgID
- * @param[out]	anMasterFilterIDs	ƒ}ƒXƒ^ƒe[ƒuƒ‹‚ÌJOINƒL[‚Ìˆê——
- * @param[out]	pnSlaveTableID		ƒXƒŒ[ƒuƒe[ƒuƒ‹ID
- * @param[out]	pnSlaveSetID		ƒXƒŒ[ƒuƒe[ƒuƒ‹ƒZƒbƒgID
- * @param[out]	anSlaveFilterIDs	ƒXƒŒ[ƒuƒe[ƒuƒ‹‚ÌJOINƒL[‚Ìˆê——
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * JOINãƒ†ãƒ¼ãƒ–ãƒ«ã®æƒ…å ±ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID			æƒ…å ±ã‚’å–å¾—ã™ã‚‹JOINãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[out]	szTableName			ãƒ†ãƒ¼ãƒ–ãƒ«åç§°
+ * @param[out]	pnIsOuter			JOINãƒ†ãƒ¼ãƒ–ãƒ«ã®ç¨®é¡
+ * @param[out]	pnJoinKeyCount		JOINã‚­ãƒ¼ã®æ•°
+ * @param[out]	pnMasterTableID		ãƒã‚¹ã‚¿ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[out]	pnMasterSetID		ãƒã‚¹ã‚¿ãƒ†ãƒ¼ãƒ–ãƒ«ã‚»ãƒƒãƒˆID
+ * @param[out]	anMasterFilterIDs	ãƒã‚¹ã‚¿ãƒ†ãƒ¼ãƒ–ãƒ«ã®JOINã‚­ãƒ¼ã®ä¸€è¦§
+ * @param[out]	pnSlaveTableID		ã‚¹ãƒ¬ãƒ¼ãƒ–ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[out]	pnSlaveSetID		ã‚¹ãƒ¬ãƒ¼ãƒ–ãƒ†ãƒ¼ãƒ–ãƒ«ã‚»ãƒƒãƒˆID
+ * @param[out]	anSlaveFilterIDs	ã‚¹ãƒ¬ãƒ¼ãƒ–ãƒ†ãƒ¼ãƒ–ãƒ«ã®JOINã‚­ãƒ¼ã®ä¸€è¦§
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * –{API‚Íg—p‚¹‚¸A{@link #RD5GetJoinInfoExR1}‚ğg—p‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * æœ¬APIã¯ä½¿ç”¨ã›ãšã€{@link #RD5GetJoinInfoExR1}ã‚’ä½¿ç”¨ã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5GetJoinInfoEx(
 		 const int nTableID,
@@ -598,16 +598,16 @@ D5RESULT D5APICALL RD5GetJoinInfoEx(
 			);
 
 /**
- * JOINî•ñ‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID		w’è‚Ìƒe[ƒuƒ‹‚Ìƒe[ƒuƒ‹ID
- * @param[out]	anJoinFilterIDs		w’è‚Ìƒe[ƒuƒ‹‚ÌƒtƒBƒ‹ƒ^IDƒŠƒXƒg
- * @param[out]	anSrcTableIDs	w’è‚Ìƒe[ƒuƒ‹‚ÌŒ³ƒe[ƒuƒ‹IDƒŠƒXƒg
- * @param[out]	anSrcFilterIDs	w’è‚Ìƒe[ƒuƒ‹‚ÌŒ³ƒtƒBƒ‹ƒ^IDƒŠƒXƒg
- * @retval	0ˆÈã	€–Ú”‚Ì‡Œv
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * JOINæƒ…å ±ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID		æŒ‡å®šã®ãƒ†ãƒ¼ãƒ–ãƒ«ã®ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[out]	anJoinFilterIDs		æŒ‡å®šã®ãƒ†ãƒ¼ãƒ–ãƒ«ã®ãƒ•ã‚£ãƒ«ã‚¿IDãƒªã‚¹ãƒˆ
+ * @param[out]	anSrcTableIDs	æŒ‡å®šã®ãƒ†ãƒ¼ãƒ–ãƒ«ã®å…ƒãƒ†ãƒ¼ãƒ–ãƒ«IDãƒªã‚¹ãƒˆ
+ * @param[out]	anSrcFilterIDs	æŒ‡å®šã®ãƒ†ãƒ¼ãƒ–ãƒ«ã®å…ƒãƒ•ã‚£ãƒ«ã‚¿IDãƒªã‚¹ãƒˆ
+ * @retval	0ä»¥ä¸Š	é …ç›®æ•°ã®åˆè¨ˆ
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * anJoinFilterIDs,anSrcTableIDs,anSrcFilterIDs‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * anJoinFilterIDs,anSrcTableIDs,anSrcFilterIDsã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5GetJoinSrcTblIDs(
 		 const int nTableID,
@@ -617,18 +617,18 @@ D5RESULT D5APICALL RD5GetJoinSrcTblIDs(
 			);
 
 /**
- * JOINƒe[ƒuƒ‹‚Ìî•ñ‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID		w’è‚Ìƒe[ƒuƒ‹‚Ìƒe[ƒuƒ‹ID
- * @param[out]	pnNMasterFilter	ƒ}ƒXƒ^‘¤ƒtƒBƒ‹ƒ^‚É—R—ˆ‚·‚éƒtƒBƒ‹ƒ^‚Ì”
- * @param[out]	pnNSlaveFilter	ƒXƒŒƒCƒu‘¤ƒe[ƒuƒ‹‚É—R—ˆ‚·‚éƒtƒBƒ‹ƒ^‚Ì”
- * @param[out]	anJoinFilterIDs	w’è‚Ìƒe[ƒuƒ‹‚ÌƒtƒBƒ‹ƒ^ID[1..N]
- * @param[out]	anSrcTableIDs	w’è‚Ìƒe[ƒuƒ‹‚Ìƒ}ƒXƒ^[ƒe[ƒuƒ‹ID[Nm, Nm, ... Nm, Ns, Ns, ... Ns]
- * @param[out]	anSrcFilterIDs	w’è‚Ìƒe[ƒuƒ‹‚Ìƒ}ƒXƒ^[W‡ID[FIDm1, FIDm2, ..., FIDs1, FIDs2, ...]
- * @retval	0ˆÈã	æ“¾‚µ‚½ƒtƒBƒ‹ƒ^‚Ì”
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * JOINãƒ†ãƒ¼ãƒ–ãƒ«ã®æƒ…å ±ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID		æŒ‡å®šã®ãƒ†ãƒ¼ãƒ–ãƒ«ã®ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[out]	pnNMasterFilter	ãƒã‚¹ã‚¿å´ãƒ•ã‚£ãƒ«ã‚¿ã«ç”±æ¥ã™ã‚‹ãƒ•ã‚£ãƒ«ã‚¿ã®æ•°
+ * @param[out]	pnNSlaveFilter	ã‚¹ãƒ¬ã‚¤ãƒ–å´ãƒ†ãƒ¼ãƒ–ãƒ«ã«ç”±æ¥ã™ã‚‹ãƒ•ã‚£ãƒ«ã‚¿ã®æ•°
+ * @param[out]	anJoinFilterIDs	æŒ‡å®šã®ãƒ†ãƒ¼ãƒ–ãƒ«ã®ãƒ•ã‚£ãƒ«ã‚¿ID[1..N]
+ * @param[out]	anSrcTableIDs	æŒ‡å®šã®ãƒ†ãƒ¼ãƒ–ãƒ«ã®ãƒã‚¹ã‚¿ãƒ¼ãƒ†ãƒ¼ãƒ–ãƒ«ID[Nm, Nm, ... Nm, Ns, Ns, ... Ns]
+ * @param[out]	anSrcFilterIDs	æŒ‡å®šã®ãƒ†ãƒ¼ãƒ–ãƒ«ã®ãƒã‚¹ã‚¿ãƒ¼é›†åˆID[FIDm1, FIDm2, ..., FIDs1, FIDs2, ...]
+ * @retval	0ä»¥ä¸Š	å–å¾—ã—ãŸãƒ•ã‚£ãƒ«ã‚¿ã®æ•°
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * pnNMasterFilter,pnNSlaveFilter,anJoinFilterIDs,anSrcTableIDs,anSrcFilterIDs‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * pnNMasterFilter,pnNSlaveFilter,anJoinFilterIDs,anSrcTableIDs,anSrcFilterIDsã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5GetJoinSrcTblInfo(
 		 const int	nTableID,
@@ -640,14 +640,14 @@ D5RESULT D5APICALL RD5GetJoinSrcTblInfo(
 		 );
 
 /**
- * REALƒe[ƒuƒ‹‚ğ•¡»‚µ‚Ü‚·B
- * @param[in]	szTableName		V‹K‚Éİ’è‚·‚éƒe[ƒuƒ‹–¼Ì
- * @param[in]	nTableID		•¡»Œ³‚Ìƒe[ƒuƒ‹ID
- * @retval	0ˆÈã	¶¬‚³‚ê‚½ƒe[ƒuƒ‹ID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * REALãƒ†ãƒ¼ãƒ–ãƒ«ã‚’è¤‡è£½ã—ã¾ã™ã€‚
+ * @param[in]	szTableName		æ–°è¦ã«è¨­å®šã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«åç§°
+ * @param[in]	nTableID		è¤‡è£½å…ƒã®ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	0ä»¥ä¸Š	ç”Ÿæˆã•ã‚ŒãŸãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT  D5APICALL RD5DuplicateRealTable(
 		const char szTableName[D5_MAX_NAME_LENGTH],
@@ -655,16 +655,16 @@ D5RESULT  D5APICALL RD5DuplicateRealTable(
 		);
 
 /**
- * REALƒe[ƒuƒ‹‚ğ’Šo‚µ‚Ü‚·B
- * @param[in]	szTableName				V‹K‚Éİ’è‚·‚éƒe[ƒuƒ‹–¼Ì
- * @param[in]	nTableID				’ŠoŒ³‚Ìƒe[ƒuƒ‹ID
- * @param[in]	nSetID					’Šo‚·‚éƒZƒbƒgID
- * @param[in]	anExtractFilterIDList	’Šo‚·‚é€–ÚIDƒŠƒXƒg
- * @retval	0ˆÈã	¶¬‚³‚ê‚½ƒe[ƒuƒ‹ID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * REALãƒ†ãƒ¼ãƒ–ãƒ«ã‚’æŠ½å‡ºã—ã¾ã™ã€‚
+ * @param[in]	szTableName				æ–°è¦ã«è¨­å®šã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«åç§°
+ * @param[in]	nTableID				æŠ½å‡ºå…ƒã®ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID					æŠ½å‡ºã™ã‚‹ã‚»ãƒƒãƒˆID
+ * @param[in]	anExtractFilterIDList	æŠ½å‡ºã™ã‚‹é …ç›®IDãƒªã‚¹ãƒˆ
+ * @retval	0ä»¥ä¸Š	ç”Ÿæˆã•ã‚ŒãŸãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * anExtractFilterIDList‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * anExtractFilterIDListã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT  D5APICALL RD5ExtractRealTable(
 		 const char  szTableName[D5_MAX_NAME_LENGTH],
@@ -674,18 +674,18 @@ D5RESULT  D5APICALL RD5ExtractRealTable(
 		   );
 
 /**
- * REALƒe[ƒuƒ‹‚ğ’Šo‚µ‚Ü‚·B
- * @param[in]	szTableName				V‹K‚Éİ’è‚·‚éƒe[ƒuƒ‹–¼Ì
- * @param[in]	nTableID				’ŠoŒ³‚Ìƒe[ƒuƒ‹ID
- * @param[in]	nSetID					’Šo‚·‚éƒZƒbƒgID
- * @param[in]	nIncludeTableID			’ŠoŒ³ƒe[ƒuƒ‹ID‚Ì€–Ú‰»İ’è’l
- * @param[in]	nIncludeRecNo			’ŠoŒ³ƒŒƒR[ƒh”Ô†‚Ì€–Ú‰»İ’è’l
- * @param[in]	anExtractFilterIDList	’Šo‚·‚é€–ÚIDƒŠƒXƒg
- * @retval	0ˆÈã	¶¬‚³‚ê‚½ƒe[ƒuƒ‹ID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * REALãƒ†ãƒ¼ãƒ–ãƒ«ã‚’æŠ½å‡ºã—ã¾ã™ã€‚
+ * @param[in]	szTableName				æ–°è¦ã«è¨­å®šã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«åç§°
+ * @param[in]	nTableID				æŠ½å‡ºå…ƒã®ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID					æŠ½å‡ºã™ã‚‹ã‚»ãƒƒãƒˆID
+ * @param[in]	nIncludeTableID			æŠ½å‡ºå…ƒãƒ†ãƒ¼ãƒ–ãƒ«IDã®é …ç›®åŒ–è¨­å®šå€¤
+ * @param[in]	nIncludeRecNo			æŠ½å‡ºå…ƒãƒ¬ã‚³ãƒ¼ãƒ‰ç•ªå·ã®é …ç›®åŒ–è¨­å®šå€¤
+ * @param[in]	anExtractFilterIDList	æŠ½å‡ºã™ã‚‹é …ç›®IDãƒªã‚¹ãƒˆ
+ * @retval	0ä»¥ä¸Š	ç”Ÿæˆã•ã‚ŒãŸãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * anExtractFilterIDList‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * anExtractFilterIDListã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT  D5APICALL RD5ExtractRealTableEx(
 			const char  szTableName[D5_MAX_NAME_LENGTH],
@@ -697,19 +697,19 @@ D5RESULT  D5APICALL RD5ExtractRealTableEx(
 		   );
 
 /**
- * REALƒe[ƒuƒ‹‚ğcŒ‹‡‚µ‚Ü‚·B
- * @param[in]	szTableName		V‹K‚Éİ’è‚·‚éƒe[ƒuƒ‹–¼Ì
- * @param[in]	nTableID1		Œ‹‡‚·‚é1”Ô–Ú‚Ìƒe[ƒuƒ‹ID
- * @param[in]	nSetID1			Œ‹‡‚·‚é1”Ô–Ú‚ÌƒZƒbƒgID
- * @param[in]	anFilterIDs1	Œ‹‡‚·‚é1”Ô–Ú‚Ì€–ÚƒŠƒXƒg
- * @param[in]	nTableID2		Œ‹‡‚·‚é2”Ô–Ú‚Ìƒe[ƒuƒ‹ID
- * @param[in]	nSetID2			Œ‹‡‚·‚é2”Ô–Ú‚ÌƒZƒbƒgID
- * @param[in]	anFilterIDs2	Œ‹‡‚·‚é2”Ô–Ú‚Ì€–ÚƒŠƒXƒg
- * @retval	0ˆÈã	¶¬‚³‚ê‚½ƒe[ƒuƒ‹ID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * REALãƒ†ãƒ¼ãƒ–ãƒ«ã‚’ç¸¦çµåˆã—ã¾ã™ã€‚
+ * @param[in]	szTableName		æ–°è¦ã«è¨­å®šã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«åç§°
+ * @param[in]	nTableID1		çµåˆã™ã‚‹1ç•ªç›®ã®ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID1			çµåˆã™ã‚‹1ç•ªç›®ã®ã‚»ãƒƒãƒˆID
+ * @param[in]	anFilterIDs1	çµåˆã™ã‚‹1ç•ªç›®ã®é …ç›®ãƒªã‚¹ãƒˆ
+ * @param[in]	nTableID2		çµåˆã™ã‚‹2ç•ªç›®ã®ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID2			çµåˆã™ã‚‹2ç•ªç›®ã®ã‚»ãƒƒãƒˆID
+ * @param[in]	anFilterIDs2	çµåˆã™ã‚‹2ç•ªç›®ã®é …ç›®ãƒªã‚¹ãƒˆ
+ * @retval	0ä»¥ä¸Š	ç”Ÿæˆã•ã‚ŒãŸãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * anFilterIDs1,anFilterIDs2‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * anFilterIDs1,anFilterIDs2ã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT  D5APICALL RD5CombineRealTable(
 			const char	szTableName[D5_MAX_NAME_LENGTH],
@@ -722,21 +722,21 @@ D5RESULT  D5APICALL RD5CombineRealTable(
 		   );
 
 /**
- * REALƒe[ƒuƒ‹‚ğcŒ‹‡‚µ‚Ü‚·B
- * @param[in]	szTableName		V‹K‚Éİ’è‚·‚éƒe[ƒuƒ‹–¼Ì
- * @param[in]	nIncludeTableID	’ŠoŒ³‚Ìƒe[ƒuƒ‹ID‚Ì€–Ú‰»İ’è’l
- * @param[in]	nIncludeRecNo	’ŠoŒ³‚ÌƒŒƒR[ƒh”Ô†‚Ì€–Ú‰»İ’è’l
- * @param[in]	nTableID1		Œ‹‡‚·‚é1”Ô–Ú‚Ìƒe[ƒuƒ‹ID
- * @param[in]	nSetID1			Œ‹‡‚·‚é1”Ô–Ú‚ÌƒZƒbƒgID
- * @param[in]	anFilterIDs1	Œ‹‡‚·‚é1”Ô–Ú‚Ì€–ÚƒŠƒXƒg
- * @param[in]	nTableID2		Œ‹‡‚·‚é2”Ô–Ú‚Ìƒe[ƒuƒ‹ID
- * @param[in]	nSetID2			Œ‹‡‚·‚é2”Ô–Ú‚ÌƒZƒbƒgID
- * @param[in]	anFilterIDs2	Œ‹‡‚·‚é2”Ô–Ú‚Ì€–ÚƒŠƒXƒg
- * @retval	0ˆÈã	¶¬‚³‚ê‚½ƒe[ƒuƒ‹ID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * REALãƒ†ãƒ¼ãƒ–ãƒ«ã‚’ç¸¦çµåˆã—ã¾ã™ã€‚
+ * @param[in]	szTableName		æ–°è¦ã«è¨­å®šã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«åç§°
+ * @param[in]	nIncludeTableID	æŠ½å‡ºå…ƒã®ãƒ†ãƒ¼ãƒ–ãƒ«IDã®é …ç›®åŒ–è¨­å®šå€¤
+ * @param[in]	nIncludeRecNo	æŠ½å‡ºå…ƒã®ãƒ¬ã‚³ãƒ¼ãƒ‰ç•ªå·ã®é …ç›®åŒ–è¨­å®šå€¤
+ * @param[in]	nTableID1		çµåˆã™ã‚‹1ç•ªç›®ã®ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID1			çµåˆã™ã‚‹1ç•ªç›®ã®ã‚»ãƒƒãƒˆID
+ * @param[in]	anFilterIDs1	çµåˆã™ã‚‹1ç•ªç›®ã®é …ç›®ãƒªã‚¹ãƒˆ
+ * @param[in]	nTableID2		çµåˆã™ã‚‹2ç•ªç›®ã®ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID2			çµåˆã™ã‚‹2ç•ªç›®ã®ã‚»ãƒƒãƒˆID
+ * @param[in]	anFilterIDs2	çµåˆã™ã‚‹2ç•ªç›®ã®é …ç›®ãƒªã‚¹ãƒˆ
+ * @retval	0ä»¥ä¸Š	ç”Ÿæˆã•ã‚ŒãŸãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * anFilterIDs1,anFilterIDs2‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * anFilterIDs1,anFilterIDs2ã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT  D5APICALL RD5CombineRealTableEx(
 		 const char	szTableName[D5_MAX_NAME_LENGTH],
@@ -751,21 +751,21 @@ D5RESULT  D5APICALL RD5CombineRealTableEx(
 		   );
 
 /**
- * REALƒe[ƒuƒ‹‚ğcŒ‹‡‚µ‚Ü‚·B
- * @param[in]	szTableName		V‹K‚Éİ’è‚·‚éƒe[ƒuƒ‹–¼Ì
- * @param[in]	nIncludeTableID	’ŠoŒ³‚Ìƒe[ƒuƒ‹ID‚Ì€–Ú‰»İ’è’l
- * @param[in]	nIncludeRecNo	’ŠoŒ³‚ÌƒŒƒR[ƒh”Ô†‚Ì€–Ú‰»İ’è’l
- * @param[in]	nTableID1		Œ‹‡‚·‚é1”Ô–Ú‚Ìƒe[ƒuƒ‹ID
- * @param[in]	nSetID1			Œ‹‡‚·‚é1”Ô–Ú‚ÌƒZƒbƒgID
- * @param[in]	anFilterIDs1	Œ‹‡‚·‚é1”Ô–Ú‚Ì€–Ú‚ÌƒŠƒXƒg
- * @param[in]	nTableID2		Œ‹‡‚·‚é2”Ô–Ú‚Ìƒe[ƒuƒ‹ID
- * @param[in]	nSetID2			Œ‹‡‚·‚é2”Ô–Ú‚ÌƒZƒbƒgID
- * @param[in]	anFilterIDs2	Œ‹‡‚·‚é2”Ô–Ú‚Ì€–Ú‚ÌƒŠƒXƒg
- * @retval	0ˆÈã	¶¬‚³‚ê‚½ƒe[ƒuƒ‹ID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * REALãƒ†ãƒ¼ãƒ–ãƒ«ã‚’ç¸¦çµåˆã—ã¾ã™ã€‚
+ * @param[in]	szTableName		æ–°è¦ã«è¨­å®šã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«åç§°
+ * @param[in]	nIncludeTableID	æŠ½å‡ºå…ƒã®ãƒ†ãƒ¼ãƒ–ãƒ«IDã®é …ç›®åŒ–è¨­å®šå€¤
+ * @param[in]	nIncludeRecNo	æŠ½å‡ºå…ƒã®ãƒ¬ã‚³ãƒ¼ãƒ‰ç•ªå·ã®é …ç›®åŒ–è¨­å®šå€¤
+ * @param[in]	nTableID1		çµåˆã™ã‚‹1ç•ªç›®ã®ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID1			çµåˆã™ã‚‹1ç•ªç›®ã®ã‚»ãƒƒãƒˆID
+ * @param[in]	anFilterIDs1	çµåˆã™ã‚‹1ç•ªç›®ã®é …ç›®ã®ãƒªã‚¹ãƒˆ
+ * @param[in]	nTableID2		çµåˆã™ã‚‹2ç•ªç›®ã®ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID2			çµåˆã™ã‚‹2ç•ªç›®ã®ã‚»ãƒƒãƒˆID
+ * @param[in]	anFilterIDs2	çµåˆã™ã‚‹2ç•ªç›®ã®é …ç›®ã®ãƒªã‚¹ãƒˆ
+ * @retval	0ä»¥ä¸Š	ç”Ÿæˆã•ã‚ŒãŸãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * anFilterIDs1,anFilterIDs2‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * anFilterIDs1,anFilterIDs2ã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT  D5APICALL RD5CombineRealTableEx2(
 		 const char	szTableName[D5_MAX_NAME_LENGTH],
@@ -780,20 +780,20 @@ D5RESULT  D5APICALL RD5CombineRealTableEx2(
 		   );
 
 /**
- * •¡”‚ÌREALƒe[ƒuƒ‹‚Ì®”€–Ú‚ğŒ‹‡‚µ‚Ü‚·B
- * @param[in]	szTableName			V‹K‚Éİ’è‚·‚éƒe[ƒuƒ‹–¼Ì
- * @param[in]	anTableIDList		Œ‹‡‚·‚éƒe[ƒuƒ‹IDƒŠƒXƒg
- * @param[in]	anSetIDList			Œ‹‡‚·‚éƒZƒbƒgIDƒŠƒXƒg
- * @param[in]	anIntFilterList0	Vƒe[ƒuƒ‹‚Ì1”Ô–Ú‚Ì€–Ú‚Éİ’è‚·‚é€–ÚIDƒŠƒXƒg
- * @param[in]	anIntFilterList1	Vƒe[ƒuƒ‹‚Ì2”Ô–Ú‚Ì€–Ú‚Éİ’è‚·‚é€–ÚIDƒŠƒXƒg
- * @param[in]	anIntFilterList2	Vƒe[ƒuƒ‹‚Ì3”Ô–Ú‚Ì€–Ú‚Éİ’è‚·‚é€–ÚIDƒŠƒXƒg
- * @param[in]	anIntFilterList3	Vƒe[ƒuƒ‹‚Ì4”Ô–Ú‚Ì€–Ú‚Éİ’è‚·‚é€–ÚIDƒŠƒXƒg
- * @retval	0ˆÈã	¶¬‚³‚ê‚½ƒe[ƒuƒ‹ID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * è¤‡æ•°ã®REALãƒ†ãƒ¼ãƒ–ãƒ«ã®æ•´æ•°é …ç›®ã‚’çµåˆã—ã¾ã™ã€‚
+ * @param[in]	szTableName			æ–°è¦ã«è¨­å®šã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«åç§°
+ * @param[in]	anTableIDList		çµåˆã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«IDãƒªã‚¹ãƒˆ
+ * @param[in]	anSetIDList			çµåˆã™ã‚‹ã‚»ãƒƒãƒˆIDãƒªã‚¹ãƒˆ
+ * @param[in]	anIntFilterList0	æ–°ãƒ†ãƒ¼ãƒ–ãƒ«ã®1ç•ªç›®ã®é …ç›®ã«è¨­å®šã™ã‚‹é …ç›®IDãƒªã‚¹ãƒˆ
+ * @param[in]	anIntFilterList1	æ–°ãƒ†ãƒ¼ãƒ–ãƒ«ã®2ç•ªç›®ã®é …ç›®ã«è¨­å®šã™ã‚‹é …ç›®IDãƒªã‚¹ãƒˆ
+ * @param[in]	anIntFilterList2	æ–°ãƒ†ãƒ¼ãƒ–ãƒ«ã®3ç•ªç›®ã®é …ç›®ã«è¨­å®šã™ã‚‹é …ç›®IDãƒªã‚¹ãƒˆ
+ * @param[in]	anIntFilterList3	æ–°ãƒ†ãƒ¼ãƒ–ãƒ«ã®4ç•ªç›®ã®é …ç›®ã«è¨­å®šã™ã‚‹é …ç›®IDãƒªã‚¹ãƒˆ
+ * @retval	0ä»¥ä¸Š	ç”Ÿæˆã•ã‚ŒãŸãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * anTableIDList,anSetIDList,anIntFilterList0,anIntFilterList1,anIntFilterList2,anIntFilterList3‚ÍA
- * lfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * anTableIDList,anSetIDList,anIntFilterList0,anIntFilterList1,anIntFilterList2,anIntFilterList3ã¯ã€
+ * lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT  D5APICALL RD5CombineTableList(
 		 const char	szTableName[D5_MAX_NAME_LENGTH],
@@ -806,13 +806,13 @@ D5RESULT  D5APICALL RD5CombineTableList(
 		 );
 
 /**
- * REALƒe[ƒuƒ‹‚ğˆ³k‚µ‚Ü‚·B
- * @param[in]	nTableID	ˆ³k‚·‚éƒe[ƒuƒ‹ID
- * @retval	0	³í
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * REALãƒ†ãƒ¼ãƒ–ãƒ«ã‚’åœ§ç¸®ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	åœ§ç¸®ã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	0	æ­£å¸¸
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT  D5APICALL RD5CondenseRealTable(
 			 const int  nTableID
@@ -825,53 +825,53 @@ D5RESULT  D5APICALL RD5GenTableName(
 			);
 
 /**
- * w’è‚µ‚½ƒe[ƒuƒ‹‚É‘®‚·‚éƒZƒbƒg”‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @retval	1ˆÈã	ƒZƒbƒg‚Ì”
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * æŒ‡å®šã—ãŸãƒ†ãƒ¼ãƒ–ãƒ«ã«å±ã™ã‚‹ã‚»ãƒƒãƒˆæ•°ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	1ä»¥ä¸Š	ã‚»ãƒƒãƒˆã®æ•°
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5GetNSet(
 			const int nTableID
 		  );
 
 /**
- * ƒ‹[ƒgƒZƒbƒg‚ÌŒ”‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @retval	0ˆÈã	ƒ‹[ƒgƒZƒbƒg‚ÌƒTƒCƒY
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * ãƒ«ãƒ¼ãƒˆã‚»ãƒƒãƒˆã®ä»¶æ•°ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	0ä»¥ä¸Š	ãƒ«ãƒ¼ãƒˆã‚»ãƒƒãƒˆã®ã‚µã‚¤ã‚º
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5GetTotalRows(
 			const int nTableID
 		  );
 
 /**
- * ƒ‹[ƒgƒZƒbƒgˆÈŠO‚ÌƒZƒbƒg‚ğíœ‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ãƒ«ãƒ¼ãƒˆã‚»ãƒƒãƒˆä»¥å¤–ã®ã‚»ãƒƒãƒˆã‚’å‰Šé™¤ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5PurgeSubsets(
 			const int nTableID
 		  );
 
 /**
- * ƒZƒbƒgID‚ğw’è‚µAƒZƒbƒgƒTƒCƒY‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nSetID		ƒZƒbƒgID
- * @retval	0ˆÈã	ƒZƒbƒg‚ÌƒTƒCƒY
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * ã‚»ãƒƒãƒˆIDã‚’æŒ‡å®šã—ã€ã‚»ãƒƒãƒˆã‚µã‚¤ã‚ºã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @retval	0ä»¥ä¸Š	ã‚»ãƒƒãƒˆã®ã‚µã‚¤ã‚º
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5GetSetSize(
 			const int nTableID,
@@ -879,17 +879,17 @@ D5RESULT D5APICALL RD5GetSetSize(
 		  );
 
 /**
- * w’è‚µ‚½ID‚ÌƒZƒbƒg‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nSetID		ƒZƒbƒgID
- * @param[out]	pnSetSize	ƒZƒbƒg‚Ìs”
- * @param[in]	nGetCount	ƒZƒbƒg”z—ñipnSetArrayj‚ÌƒTƒCƒY
- * @param[out]	pnSetArray	ƒZƒbƒg”z—ñ
- * @retval	0ˆÈã	ƒZƒbƒg‚ÌƒTƒCƒY
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * æŒ‡å®šã—ãŸIDã®ã‚»ãƒƒãƒˆã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @param[out]	pnSetSize	ã‚»ãƒƒãƒˆã®è¡Œæ•°
+ * @param[in]	nGetCount	ã‚»ãƒƒãƒˆé…åˆ—ï¼ˆpnSetArrayï¼‰ã®ã‚µã‚¤ã‚º
+ * @param[out]	pnSetArray	ã‚»ãƒƒãƒˆé…åˆ—
+ * @retval	0ä»¥ä¸Š	ã‚»ãƒƒãƒˆã®ã‚µã‚¤ã‚º
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ƒXƒNƒŠƒvƒgŒ¾Œê‚Å‚ÍƒTƒ|[ƒg‚µ‚Ü‚¹‚ñB
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã§ã¯ã‚µãƒãƒ¼ãƒˆã—ã¾ã›ã‚“ã€‚
  */
 D5RESULT D5APICALL RD5GetSet(
             const int	nTableID,
@@ -900,17 +900,17 @@ D5RESULT D5APICALL RD5GetSet(
           );
 
 /**
- * w’è‚µ‚½ID‚ÌƒXƒŒ[ƒuƒZƒbƒg‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nSetID		ƒZƒbƒgID
- * @param[out]	pnSetSize	ƒZƒbƒg‚Ìs”
- * @param[in]	nGetCount	ƒZƒbƒg”z—ñipnSetArrayj‚ÌƒTƒCƒY
- * @param[out]	pnSetArray	ƒZƒbƒg”z—ñ
- * @retval	0ˆÈã	ƒZƒbƒg‚ÌƒTƒCƒY
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * æŒ‡å®šã—ãŸIDã®ã‚¹ãƒ¬ãƒ¼ãƒ–ã‚»ãƒƒãƒˆã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @param[out]	pnSetSize	ã‚»ãƒƒãƒˆã®è¡Œæ•°
+ * @param[in]	nGetCount	ã‚»ãƒƒãƒˆé…åˆ—ï¼ˆpnSetArrayï¼‰ã®ã‚µã‚¤ã‚º
+ * @param[out]	pnSetArray	ã‚»ãƒƒãƒˆé…åˆ—
+ * @retval	0ä»¥ä¸Š	ã‚»ãƒƒãƒˆã®ã‚µã‚¤ã‚º
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ƒXƒNƒŠƒvƒgŒ¾Œê‚Å‚ÍƒTƒ|[ƒg‚µ‚Ü‚¹‚ñB
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã§ã¯ã‚µãƒãƒ¼ãƒˆã—ã¾ã›ã‚“ã€‚
  */
 D5RESULT D5APICALL RD5GetJoinSlaveSet(
             const int	nTableID,
@@ -921,15 +921,15 @@ D5RESULT D5APICALL RD5GetJoinSlaveSet(
           );
 
 /**
- * w’è‚µ‚½ƒZƒbƒg‚ÌJOIN‚Ì•ûŒü‚ğæ“¾‚µ‚Ü‚·B
- * @param[in] nTableID	ƒe[ƒuƒ‹ID
- * @param[in] nSetID	ƒZƒbƒgID
- * @retval	0	¶¨‰E
- * @retval	1	‰E¨¶
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * æŒ‡å®šã—ãŸã‚»ãƒƒãƒˆã®JOINã®æ–¹å‘ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in] nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in] nSetID	ã‚»ãƒƒãƒˆID
+ * @retval	0	å·¦â†’å³
+ * @retval	1	å³â†’å·¦
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5GetJoinDir(
 			const int nTableID,
@@ -937,20 +937,20 @@ D5RESULT D5APICALL RD5GetJoinDir(
 		  );
 
 /**
- * w’è‚³‚ê‚½JOINƒe[ƒuƒ‹‚Ì—İŒv””z—ñ‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]		nTableID			ƒe[ƒuƒ‹ID
- * @param[in]		nSetID				ƒZƒbƒgID
- * @param[out]		pnMasterSize		ƒ}ƒXƒ^‘¤—İŒv””z—ñ‚ÌƒTƒCƒY
- * @param[in]		nMasterGetCount		ƒ}ƒXƒ^‘¤æ“¾ƒTƒCƒY
- * @param[in,out]	pnMasterSetArray	æ“¾‚³‚ê‚éƒ}ƒXƒ^‘¤—İŒv””z—ñ
- * @param[out]		pnSlaveSize			ƒXƒŒ[ƒu‘¤—İŒv””z—ñ‚ÌƒTƒCƒY
- * @param[in]		nSlaveGetCount		ƒXƒŒ[ƒu‘¤æ“¾ƒTƒCƒY
- * @param[in,out]	pnSlaveSetArray		æ“¾‚³‚ê‚éƒXƒŒ[ƒu‘¤—İŒv””z—ñ
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * æŒ‡å®šã•ã‚ŒãŸJOINãƒ†ãƒ¼ãƒ–ãƒ«ã®ç´¯è¨ˆæ•°é…åˆ—ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]		nTableID			ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]		nSetID				ã‚»ãƒƒãƒˆID
+ * @param[out]		pnMasterSize		ãƒã‚¹ã‚¿å´ç´¯è¨ˆæ•°é…åˆ—ã®ã‚µã‚¤ã‚º
+ * @param[in]		nMasterGetCount		ãƒã‚¹ã‚¿å´å–å¾—ã‚µã‚¤ã‚º
+ * @param[in,out]	pnMasterSetArray	å–å¾—ã•ã‚Œã‚‹ãƒã‚¹ã‚¿å´ç´¯è¨ˆæ•°é…åˆ—
+ * @param[out]		pnSlaveSize			ã‚¹ãƒ¬ãƒ¼ãƒ–å´ç´¯è¨ˆæ•°é…åˆ—ã®ã‚µã‚¤ã‚º
+ * @param[in]		nSlaveGetCount		ã‚¹ãƒ¬ãƒ¼ãƒ–å´å–å¾—ã‚µã‚¤ã‚º
+ * @param[in,out]	pnSlaveSetArray		å–å¾—ã•ã‚Œã‚‹ã‚¹ãƒ¬ãƒ¼ãƒ–å´ç´¯è¨ˆæ•°é…åˆ—
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * pnMasterSize,pnMasterSetArray,pnSlaveSize,pnSlaveSetArray‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * pnMasterSize,pnMasterSetArray,pnSlaveSize,pnSlaveSetArrayã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5GetJoinProjectionSets(
 			const int	nTableID,
@@ -964,14 +964,14 @@ D5RESULT D5APICALL RD5GetJoinProjectionSets(
 		  );
 
 /**
- * ƒZƒbƒgID‚Ìˆê——‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID		ƒe[ƒuƒ‹ID
- * @param[out]	anSetIDList		ƒZƒbƒgIDƒŠƒXƒg
- * @retval	0ˆÈã	ƒZƒbƒgID‚ÌŒÂ”
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * ã‚»ãƒƒãƒˆIDã®ä¸€è¦§ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID		ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[out]	anSetIDList		ã‚»ãƒƒãƒˆIDãƒªã‚¹ãƒˆ
+ * @retval	0ä»¥ä¸Š	ã‚»ãƒƒãƒˆIDã®å€‹æ•°
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * anSetIDList‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * anSetIDListã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5GetSetList(
 				const int nTableID,
@@ -979,15 +979,15 @@ D5RESULT D5APICALL RD5GetSetList(
 		  );
 
 /**
- * w’è‚³‚ê‚½ƒe[ƒuƒ‹‚ÌƒZƒbƒg‚Ì‚¤‚¿w’è‚³‚ê‚½ŒÂ”‚ÌƒZƒbƒg‚ğæ“¾‚µ‚Ü‚·BiƒZƒbƒg”Ô†‚Ì¸‡‚Éæ‚èo‚µ‚Ü‚·Bj
- * @param[in]	nTableID	ƒZƒbƒg‚ğæ“¾‚µ‚½‚¢ƒe[ƒuƒ‹‚Ìƒe[ƒuƒ‹ID
- * @param[in]	nSize		ó‚¯æ‚éƒZƒbƒg‚ÌŒÂ”
- * @param[out]	anSetIDList	ƒZƒbƒg‚ğó‚¯æ‚é”z—ñ‚Ö‚Ìƒ|ƒCƒ“ƒ^
- * @retval	0ˆÈã	ƒZƒbƒg‚ÌŒÂ”
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * æŒ‡å®šã•ã‚ŒãŸãƒ†ãƒ¼ãƒ–ãƒ«ã®ã‚»ãƒƒãƒˆã®ã†ã¡æŒ‡å®šã•ã‚ŒãŸå€‹æ•°ã®ã‚»ãƒƒãƒˆã‚’å–å¾—ã—ã¾ã™ã€‚ï¼ˆã‚»ãƒƒãƒˆç•ªå·ã®æ˜‡é †ã«å–ã‚Šå‡ºã—ã¾ã™ã€‚ï¼‰
+ * @param[in]	nTableID	ã‚»ãƒƒãƒˆã‚’å–å¾—ã—ãŸã„ãƒ†ãƒ¼ãƒ–ãƒ«ã®ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSize		å—ã‘å–ã‚‹ã‚»ãƒƒãƒˆã®å€‹æ•°
+ * @param[out]	anSetIDList	ã‚»ãƒƒãƒˆã‚’å—ã‘å–ã‚‹é…åˆ—ã¸ã®ãƒã‚¤ãƒ³ã‚¿
+ * @retval	0ä»¥ä¸Š	ã‚»ãƒƒãƒˆã®å€‹æ•°
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * anSetIDList‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * anSetIDListã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5GetSetIDList(
 				const int nTableID,
@@ -996,15 +996,15 @@ D5RESULT D5APICALL RD5GetSetIDList(
 		  );
 
 /**
- * ƒZƒbƒg‚ğ’Ç‰Á‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nSetSize	’Ç‰Á‚·‚éƒZƒbƒg‚ÌŒÂ”
- * @param[in]	pnSetArray	’Ç‰Á‚·‚éƒZƒbƒgƒŠƒXƒg
- * @retval	1ˆÈã	’Ç‰Á‚µ‚½ƒZƒbƒg‚ÌƒZƒbƒgID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * ã‚»ãƒƒãƒˆã‚’è¿½åŠ ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetSize	è¿½åŠ ã™ã‚‹ã‚»ãƒƒãƒˆã®å€‹æ•°
+ * @param[in]	pnSetArray	è¿½åŠ ã™ã‚‹ã‚»ãƒƒãƒˆãƒªã‚¹ãƒˆ
+ * @retval	1ä»¥ä¸Š	è¿½åŠ ã—ãŸã‚»ãƒƒãƒˆã®ã‚»ãƒƒãƒˆID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ƒXƒNƒŠƒvƒgŒ¾Œê‚Å‚ÍƒTƒ|[ƒg‚µ‚Ü‚¹‚ñB
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã§ã¯ã‚µãƒãƒ¼ãƒˆã—ã¾ã›ã‚“ã€‚
  */
 D5RESULT D5APICALL RD5AddSetReal(
             const int	nTableID,
@@ -1013,14 +1013,14 @@ D5RESULT D5APICALL RD5AddSetReal(
           );
 
 /**
- * ƒZƒbƒg‚ğíœ‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nSetID		ƒZƒbƒgID
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚»ãƒƒãƒˆã‚’å‰Šé™¤ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5DeleteSet(
 			const int nTableID,
@@ -1028,27 +1028,27 @@ D5RESULT D5APICALL RD5DeleteSet(
 		  );
 
 /**
- * ƒJƒŒƒ“ƒg‚ÌƒZƒbƒgID‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @retval	0ˆÈã	ƒJƒŒƒ“ƒgƒZƒbƒg‚ÌID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * ã‚«ãƒ¬ãƒ³ãƒˆã®ã‚»ãƒƒãƒˆIDã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	0ä»¥ä¸Š	ã‚«ãƒ¬ãƒ³ãƒˆã‚»ãƒƒãƒˆã®ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5GetCurrentSetID(
 			const int nTableID
 		  );
 
 /**
- * ƒJƒŒƒ“ƒgƒZƒbƒg‚ğİ’è‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nSetID		ƒJƒŒƒ“ƒgƒZƒbƒg‚Éİ’è‚·‚éƒZƒbƒgID
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚«ãƒ¬ãƒ³ãƒˆã‚»ãƒƒãƒˆã‚’è¨­å®šã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID		ã‚«ãƒ¬ãƒ³ãƒˆã‚»ãƒƒãƒˆã«è¨­å®šã™ã‚‹ã‚»ãƒƒãƒˆID
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5ChangeCurrentSetID(
 			const int nTableID,
@@ -1056,14 +1056,14 @@ D5RESULT D5APICALL RD5ChangeCurrentSetID(
 		  );
 
 /**
- * w’è‚µ‚½ƒTƒuƒZƒbƒgˆÈŠO‚ÌƒŒƒR[ƒh‚©‚ç‚È‚éƒTƒuƒZƒbƒg‚ğì¬‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nSetID		•âW‡‚ğì¬‚µ‚½‚¢ƒZƒbƒgID
- * @retval	0ˆÈã	ì¬‚³‚ê‚½ƒZƒbƒgID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * æŒ‡å®šã—ãŸã‚µãƒ–ã‚»ãƒƒãƒˆä»¥å¤–ã®ãƒ¬ã‚³ãƒ¼ãƒ‰ã‹ã‚‰ãªã‚‹ã‚µãƒ–ã‚»ãƒƒãƒˆã‚’ä½œæˆã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID		è£œé›†åˆã‚’ä½œæˆã—ãŸã„ã‚»ãƒƒãƒˆID
+ * @retval	0ä»¥ä¸Š	ä½œæˆã•ã‚ŒãŸã‚»ãƒƒãƒˆID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL  RD5SetNotReal(
 			const int nTableID,
@@ -1071,16 +1071,16 @@ D5RESULT D5APICALL  RD5SetNotReal(
 		  );
 
 /**
- * ƒZƒbƒg‚Ì‹¤’ÊW‡^˜aW‡^·W‡‚ğì¬‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nOpeNo		ì¬‚µ‚½‚¢ƒZƒbƒg‚Ìí—Ş
- * @param[in]	nSetAID		1”Ô–Ú‚Éw’è‚·‚éƒZƒbƒgIDiAj
- * @param[in]	nSetBID		2”Ô–Ú‚Éİ’è‚·‚éƒZƒbƒgIDiBj
- * @retval	0ˆÈã	ì¬‚³‚ê‚½W‡‚ÌID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * ã‚»ãƒƒãƒˆã®å…±é€šé›†åˆï¼å’Œé›†åˆï¼å·®é›†åˆã‚’ä½œæˆã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nOpeNo		ä½œæˆã—ãŸã„ã‚»ãƒƒãƒˆã®ç¨®é¡
+ * @param[in]	nSetAID		1ç•ªç›®ã«æŒ‡å®šã™ã‚‹ã‚»ãƒƒãƒˆIDï¼ˆAï¼‰
+ * @param[in]	nSetBID		2ç•ªç›®ã«è¨­å®šã™ã‚‹ã‚»ãƒƒãƒˆIDï¼ˆBï¼‰
+ * @retval	0ä»¥ä¸Š	ä½œæˆã•ã‚ŒãŸé›†åˆã®ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5SetOpeReal(
 			const int nTableID,
@@ -1090,17 +1090,17 @@ D5RESULT D5APICALL RD5SetOpeReal(
 		  );
 
 /**
- * ƒ†ƒj[ƒNs‚ğ’Šo‚µ‚Ü‚·B
- * @param[in]	nJBAHandle				í‚É0
- * @param[in]	nTableID				ƒe[ƒuƒ‹ID
- * @param[in]	nSetID					ƒZƒbƒgID
- * @param[in]	anFilterIDs				€–ÚIDƒŠƒXƒg
- * @param[in]	nConserveOriginalOrder	True ‚Ü‚½‚Í False
- * @retval	1ˆÈã	¶¬‚³‚ê‚½ƒZƒbƒg‚ÌID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * ãƒ¦ãƒ‹ãƒ¼ã‚¯è¡Œã‚’æŠ½å‡ºã—ã¾ã™ã€‚
+ * @param[in]	nJBAHandle				å¸¸ã«0
+ * @param[in]	nTableID				ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID					ã‚»ãƒƒãƒˆID
+ * @param[in]	anFilterIDs				é …ç›®IDãƒªã‚¹ãƒˆ
+ * @param[in]	nConserveOriginalOrder	True ã¾ãŸã¯ False
+ * @retval	1ä»¥ä¸Š	ç”Ÿæˆã•ã‚ŒãŸã‚»ãƒƒãƒˆã®ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * anFilterIDs‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * anFilterIDsã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL  RD5ExtractUniqueReal(
 			const int		nJBAHandle,
@@ -1111,17 +1111,17 @@ D5RESULT D5APICALL  RD5ExtractUniqueReal(
 			);
 
 /**
- * JOIN‚Éƒ}ƒbƒ`‚µ‚½sAƒ}ƒbƒ`‚µ‚È‚©‚Á‚½s‚ğƒZƒbƒg‚Æ‚µ‚Ä¶¬‚µ‚Ü‚·B
- * @param[in]	nJoinTableID		JOINƒe[ƒuƒ‹ID
- * @param[in]	nPutSlave			ƒZƒbƒg‚ğ¶¬‚·‚éƒe[ƒuƒ‹‚ğw’è
- * @param[in]	nPutJoinOut			¶¬‚·‚éƒZƒbƒg‚Ìí—Ş‚ğw’è
- * @param[out]	pnTargetTableID		ƒZƒbƒg‚ª’Ç‰Á‚³‚ê‚½ƒe[ƒuƒ‹ID
- * @param[out]	pnTargetSetID		¶¬‚³‚ê‚½ƒZƒbƒgID
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * JOINã«ãƒãƒƒãƒã—ãŸè¡Œã€ãƒãƒƒãƒã—ãªã‹ã£ãŸè¡Œã‚’ã‚»ãƒƒãƒˆã¨ã—ã¦ç”Ÿæˆã—ã¾ã™ã€‚
+ * @param[in]	nJoinTableID		JOINãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nPutSlave			ã‚»ãƒƒãƒˆã‚’ç”Ÿæˆã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’æŒ‡å®š
+ * @param[in]	nPutJoinOut			ç”Ÿæˆã™ã‚‹ã‚»ãƒƒãƒˆã®ç¨®é¡ã‚’æŒ‡å®š
+ * @param[out]	pnTargetTableID		ã‚»ãƒƒãƒˆãŒè¿½åŠ ã•ã‚ŒãŸãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[out]	pnTargetSetID		ç”Ÿæˆã•ã‚ŒãŸã‚»ãƒƒãƒˆID
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * pnTargetTableID,pnTargetSetID‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * pnTargetTableID,pnTargetSetIDã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL  RD5PutJoinSetToParent(
 		 const int	nJoinTableID,
@@ -1132,14 +1132,14 @@ D5RESULT D5APICALL  RD5PutJoinSetToParent(
 	   );
 
 /**
- * JOIN‚Éƒ}ƒbƒ`‚µ‚½ƒXƒŒ[ƒu‘¤‚Ìs‚ÌƒZƒbƒg‚ğ¶¬‚µ‚Ü‚·B
- * @param[in]	nJoinTableID		JOINƒe[ƒuƒ‹IDJOINŒ³ƒXƒŒ[ƒuƒe[ƒuƒ‹ID
- * @param[in]	pnTargetTableID		JOINŒ³ƒXƒŒ[ƒuƒe[ƒuƒ‹ID
- * @retval	1ˆÈã	¶¬‚³‚ê‚½ƒZƒbƒgID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * JOINã«ãƒãƒƒãƒã—ãŸã‚¹ãƒ¬ãƒ¼ãƒ–å´ã®è¡Œã®ã‚»ãƒƒãƒˆã‚’ç”Ÿæˆã—ã¾ã™ã€‚
+ * @param[in]	nJoinTableID		JOINãƒ†ãƒ¼ãƒ–ãƒ«IDJOINå…ƒã‚¹ãƒ¬ãƒ¼ãƒ–ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	pnTargetTableID		JOINå…ƒã‚¹ãƒ¬ãƒ¼ãƒ–ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	1ä»¥ä¸Š	ç”Ÿæˆã•ã‚ŒãŸã‚»ãƒƒãƒˆID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * pnTargetTableID‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * pnTargetTableIDã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5ReturnSet2SlaveTable(
 		 const int	nJoinTableID,
@@ -1147,29 +1147,29 @@ D5RESULT D5APICALL RD5ReturnSet2SlaveTable(
 	   );
 
 /**
- * €–Ú‚ÌŒÂ”‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @retval	0ˆÈã	€–Ú‚ÌŒÂ”
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * é …ç›®ã®å€‹æ•°ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	0ä»¥ä¸Š	é …ç›®ã®å€‹æ•°
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5GetNFilter(
 			const int nTableID
 		  );
 
 /**
- * €–ÚID‚Ìˆê——‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID		ƒe[ƒuƒ‹ID
- * @param[out]	anFilterIDList	€–ÚIDƒŠƒXƒg
- * @retval	4byte	€–Ú‚Ìƒf[ƒ^Œ^‚ª®”
- * @retval	8byte	€–Ú‚Ìƒf[ƒ^Œ^‚ª•‚“®¬”“_or“ú•toror“ú•t
- * @retval	Å‘å’·‚Ì•¶š—ñ‚©‚ç\0‚ğœ‚¢‚½byte”	€–Ú‚Ìƒf[ƒ^Œ^‚ª•¶š—ñ
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * é …ç›®IDã®ä¸€è¦§ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID		ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[out]	anFilterIDList	é …ç›®IDãƒªã‚¹ãƒˆ
+ * @retval	4byte	é …ç›®ã®ãƒ‡ãƒ¼ã‚¿å‹ãŒæ•´æ•°
+ * @retval	8byte	é …ç›®ã®ãƒ‡ãƒ¼ã‚¿å‹ãŒæµ®å‹•å°æ•°ç‚¹oræ—¥ä»˜oræ™‚åˆ»oræ—¥ä»˜æ™‚åˆ»
+ * @retval	æœ€å¤§é•·ã®æ–‡å­—åˆ—ã‹ã‚‰\0ã‚’é™¤ã„ãŸbyteæ•°	é …ç›®ã®ãƒ‡ãƒ¼ã‚¿å‹ãŒæ–‡å­—åˆ—
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * anFilterIDList‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * anFilterIDListã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5GetFilterIDList(
 			const int nTableID,
@@ -1177,14 +1177,14 @@ D5RESULT D5APICALL RD5GetFilterIDList(
 		  );
 
 /**
- * €–Ú‚Ì•‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nFilterID	€–ÚID
- * @retval	0ˆÈã	€–Ú‚Ì•
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * é …ç›®ã®å¹…ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID	é …ç›®ID
+ * @retval	0ä»¥ä¸Š	é …ç›®ã®å¹…
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5GetFilterWidth(
 			const int nTableID,
@@ -1192,14 +1192,14 @@ D5RESULT D5APICALL RD5GetFilterWidth(
 		  );
 
 /**
- * €–Ú‚Ìƒf[ƒ^Œ^‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nFilterID	€–ÚID
- * @retval	2`7	5-1. ’è”’è‹`‚ğQÆ
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * é …ç›®ã®ãƒ‡ãƒ¼ã‚¿å‹ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID	é …ç›®ID
+ * @retval	2ï½7	5-1. å®šæ•°å®šç¾©ã‚’å‚ç…§
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5GetFilterType(
 			const int nTableID,
@@ -1207,15 +1207,15 @@ D5RESULT D5APICALL RD5GetFilterType(
 		  );
 
 /**
- * €–Ú‚Ìî•ñ‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nFilterID	€–ÚID
- * @param[out]	pFilterInfo	€–Úî•ñ
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * é …ç›®ã®æƒ…å ±ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID	é …ç›®ID
+ * @param[out]	pFilterInfo	é …ç›®æƒ…å ±
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5GetFilterInfo(
 		const int nTableID,
@@ -1231,15 +1231,15 @@ D5RESULT D5APICALL RD5GetJoinKeyInfo(
 	);
 
 /**
- * €–Ú‚ÌƒAƒgƒŠƒrƒ…[ƒg—Ìˆæ‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nFilterID	€–ÚID
- * @param[out]	acAttrs		ƒAƒgƒŠƒrƒ…[ƒg”z—ñ
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * é …ç›®ã®ã‚¢ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ãƒˆé ˜åŸŸã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID	é …ç›®ID
+ * @param[out]	acAttrs		ã‚¢ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ãƒˆé…åˆ—
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * –{API‚Íg—p‚¹‚¸Alfmutil‚Ì{@link CFilterAttr}‚ğg—p‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * æœ¬APIã¯ä½¿ç”¨ã›ãšã€lfmutilã®{@link CFilterAttr}ã‚’ä½¿ç”¨ã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT	D5APICALL RD5GetFilterAttr(
 		 const int	nTableID,
@@ -1248,15 +1248,15 @@ D5RESULT	D5APICALL RD5GetFilterAttr(
 		  );
 
 /**
- * ƒZƒbƒg‚ÌƒAƒgƒŠƒrƒ…[ƒg—Ìˆæ‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nSetID		ƒZƒbƒgID
- * @param[out]	acAttrs		ƒAƒgƒŠƒrƒ…[ƒg”z—ñ
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚»ãƒƒãƒˆã®ã‚¢ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ãƒˆé ˜åŸŸã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @param[out]	acAttrs		ã‚¢ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ãƒˆé…åˆ—
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * –{API‚Íg—p‚¹‚¸Alfmutil‚Ì{@link CSubsetAttr}‚ğg—p‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * æœ¬APIã¯ä½¿ç”¨ã›ãšã€lfmutilã®{@link CSubsetAttr}ã‚’ä½¿ç”¨ã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT	D5APICALL RD5GetSubsetAttr(
 		 const int	nTableID,
@@ -1265,15 +1265,15 @@ D5RESULT	D5APICALL RD5GetSubsetAttr(
 		  );
 
 /**
- * €–Ú‚ÌƒAƒgƒŠƒrƒ…[ƒg—Ìˆæ‚Éƒf[ƒ^‚ğŠi”[‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nFilterID	€–ÚID
- * @param[in]	acAttrs		ƒAƒgƒŠƒrƒ…[ƒg”z—ñ
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * é …ç›®ã®ã‚¢ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ãƒˆé ˜åŸŸã«ãƒ‡ãƒ¼ã‚¿ã‚’æ ¼ç´ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID	é …ç›®ID
+ * @param[in]	acAttrs		ã‚¢ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ãƒˆé…åˆ—
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * –{API‚Íg—p‚¹‚¸Alfmutil‚Ì{@link CFilterAttr}‚ğg—p‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * æœ¬APIã¯ä½¿ç”¨ã›ãšã€lfmutilã®{@link CFilterAttr}ã‚’ä½¿ç”¨ã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT	D5APICALL RD5SetFilterAttr(
 		 const int	nTableID,
@@ -1282,15 +1282,15 @@ D5RESULT	D5APICALL RD5SetFilterAttr(
 		  );
 
 /**
- * ƒZƒbƒg‚ÌƒAƒgƒŠƒrƒ…[ƒg—Ìˆæ‚ğİ’è‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nSetID		ƒZƒbƒgID
- * @param[in]	acAttrs		ƒAƒgƒŠƒrƒ…[ƒg”z—ñ
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚»ãƒƒãƒˆã®ã‚¢ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ãƒˆé ˜åŸŸã‚’è¨­å®šã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @param[in]	acAttrs		ã‚¢ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ãƒˆé…åˆ—
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * –{API‚Íg—p‚¹‚¸Alfmutil‚Ì{@link CSubsetAttr}‚ğg—p‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * æœ¬APIã¯ä½¿ç”¨ã›ãšã€lfmutilã®{@link CSubsetAttr}ã‚’ä½¿ç”¨ã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT	D5APICALL RD5SetSubsetAttr(
 		 const int	nTableID,
@@ -1299,14 +1299,14 @@ D5RESULT	D5APICALL RD5SetSubsetAttr(
 		  );
 
 /**
- * w’è€–Ú‚ğíœ‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nFilterID	€–ÚID
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * æŒ‡å®šé …ç›®ã‚’å‰Šé™¤ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID	é …ç›®ID
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5DeleteRealFilter(
 			const int nTableID,
@@ -1314,15 +1314,15 @@ D5RESULT D5APICALL RD5DeleteRealFilter(
 		  );
 
 /**
- * €–Ú‚ÌˆÊ’u‚ğ•ÏX‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nFromIndex	ˆÚ“®‘ÎÛ‚ÌˆÊ’u
- * @param[in]	nToIndex	‘}“üæ‚ÌˆÊ’u
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * é …ç›®ã®ä½ç½®ã‚’å¤‰æ›´ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFromIndex	ç§»å‹•å¯¾è±¡ã®ä½ç½®
+ * @param[in]	nToIndex	æŒ¿å…¥å…ˆã®ä½ç½®
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5MoveRealFilter(
 			const int nTableID,
@@ -1331,14 +1331,14 @@ D5RESULT D5APICALL RD5MoveRealFilter(
 		  );
 
 /**
- * €–Ú‚ğ•¡»‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID	
- * @param[in]	nFilterID	•¡»Œ³‚Ì€–ÚID
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * é …ç›®ã‚’è¤‡è£½ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID	
+ * @param[in]	nFilterID	è¤‡è£½å…ƒã®é …ç›®ID
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5DupRealFilter(
 			const int nTableID,
@@ -1346,15 +1346,15 @@ D5RESULT D5APICALL RD5DupRealFilter(
 		  );
 
 /**
- * ”CˆÓ‚Ìƒf[ƒ^Œ^‚É•ÏŠ·‚µ‚Ä€–Ú‚ğ•¡»‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nFilterID	•¡»Œ³‚Ì€–ÚID
- * @param[in]	nDataType	ì¬‚·‚éƒf[ƒ^Œ^
- * @retval	1ˆÈã	¶¬‚³‚ê‚½€–ÚID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * ä»»æ„ã®ãƒ‡ãƒ¼ã‚¿å‹ã«å¤‰æ›ã—ã¦é …ç›®ã‚’è¤‡è£½ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID	è¤‡è£½å…ƒã®é …ç›®ID
+ * @param[in]	nDataType	ä½œæˆã™ã‚‹ãƒ‡ãƒ¼ã‚¿å‹
+ * @retval	1ä»¥ä¸Š	ç”Ÿæˆã•ã‚ŒãŸé …ç›®ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5DupRealFilterEx(
 			const int nTableID,
@@ -1363,17 +1363,17 @@ D5RESULT D5APICALL RD5DupRealFilterEx(
 		  );
 
 /**
- * ƒJƒ^ƒƒO’è‹`ƒtƒ@ƒCƒ‹‚©‚çƒe[ƒuƒ‹‚Öƒf[ƒ^‚ğ’Ç‰Á‚µ‚Ü‚·B
- * @param[in]	nTableID		’Ç‰Á‚·‚éƒe[ƒuƒ‹ID
- * @param[in]	nAppendPos		’Ç‰ÁŠJnˆÊ’u
- * @param[in]	nDataArraySize	’Ç‰Á‚·‚és”
- * @param[in]	szCatalogPath	ƒJƒ^ƒƒO’è‹`ƒtƒ@ƒCƒ‹‚Ì‘¶İ‚·‚éƒpƒX
- * @param[in]	szCatalogName	ƒJƒ^ƒƒO’è‹`ƒtƒ@ƒCƒ‹‚Ì–¼Ì
- * @retval	0ˆÈã	’Ç‰Á‚³‚ê‚½s”
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * ã‚«ã‚¿ãƒ­ã‚°å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰ãƒ†ãƒ¼ãƒ–ãƒ«ã¸ãƒ‡ãƒ¼ã‚¿ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+ * @param[in]	nTableID		è¿½åŠ ã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nAppendPos		è¿½åŠ é–‹å§‹ä½ç½®
+ * @param[in]	nDataArraySize	è¿½åŠ ã™ã‚‹è¡Œæ•°
+ * @param[in]	szCatalogPath	ã‚«ã‚¿ãƒ­ã‚°å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã®å­˜åœ¨ã™ã‚‹ãƒ‘ã‚¹
+ * @param[in]	szCatalogName	ã‚«ã‚¿ãƒ­ã‚°å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã®åç§°
+ * @retval	0ä»¥ä¸Š	è¿½åŠ ã•ã‚ŒãŸè¡Œæ•°
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5AppendCatalogFile(
 			const int	 nTableID,
@@ -1384,19 +1384,19 @@ D5RESULT D5APICALL RD5AppendCatalogFile(
 			);
 
 /**
- * ƒJƒ^ƒƒO’è‹`ƒtƒ@ƒCƒ‹‚©‚çƒe[ƒuƒ‹‚Öƒf[ƒ^‚ğ’Ç‰Á‚µ‚Ü‚·B
- * @param[in]	nTableID		’Ç‰Á‚·‚éƒe[ƒuƒ‹ID
- * @param[in]	nAppendPos		’Ç‰ÁŠJnˆÊ’u
- * @param[in]	nDataArraySize	’Ç‰Á‚·‚és”
- * @param[in]	szCatalogPath	\‘¢’è‹`ƒtƒ@ƒCƒ‹‚Ì‘¶İ‚·‚éƒpƒX
- * @param[in]	szCatalogName	\‘¢’è‹`ƒtƒ@ƒCƒ‹‚Ì–¼Ì
- * @param[in]	szSourcePath	Œ´nƒf[ƒ^ƒtƒ@ƒCƒ‹‚Ì‘¶İ‚·‚éƒpƒX
- * @param[in]	szSourceName	Œ´nƒf[ƒ^ƒtƒ@ƒCƒ‹‚Ì–¼Ì
- * @retval	0ˆÈã	’Ç‰Á‚³‚ê‚½s”
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * ã‚«ã‚¿ãƒ­ã‚°å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰ãƒ†ãƒ¼ãƒ–ãƒ«ã¸ãƒ‡ãƒ¼ã‚¿ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+ * @param[in]	nTableID		è¿½åŠ ã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nAppendPos		è¿½åŠ é–‹å§‹ä½ç½®
+ * @param[in]	nDataArraySize	è¿½åŠ ã™ã‚‹è¡Œæ•°
+ * @param[in]	szCatalogPath	æ§‹é€ å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã®å­˜åœ¨ã™ã‚‹ãƒ‘ã‚¹
+ * @param[in]	szCatalogName	æ§‹é€ å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã®åç§°
+ * @param[in]	szSourcePath	åŸå§‹ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã®å­˜åœ¨ã™ã‚‹ãƒ‘ã‚¹
+ * @param[in]	szSourceName	åŸå§‹ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã®åç§°
+ * @retval	0ä»¥ä¸Š	è¿½åŠ ã•ã‚ŒãŸè¡Œæ•°
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5AppendCatalogFileEx2(
 			const int	 nTableID,
@@ -1409,17 +1409,17 @@ D5RESULT D5APICALL RD5AppendCatalogFileEx2(
 			);
 
 /**
- * ƒJƒ^ƒƒO’è‹`ƒtƒ@ƒCƒ‹‚©‚çƒe[ƒuƒ‹‚ğ¶¬‚µ‚Ü‚·B
- * @param[in]	szCatalogPath	\‘¢’è‹`ƒtƒ@ƒCƒ‹‚Ì‘¶İ‚·‚éƒpƒX
- * @param[in]	szCatalogName	\‘¢’è‹`ƒtƒ@ƒCƒ‹‚Ì–¼Ì
- * @param[in]	szSourcePath	Œ´nƒf[ƒ^ƒtƒ@ƒCƒ‹‚Ì‘¶İ‚·‚éƒpƒX
- * @param[in]	szSourceName	Œ´nƒf[ƒ^ƒtƒ@ƒCƒ‹‚Ì–¼Ì
- * @param[in]	szTableName		V‹K‚É¶¬‚·‚éƒe[ƒuƒ‹–¼Ì
- * @retval	0ˆÈã	¶¬‚³‚ê‚½ƒe[ƒuƒ‹‚ÌID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * ã‚«ã‚¿ãƒ­ã‚°å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’ç”Ÿæˆã—ã¾ã™ã€‚
+ * @param[in]	szCatalogPath	æ§‹é€ å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã®å­˜åœ¨ã™ã‚‹ãƒ‘ã‚¹
+ * @param[in]	szCatalogName	æ§‹é€ å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã®åç§°
+ * @param[in]	szSourcePath	åŸå§‹ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã®å­˜åœ¨ã™ã‚‹ãƒ‘ã‚¹
+ * @param[in]	szSourceName	åŸå§‹ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã®åç§°
+ * @param[in]	szTableName		æ–°è¦ã«ç”Ÿæˆã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«åç§°
+ * @retval	0ä»¥ä¸Š	ç”Ÿæˆã•ã‚ŒãŸãƒ†ãƒ¼ãƒ–ãƒ«ã®ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5AddCatalogFileEx2(
 			const char   szCatalogPath[D5_MAX_PATH],
@@ -1430,23 +1430,23 @@ D5RESULT D5APICALL RD5AddCatalogFileEx2(
 			);
 
 /**
- * ƒJƒ^ƒƒO’è‹`ƒtƒ@ƒCƒ‹‚©‚çƒe[ƒuƒ‹‚ğ¶¬‚µ‚Ü‚·B
- * à–¾F@ƒGƒ‰[‚Ì”­¶‰ÓŠAƒGƒ‰[‚Æ‚È‚Á‚½ƒf[ƒ^A·‚µ‘Ö‚¦’l‚ªƒƒOƒtƒ@ƒCƒ‹‚Éƒ^ƒu‹æØ‚è‚Ìƒf[ƒ^‚Æ‚µ‚Äo—Í‚³‚ê‚Ü‚·B
- *            ƒƒOƒtƒ@ƒCƒ‹‚ÍA“Ç‚İ‚ñ‚Åƒe[ƒuƒ‹‚É‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·‚Ì‚ÅAƒGƒ‰[‚ÌŒ´ˆö‚ğ“Á’è‚µAC³‚·‚é‚±‚Æ‚ª—eˆÕ‚É‚È‚è‚Ü‚·B
- *            ‚È‚¨A–{‹@”\‚ÍAƒVƒ“ƒOƒ‹ƒXƒŒƒbƒh‚Å“®ì‚·‚é‚½‚ßˆ—‘¬“x‚ª’á‘¬‚Å‚·B
- * @param[in]	szCatalogPath	\‘¢’è‹`ƒtƒ@ƒCƒ‹‚Ì‘¶İ‚·‚éƒpƒX
- * @param[in]	szCatalogName	\‘¢’è‹`ƒtƒ@ƒCƒ‹‚Ì–¼Ì
-								"structinfo.txt"‚ğg‚¤‚±‚Æ‚ª‘½‚¢
- * @param[in]	szSourcePath	Œ´nƒf[ƒ^ƒtƒ@ƒCƒ‹‚Ì‘¶İ‚·‚éƒpƒX
- * @param[in]	szSourceName	Œ´nƒf[ƒ^ƒtƒ@ƒCƒ‹‚Ì–¼Ì
-								"Sample.csv", "Sample.txt" ‚È‚Ç
- * @param[in]	szTableName		V‹K‚É¶¬‚·‚éƒe[ƒuƒ‹–¼Ì
-								ƒGƒ“ƒWƒ“‚Ì–½–¼‹K‘¥‚ÆAƒ[ƒNƒXƒy[ƒXã‚Ì
-								Šù‘¶ƒe[ƒuƒ‹–¼Ì‚É‚æ‚èƒGƒ“ƒWƒ“‚É‚æ‚è•ÏX‚³‚ê‚é‚±‚Æ‚ª‚ ‚é
- * @retval	0ˆÈã	¶¬‚³‚ê‚½ƒe[ƒuƒ‹‚ÌID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
- 			 å‚Éƒtƒ@ƒCƒ‹ŠÖŒW‚ÌƒGƒ‰[iƒI[ƒvƒ“‚Å‚«‚È‚¢‚È‚Çj‚ª•Ô‚³‚ê‚é‚ªA
-			 ƒƒ‚ƒŠ•s‘«AƒtƒH[ƒ}ƒbƒgˆÙí‚È‚Ç‚ÌƒGƒ‰[‚à•Ô‚³‚ê‚é‚±‚Æ‚ª‚ ‚é
+ * ã‚«ã‚¿ãƒ­ã‚°å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’ç”Ÿæˆã—ã¾ã™ã€‚
+ * èª¬æ˜ï¼šã€€ã‚¨ãƒ©ãƒ¼ã®ç™ºç”Ÿç®‡æ‰€ã€ã‚¨ãƒ©ãƒ¼ã¨ãªã£ãŸãƒ‡ãƒ¼ã‚¿ã€å·®ã—æ›¿ãˆå€¤ãŒãƒ­ã‚°ãƒ•ã‚¡ã‚¤ãƒ«ã«ã‚¿ãƒ–åŒºåˆ‡ã‚Šã®ãƒ‡ãƒ¼ã‚¿ã¨ã—ã¦å‡ºåŠ›ã•ã‚Œã¾ã™ã€‚
+ *            ãƒ­ã‚°ãƒ•ã‚¡ã‚¤ãƒ«ã¯ã€èª­ã¿è¾¼ã‚“ã§ãƒ†ãƒ¼ãƒ–ãƒ«ã«ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã®ã§ã€ã‚¨ãƒ©ãƒ¼ã®åŸå› ã‚’ç‰¹å®šã—ã€ä¿®æ­£ã™ã‚‹ã“ã¨ãŒå®¹æ˜“ã«ãªã‚Šã¾ã™ã€‚
+ *            ãªãŠã€æœ¬æ©Ÿèƒ½ã¯ã€ã‚·ãƒ³ã‚°ãƒ«ã‚¹ãƒ¬ãƒƒãƒ‰ã§å‹•ä½œã™ã‚‹ãŸã‚å‡¦ç†é€Ÿåº¦ãŒä½é€Ÿã§ã™ã€‚
+ * @param[in]	szCatalogPath	æ§‹é€ å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã®å­˜åœ¨ã™ã‚‹ãƒ‘ã‚¹
+ * @param[in]	szCatalogName	æ§‹é€ å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã®åç§°
+								"structinfo.txt"ã‚’ä½¿ã†ã“ã¨ãŒå¤šã„
+ * @param[in]	szSourcePath	åŸå§‹ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã®å­˜åœ¨ã™ã‚‹ãƒ‘ã‚¹
+ * @param[in]	szSourceName	åŸå§‹ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã®åç§°
+								"Sample.csv", "Sample.txt" ãªã©
+ * @param[in]	szTableName		æ–°è¦ã«ç”Ÿæˆã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«åç§°
+								ã‚¨ãƒ³ã‚¸ãƒ³ã®å‘½åè¦å‰‡ã¨ã€ãƒ¯ãƒ¼ã‚¯ã‚¹ãƒšãƒ¼ã‚¹ä¸Šã®
+								æ—¢å­˜ãƒ†ãƒ¼ãƒ–ãƒ«åç§°ã«ã‚ˆã‚Šã‚¨ãƒ³ã‚¸ãƒ³ã«ã‚ˆã‚Šå¤‰æ›´ã•ã‚Œã‚‹ã“ã¨ãŒã‚ã‚‹
+ * @retval	0ä»¥ä¸Š	ç”Ÿæˆã•ã‚ŒãŸãƒ†ãƒ¼ãƒ–ãƒ«ã®ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
+ 			 ä¸»ã«ãƒ•ã‚¡ã‚¤ãƒ«é–¢ä¿‚ã®ã‚¨ãƒ©ãƒ¼ï¼ˆã‚ªãƒ¼ãƒ—ãƒ³ã§ããªã„ãªã©ï¼‰ãŒè¿”ã•ã‚Œã‚‹ãŒã€
+			 ãƒ¡ãƒ¢ãƒªä¸è¶³ã€ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆç•°å¸¸ãªã©ã®ã‚¨ãƒ©ãƒ¼ã‚‚è¿”ã•ã‚Œã‚‹ã“ã¨ãŒã‚ã‚‹
  */
 D5RESULT D5APICALL RD5AddCatalogFileChecker(
 			const char   szCatalogPath[D5_MAX_PATH],         
@@ -1468,20 +1468,20 @@ D5RESULT D5APICALL RD5AppendRealFilter2(
 			);
 
 /**
- * €–Ú‚ğ’Ç‰Á‚µ‚Ü‚·B
- * @param[in]	nTableID		’Ç‰Á‚·‚éƒe[ƒuƒ‹ID
- * @param[in]	nLoc			€–Ú‘}“üˆÊ’u
- * @param[in]	szFilterName	V‹K‚É’Ç‰Á‚·‚é€–Ú–¼Ì
- * @param[in]	nDataType		’Ç‰Á€–Ú‚Ìƒf[ƒ^Œ^
- * @param[in]	nDataArraySize	’Ç‰Á‚·‚éƒŒƒR[ƒh”z—ñ‚ÌƒTƒCƒY
- * @param[in]	nDataUnitSize	1ƒŒƒR[ƒh‚ÌƒTƒCƒY(byte)
- * @param[in]	szFilePath		’Ç‰Á‚·‚éƒf[ƒ^‚Ìƒtƒ@ƒCƒ‹ƒpƒX
- * @param[in]	szFileName		’Ç‰Á‚·‚éƒf[ƒ^‚Ìƒtƒ@ƒCƒ‹–¼Ì
- * @retval	0ˆÈã	¶¬‚³‚ê‚½€–ÚID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * é …ç›®ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+ * @param[in]	nTableID		è¿½åŠ ã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nLoc			é …ç›®æŒ¿å…¥ä½ç½®
+ * @param[in]	szFilterName	æ–°è¦ã«è¿½åŠ ã™ã‚‹é …ç›®åç§°
+ * @param[in]	nDataType		è¿½åŠ é …ç›®ã®ãƒ‡ãƒ¼ã‚¿å‹
+ * @param[in]	nDataArraySize	è¿½åŠ ã™ã‚‹ãƒ¬ã‚³ãƒ¼ãƒ‰é…åˆ—ã®ã‚µã‚¤ã‚º
+ * @param[in]	nDataUnitSize	1ãƒ¬ã‚³ãƒ¼ãƒ‰ã®ã‚µã‚¤ã‚º(byte)
+ * @param[in]	szFilePath		è¿½åŠ ã™ã‚‹ãƒ‡ãƒ¼ã‚¿ã®ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹
+ * @param[in]	szFileName		è¿½åŠ ã™ã‚‹ãƒ‡ãƒ¼ã‚¿ã®ãƒ•ã‚¡ã‚¤ãƒ«åç§°
+ * @retval	0ä»¥ä¸Š	ç”Ÿæˆã•ã‚ŒãŸé …ç›®ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5AddRealFilter2(
 			const int	nTableID,
@@ -1495,14 +1495,14 @@ D5RESULT D5APICALL RD5AddRealFilter2(
 		   );
 
 /**
- * ƒJƒ^ƒƒO’è‹`ƒtƒ@ƒCƒ‹‚©‚çƒe[ƒuƒ‹‚ğ¶¬‚µ‚Ü‚·B
- * @param[in]	szCatalogPath	ƒJƒ^ƒƒO’è‹`ƒtƒ@ƒCƒ‹‚Ì‘¶İ‚·‚éƒpƒX
- * @param[in]	szCatalogName	ƒJƒ^ƒƒO’è‹`ƒtƒ@ƒCƒ‹‚Ì–¼Ì
- * @retval	0ˆÈã	¶¬‚³‚ê‚½ƒe[ƒuƒ‹‚ÌID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * ã‚«ã‚¿ãƒ­ã‚°å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’ç”Ÿæˆã—ã¾ã™ã€‚
+ * @param[in]	szCatalogPath	ã‚«ã‚¿ãƒ­ã‚°å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã®å­˜åœ¨ã™ã‚‹ãƒ‘ã‚¹
+ * @param[in]	szCatalogName	ã‚«ã‚¿ãƒ­ã‚°å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã®åç§°
+ * @retval	0ä»¥ä¸Š	ç”Ÿæˆã•ã‚ŒãŸãƒ†ãƒ¼ãƒ–ãƒ«ã®ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5AddCatalogFile(
 		 const char   szCatalogPath[D5_MAX_PATH],
@@ -1510,20 +1510,20 @@ D5RESULT D5APICALL RD5AddCatalogFile(
 		 );
 
 /**
- * ƒXƒŒ[ƒu‘¤ƒe[ƒuƒ‹‚Ì€–Úˆê——‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nJoinTableID		JOINƒe[ƒuƒ‹ID
- * @param[out]	pnMasterTableID		ƒ}ƒXƒ^ƒe[ƒuƒ‹ID
- * @param[out]	pnMasterSetID		JOINì¬‚Ég—p‚µ‚½ƒ}ƒXƒ^ƒe[ƒuƒ‹‚ÌƒZƒbƒgID
- * @param[out]	pnSlaveTableID		ƒXƒŒ[ƒuƒe[ƒuƒ‹ID
- * @param[out]	pnSlaveSetID		JOINì¬‚Ég—p‚µ‚½ƒXƒŒ[ƒuƒe[ƒuƒ‹‚ÌƒZƒbƒgID
- * @param[out]	pnSlaveFilterCount	ƒXƒŒ[ƒuƒe[ƒuƒ‹‚Ì€–Ú”
- * @param[out]	anSlaveFilterIDs	ƒXƒŒ[ƒuƒe[ƒuƒ‹‚Ì€–ÚIDˆê——
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚¹ãƒ¬ãƒ¼ãƒ–å´ãƒ†ãƒ¼ãƒ–ãƒ«ã®é …ç›®ä¸€è¦§ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nJoinTableID		JOINãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[out]	pnMasterTableID		ãƒã‚¹ã‚¿ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[out]	pnMasterSetID		JOINä½œæˆæ™‚ã«ä½¿ç”¨ã—ãŸãƒã‚¹ã‚¿ãƒ†ãƒ¼ãƒ–ãƒ«ã®ã‚»ãƒƒãƒˆID
+ * @param[out]	pnSlaveTableID		ã‚¹ãƒ¬ãƒ¼ãƒ–ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[out]	pnSlaveSetID		JOINä½œæˆæ™‚ã«ä½¿ç”¨ã—ãŸã‚¹ãƒ¬ãƒ¼ãƒ–ãƒ†ãƒ¼ãƒ–ãƒ«ã®ã‚»ãƒƒãƒˆID
+ * @param[out]	pnSlaveFilterCount	ã‚¹ãƒ¬ãƒ¼ãƒ–ãƒ†ãƒ¼ãƒ–ãƒ«ã®é …ç›®æ•°
+ * @param[out]	anSlaveFilterIDs	ã‚¹ãƒ¬ãƒ¼ãƒ–ãƒ†ãƒ¼ãƒ–ãƒ«ã®é …ç›®IDä¸€è¦§
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * pnMasterTableID,pnMasterSetID,pnSlaveTableID,pnSlaveSetID,pnSlaveFilterCount,anSlaveFilterIDs‚ÍA
- * lfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * pnMasterTableID,pnMasterSetID,pnSlaveTableID,pnSlaveSetID,pnSlaveFilterCount,anSlaveFilterIDsã¯ã€
+ * lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5GetSlaveInfo(
 		 const int	nJoinTableID,
@@ -1536,14 +1536,14 @@ D5RESULT D5APICALL RD5GetSlaveInfo(
 		  );
 
 /**
- * ƒXƒŒ[ƒuƒe[ƒuƒ‹‚Ì€–Ú‚ğƒ}ƒXƒ^ƒe[ƒuƒ‹‚É“]‘—‚µ‚Ü‚·B
- * @param[in]	nJoinTableID	JOINƒe[ƒuƒ‹ID
- * @param[in]	nSlaveFilterID	“]‘—Œ³‚ÌƒXƒŒ[ƒuƒe[ƒuƒ‹‚Ì€–ÚID
- * @retval	0ˆÈã	’Ç‰Áì¬‚³‚ê‚½€–ÚID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * ã‚¹ãƒ¬ãƒ¼ãƒ–ãƒ†ãƒ¼ãƒ–ãƒ«ã®é …ç›®ã‚’ãƒã‚¹ã‚¿ãƒ†ãƒ¼ãƒ–ãƒ«ã«è»¢é€ã—ã¾ã™ã€‚
+ * @param[in]	nJoinTableID	JOINãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSlaveFilterID	è»¢é€å…ƒã®ã‚¹ãƒ¬ãƒ¼ãƒ–ãƒ†ãƒ¼ãƒ–ãƒ«ã®é …ç›®ID
+ * @retval	0ä»¥ä¸Š	è¿½åŠ ä½œæˆã•ã‚ŒãŸé …ç›®ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5MoveSlaveFlt2Master(
 		 const	int	nJoinTableID,
@@ -1551,16 +1551,16 @@ D5RESULT D5APICALL RD5MoveSlaveFlt2Master(
 		 );
 
 /**
- * s”Ô†‚©‚çƒZƒbƒg“à‡˜”Ô†‚ğŒŸõ‚µ‚Ü‚·B
- * @param[in]	nTableID		ƒe[ƒuƒ‹ID
- * @param[in]	nSetID			ƒZƒbƒgID
- * @param[in]	nTargetRecNo	ŒŸõ‘ÎÛ‚Ìs”Ô†
- * @retval	0		ğŒ‚Éˆê’v‚·‚és‚ªŒ©‚Â‚©‚ç‚È‚©‚Á‚½
- * @retval	1ˆÈã	ğŒ‚Éˆê’v‚·‚éƒZƒbƒg“à‡˜”Ô†
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * è¡Œç•ªå·ã‹ã‚‰ã‚»ãƒƒãƒˆå†…é †åºç•ªå·ã‚’æ¤œç´¢ã—ã¾ã™ã€‚
+ * @param[in]	nTableID		ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID			ã‚»ãƒƒãƒˆID
+ * @param[in]	nTargetRecNo	æ¤œç´¢å¯¾è±¡ã®è¡Œç•ªå·
+ * @retval	0		æ¡ä»¶ã«ä¸€è‡´ã™ã‚‹è¡ŒãŒè¦‹ã¤ã‹ã‚‰ãªã‹ã£ãŸ
+ * @retval	1ä»¥ä¸Š	æ¡ä»¶ã«ä¸€è‡´ã™ã‚‹ã‚»ãƒƒãƒˆå†…é †åºç•ªå·
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5FindRecNoReal(
 		 const	int	   nTableID,
@@ -1569,17 +1569,17 @@ D5RESULT D5APICALL RD5FindRecNoReal(
 		 );
 
 /**
- * •¶š—ñŒ^‚Ì€–Ú‚ğğŒ‚Æ‚µ‚ÄA’lƒWƒƒƒ“ƒv‹@”\‚ğƒI[ƒvƒ“‚µ‚Ü‚·B
- * @param[in]	nTableID		ŒŸõ‚·‚éƒe[ƒuƒ‹ID
- * @param[in]	nFilterID		ŒŸõ‘ÎÛ‚Æ‚È‚é•¶š—ñŒ^‚Ì€–ÚID
- * @param[in]	nStrSrchKind	ŒŸõğŒ®‚ğw’è‚·‚é’l
- * @param[in]	szSrchStr1		1”Ô–Ú‚ÌŒŸõğŒ•¶š—ñ
- * @param[in]	szSrchStr2		2”Ô–Ú‚ÌŒŸõğŒ•¶š—ñ
- * @retval	0ˆÈã	ŒŸõID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * æ–‡å­—åˆ—å‹ã®é …ç›®ã‚’æ¡ä»¶ã¨ã—ã¦ã€å€¤ã‚¸ãƒ£ãƒ³ãƒ—æ©Ÿèƒ½ã‚’ã‚ªãƒ¼ãƒ—ãƒ³ã—ã¾ã™ã€‚
+ * @param[in]	nTableID		æ¤œç´¢ã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID		æ¤œç´¢å¯¾è±¡ã¨ãªã‚‹æ–‡å­—åˆ—å‹ã®é …ç›®ID
+ * @param[in]	nStrSrchKind	æ¤œç´¢æ¡ä»¶å¼ã‚’æŒ‡å®šã™ã‚‹å€¤
+ * @param[in]	szSrchStr1		1ç•ªç›®ã®æ¤œç´¢æ¡ä»¶æ–‡å­—åˆ—
+ * @param[in]	szSrchStr2		2ç•ªç›®ã®æ¤œç´¢æ¡ä»¶æ–‡å­—åˆ—
+ * @retval	0ä»¥ä¸Š	æ¤œç´¢ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5OpenStrFindReal(
 		 const	int	   nTableID,
@@ -1590,17 +1590,17 @@ D5RESULT D5APICALL RD5OpenStrFindReal(
 		 );
 
 /**
- * SJISƒR[ƒh‚Ì•¶š—ñŒ^‚Ì€–Ú‚ğğŒ‚Æ‚µ‚ÄA’lƒWƒƒƒ“ƒv‹@”\‚ğƒI[ƒvƒ“‚µ‚Ü‚·B
- * @param[in]	nTableID		ƒe[ƒuƒ‹ID
- * @param[in]	nFilterID		ŒŸõ‘ÎÛ‚Æ‚È‚é•¶š—ñŒ^‚Ì€–ÚID
- * @param[in]	nStrSrchKind	ŒŸõğŒ®‚ğw’è‚·‚é’l
- * @param[in]	szSrchStr1		1”Ô–Ú‚ÌŒŸõğŒ•¶š—ñ
- * @param[in]	szSrchStr2		2”Ô–Ú‚ÌŒŸõğŒ•¶š—ñ
- * @retval	0ˆÈã	ŒŸõID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * SJISã‚³ãƒ¼ãƒ‰ã®æ–‡å­—åˆ—å‹ã®é …ç›®ã‚’æ¡ä»¶ã¨ã—ã¦ã€å€¤ã‚¸ãƒ£ãƒ³ãƒ—æ©Ÿèƒ½ã‚’ã‚ªãƒ¼ãƒ—ãƒ³ã—ã¾ã™ã€‚
+ * @param[in]	nTableID		ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID		æ¤œç´¢å¯¾è±¡ã¨ãªã‚‹æ–‡å­—åˆ—å‹ã®é …ç›®ID
+ * @param[in]	nStrSrchKind	æ¤œç´¢æ¡ä»¶å¼ã‚’æŒ‡å®šã™ã‚‹å€¤
+ * @param[in]	szSrchStr1		1ç•ªç›®ã®æ¤œç´¢æ¡ä»¶æ–‡å­—åˆ—
+ * @param[in]	szSrchStr2		2ç•ªç›®ã®æ¤œç´¢æ¡ä»¶æ–‡å­—åˆ—
+ * @retval	0ä»¥ä¸Š	æ¤œç´¢ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5OpenStrFindRealSJIS(
 			const	int		nTableID,
@@ -1611,18 +1611,18 @@ D5RESULT D5APICALL RD5OpenStrFindRealSJIS(
 		);
 
 /**
- * •¶š—ñŒ^‚Ì€–Ú‚ğğŒ‚Æ‚µ‚ÄA’lƒWƒƒƒ“ƒv‹@”\‚ğƒI[ƒvƒ“‚µ‚Ü‚·B
- * @param[in]	nTableID		ƒe[ƒuƒ‹ID
- * @param[in]	nFilterID		ŒŸõ‘ÎÛ‚Æ‚È‚é•¶š—ñŒ^‚Ì€–ÚID
- * @param[in]	nStrSrchKind	ŒŸõğŒ®‚ğw’è‚·‚é’l
- * @param[in]	szSrchStr1		1”Ô–Ú‚ÌŒŸõğŒ•¶š—ñ
- * @param[in]	szSrchStr2		2”Ô–Ú‚ÌŒŸõğŒ•¶š—ñ
- * @param[in]	nLocaleID		•¶šƒR[ƒhID
- * @retval	0ˆÈã	ŒŸõID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * æ–‡å­—åˆ—å‹ã®é …ç›®ã‚’æ¡ä»¶ã¨ã—ã¦ã€å€¤ã‚¸ãƒ£ãƒ³ãƒ—æ©Ÿèƒ½ã‚’ã‚ªãƒ¼ãƒ—ãƒ³ã—ã¾ã™ã€‚
+ * @param[in]	nTableID		ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID		æ¤œç´¢å¯¾è±¡ã¨ãªã‚‹æ–‡å­—åˆ—å‹ã®é …ç›®ID
+ * @param[in]	nStrSrchKind	æ¤œç´¢æ¡ä»¶å¼ã‚’æŒ‡å®šã™ã‚‹å€¤
+ * @param[in]	szSrchStr1		1ç•ªç›®ã®æ¤œç´¢æ¡ä»¶æ–‡å­—åˆ—
+ * @param[in]	szSrchStr2		2ç•ªç›®ã®æ¤œç´¢æ¡ä»¶æ–‡å­—åˆ—
+ * @param[in]	nLocaleID		æ–‡å­—ã‚³ãƒ¼ãƒ‰ID
+ * @retval	0ä»¥ä¸Š	æ¤œç´¢ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5OpenStrFindRealLocale(
 			const	int		nTableID,
@@ -1634,17 +1634,17 @@ D5RESULT D5APICALL RD5OpenStrFindRealLocale(
 		);
 
 /**
- * ®”Œ^‚Ì€–Ú‚ğğŒ‚Æ‚µ‚ÄA’lƒWƒƒƒ“ƒv‹@”\‚ğƒI[ƒvƒ“‚µ‚Ü‚·B
- * @param[in]	nTableID		ŒŸõ‚·‚éƒe[ƒuƒ‹ID
- * @param[in]	nFilterID		ŒŸõ‘ÎÛ‚Æ‚È‚é®”Œ^‚Ì€–ÚID
- * @param[in]	nValSrchKind	ŒŸõğŒ®‚ğw’è‚·‚é’l
- * @param[in]	nSrchVal1		1”Ô–Ú‚ÌŒŸõğŒ’l
- * @param[in]	nSrchVal2		2”Ô–Ú‚ÌŒŸõğŒ’l
- * @retval	0ˆÈã	ŒŸõID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * æ•´æ•°å‹ã®é …ç›®ã‚’æ¡ä»¶ã¨ã—ã¦ã€å€¤ã‚¸ãƒ£ãƒ³ãƒ—æ©Ÿèƒ½ã‚’ã‚ªãƒ¼ãƒ—ãƒ³ã—ã¾ã™ã€‚
+ * @param[in]	nTableID		æ¤œç´¢ã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID		æ¤œç´¢å¯¾è±¡ã¨ãªã‚‹æ•´æ•°å‹ã®é …ç›®ID
+ * @param[in]	nValSrchKind	æ¤œç´¢æ¡ä»¶å¼ã‚’æŒ‡å®šã™ã‚‹å€¤
+ * @param[in]	nSrchVal1		1ç•ªç›®ã®æ¤œç´¢æ¡ä»¶å€¤
+ * @param[in]	nSrchVal2		2ç•ªç›®ã®æ¤œç´¢æ¡ä»¶å€¤
+ * @retval	0ä»¥ä¸Š	æ¤œç´¢ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5OpenIntFindReal(
 		 const	int	   nTableID,
@@ -1655,17 +1655,17 @@ D5RESULT D5APICALL RD5OpenIntFindReal(
 		 );
 
 /**
- * •‚“®¬”“_Œ^‚Ì€–Ú‚ğğŒ‚Æ‚µ‚ÄA’lƒWƒƒƒ“ƒv‹@”\‚ğƒI[ƒvƒ“‚µ‚Ü‚·B
- * @param[in]	nTableID		ŒŸõ‚·‚éƒe[ƒuƒ‹ID
- * @param[in]	nFilterID		ŒŸõ‘ÎÛ‚Æ‚È‚é•‚“®¬”“_Œ^‚Ì€–ÚID
- * @param[in]	nValSrchKind	ŒŸõğŒ®‚ğw’è‚·‚é’l
- * @param[in]	dSrchVal1		1”Ô–Ú‚ÌŒŸõğŒ’l
- * @param[in]	dSrchVal2		2”Ô–Ú‚ÌŒŸõğŒ’l
- * @retval	0ˆÈã	ŒŸõID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * æµ®å‹•å°æ•°ç‚¹å‹ã®é …ç›®ã‚’æ¡ä»¶ã¨ã—ã¦ã€å€¤ã‚¸ãƒ£ãƒ³ãƒ—æ©Ÿèƒ½ã‚’ã‚ªãƒ¼ãƒ—ãƒ³ã—ã¾ã™ã€‚
+ * @param[in]	nTableID		æ¤œç´¢ã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID		æ¤œç´¢å¯¾è±¡ã¨ãªã‚‹æµ®å‹•å°æ•°ç‚¹å‹ã®é …ç›®ID
+ * @param[in]	nValSrchKind	æ¤œç´¢æ¡ä»¶å¼ã‚’æŒ‡å®šã™ã‚‹å€¤
+ * @param[in]	dSrchVal1		1ç•ªç›®ã®æ¤œç´¢æ¡ä»¶å€¤
+ * @param[in]	dSrchVal2		2ç•ªç›®ã®æ¤œç´¢æ¡ä»¶å€¤
+ * @retval	0ä»¥ä¸Š	æ¤œç´¢ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5OpenFloatFindReal(
 		 const	int	   nTableID,
@@ -1676,16 +1676,16 @@ D5RESULT D5APICALL RD5OpenFloatFindReal(
 		 );
 
 /**
- * ŒŸõƒXƒe[ƒ^ƒX‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID	ŒŸõ‚·‚éƒe[ƒuƒ‹ID
- * @param[out]	pnHitCount	ƒ‹[ƒgƒZƒbƒg‚ÅAŒŸõğŒ‚Éˆê’v‚µ‚½Œ”
- * @param[out]	pnFilterID	ŒŸõ‘ÎÛ‚Ì€–ÚID
- * @retval	0		ŒŸõğŒ‚ª“o˜^‚³‚ê‚Ä‚¢‚È‚¢
- * @retval	1ˆÈã	ŒŸõID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * æ¤œç´¢ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	æ¤œç´¢ã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[out]	pnHitCount	ãƒ«ãƒ¼ãƒˆã‚»ãƒƒãƒˆã§ã€æ¤œç´¢æ¡ä»¶ã«ä¸€è‡´ã—ãŸä»¶æ•°
+ * @param[out]	pnFilterID	æ¤œç´¢å¯¾è±¡ã®é …ç›®ID
+ * @retval	0		æ¤œç´¢æ¡ä»¶ãŒç™»éŒ²ã•ã‚Œã¦ã„ãªã„
+ * @retval	1ä»¥ä¸Š	æ¤œç´¢ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * pnHitCount,pnFilterID‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * pnHitCount,pnFilterIDã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5GetFindStatus(
 		 const int	nTableID,
@@ -1694,20 +1694,20 @@ D5RESULT D5APICALL RD5GetFindStatus(
 		 );
 
 /**
- * ’lƒWƒƒƒ“ƒv‚ÅğŒ‚Éˆê’v‚·‚és‚ğŒ©‚Â‚¯‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nSrchID		ŒŸõID
- * @param[in]	nSetID		ŒŸõ‘ÎÛ‚ÌƒZƒbƒgID
- * @param[in]	nCurPos		Œ»İ‚ÌˆÊ’u
- * @param[in]	nDir		ŒŸõ•ûŒü
- * @param[out]	pnFilterID	ŒŸõ‘ÎÛ‚Ì€–ÚID
- * @param[out]	pnNextPos	ŒŸõğŒ‚Éˆê’v‚·‚éƒZƒbƒg“à‡˜”Ô†
- * @retval	0	ğŒ‚Éˆê’v‚·‚és‚ªŒ©‚Â‚©‚ç‚È‚©‚Á‚½
- * @retval	1	ğŒ‚Éˆê’v‚·‚és‚ªŒ©‚Â‚©‚Á‚½
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * å€¤ã‚¸ãƒ£ãƒ³ãƒ—ã§æ¡ä»¶ã«ä¸€è‡´ã™ã‚‹è¡Œã‚’è¦‹ã¤ã‘ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSrchID		æ¤œç´¢ID
+ * @param[in]	nSetID		æ¤œç´¢å¯¾è±¡ã®ã‚»ãƒƒãƒˆID
+ * @param[in]	nCurPos		ç¾åœ¨ã®ä½ç½®
+ * @param[in]	nDir		æ¤œç´¢æ–¹å‘
+ * @param[out]	pnFilterID	æ¤œç´¢å¯¾è±¡ã®é …ç›®ID
+ * @param[out]	pnNextPos	æ¤œç´¢æ¡ä»¶ã«ä¸€è‡´ã™ã‚‹ã‚»ãƒƒãƒˆå†…é †åºç•ªå·
+ * @retval	0	æ¡ä»¶ã«ä¸€è‡´ã™ã‚‹è¡ŒãŒè¦‹ã¤ã‹ã‚‰ãªã‹ã£ãŸ
+ * @retval	1	æ¡ä»¶ã«ä¸€è‡´ã™ã‚‹è¡ŒãŒè¦‹ã¤ã‹ã£ãŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * pnFilterID,pnNextPos‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * pnFilterID,pnNextPosã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5GetNextHitReal(
 		 const	int		nTableID,
@@ -1720,28 +1720,28 @@ D5RESULT D5APICALL RD5GetNextHitReal(
 		 );
 
 /**
- * ’lƒWƒƒƒ“ƒv‚ğƒNƒ[ƒY‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * å€¤ã‚¸ãƒ£ãƒ³ãƒ—ã‚’ã‚¯ãƒ­ãƒ¼ã‚ºã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5CloseFindReal(
 		 const	int	   nTableID
 		 );
 
 /**
- * ƒJƒeƒSƒŠ’è‹`‚ÉŠî‚Ã‚«•ª—Ş‚ğs‚¢‚Ü‚·B
- * @param[in]	nTableID			ƒe[ƒuƒ‹ID
- * @param[in]	nFilterID			€–ÚID
- * @param[in]	nCategoryTableID	ƒJƒeƒSƒŠ’è‹`ƒe[ƒuƒ‹ID
- * @retval	0ˆÈã	•ª—Ş‚µAV‹K‚Éì¬‚³‚ê‚½€–ÚID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * ã‚«ãƒ†ã‚´ãƒªå®šç¾©ã«åŸºã¥ãåˆ†é¡ã‚’è¡Œã„ã¾ã™ã€‚
+ * @param[in]	nTableID			ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID			é …ç›®ID
+ * @param[in]	nCategoryTableID	ã‚«ãƒ†ã‚´ãƒªå®šç¾©ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	0ä»¥ä¸Š	åˆ†é¡ã—ã€æ–°è¦ã«ä½œæˆã•ã‚ŒãŸé …ç›®ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5AddCategoryReal(
 		 const	int	   nTableID,
@@ -1750,19 +1750,19 @@ D5RESULT D5APICALL RD5AddCategoryReal(
 		 );
 
 /**
- * ŒvZˆ—‚ğs‚¢‚Ü‚·B
- * @param[in]	nTableID	ŒvZ‚ğs‚¤ƒe[ƒuƒ‹ID
- * @param[in]	nSetID		ŒvZ‚ğs‚¤ƒZƒbƒgID
- * @param[in]	nFilterID	ŒvZ‚ğs‚¤€–ÚID
- * @param[in]	nCalStart	ŒvZŠJnˆÊ’u
- * @param[in]	nCalCount	ŒvZ‚·‚éƒŒƒR[ƒh”
- * @param[in]	szFormula	ŒvZ®
- * @param[out]	szErrorRep	ƒGƒ‰[à–¾
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * è¨ˆç®—å‡¦ç†ã‚’è¡Œã„ã¾ã™ã€‚
+ * @param[in]	nTableID	è¨ˆç®—ã‚’è¡Œã†ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID		è¨ˆç®—ã‚’è¡Œã†ã‚»ãƒƒãƒˆID
+ * @param[in]	nFilterID	è¨ˆç®—ã‚’è¡Œã†é …ç›®ID
+ * @param[in]	nCalStart	è¨ˆç®—é–‹å§‹ä½ç½®
+ * @param[in]	nCalCount	è¨ˆç®—ã™ã‚‹ãƒ¬ã‚³ãƒ¼ãƒ‰æ•°
+ * @param[in]	szFormula	è¨ˆç®—å¼
+ * @param[out]	szErrorRep	ã‚¨ãƒ©ãƒ¼èª¬æ˜
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ErrorRep‚Í–³Œø‚È‚Ì‚Å‹ó•¶š—ñ‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ErrorRepã¯ç„¡åŠ¹ãªã®ã§ç©ºæ–‡å­—åˆ—ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5CalcReal(
 		 const	int	   nTableID,
@@ -1775,15 +1775,15 @@ D5RESULT D5APICALL RD5CalcReal(
 		 );
 
 /**
- * ƒe[ƒuƒ‹‚ª•ÒW‰Â”\‚Å‚ ‚é‚©‚ğ’²‚×‚Ü‚·B
- * @param[in]	nTableID	’²‚×‚é‘ÎÛ‚Ìƒe[ƒuƒ‹ID
- * @param[out]	anReferIDs	‚±‚Ìƒe[ƒuƒ‹‚ğQÆ‚µ‚Ä‚¢‚éƒe[ƒuƒ‹ID‚Ìˆê——
- * @retval	0		anReferIDs‚Ì—LŒøƒTƒCƒYi•ÒW‰Â”\j
- * @retval	1ˆÈã	anReferIDs‚Ì—LŒøƒTƒCƒYi•ÒW•s‰Âj
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * ãƒ†ãƒ¼ãƒ–ãƒ«ãŒç·¨é›†å¯èƒ½ã§ã‚ã‚‹ã‹ã‚’èª¿ã¹ã¾ã™ã€‚
+ * @param[in]	nTableID	èª¿ã¹ã‚‹å¯¾è±¡ã®ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[out]	anReferIDs	ã“ã®ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’å‚ç…§ã—ã¦ã„ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«IDã®ä¸€è¦§
+ * @retval	0		anReferIDsã®æœ‰åŠ¹ã‚µã‚¤ã‚ºï¼ˆç·¨é›†å¯èƒ½ï¼‰
+ * @retval	1ä»¥ä¸Š	anReferIDsã®æœ‰åŠ¹ã‚µã‚¤ã‚ºï¼ˆç·¨é›†ä¸å¯ï¼‰
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * anReferIDs‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * anReferIDsã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5TableCanEdit(
 			const int  nTableID,
@@ -1791,15 +1791,15 @@ D5RESULT D5APICALL RD5TableCanEdit(
 		   );
 
 /**
- * s‚ğíœ‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nDelStart	íœŠJns
- * @param[in]	nDelCount	íœ‚·‚és”
- * @retval	0ˆÈã	ÀÛ‚Éíœ‚³‚ê‚½”
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * è¡Œã‚’å‰Šé™¤ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nDelStart	å‰Šé™¤é–‹å§‹è¡Œ
+ * @param[in]	nDelCount	å‰Šé™¤ã™ã‚‹è¡Œæ•°
+ * @retval	0ä»¥ä¸Š	å®Ÿéš›ã«å‰Šé™¤ã•ã‚ŒãŸæ•°
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5DeleteRealRows(
 			const int nTableID,
@@ -1808,16 +1808,16 @@ D5RESULT D5APICALL RD5DeleteRealRows(
 		   );
 
 /**
- * s‚ğíœ‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nSetID		ƒZƒbƒgID
- * @param[in]	nDelStart	íœŠJns
- * @param[in]	nDelCount	íœ‚·‚és”
- * @retval	0ˆÈã	ÀÛ‚Éíœ‚³‚ê‚½”
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * è¡Œã‚’å‰Šé™¤ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @param[in]	nDelStart	å‰Šé™¤é–‹å§‹è¡Œ
+ * @param[in]	nDelCount	å‰Šé™¤ã™ã‚‹è¡Œæ•°
+ * @retval	0ä»¥ä¸Š	å®Ÿéš›ã«å‰Šé™¤ã•ã‚ŒãŸæ•°
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5DeleteRealRowsEx(
 			const int nTableID,
@@ -1827,15 +1827,15 @@ D5RESULT D5APICALL RD5DeleteRealRowsEx(
 		   );
 
 /**
- * s‚ğ‘}“ü‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nInsPos		‘}“üˆÊ’u
- * @param[in]	nInsCount	‘}“ü‚·‚és”
- * @retval	0ˆÈã	ÀÛ‚Éíœ‚³‚ê‚½”
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * è¡Œã‚’æŒ¿å…¥ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nInsPos		æŒ¿å…¥ä½ç½®
+ * @param[in]	nInsCount	æŒ¿å…¥ã™ã‚‹è¡Œæ•°
+ * @retval	0ä»¥ä¸Š	å®Ÿéš›ã«å‰Šé™¤ã•ã‚ŒãŸæ•°
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5InsertRealRows(
 			const int nTableID,
@@ -1844,20 +1844,20 @@ D5RESULT D5APICALL RD5InsertRealRows(
 		   );
 
 /**
- * ƒf[ƒ^‚ğã‘‚«‚µ‚Ü‚·B
- * @param[in]	nTableID		ƒe[ƒuƒ‹ID
- * @param[in]	nSetID			ƒZƒbƒgID
- * @param[in]	nFilterID		€–ÚID
- * @param[in]	nWriteStart		‘‚«‚İŠJnˆÊ’u
- * @param[in]	nWriteCount		‘‚«‚İ”
- * @param[in]	pvWriteData		‘‚«‚İƒf[ƒ^
- * @retval	0ˆÈã	‘‚«‚İ‚É¬Œ÷‚µ‚½ƒf[ƒ^”
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * ãƒ‡ãƒ¼ã‚¿ã‚’ä¸Šæ›¸ãã—ã¾ã™ã€‚
+ * @param[in]	nTableID		ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID			ã‚»ãƒƒãƒˆID
+ * @param[in]	nFilterID		é …ç›®ID
+ * @param[in]	nWriteStart		æ›¸ãè¾¼ã¿é–‹å§‹ä½ç½®
+ * @param[in]	nWriteCount		æ›¸ãè¾¼ã¿æ•°
+ * @param[in]	pvWriteData		æ›¸ãè¾¼ã¿ãƒ‡ãƒ¼ã‚¿
+ * @retval	0ä»¥ä¸Š	æ›¸ãè¾¼ã¿ã«æˆåŠŸã—ãŸãƒ‡ãƒ¼ã‚¿æ•°
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * pvWriteData‚ÍAƒf[ƒ^Œ^‚É‡‚í‚¹‚½lfmutil‚ÌƒNƒ‰ƒX‚ğg—p‚µ‚Ä”z—ñ‚Ö‚Ìƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
- * 1ƒf[ƒ^‚Ì‚İ‚Ìê‡‚ÍA{@link #RD5OverwriteRealExIntR1},{@link #RD5OverwriteRealExDblR1}
- * ,{@link #RD5OverwriteRealExNumericR1},{@link #RD5OverwriteRealExStrR1}‚ğg—p‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * pvWriteDataã¯ã€ãƒ‡ãƒ¼ã‚¿å‹ã«åˆã‚ã›ãŸlfmutilã®ã‚¯ãƒ©ã‚¹ã‚’ä½¿ç”¨ã—ã¦é…åˆ—ã¸ã®ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
+ * 1ãƒ‡ãƒ¼ã‚¿ã®ã¿ã®å ´åˆã¯ã€{@link #RD5OverwriteRealExIntR1},{@link #RD5OverwriteRealExDblR1}
+ * ,{@link #RD5OverwriteRealExNumericR1},{@link #RD5OverwriteRealExStrR1}ã‚’ä½¿ç”¨ã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5OverwriteRealEx(
 			const int   nTableID,
@@ -1869,18 +1869,18 @@ D5RESULT D5APICALL RD5OverwriteRealEx(
 		  );
 
 /**
- * ƒf[ƒ^‚ğã‘‚«‚µ‚Ü‚·B
- * @param[in]	nTableID		ƒe[ƒuƒ‹ID
- * @param[in]	nSetID			ƒZƒbƒgID
- * @param[in]	nFilterID		€–ÚID
- * @param[in]	nWriteStart		‘‚«‚İŠJnˆÊ’u
- * @param[in]	nWriteCount		‘‚«‚İ”
- * @param[in]	pvWriteData		‘‚«‚İƒf[ƒ^
- * @retval	0ˆÈã	‘‚«‚İ‚É¬Œ÷‚µ‚½ƒf[ƒ^”
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * ãƒ‡ãƒ¼ã‚¿ã‚’ä¸Šæ›¸ãã—ã¾ã™ã€‚
+ * @param[in]	nTableID		ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID			ã‚»ãƒƒãƒˆID
+ * @param[in]	nFilterID		é …ç›®ID
+ * @param[in]	nWriteStart		æ›¸ãè¾¼ã¿é–‹å§‹ä½ç½®
+ * @param[in]	nWriteCount		æ›¸ãè¾¼ã¿æ•°
+ * @param[in]	pvWriteData		æ›¸ãè¾¼ã¿ãƒ‡ãƒ¼ã‚¿
+ * @retval	0ä»¥ä¸Š	æ›¸ãè¾¼ã¿ã«æˆåŠŸã—ãŸãƒ‡ãƒ¼ã‚¿æ•°
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * pvWriteData‚ÍAƒf[ƒ^Œ^‚É‡‚í‚¹‚½lfmutil‚ÌƒNƒ‰ƒX‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * pvWriteDataã¯ã€ãƒ‡ãƒ¼ã‚¿å‹ã«åˆã‚ã›ãŸlfmutilã®ã‚¯ãƒ©ã‚¹ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5FillRealEx(
 			const int   nTableID,
@@ -1892,18 +1892,18 @@ D5RESULT D5APICALL RD5FillRealEx(
 		  );
 
 /**
- * ’Pˆêƒf[ƒ^‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nFilterID	€–ÚID
- * @param[in]	nSetID		ƒZƒbƒgID
- * @param[in]	nRowNo		ƒZƒbƒg“à‡˜”Ô†
- * @param[out]	pnDataType	æ“¾‚µ‚½ƒf[ƒ^Œ^
- * @param[out]	acBuf		æ“¾‚µ‚½ƒf[ƒ^
- * @retval	0ˆÈã	acBufã‚Åg—p‚³‚ê‚½—Ìˆæ’·
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * å˜ä¸€ãƒ‡ãƒ¼ã‚¿ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID	é …ç›®ID
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @param[in]	nRowNo		ã‚»ãƒƒãƒˆå†…é †åºç•ªå·
+ * @param[out]	pnDataType	å–å¾—ã—ãŸãƒ‡ãƒ¼ã‚¿å‹
+ * @param[out]	acBuf		å–å¾—ã—ãŸãƒ‡ãƒ¼ã‚¿
+ * @retval	0ä»¥ä¸Š	acBufä¸Šã§ä½¿ç”¨ã•ã‚ŒãŸé ˜åŸŸé•·
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * –{API‚Íg—p‚¹‚¸A{@link #RD5GetData1IntR1},{@link #RD5GetData1DblR1},{@link #RD5GetData1StrR1},{@link #RD5GetData1NumericR1}‚ğg—p‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * æœ¬APIã¯ä½¿ç”¨ã›ãšã€{@link #RD5GetData1IntR1},{@link #RD5GetData1DblR1},{@link #RD5GetData1StrR1},{@link #RD5GetData1NumericR1}ã‚’ä½¿ç”¨ã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5GetData1(
 			const int nTableID,
@@ -1915,20 +1915,20 @@ D5RESULT D5APICALL RD5GetData1(
 		  );
 
 /**
- * •¡”ƒf[ƒ^‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID		ƒe[ƒuƒ‹ID
- * @param[in]	nFilterID		€–ÚID
- * @param[in]	nSetID			ƒZƒbƒgID
- * @param[in]	nRowNo			ƒZƒbƒg“à‡˜”Ô†
- * @param[out]	pnDataType		æ“¾‚µ‚½ƒf[ƒ^Œ^
- * @param[out]	pnGotCount		æ“¾‚µ‚½ƒf[ƒ^”
- * @param[out]	acBuf			æ“¾‚µ‚½•¶š—ñŒ^ˆÈŠO‚Ìƒf[ƒ^ ‚Ü‚½‚Í •¶š—ñŒ^ƒf[ƒ^‚ÌacCharBuf“àƒf[ƒ^ŠJnˆÊ’u
- * @param[out]	acCharBuf		æ“¾‚µ‚½•¶š—ñƒf[ƒ^
- * @retval	0ˆÈã	®”E•‚“®¬”“_Œ^Fæ“¾‚µ‚½s‚Ì‚¤‚¿A’Pˆê‚ÅÅ‘å‚Ìƒf[ƒ^ƒTƒCƒY(byte) •¶š—ñŒ^FNULLI’[‚ğŠÜ‚Ü‚È‚¢ÅIs‚Ìƒf[ƒ^ƒTƒCƒY(byte)
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * è¤‡æ•°ãƒ‡ãƒ¼ã‚¿ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID		ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID		é …ç›®ID
+ * @param[in]	nSetID			ã‚»ãƒƒãƒˆID
+ * @param[in]	nRowNo			ã‚»ãƒƒãƒˆå†…é †åºç•ªå·
+ * @param[out]	pnDataType		å–å¾—ã—ãŸãƒ‡ãƒ¼ã‚¿å‹
+ * @param[out]	pnGotCount		å–å¾—ã—ãŸãƒ‡ãƒ¼ã‚¿æ•°
+ * @param[out]	acBuf			å–å¾—ã—ãŸæ–‡å­—åˆ—å‹ä»¥å¤–ã®ãƒ‡ãƒ¼ã‚¿ ã¾ãŸã¯ æ–‡å­—åˆ—å‹ãƒ‡ãƒ¼ã‚¿ã®acCharBufå†…ãƒ‡ãƒ¼ã‚¿é–‹å§‹ä½ç½®
+ * @param[out]	acCharBuf		å–å¾—ã—ãŸæ–‡å­—åˆ—ãƒ‡ãƒ¼ã‚¿
+ * @retval	0ä»¥ä¸Š	æ•´æ•°ãƒ»æµ®å‹•å°æ•°ç‚¹å‹ï¼šå–å¾—ã—ãŸè¡Œã®ã†ã¡ã€å˜ä¸€ã§æœ€å¤§ã®ãƒ‡ãƒ¼ã‚¿ã‚µã‚¤ã‚º(byte) æ–‡å­—åˆ—å‹ï¼šNULLçµ‚ç«¯ã‚’å«ã¾ãªã„æœ€çµ‚è¡Œã®ãƒ‡ãƒ¼ã‚¿ã‚µã‚¤ã‚º(byte)
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * –{API‚Íg—p‚¹‚¸A{@link #RD5GetData1MIntR1},{@link #RD5GetData1MDblR1},{@link #RD5GetData1MNumericR1},{@link #RD5GetData1MStrR1}‚ğg—p‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * æœ¬APIã¯ä½¿ç”¨ã›ãšã€{@link #RD5GetData1MIntR1},{@link #RD5GetData1MDblR1},{@link #RD5GetData1MNumericR1},{@link #RD5GetData1MStrR1}ã‚’ä½¿ç”¨ã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5GetData1M(
 			const int	nTableID,
@@ -1951,18 +1951,18 @@ D5RESULT D5APICALL RD5GetRowNo(
 		   );
 
 /**
- * ƒ‹[ƒgƒZƒbƒg‚É‚¨‚¯‚ésˆÊ’u‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nSetID		ƒZƒbƒgID
- * @param[in]	nRowNo		æ“¾‚µ‚½‚¢ƒZƒbƒg“à‡˜”Ô†(1‚©‚çn‚Ü‚é)
- * @param[out]	pnRow1		REALƒe[ƒuƒ‹Fæ“¾‚·‚és”Ô† JOINƒe[ƒuƒ‹Fƒ}ƒXƒ^‘¤‚Ìs”Ô†
- * @param[out]	pnRow2		REALƒe[ƒuƒ‹Fg—p‚µ‚È‚¢ JOINƒe[ƒuƒ‹FƒXƒŒ[ƒu‘¤s”Ô†
- * @retval	4	REALƒe[ƒuƒ‹‚Ìê‡‚Ì¬Œ÷
- * @retval	8	JOINƒe[ƒuƒ‹‚Ìê‡‚Ì¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ãƒ«ãƒ¼ãƒˆã‚»ãƒƒãƒˆã«ãŠã‘ã‚‹è¡Œä½ç½®ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @param[in]	nRowNo		å–å¾—ã—ãŸã„ã‚»ãƒƒãƒˆå†…é †åºç•ªå·(1ã‹ã‚‰å§‹ã¾ã‚‹)
+ * @param[out]	pnRow1		REALãƒ†ãƒ¼ãƒ–ãƒ«ï¼šå–å¾—ã™ã‚‹è¡Œç•ªå· JOINãƒ†ãƒ¼ãƒ–ãƒ«ï¼šãƒã‚¹ã‚¿å´ã®è¡Œç•ªå·
+ * @param[out]	pnRow2		REALãƒ†ãƒ¼ãƒ–ãƒ«ï¼šä½¿ç”¨ã—ãªã„ JOINãƒ†ãƒ¼ãƒ–ãƒ«ï¼šã‚¹ãƒ¬ãƒ¼ãƒ–å´è¡Œç•ªå·
+ * @retval	4	REALãƒ†ãƒ¼ãƒ–ãƒ«ã®å ´åˆã®æˆåŠŸ
+ * @retval	8	JOINãƒ†ãƒ¼ãƒ–ãƒ«ã®å ´åˆã®æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * pnRow1,pnRow2‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * pnRow1,pnRow2ã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5GetRowNo1(
 			const int nTableID,
@@ -1973,19 +1973,19 @@ D5RESULT D5APICALL RD5GetRowNo1(
 		   );
 
 /**
- * ƒ‹[ƒgƒZƒbƒg‚É‚¨‚¯‚é•¡”‚ÌsˆÊ’u‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nSetID		ƒZƒbƒgID
- * @param[in]	nRowNo		æ“¾‚µ‚½‚¢ƒZƒbƒg“à‡˜”Ô†(1‚©‚çn‚Ü‚é)
- * @param[out]	pnGotCount	æ“¾‚µ‚½s”
- * @param[out]	anRow1		REALƒe[ƒuƒ‹Fæ“¾‚·‚és”Ô† JOINƒe[ƒuƒ‹Fƒ}ƒXƒ^‘¤‚Ìs”Ô†
- * @param[out]	anRow2		REALƒe[ƒuƒ‹Fg—p‚µ‚È‚¢ JOINƒe[ƒuƒ‹FƒXƒŒ[ƒu‘¤s”Ô†
- * @retval	4	REALƒe[ƒuƒ‹‚Ìê‡‚Ì¬Œ÷
- * @retval	8	JOINƒe[ƒuƒ‹‚Ìê‡‚Ì¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ãƒ«ãƒ¼ãƒˆã‚»ãƒƒãƒˆã«ãŠã‘ã‚‹è¤‡æ•°ã®è¡Œä½ç½®ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @param[in]	nRowNo		å–å¾—ã—ãŸã„ã‚»ãƒƒãƒˆå†…é †åºç•ªå·(1ã‹ã‚‰å§‹ã¾ã‚‹)
+ * @param[out]	pnGotCount	å–å¾—ã—ãŸè¡Œæ•°
+ * @param[out]	anRow1		REALãƒ†ãƒ¼ãƒ–ãƒ«ï¼šå–å¾—ã™ã‚‹è¡Œç•ªå· JOINãƒ†ãƒ¼ãƒ–ãƒ«ï¼šãƒã‚¹ã‚¿å´ã®è¡Œç•ªå·
+ * @param[out]	anRow2		REALãƒ†ãƒ¼ãƒ–ãƒ«ï¼šä½¿ç”¨ã—ãªã„ JOINãƒ†ãƒ¼ãƒ–ãƒ«ï¼šã‚¹ãƒ¬ãƒ¼ãƒ–å´è¡Œç•ªå·
+ * @retval	4	REALãƒ†ãƒ¼ãƒ–ãƒ«ã®å ´åˆã®æˆåŠŸ
+ * @retval	8	JOINãƒ†ãƒ¼ãƒ–ãƒ«ã®å ´åˆã®æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * pnGotCount,anRow1,anRow2‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * pnGotCount,anRow1,anRow2ã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5GetRowNo1M(
 			const int	nTableID,
@@ -1997,17 +1997,17 @@ D5RESULT D5APICALL RD5GetRowNo1M(
 		   );
 
 /**
- * ƒZƒbƒg“à‡˜”Ô†‚É‚æ‚éŒŸõ‚ğs‚¢‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nSetID		ƒZƒbƒgID
- * @param[in]	nOpeNo		ŒŸõğŒ®
- * @param[in]	nX			1”Ô–Ú‚ÌŒŸõğŒ(ƒZƒbƒg“à‡˜”Ô†)
- * @param[in]	nY			2”Ô–Ú‚ÌŒŸõğŒ(ƒZƒbƒg“à‡˜”Ô†)
- * @retval	1ˆÈã	ŒŸõŒ‹‰Ê‚ÅV‹K‚É¶¬‚³‚ê‚½ƒZƒbƒgID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * ã‚»ãƒƒãƒˆå†…é †åºç•ªå·ã«ã‚ˆã‚‹æ¤œç´¢ã‚’è¡Œã„ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @param[in]	nOpeNo		æ¤œç´¢æ¡ä»¶å¼
+ * @param[in]	nX			1ç•ªç›®ã®æ¤œç´¢æ¡ä»¶(ã‚»ãƒƒãƒˆå†…é †åºç•ªå·)
+ * @param[in]	nY			2ç•ªç›®ã®æ¤œç´¢æ¡ä»¶(ã‚»ãƒƒãƒˆå†…é †åºç•ªå·)
+ * @retval	1ä»¥ä¸Š	æ¤œç´¢çµæœã§æ–°è¦ã«ç”Ÿæˆã•ã‚ŒãŸã‚»ãƒƒãƒˆID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5SearchByDispRowNoReal(
 			 const int nTableID,
@@ -2018,18 +2018,18 @@ D5RESULT D5APICALL RD5SearchByDispRowNoReal(
 		 );
 
 /**
- * ƒ‹[ƒgƒZƒbƒg‚Ìs”Ô†‚É‚æ‚éŒŸõ‚ğs‚¢‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nTableNo	ƒ}ƒXƒ^ƒe[ƒuƒ‹‚©AƒXƒŒ[ƒuƒe[ƒuƒ‹‚©‚Ìİ’è
- * @param[in]	nSetID		ƒZƒbƒgID
- * @param[in]	nOpeNo		ŒŸõğŒ®
- * @param[in]	nX			1”Ô–Ú‚ÌŒŸõğŒ(s”Ô†)
- * @param[in]	nY			2”Ô–Ú‚ÌŒŸõğŒ(s”Ô†)
- * @retval	0ˆÈã	ŒŸõŒ‹‰Ê‚ÅV‹K‚É¶¬‚³‚ê‚½ƒZƒbƒgID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * ãƒ«ãƒ¼ãƒˆã‚»ãƒƒãƒˆã®è¡Œç•ªå·ã«ã‚ˆã‚‹æ¤œç´¢ã‚’è¡Œã„ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nTableNo	ãƒã‚¹ã‚¿ãƒ†ãƒ¼ãƒ–ãƒ«ã‹ã€ã‚¹ãƒ¬ãƒ¼ãƒ–ãƒ†ãƒ¼ãƒ–ãƒ«ã‹ã®è¨­å®š
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @param[in]	nOpeNo		æ¤œç´¢æ¡ä»¶å¼
+ * @param[in]	nX			1ç•ªç›®ã®æ¤œç´¢æ¡ä»¶(è¡Œç•ªå·)
+ * @param[in]	nY			2ç•ªç›®ã®æ¤œç´¢æ¡ä»¶(è¡Œç•ªå·)
+ * @retval	0ä»¥ä¸Š	æ¤œç´¢çµæœã§æ–°è¦ã«ç”Ÿæˆã•ã‚ŒãŸã‚»ãƒƒãƒˆID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5SearchByRowNo(
 			const int nTableID,
@@ -2041,18 +2041,18 @@ D5RESULT D5APICALL RD5SearchByRowNo(
 		   );
 
 /**
- * w’è‚µ‚½€–Ú‚Ìƒf[ƒ^‚É‚æ‚éŒŸõ‚ğs‚¢‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nFilterID	€–ÚID
- * @param[in]	nSetID		ƒZƒbƒgID
- * @param[in]	nOpeNo		ŒŸõğŒ®
- * @param[in]	pvX			1”Ô–Ú‚ÌŒŸõğŒƒf[ƒ^
- * @param[in]	pvY			2”Ô–Ú‚ÌŒŸõğŒƒf[ƒ^
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * æŒ‡å®šã—ãŸé …ç›®ã®ãƒ‡ãƒ¼ã‚¿ã«ã‚ˆã‚‹æ¤œç´¢ã‚’è¡Œã„ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID	é …ç›®ID
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @param[in]	nOpeNo		æ¤œç´¢æ¡ä»¶å¼
+ * @param[in]	pvX			1ç•ªç›®ã®æ¤œç´¢æ¡ä»¶ãƒ‡ãƒ¼ã‚¿
+ * @param[in]	pvY			2ç•ªç›®ã®æ¤œç´¢æ¡ä»¶ãƒ‡ãƒ¼ã‚¿
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * –{API‚Íg—p‚¹‚¸A{@link #RD5SearchByFieldIntR1},{@link #RD5SearchByFieldDblR1},{@link #RD5SearchByFieldNumericR1},{@link #RD5SearchByFieldStrR1}‚ğg—p‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * æœ¬APIã¯ä½¿ç”¨ã›ãšã€{@link #RD5SearchByFieldIntR1},{@link #RD5SearchByFieldDblR1},{@link #RD5SearchByFieldNumericR1},{@link #RD5SearchByFieldStrR1}ã‚’ä½¿ç”¨ã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5SearchByField(
 			const int nTableID,
@@ -2064,19 +2064,19 @@ D5RESULT D5APICALL RD5SearchByField(
 		  );
 
 /**
- * w’è‚µ‚½€–Ú‚ÌAƒ}ƒ‹ƒ`ƒoƒCƒg•¶šƒR[ƒh‚ğg‚Á‚½ŒŸõ‚ğs‚¢‚Ü‚·B
- * •¶š—ñ€–ÚˆÈŠO‚ÌŒŸõ‚É‚Í{@link #RD5SearchByField}‚ğg—p‚µ‚Ä‚­‚¾‚³‚¢B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nFilterID	€–ÚID
- * @param[in]	nSetID		ƒZƒbƒgID
- * @param[in]	nOpeNo		ŒŸõğŒ®
- * @param[in]	pvX			1”Ô–Ú‚ÌŒŸõğŒƒf[ƒ^
- * @param[in]	pvY			2”Ô–Ú‚ÌŒŸõğŒƒf[ƒ^
- * @retval	1ˆÈã	ŒŸõŒ‹‰Ê‚ÅV‹K‚É¶¬‚³‚ê‚½ƒZƒbƒgID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * æŒ‡å®šã—ãŸé …ç›®ã®ã€ãƒãƒ«ãƒãƒã‚¤ãƒˆæ–‡å­—ã‚³ãƒ¼ãƒ‰ã‚’ä½¿ã£ãŸæ¤œç´¢ã‚’è¡Œã„ã¾ã™ã€‚
+ * æ–‡å­—åˆ—é …ç›®ä»¥å¤–ã®æ¤œç´¢ã«ã¯{@link #RD5SearchByField}ã‚’ä½¿ç”¨ã—ã¦ãã ã•ã„ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID	é …ç›®ID
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @param[in]	nOpeNo		æ¤œç´¢æ¡ä»¶å¼
+ * @param[in]	pvX			1ç•ªç›®ã®æ¤œç´¢æ¡ä»¶ãƒ‡ãƒ¼ã‚¿
+ * @param[in]	pvY			2ç•ªç›®ã®æ¤œç´¢æ¡ä»¶ãƒ‡ãƒ¼ã‚¿
+ * @retval	1ä»¥ä¸Š	æ¤œç´¢çµæœã§æ–°è¦ã«ç”Ÿæˆã•ã‚ŒãŸã‚»ãƒƒãƒˆID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * –{API‚Íg—p‚¹‚¸A{@link #RD5SearchByFieldSJISR1}‚ğg—p‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * æœ¬APIã¯ä½¿ç”¨ã›ãšã€{@link #RD5SearchByFieldSJISR1}ã‚’ä½¿ç”¨ã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5SearchByFieldSJIS(
             const int nTableID,
@@ -2088,20 +2088,20 @@ D5RESULT D5APICALL RD5SearchByFieldSJIS(
           );
 
 /**
- * w’è‚µ‚½€–Ú‚ÌAƒ}ƒ‹ƒ`ƒoƒCƒg•¶šƒR[ƒh‚ğg‚Á‚½ŒŸõ‚ğs‚¢‚Ü‚·B
- * •¶š—ñ€–ÚˆÈŠO‚ÌŒŸõ‚É‚Í{@link #RD5SearchByField}‚ğg—p‚µ‚Ä‚­‚¾‚³‚¢B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nFilterID	€–ÚID
- * @param[in]	nSetID		ƒZƒbƒgID
- * @param[in]	nOpeNo		ŒŸõğŒ®
- * @param[in]	pvX			1”Ô–Ú‚ÌŒŸõğŒƒf[ƒ^
- * @param[in]	pvY			2”Ô–Ú‚ÌŒŸõğŒƒf[ƒ^
- * @param[in]	nLocaleID	•¶šƒR[ƒhID
- * @retval	1ˆÈã	ŒŸõŒ‹‰Ê‚ÅV‹K‚É¶¬‚³‚ê‚½ƒZƒbƒgID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * æŒ‡å®šã—ãŸé …ç›®ã®ã€ãƒãƒ«ãƒãƒã‚¤ãƒˆæ–‡å­—ã‚³ãƒ¼ãƒ‰ã‚’ä½¿ã£ãŸæ¤œç´¢ã‚’è¡Œã„ã¾ã™ã€‚
+ * æ–‡å­—åˆ—é …ç›®ä»¥å¤–ã®æ¤œç´¢ã«ã¯{@link #RD5SearchByField}ã‚’ä½¿ç”¨ã—ã¦ãã ã•ã„ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID	é …ç›®ID
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @param[in]	nOpeNo		æ¤œç´¢æ¡ä»¶å¼
+ * @param[in]	pvX			1ç•ªç›®ã®æ¤œç´¢æ¡ä»¶ãƒ‡ãƒ¼ã‚¿
+ * @param[in]	pvY			2ç•ªç›®ã®æ¤œç´¢æ¡ä»¶ãƒ‡ãƒ¼ã‚¿
+ * @param[in]	nLocaleID	æ–‡å­—ã‚³ãƒ¼ãƒ‰ID
+ * @retval	1ä»¥ä¸Š	æ¤œç´¢çµæœã§æ–°è¦ã«ç”Ÿæˆã•ã‚ŒãŸã‚»ãƒƒãƒˆID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * –{API‚Íg—p‚¹‚¸A{@link #RD5SearchByFieldLocaleR1}‚ğg—p‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * æœ¬APIã¯ä½¿ç”¨ã›ãšã€{@link #RD5SearchByFieldLocaleR1}ã‚’ä½¿ç”¨ã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5SearchByFieldLocale(
 			const int nTableID,
@@ -2114,16 +2114,16 @@ D5RESULT D5APICALL RD5SearchByFieldLocale(
 		  );
 
 /**
- * w’è‚µ‚½€–Ú‚ÌAƒƒCƒ‹ƒhƒJ[ƒh‚ğŠÜ‚Şƒf[ƒ^‚É‚æ‚éŒŸõ‚ğs‚¢‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nFilterID	€–ÚID
- * @param[in]	nSetID		ƒZƒbƒgID
- * @param[in]	szText		ŒŸõğŒ®
- * @retval	1ˆÈã	ŒŸõŒ‹‰Ê‚ÅV‹K‚É¶¬‚³‚ê‚½ƒZƒbƒgID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * æŒ‡å®šã—ãŸé …ç›®ã®ã€ãƒ¯ã‚¤ãƒ«ãƒ‰ã‚«ãƒ¼ãƒ‰ã‚’å«ã‚€ãƒ‡ãƒ¼ã‚¿ã«ã‚ˆã‚‹æ¤œç´¢ã‚’è¡Œã„ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID	é …ç›®ID
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @param[in]	szText		æ¤œç´¢æ¡ä»¶å¼
+ * @retval	1ä»¥ä¸Š	æ¤œç´¢çµæœã§æ–°è¦ã«ç”Ÿæˆã•ã‚ŒãŸã‚»ãƒƒãƒˆID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5SearchByFieldWildCard(
 			const int nTableID,
@@ -2133,15 +2133,15 @@ D5RESULT D5APICALL RD5SearchByFieldWildCard(
 		);
 
 /**
- * •¶š—ñ‚Å‘‚©‚ê‚½ŒŸõ®‚ÅŒŸõ‚ğs‚¢‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nSetID		ƒZƒbƒgID
- * @param[in]	szText		ŒŸõ•¶š—ñ
- * @retval	1ˆÈã	ŒŸõŒ‹‰Ê‚ÅV‹K‚É¶¬‚³‚ê‚½ƒZƒbƒgID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * æ–‡å­—åˆ—ã§æ›¸ã‹ã‚ŒãŸæ¤œç´¢å¼ã§æ¤œç´¢ã‚’è¡Œã„ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @param[in]	szText		æ¤œç´¢æ–‡å­—åˆ—
+ * @retval	1ä»¥ä¸Š	æ¤œç´¢çµæœã§æ–°è¦ã«ç”Ÿæˆã•ã‚ŒãŸã‚»ãƒƒãƒˆID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5SearchByText(
 				const int nTableID,
@@ -2150,15 +2150,15 @@ D5RESULT D5APICALL RD5SearchByText(
 				);
 
 /**
- * •¶š—ñ‚Å‘‚©‚ê‚½ŒŸõ®‚É‚æ‚éŒŸõ‚ğAƒ}ƒ‹ƒ`ƒoƒCƒg•¶šƒR[ƒh‚ğg—p‚·‚éê‡‚És‚¢‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nSetID		ƒZƒbƒgID
- * @param[in]	szText		ŒŸõ•¶š—ñ
- * @retval	1ˆÈã	ŒŸõŒ‹‰Ê‚ÅV‹K‚É¶¬‚³‚ê‚½ƒZƒbƒgID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * æ–‡å­—åˆ—ã§æ›¸ã‹ã‚ŒãŸæ¤œç´¢å¼ã«ã‚ˆã‚‹æ¤œç´¢ã‚’ã€ãƒãƒ«ãƒãƒã‚¤ãƒˆæ–‡å­—ã‚³ãƒ¼ãƒ‰ã‚’ä½¿ç”¨ã™ã‚‹å ´åˆã«è¡Œã„ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @param[in]	szText		æ¤œç´¢æ–‡å­—åˆ—
+ * @retval	1ä»¥ä¸Š	æ¤œç´¢çµæœã§æ–°è¦ã«ç”Ÿæˆã•ã‚ŒãŸã‚»ãƒƒãƒˆID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5SearchByTextSJIS(
 				const int nTableID,
@@ -2167,16 +2167,16 @@ D5RESULT D5APICALL RD5SearchByTextSJIS(
 				);
 
 /**
- * •¶š—ñ‚Å‘‚©‚ê‚½ŒŸõ®‚É‚æ‚éŒŸõ‚ğAƒ}ƒ‹ƒ`ƒoƒCƒg•¶šƒR[ƒh‚ğg—p‚·‚éê‡‚És‚¢‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nSetID		ƒZƒbƒgID
- * @param[in]	szText		ŒŸõ•¶š—ñ
- * @param[in]	nLocaleID	•¶šƒR[ƒhID
- * @retval	1ˆÈã	ŒŸõŒ‹‰Ê‚ÅV‹K‚É¶¬‚³‚ê‚½ƒZƒbƒgID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * æ–‡å­—åˆ—ã§æ›¸ã‹ã‚ŒãŸæ¤œç´¢å¼ã«ã‚ˆã‚‹æ¤œç´¢ã‚’ã€ãƒãƒ«ãƒãƒã‚¤ãƒˆæ–‡å­—ã‚³ãƒ¼ãƒ‰ã‚’ä½¿ç”¨ã™ã‚‹å ´åˆã«è¡Œã„ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @param[in]	szText		æ¤œç´¢æ–‡å­—åˆ—
+ * @param[in]	nLocaleID	æ–‡å­—ã‚³ãƒ¼ãƒ‰ID
+ * @retval	1ä»¥ä¸Š	æ¤œç´¢çµæœã§æ–°è¦ã«ç”Ÿæˆã•ã‚ŒãŸã‚»ãƒƒãƒˆID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5SearchByTextLocale(
 				const int nTableID,
@@ -2186,16 +2186,16 @@ D5RESULT D5APICALL RD5SearchByTextLocale(
 				);
 
 /**
- * w’è‚³‚ê‚½€–Ú‚Åƒ\[ƒgˆ—‚ğs‚¢‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nFilterID	€–ÚID
- * @param[in]	nSetID		ƒZƒbƒgID
- * @param[in]	nSortDir	ƒ\[ƒg‚·‚é•ûŒü
- * @retval	1ˆÈã	ƒ\[ƒgŒ‹‰Ê‚ÅV‹K‚É¶¬‚³‚ê‚½ƒZƒbƒgID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * æŒ‡å®šã•ã‚ŒãŸé …ç›®ã§ã‚½ãƒ¼ãƒˆå‡¦ç†ã‚’è¡Œã„ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID	é …ç›®ID
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @param[in]	nSortDir	ã‚½ãƒ¼ãƒˆã™ã‚‹æ–¹å‘
+ * @retval	1ä»¥ä¸Š	ã‚½ãƒ¼ãƒˆçµæœã§æ–°è¦ã«ç”Ÿæˆã•ã‚ŒãŸã‚»ãƒƒãƒˆID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5SortByField(
 			const int nTableID,
@@ -2205,16 +2205,16 @@ D5RESULT D5APICALL RD5SortByField(
 		  );
 
 /**
- * s”Ô†‚É‚æ‚éƒ\[ƒgˆ—‚ğs‚¢‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nTableNo	ƒ}ƒXƒ^‚Ü‚½‚ÍƒXƒŒ[ƒuƒe[ƒuƒ‹‚ğw’è
- * @param[in]	nSetID		ƒZƒbƒgID
- * @param[in]	nSortDir	ƒ\[ƒg‚·‚é•ûŒü
- * @retval	1ˆÈã	ƒ\[ƒgŒ‹‰Ê‚ÅV‹K‚É¶¬‚³‚ê‚½ƒZƒbƒgID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * è¡Œç•ªå·ã«ã‚ˆã‚‹ã‚½ãƒ¼ãƒˆå‡¦ç†ã‚’è¡Œã„ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nTableNo	ãƒã‚¹ã‚¿ã¾ãŸã¯ã‚¹ãƒ¬ãƒ¼ãƒ–ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’æŒ‡å®š
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @param[in]	nSortDir	ã‚½ãƒ¼ãƒˆã™ã‚‹æ–¹å‘
+ * @retval	1ä»¥ä¸Š	ã‚½ãƒ¼ãƒˆçµæœã§æ–°è¦ã«ç”Ÿæˆã•ã‚ŒãŸã‚»ãƒƒãƒˆID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5SortByRowNo(
 			const int nTableID,
@@ -2224,18 +2224,18 @@ D5RESULT D5APICALL RD5SortByRowNo(
 		  );
 
 /**
- * €–ÚÚ×î•ñæ“¾‹@”\‚ğƒI[ƒvƒ“‚µ‚Ü‚·B
- * @param[in]	nTableID		ƒe[ƒuƒ‹ID
- * @param[in]	nSetID			ƒZƒbƒgID
- * @param[in]	nFilterID		€–ÚID
- * @param[out]	pnDataType		ƒf[ƒ^Œ^
- * @param[out]	pnRangeSize		“o˜^‚³‚ê‚Ä‚¢‚é’l‚Ì‘”
- * @param[out]	pnNonZeroCount	ƒ[ƒ‚Å‚È‚¢’l‚ğ‚ÂƒŒƒR[ƒh”
- * @retval	1ˆÈã	¬Œ÷iÚ×•\¦ƒnƒ“ƒhƒ‹j
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * é …ç›®è©³ç´°æƒ…å ±å–å¾—æ©Ÿèƒ½ã‚’ã‚ªãƒ¼ãƒ—ãƒ³ã—ã¾ã™ã€‚
+ * @param[in]	nTableID		ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID			ã‚»ãƒƒãƒˆID
+ * @param[in]	nFilterID		é …ç›®ID
+ * @param[out]	pnDataType		ãƒ‡ãƒ¼ã‚¿å‹
+ * @param[out]	pnRangeSize		ç™»éŒ²ã•ã‚Œã¦ã„ã‚‹å€¤ã®ç·æ•°
+ * @param[out]	pnNonZeroCount	ã‚¼ãƒ­ã§ãªã„å€¤ã‚’æŒã¤ãƒ¬ã‚³ãƒ¼ãƒ‰æ•°
+ * @retval	1ä»¥ä¸Š	æˆåŠŸï¼ˆè©³ç´°è¡¨ç¤ºãƒãƒ³ãƒ‰ãƒ«ï¼‰
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * pnDataType,pnRangeSize,pnNonZeroCount‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * pnDataType,pnRangeSize,pnNonZeroCountã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT	D5APICALL RD5OpenDetailInfo(
 		  const int nTableID,
@@ -2247,21 +2247,21 @@ D5RESULT	D5APICALL RD5OpenDetailInfo(
 		  );
 
 /**
- * ƒI[ƒvƒ“‚µ‚½€–ÚÚ×î•ñ‚Ì€–Ú’l‚ğw’è‚µ‚½‡˜‚É•À‚×Aw’è‚µ‚½‡˜”Ô†‚Ì€–Ú’l‚ğæ“¾‚µ‚Ü‚·B
- * iæ“ª‚Ì€–Ú’l‚Ì”Ô†‚ğ1‚Æ‚µA•À‚Ñ‚Ì‡”Ô‚É”Ô†‚ª‚Â‚¯‚ç‚ê‚Ü‚·j
- * @param[in]	nHandle			ƒI[ƒvƒ“‚Éæ“¾‚µ‚½ƒnƒ“ƒhƒ‹
- * @param[in]	nOrderByN		‘¶İ”‡‚É•À‚×‚é‚©‚Ç‚¤‚©‚ğw’è
- * @param[in]	nReverse		‹t‡‚É‚·‚é‚©‚Ç‚¤‚©‚ğw’è
- * @param[in]	nZeroSuppress	‘¶İ”‚ª0‚Ìƒf[ƒ^‚ğŠÜ‚ß‚é‚©‚Ç‚¤‚©‚ğw’è
- * @param[in]	nRow			€–Ú’l‚Ì‡˜”Ô†
- * @param[out]	pnDataType		ƒf[ƒ^Œ^
- * @param[out]	pvData			æ“¾ƒf[ƒ^
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚ªãƒ¼ãƒ—ãƒ³ã—ãŸé …ç›®è©³ç´°æƒ…å ±ã®é …ç›®å€¤ã‚’æŒ‡å®šã—ãŸé †åºã«ä¸¦ã¹ã€æŒ‡å®šã—ãŸé †åºç•ªå·ã®é …ç›®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * ï¼ˆå…ˆé ­ã®é …ç›®å€¤ã®ç•ªå·ã‚’1ã¨ã—ã€ä¸¦ã³ã®é †ç•ªã«ç•ªå·ãŒã¤ã‘ã‚‰ã‚Œã¾ã™ï¼‰
+ * @param[in]	nHandle			ã‚ªãƒ¼ãƒ—ãƒ³æ™‚ã«å–å¾—ã—ãŸãƒãƒ³ãƒ‰ãƒ«
+ * @param[in]	nOrderByN		å­˜åœ¨æ•°é †ã«ä¸¦ã¹ã‚‹ã‹ã©ã†ã‹ã‚’æŒ‡å®š
+ * @param[in]	nReverse		é€†é †ã«ã™ã‚‹ã‹ã©ã†ã‹ã‚’æŒ‡å®š
+ * @param[in]	nZeroSuppress	å­˜åœ¨æ•°ãŒ0ã®ãƒ‡ãƒ¼ã‚¿ã‚’å«ã‚ã‚‹ã‹ã©ã†ã‹ã‚’æŒ‡å®š
+ * @param[in]	nRow			é …ç›®å€¤ã®é †åºç•ªå·
+ * @param[out]	pnDataType		ãƒ‡ãƒ¼ã‚¿å‹
+ * @param[out]	pvData			å–å¾—ãƒ‡ãƒ¼ã‚¿
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * pnDataType‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
- * pvData‚ÍAƒf[ƒ^Œ^‚É‡‚í‚¹‚½lfmutil‚ÌƒNƒ‰ƒX‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * pnDataTypeã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
+ * pvDataã¯ã€ãƒ‡ãƒ¼ã‚¿å‹ã«åˆã‚ã›ãŸlfmutilã®ã‚¯ãƒ©ã‚¹ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT	D5APICALL RD5GetDetailValue(
 		  const int   nHandle,
@@ -2274,18 +2274,18 @@ D5RESULT	D5APICALL RD5GetDetailValue(
 		  );
 
 /**
- * ƒI[ƒvƒ“‚µ‚½€–ÚÚ×î•ñ‚Ì‘¶İ”‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nHandle			ƒI[ƒvƒ“‚Éæ“¾‚µ‚½ƒnƒ“ƒhƒ‹
- * @param[in]	nOrderByN		‘¶İ”‡‚É•À‚×‚é‚©‚Ç‚¤‚©‚ğw’è
- * @param[in]	nReverse		‹t‡‚É‚·‚é‚©‚Ç‚¤‚©‚ğw’è
- * @param[in]	nZeroSuppress	‘¶İ”‚ª0‚Ìƒf[ƒ^‚ğŠÜ‚ß‚é‚©‚Ç‚¤‚©‚ğw’è
- * @param[in]	nRow			€–Ú’l‚Ì‡˜”Ô†
- * @param[out]	pnCount			æ“¾ƒf[ƒ^
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚ªãƒ¼ãƒ—ãƒ³ã—ãŸé …ç›®è©³ç´°æƒ…å ±ã®å­˜åœ¨æ•°ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nHandle			ã‚ªãƒ¼ãƒ—ãƒ³æ™‚ã«å–å¾—ã—ãŸãƒãƒ³ãƒ‰ãƒ«
+ * @param[in]	nOrderByN		å­˜åœ¨æ•°é †ã«ä¸¦ã¹ã‚‹ã‹ã©ã†ã‹ã‚’æŒ‡å®š
+ * @param[in]	nReverse		é€†é †ã«ã™ã‚‹ã‹ã©ã†ã‹ã‚’æŒ‡å®š
+ * @param[in]	nZeroSuppress	å­˜åœ¨æ•°ãŒ0ã®ãƒ‡ãƒ¼ã‚¿ã‚’å«ã‚ã‚‹ã‹ã©ã†ã‹ã‚’æŒ‡å®š
+ * @param[in]	nRow			é …ç›®å€¤ã®é †åºç•ªå·
+ * @param[out]	pnCount			å–å¾—ãƒ‡ãƒ¼ã‚¿
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * pnCount‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * pnCountã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT	D5APICALL RD5GetDetailCount(
 		  const int   nHandle,
@@ -2297,33 +2297,33 @@ D5RESULT	D5APICALL RD5GetDetailCount(
 		  );
 
 /**
- * ƒI[ƒvƒ“‚µ‚½€–ÚÚ×î•ñ‚ğƒNƒ[ƒY‚µ‚Ü‚·B
- * @param[in]	nHandle	ƒI[ƒvƒ“‚Éæ“¾‚µ‚½ƒnƒ“ƒhƒ‹
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚ªãƒ¼ãƒ—ãƒ³ã—ãŸé …ç›®è©³ç´°æƒ…å ±ã‚’ã‚¯ãƒ­ãƒ¼ã‚ºã—ã¾ã™ã€‚
+ * @param[in]	nHandle	ã‚ªãƒ¼ãƒ—ãƒ³æ™‚ã«å–å¾—ã—ãŸãƒãƒ³ãƒ‰ãƒ«
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT	D5APICALL RD5CloseDetailInfo(
 		  const int	 nHandle
 		  );
 
 /**
- * WŒv‚ğs‚¢AWŒvƒe[ƒuƒ‹‚ğì¬‚µ‚Ü‚·B
- * @param[in]	nTableID			ƒe[ƒuƒ‹ID
- * @param[in]	nSetID				ƒZƒbƒgID
- * @param[in]	nDimCount			WŒvŸŒ³”
- * @param[in]	pnDimFilterIDs		WŒvŸŒ³‚Æ‚È‚é€–ÚID”z—ñ
- * @param[in]	nMeasureCount		WŒv‘ª“x‚Ì”
- * @param[in]	pnMeasureFilterIDs	WŒv‘ª“x‚Æ‚È‚é€–ÚID”z—ñ
- * @param[in]	pnSummaryTypes		pnMeasureFilterIDs‚ÌŠe€–Ú‚ÉWŒví•Ê‚ğw’è‚·‚é”z—ñ
- * @param[in]	pnFloatFormats		pnMeasureFilterIDs‚ÌŠe€–Ú‚ÉŒÅ’è¬”“_‚ğg—p‚·‚é‚©‚µ‚È‚¢‚©‚ğw’è‚·‚é”z—ñ
- * @retval	1ˆÈã	¶¬‚³‚ê‚½WŒvŒ‹‰Ê‚ÌV‹Kƒe[ƒuƒ‹ID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * é›†è¨ˆã‚’è¡Œã„ã€é›†è¨ˆãƒ†ãƒ¼ãƒ–ãƒ«ã‚’ä½œæˆã—ã¾ã™ã€‚
+ * @param[in]	nTableID			ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID				ã‚»ãƒƒãƒˆID
+ * @param[in]	nDimCount			é›†è¨ˆæ¬¡å…ƒæ•°
+ * @param[in]	pnDimFilterIDs		é›†è¨ˆæ¬¡å…ƒã¨ãªã‚‹é …ç›®IDé…åˆ—
+ * @param[in]	nMeasureCount		é›†è¨ˆæ¸¬åº¦ã®æ•°
+ * @param[in]	pnMeasureFilterIDs	é›†è¨ˆæ¸¬åº¦ã¨ãªã‚‹é …ç›®IDé…åˆ—
+ * @param[in]	pnSummaryTypes		pnMeasureFilterIDsã®å„é …ç›®ã«é›†è¨ˆç¨®åˆ¥ã‚’æŒ‡å®šã™ã‚‹é…åˆ—
+ * @param[in]	pnFloatFormats		pnMeasureFilterIDsã®å„é …ç›®ã«å›ºå®šå°æ•°ç‚¹ã‚’ä½¿ç”¨ã™ã‚‹ã‹ã—ãªã„ã‹ã‚’æŒ‡å®šã™ã‚‹é…åˆ—
+ * @retval	1ä»¥ä¸Š	ç”Ÿæˆã•ã‚ŒãŸé›†è¨ˆçµæœã®æ–°è¦ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * pnDimFilterIDs,pnMeasureFilterIDs,pnSummaryTypes,pnFloatFormats‚ÍAlfmutil‚Ì{@link CTypeIntAr}‚ğg—p‚µ‚Äƒ|ƒCƒ“ƒ^‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * pnDimFilterIDs,pnMeasureFilterIDs,pnSummaryTypes,pnFloatFormatsã¯ã€lfmutilã®{@link CTypeIntAr}ã‚’ä½¿ç”¨ã—ã¦ãƒã‚¤ãƒ³ã‚¿ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL  RD5NonCubeSum(
 			const int nTableID,
@@ -2337,27 +2337,27 @@ D5RESULT D5APICALL  RD5NonCubeSum(
 			);
 
 /**
- * ƒe[ƒuƒ‹–¼Ì‚©‚çƒe[ƒuƒ‹ID‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	szTableName	ƒe[ƒuƒ‹–¼Ì
- * @retval	0ˆÈã	ƒe[ƒuƒ‹ID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * ãƒ†ãƒ¼ãƒ–ãƒ«åç§°ã‹ã‚‰ãƒ†ãƒ¼ãƒ–ãƒ«IDã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	szTableName	ãƒ†ãƒ¼ãƒ–ãƒ«åç§°
+ * @retval	0ä»¥ä¸Š	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL  RD5GetTableIDFromName(
 			const  char szTableName[D5_MAX_NAME_LENGTH]
 		 );
 
 /**
- * €–Ú–¼Ì‚©‚ç€–ÚID‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID		ƒe[ƒuƒ‹ID
- * @param[in]	szFilterName	€–Ú–¼Ì
- * @retval	1ˆÈã	€–ÚID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * é …ç›®åç§°ã‹ã‚‰é …ç›®IDã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID		ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	szFilterName	é …ç›®åç§°
+ * @retval	1ä»¥ä¸Š	é …ç›®ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL  RD5GetFilterIDFromName(
 			const int nTableID,
@@ -2365,15 +2365,15 @@ D5RESULT D5APICALL  RD5GetFilterIDFromName(
 			);
 
 /**
- * REALƒe[ƒuƒ‹–”‚ÍJOINƒe[ƒuƒ‹‚Ì€–Ú–¼Ì‚©‚ç€–ÚID‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID		ƒe[ƒuƒ‹IDiJOINƒe[ƒuƒ‹–”‚ÍREALƒe[ƒuƒ‹j
- * @param[in]	nIsSlave		JOINƒe[ƒuƒ‹‚Ìê‡Aƒ}ƒXƒ^‘¤‚©ƒXƒŒ[ƒu‘¤‚©‚ğw’è
- * @param[in]	szFilterName	€–Ú–¼Ì
- * @retval	1ˆÈã	€–ÚID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * REALãƒ†ãƒ¼ãƒ–ãƒ«åˆã¯JOINãƒ†ãƒ¼ãƒ–ãƒ«ã®é …ç›®åç§°ã‹ã‚‰é …ç›®IDã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID		ãƒ†ãƒ¼ãƒ–ãƒ«IDï¼ˆJOINãƒ†ãƒ¼ãƒ–ãƒ«åˆã¯REALãƒ†ãƒ¼ãƒ–ãƒ«ï¼‰
+ * @param[in]	nIsSlave		JOINãƒ†ãƒ¼ãƒ–ãƒ«ã®å ´åˆã€ãƒã‚¹ã‚¿å´ã‹ã‚¹ãƒ¬ãƒ¼ãƒ–å´ã‹ã‚’æŒ‡å®š
+ * @param[in]	szFilterName	é …ç›®åç§°
+ * @retval	1ä»¥ä¸Š	é …ç›®ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL  RD5GetFilterIDFromName2(
 			const int nTableID,
@@ -2382,14 +2382,14 @@ D5RESULT D5APICALL  RD5GetFilterIDFromName2(
 			);
 
 /**
- * ƒe[ƒuƒ‹–¼Ì‚ğ•ÏX‚µ‚Ü‚·B
- * @param[in]	nTableID		•ÏX‚·‚éƒe[ƒuƒ‹ID
- * @param[in]	szTableName		V‹K‚Éİ’è‚·‚éƒe[ƒuƒ‹–¼Ì
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ãƒ†ãƒ¼ãƒ–ãƒ«åç§°ã‚’å¤‰æ›´ã—ã¾ã™ã€‚
+ * @param[in]	nTableID		å¤‰æ›´ã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	szTableName		æ–°è¦ã«è¨­å®šã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«åç§°
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5SetTableName(
 			const int  nTableID,
@@ -2397,15 +2397,15 @@ D5RESULT D5APICALL RD5SetTableName(
 			);
 
 /**
- * €–Ú‚Ì–¼Ì‚ğ•ÏX‚µ‚Ü‚·B
- * @param[in]	nTableID		ƒe[ƒuƒ‹ID
- * @param[in]	nFilterID		€–ÚID
- * @param[in]	szFilterName	€–Ú‚ÌV‹K–¼Ì
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * é …ç›®ã®åç§°ã‚’å¤‰æ›´ã—ã¾ã™ã€‚
+ * @param[in]	nTableID		ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID		é …ç›®ID
+ * @param[in]	szFilterName	é …ç›®ã®æ–°è¦åç§°
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5SetFilterName(
 			const int  nTableID,
@@ -2414,15 +2414,15 @@ D5RESULT D5APICALL RD5SetFilterName(
 			);
 
 /**
- * ƒZƒbƒg–¼Ì‚ğİ’è‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒZƒbƒg‚Ì‘®‚·‚éƒe[ƒuƒ‹–¼Ì
- * @param[in]	nSetID		ƒZƒbƒgID
- * @param[in]	szSetName	İ’è‚·‚éƒZƒbƒg–¼Ì‚ğŠi”[‚µ‚½•¶š”z—ñ
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚»ãƒƒãƒˆåç§°ã‚’è¨­å®šã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ã‚»ãƒƒãƒˆã®å±ã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«åç§°
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @param[in]	szSetName	è¨­å®šã™ã‚‹ã‚»ãƒƒãƒˆåç§°ã‚’æ ¼ç´ã—ãŸæ–‡å­—é…åˆ—
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5SetSetName(
 			const int  nTableID,
@@ -2431,15 +2431,15 @@ D5RESULT D5APICALL RD5SetSetName(
 			);
 
 /**
- * €–ÚID‚©‚ç€–Ú–¼Ì‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID		ƒe[ƒuƒ‹ID
- * @param[in]	nFilterID		€–ÚID
- * @param[out]	szFilterName	€–Ú–¼Ì
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * é …ç›®IDã‹ã‚‰é …ç›®åç§°ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID		ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID		é …ç›®ID
+ * @param[out]	szFilterName	é …ç›®åç§°
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * –{API‚Íg—p‚¹‚¸A{@link #RD5GetFilterNameR1}‚ğg—p‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * æœ¬APIã¯ä½¿ç”¨ã›ãšã€{@link #RD5GetFilterNameR1}ã‚’ä½¿ç”¨ã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5GetFilterName(
 			const int  nTableID,
@@ -2448,15 +2448,15 @@ D5RESULT D5APICALL RD5GetFilterName(
 		   );
 
 /**
- * ƒZƒbƒg–¼Ì‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒZƒbƒg‚Ì‘®‚·‚éƒe[ƒuƒ‹ID
- * @param[in]	nSetID		ƒZƒbƒgID
- * @param[out]	szSetName	ƒZƒbƒg–¼Ì
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚»ãƒƒãƒˆåç§°ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ã‚»ãƒƒãƒˆã®å±ã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @param[out]	szSetName	ã‚»ãƒƒãƒˆåç§°
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * –{API‚Íg—p‚¹‚¸A{@link #RD5GetSetNameR1}‚ğg—p‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * æœ¬APIã¯ä½¿ç”¨ã›ãšã€{@link #RD5GetSetNameR1}ã‚’ä½¿ç”¨ã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5GetSetName(
 			const int nTableID,
@@ -2465,61 +2465,61 @@ D5RESULT D5APICALL RD5GetSetName(
 		   );
 
 /**
- * •¶š—ñ‚Ì––”ö‚ÌƒXƒy[ƒX‚ğíœ‚·‚é‚©‚Ç‚¤‚©‚É‚Â‚¢‚Äƒtƒ‰ƒO‚ğİ’è‚µ‚Ü‚·B
- * @param[in]	nFlag	•¶š—ñ––”ö‚ÌƒXƒy[ƒXíœƒ`ƒFƒbƒNƒtƒ‰ƒO
- * @retval	0	í‚É0
+ * æ–‡å­—åˆ—ã®æœ«å°¾ã®ã‚¹ãƒšãƒ¼ã‚¹ã‚’å‰Šé™¤ã™ã‚‹ã‹ã©ã†ã‹ã«ã¤ã„ã¦ãƒ•ãƒ©ã‚°ã‚’è¨­å®šã—ã¾ã™ã€‚
+ * @param[in]	nFlag	æ–‡å­—åˆ—æœ«å°¾ã®ã‚¹ãƒšãƒ¼ã‚¹å‰Šé™¤ãƒã‚§ãƒƒã‚¯ãƒ•ãƒ©ã‚°
+ * @retval	0	å¸¸ã«0
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5SetTailSpaceFlag(
 		 const	int	nFlag
 		 );
 
 /**
- * ƒT[ƒo‚ÌIPƒAƒhƒŒƒX‚ğæ“¾‚µ‚Ü‚·B
- * @param[out]	szIPAddress	IPƒAƒhƒŒƒX
- * @retval	0	ƒ[ƒJƒ‹ƒT[ƒo
- * @retval	1	ƒŠƒ‚[ƒgƒT[ƒo
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚µãƒ¼ãƒã®IPã‚¢ãƒ‰ãƒ¬ã‚¹ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[out]	szIPAddress	IPã‚¢ãƒ‰ãƒ¬ã‚¹
+ * @retval	0	ãƒ­ãƒ¼ã‚«ãƒ«ã‚µãƒ¼ãƒ
+ * @retval	1	ãƒªãƒ¢ãƒ¼ãƒˆã‚µãƒ¼ãƒ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ƒXƒNƒŠƒvƒgŒ¾Œê‚Å‚ÍƒTƒ|[ƒg‚µ‚Ü‚¹‚ñB
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã§ã¯ã‚µãƒãƒ¼ãƒˆã—ã¾ã›ã‚“ã€‚
  */
 D5RESULT D5APICALL RD5GetServerIPAddress(char szIPAddress[D5_MAX_NAME_LENGTH]);
 
 /**
- * ƒT[ƒo‚ÌŠÂ‹«î•ñ‚ğæ“¾‚µ‚Ü‚·B
- * @param[out]	pEnvironment	ŠÂ‹«î•ñ
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚µãƒ¼ãƒã®ç’°å¢ƒæƒ…å ±ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[out]	pEnvironment	ç’°å¢ƒæƒ…å ±
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5GetEnvironment( TREnvironment *pEnvironment);
 
 /**
- * ƒGƒ“ƒWƒ“‚ÌDB•¶šƒR[ƒh‚ğİ’è‚µ‚Ü‚·B
- * @param[in]	szDBCode	DB•¶šƒR[ƒh
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚¨ãƒ³ã‚¸ãƒ³ã®DBæ–‡å­—ã‚³ãƒ¼ãƒ‰ã‚’è¨­å®šã—ã¾ã™ã€‚
+ * @param[in]	szDBCode	DBæ–‡å­—ã‚³ãƒ¼ãƒ‰
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5SetDBCharCode( const char *szDBCode );
 
 /**
- * w’è‚³‚ê‚½D5Dƒtƒ@ƒCƒ‹‚Ìƒwƒbƒ_‚©‚çDBƒR[ƒhAƒo[ƒWƒ‡ƒ“‚ğ“Ç‚İo‚µ‚Ü‚·B
- * @param[in]	szDBPath		D5Dƒtƒ@ƒCƒ‹‚Ì‘¶İ‚·‚éƒpƒX
- * @param[in]	szDBName		D5Dƒtƒ@ƒCƒ‹‚Ì–¼Ì
- * @param[out]	pD5FileInfo		D5Dƒtƒ@ƒCƒ‹î•ñ
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * æŒ‡å®šã•ã‚ŒãŸD5Dãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ˜ãƒƒãƒ€ã‹ã‚‰DBã‚³ãƒ¼ãƒ‰ã€ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚’èª­ã¿å‡ºã—ã¾ã™ã€‚
+ * @param[in]	szDBPath		D5Dãƒ•ã‚¡ã‚¤ãƒ«ã®å­˜åœ¨ã™ã‚‹ãƒ‘ã‚¹
+ * @param[in]	szDBName		D5Dãƒ•ã‚¡ã‚¤ãƒ«ã®åç§°
+ * @param[out]	pD5FileInfo		D5Dãƒ•ã‚¡ã‚¤ãƒ«æƒ…å ±
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * pD5FileInfo->Version‚ÌŠe—v‘fæ“¾‚É‚ÍAlfmutil‚Ì{@link #int_at}‚ğg—p‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * pD5FileInfo->Versionã®å„è¦ç´ å–å¾—ã«ã¯ã€lfmutilã®{@link #int_at}ã‚’ä½¿ç”¨ã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5GetD5DFileInfo( const char szDBPath[D5_MAX_PATH],
 										const char szDBName[D5_MAX_PATH],
@@ -2527,15 +2527,15 @@ D5RESULT D5APICALL RD5GetD5DFileInfo( const char szDBPath[D5_MAX_PATH],
 										);
 
 /**
- * w’è‚³‚ê‚½D5Tƒtƒ@ƒCƒ‹‚Ìƒwƒbƒ_‚©‚çDBƒR[ƒhAƒo[ƒWƒ‡ƒ“‚ğ“Ç‚İo‚µ‚Ü‚·B
- * @param[in]	szTablePath		D5Tƒtƒ@ƒCƒ‹‚Ì‘¶İ‚·‚éƒpƒX
- * @param[in]	szTableName		D5Tƒtƒ@ƒCƒ‹‚Ì–¼Ì
- * @param[out]	pD5FileInfo		D5Tƒtƒ@ƒCƒ‹î•ñ
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * æŒ‡å®šã•ã‚ŒãŸD5Tãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ˜ãƒƒãƒ€ã‹ã‚‰DBã‚³ãƒ¼ãƒ‰ã€ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚’èª­ã¿å‡ºã—ã¾ã™ã€‚
+ * @param[in]	szTablePath		D5Tãƒ•ã‚¡ã‚¤ãƒ«ã®å­˜åœ¨ã™ã‚‹ãƒ‘ã‚¹
+ * @param[in]	szTableName		D5Tãƒ•ã‚¡ã‚¤ãƒ«ã®åç§°
+ * @param[out]	pD5FileInfo		D5Tãƒ•ã‚¡ã‚¤ãƒ«æƒ…å ±
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * pD5FileInfo->Version‚ÌŠe—v‘fæ“¾‚É‚ÍAlfmutil‚Ì{@link #int_at}‚ğg—p‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * pD5FileInfo->Versionã®å„è¦ç´ å–å¾—ã«ã¯ã€lfmutilã®{@link #int_at}ã‚’ä½¿ç”¨ã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5GetD5TFileInfo( const char szTablePath[D5_MAX_PATH],
 										const char szTableName[D5_MAX_PATH],
@@ -2543,57 +2543,57 @@ D5RESULT D5APICALL RD5GetD5TFileInfo( const char szTablePath[D5_MAX_PATH],
 										);
 
 /**
- * ƒT[ƒo‘¤‚ÌƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ‚ğæ“¾‚µ‚Ü‚·B
- * @param[out]	szDirectory	ƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ–¼Ì
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚µãƒ¼ãƒå´ã®ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[out]	szDirectory	ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªåç§°
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ƒXƒNƒŠƒvƒgŒ¾Œê‚Å‚ÍƒTƒ|[ƒg‚µ‚Ü‚¹‚ñB
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã§ã¯ã‚µãƒãƒ¼ãƒˆã—ã¾ã›ã‚“ã€‚
  */
 D5RESULT D5APICALL	RD5BrowserGetCurrentDirectory(
 			char	szDirectory[D5_MAX_PATH]
 			);
 
 /**
- * ƒT[ƒo‘¤‚ÌƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ‚ğ•ÏX‚µ‚Ü‚·B
- * @param[in]	szDirectory	•ÏXæƒfƒBƒŒƒNƒgƒŠ–¼Ì
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚µãƒ¼ãƒå´ã®ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’å¤‰æ›´ã—ã¾ã™ã€‚
+ * @param[in]	szDirectory	å¤‰æ›´å…ˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªåç§°
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ƒXƒNƒŠƒvƒgŒ¾Œê‚Å‚ÍƒTƒ|[ƒg‚µ‚Ü‚¹‚ñB
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã§ã¯ã‚µãƒãƒ¼ãƒˆã—ã¾ã›ã‚“ã€‚
  */
 D5RESULT D5APICALL	RD5BrowserSetCurrentDirectory(
 			const char	szDirectory[D5_MAX_PATH]
 			);
 
 /**
- * ƒT[ƒo‚Ìƒtƒ@ƒCƒ‹ƒTƒCƒY‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	szFileName	ƒtƒ@ƒCƒ‹–¼Ì
- * @retval	0ˆÈã	ƒtƒ@ƒCƒ‹ƒTƒCƒYi8btye®”Œ^j WindowsFint64, LinuxFlong long
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * ã‚µãƒ¼ãƒã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚µã‚¤ã‚ºã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	szFileName	ãƒ•ã‚¡ã‚¤ãƒ«åç§°
+ * @retval	0ä»¥ä¸Š	ãƒ•ã‚¡ã‚¤ãƒ«ã‚µã‚¤ã‚ºï¼ˆ8btyeæ•´æ•°å‹ï¼‰ Windowsï¼šint64, Linuxï¼šlong long
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ƒXƒNƒŠƒvƒgŒ¾Œê‚Å‚ÍƒTƒ|[ƒg‚µ‚Ü‚¹‚ñB
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã§ã¯ã‚µãƒãƒ¼ãƒˆã—ã¾ã›ã‚“ã€‚
  */
 D5RESULTL D5APICALL	RD5BrowserGetFileSize(
 			const char	szFileName[D5_MAX_NAME_LENGTH]
 		);
 
 /**
- * ƒT[ƒo‚Ìƒtƒ@ƒCƒ‹ˆê——‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	szFindCondition	ƒtƒ@ƒCƒ‹ŒŸõğŒ
- * @param[in]	nStart			æ“¾ŠJnˆÊ’u
- * @param[out]	pnExist			ŒŸõğŒ‚É‡’v‚µ‚½”
- * @param[out]	pnGotCount		æ“¾‚µ‚½”
- * @param[out]	acAttrList		ƒtƒ@ƒCƒ‹ƒAƒgƒŠƒrƒ…[ƒg‚Ì”z—ñ
- * @param[out]	szListBuf		ƒtƒ@ƒCƒ‹–¼Ìˆê——
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚µãƒ¼ãƒã®ãƒ•ã‚¡ã‚¤ãƒ«ä¸€è¦§ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	szFindCondition	ãƒ•ã‚¡ã‚¤ãƒ«æ¤œç´¢æ¡ä»¶
+ * @param[in]	nStart			å–å¾—é–‹å§‹ä½ç½®
+ * @param[out]	pnExist			æ¤œç´¢æ¡ä»¶ã«åˆè‡´ã—ãŸæ•°
+ * @param[out]	pnGotCount		å–å¾—ã—ãŸæ•°
+ * @param[out]	acAttrList		ãƒ•ã‚¡ã‚¤ãƒ«ã‚¢ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ãƒˆã®é…åˆ—
+ * @param[out]	szListBuf		ãƒ•ã‚¡ã‚¤ãƒ«åç§°ä¸€è¦§
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ƒXƒNƒŠƒvƒgŒ¾Œê‚Å‚ÍƒTƒ|[ƒg‚µ‚Ü‚¹‚ñB
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã§ã¯ã‚µãƒãƒ¼ãƒˆã—ã¾ã›ã‚“ã€‚
  */
 D5RESULT D5APICALL	RD5BrowserGetFileList(
 			const char	szFindCondition[D5_MAX_NAME_LENGTH],
@@ -2605,17 +2605,17 @@ D5RESULT D5APICALL	RD5BrowserGetFileList(
 		);
 
 /**
- * ƒT[ƒo‚©‚çƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚İ‚Ü‚·B
- * @param[in]	szFileName	ƒtƒ@ƒCƒ‹–¼Ì
- * @param[in]	nStart		“Ço‚µŠJnˆÊ’u
- * @param[out]	pnFileSize	ƒtƒ@ƒCƒ‹ƒTƒCƒY
- * @param[out]	pnGetLen	“Ç‚İo‚µ‚½ƒTƒCƒY(byte)
- * @param[out]	acFileBody	ƒtƒ@ƒCƒ‹ƒf[ƒ^
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚µãƒ¼ãƒã‹ã‚‰ãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã¿ã¾ã™ã€‚
+ * @param[in]	szFileName	ãƒ•ã‚¡ã‚¤ãƒ«åç§°
+ * @param[in]	nStart		èª­å‡ºã—é–‹å§‹ä½ç½®
+ * @param[out]	pnFileSize	ãƒ•ã‚¡ã‚¤ãƒ«ã‚µã‚¤ã‚º
+ * @param[out]	pnGetLen	èª­ã¿å‡ºã—ãŸã‚µã‚¤ã‚º(byte)
+ * @param[out]	acFileBody	ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‡ãƒ¼ã‚¿
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ƒXƒNƒŠƒvƒgŒ¾Œê‚Å‚ÍƒTƒ|[ƒg‚µ‚Ü‚¹‚ñB
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã§ã¯ã‚µãƒãƒ¼ãƒˆã—ã¾ã›ã‚“ã€‚
  */
 D5RESULT D5APICALL	RD5BrowserGetFileEx(
 			const char	szFileName[D5_MAX_NAME_LENGTH],
@@ -2626,17 +2626,17 @@ D5RESULT D5APICALL	RD5BrowserGetFileEx(
 		);
 
 /**
- * ƒT[ƒo‚©‚çƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚İ‚Ü‚·B
- * @param[in]	szFileName		ƒtƒ@ƒCƒ‹–¼Ì
- * @param[in]	n64Start		“Ço‚µŠJnˆÊ’u
- * @param[out]	pn64FileSize	ƒtƒ@ƒCƒ‹ƒTƒCƒY
- * @param[out]	pnGetLen		“Ç‚İo‚µ‚½ƒTƒCƒY(byte)
- * @param[out]	acFileBody		ƒtƒ@ƒCƒ‹ƒf[ƒ^
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚µãƒ¼ãƒã‹ã‚‰ãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã¿ã¾ã™ã€‚
+ * @param[in]	szFileName		ãƒ•ã‚¡ã‚¤ãƒ«åç§°
+ * @param[in]	n64Start		èª­å‡ºã—é–‹å§‹ä½ç½®
+ * @param[out]	pn64FileSize	ãƒ•ã‚¡ã‚¤ãƒ«ã‚µã‚¤ã‚º
+ * @param[out]	pnGetLen		èª­ã¿å‡ºã—ãŸã‚µã‚¤ã‚º(byte)
+ * @param[out]	acFileBody		ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‡ãƒ¼ã‚¿
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ƒXƒNƒŠƒvƒgŒ¾Œê‚Å‚ÍƒTƒ|[ƒg‚µ‚Ü‚¹‚ñB
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã§ã¯ã‚µãƒãƒ¼ãƒˆã—ã¾ã›ã‚“ã€‚
  */
 D5RESULT D5APICALL	RD5BrowserGetFileEx64(
 			const char	szFileName[D5_MAX_NAME_LENGTH],
@@ -2647,16 +2647,16 @@ D5RESULT D5APICALL	RD5BrowserGetFileEx64(
 		);
 
 /**
- * ƒT[ƒo‚©‚çƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚İ‚Ü‚·B
- * @param[in]	szFileName	ƒtƒ@ƒCƒ‹–¼Ì
- * @param[out]	pnFileSize	ƒtƒ@ƒCƒ‹ƒTƒCƒY
- * @param[out]	pnGetLen	“Ç‚İo‚µ‚½ƒTƒCƒY(byte)
- * @param[out]	acFileBody	ƒtƒ@ƒCƒ‹ƒf[ƒ^
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚µãƒ¼ãƒã‹ã‚‰ãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã¿ã¾ã™ã€‚
+ * @param[in]	szFileName	ãƒ•ã‚¡ã‚¤ãƒ«åç§°
+ * @param[out]	pnFileSize	ãƒ•ã‚¡ã‚¤ãƒ«ã‚µã‚¤ã‚º
+ * @param[out]	pnGetLen	èª­ã¿å‡ºã—ãŸã‚µã‚¤ã‚º(byte)
+ * @param[out]	acFileBody	ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‡ãƒ¼ã‚¿
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ƒXƒNƒŠƒvƒgŒ¾Œê‚Å‚ÍƒTƒ|[ƒg‚µ‚Ü‚¹‚ñB
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã§ã¯ã‚µãƒãƒ¼ãƒˆã—ã¾ã›ã‚“ã€‚
  */
 D5RESULT D5APICALL	RD5BrowserGetFile(
 			const char	szFileName[D5_MAX_NAME_LENGTH],
@@ -2666,16 +2666,16 @@ D5RESULT D5APICALL	RD5BrowserGetFile(
 		);
 
 /**
- * ƒT[ƒo‚©‚çƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚İ‚Ü‚·B
- * @param[in]	szFileName		ƒtƒ@ƒCƒ‹–¼Ì
- * @param[out]	pn64FileSize	ƒtƒ@ƒCƒ‹ƒTƒCƒY
- * @param[out]	pnGetLen		“Ç‚İo‚µ‚½ƒTƒCƒY(byte)
- * @param[out]	acFileBody		ƒtƒ@ƒCƒ‹ƒf[ƒ^
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚µãƒ¼ãƒã‹ã‚‰ãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã¿ã¾ã™ã€‚
+ * @param[in]	szFileName		ãƒ•ã‚¡ã‚¤ãƒ«åç§°
+ * @param[out]	pn64FileSize	ãƒ•ã‚¡ã‚¤ãƒ«ã‚µã‚¤ã‚º
+ * @param[out]	pnGetLen		èª­ã¿å‡ºã—ãŸã‚µã‚¤ã‚º(byte)
+ * @param[out]	acFileBody		ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‡ãƒ¼ã‚¿
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ƒXƒNƒŠƒvƒgŒ¾Œê‚Å‚ÍƒTƒ|[ƒg‚µ‚Ü‚¹‚ñB
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã§ã¯ã‚µãƒãƒ¼ãƒˆã—ã¾ã›ã‚“ã€‚
  */
 D5RESULT D5APICALL	RD5BrowserGetFile64(
 			const char	szFileName[D5_MAX_NAME_LENGTH],
@@ -2685,15 +2685,15 @@ D5RESULT D5APICALL	RD5BrowserGetFile64(
 		);
 
 /**
- * ƒT[ƒo‚Éƒtƒ@ƒCƒ‹‚ğì¬‚µ‚Ü‚·B
- * @param[in]	szFileName	ƒtƒ@ƒCƒ‹–¼Ì
- * @param[in]	nPutLen		‘‚«o‚·ƒf[ƒ^ƒTƒCƒY(byte)
- * @param[in]	acFileBody	‘‚«o‚·ƒf[ƒ^
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚µãƒ¼ãƒã«ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œæˆã—ã¾ã™ã€‚
+ * @param[in]	szFileName	ãƒ•ã‚¡ã‚¤ãƒ«åç§°
+ * @param[in]	nPutLen		æ›¸ãå‡ºã™ãƒ‡ãƒ¼ã‚¿ã‚µã‚¤ã‚º(byte)
+ * @param[in]	acFileBody	æ›¸ãå‡ºã™ãƒ‡ãƒ¼ã‚¿
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ƒXƒNƒŠƒvƒgŒ¾Œê‚Å‚ÍƒTƒ|[ƒg‚µ‚Ü‚¹‚ñB
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã§ã¯ã‚µãƒãƒ¼ãƒˆã—ã¾ã›ã‚“ã€‚
  */
 D5RESULT D5APICALL	RD5BrowserPutFile(
 			const char	szFileName[D5_MAX_NAME_LENGTH],
@@ -2702,40 +2702,40 @@ D5RESULT D5APICALL	RD5BrowserPutFile(
 			);
 
 /**
- * ƒT[ƒo‚Ìƒtƒ@ƒCƒ‹‚ğíœ‚µ‚Ü‚·B
- * @param[in]	szFileName	íœ‚·‚éƒtƒ@ƒCƒ‹–¼Ì
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚µãƒ¼ãƒã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’å‰Šé™¤ã—ã¾ã™ã€‚
+ * @param[in]	szFileName	å‰Šé™¤ã™ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«åç§°
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ƒXƒNƒŠƒvƒgŒ¾Œê‚Å‚ÍƒTƒ|[ƒg‚µ‚Ü‚¹‚ñB
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã§ã¯ã‚µãƒãƒ¼ãƒˆã—ã¾ã›ã‚“ã€‚
  */
 D5RESULT D5APICALL	RD5BrowserDelFile(
 			const char	szFileName[D5_MAX_PATH]
 		);
 
 /**
- * ƒT[ƒo‚ÉƒfƒBƒŒƒNƒgƒŠ‚ğì¬‚µ‚Ü‚·B
- * @param[in]	szDirectory	ì¬ƒfƒBƒŒƒNƒgƒŠ–¼Ì
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚µãƒ¼ãƒã«ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’ä½œæˆã—ã¾ã™ã€‚
+ * @param[in]	szDirectory	ä½œæˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªåç§°
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ƒXƒNƒŠƒvƒgŒ¾Œê‚Å‚ÍƒTƒ|[ƒg‚µ‚Ü‚¹‚ñB
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã§ã¯ã‚µãƒãƒ¼ãƒˆã—ã¾ã›ã‚“ã€‚
  */
 D5RESULT D5APICALL	RD5BrowserMakeDirectory(
 			const char	szDirectory[D5_MAX_PATH]
 		);
 
 /**
- * ƒT[ƒo‚ÉƒfƒBƒŒƒNƒgƒŠ‚ğì¬‚µ‚Ü‚·B
- * @param[in]	szDirectory	íœ‚·‚éƒfƒBƒŒƒNƒgƒŠ–¼Ì
- * @param[in]	nIsAll		íœ“à—eÚ×
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚µãƒ¼ãƒã«ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’ä½œæˆã—ã¾ã™ã€‚
+ * @param[in]	szDirectory	å‰Šé™¤ã™ã‚‹ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªåç§°
+ * @param[in]	nIsAll		å‰Šé™¤å†…å®¹è©³ç´°
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ƒXƒNƒŠƒvƒgŒ¾Œê‚Å‚ÍƒTƒ|[ƒg‚µ‚Ü‚¹‚ñB
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã§ã¯ã‚µãƒãƒ¼ãƒˆã—ã¾ã›ã‚“ã€‚
  */
 D5RESULT D5APICALL RD5BrowserDelDirectory(
 			const char szDirectory[D5_MAX_PATH],
@@ -2743,32 +2743,32 @@ D5RESULT D5APICALL RD5BrowserDelDirectory(
 			);
 
 /**
- * ƒT[ƒo‚Ìƒtƒ@ƒCƒ‹–”‚ÍƒfƒBƒŒƒNƒgƒŠ–¼Ì‚ğ•ÏX‚µ‚Ü‚·B‚Ü‚½Aw’è‚ÌƒfƒBƒŒƒNƒgƒŠ‚ÉˆÚ“®‚µ‚Ü‚·B
- * @param[in]	szOldName	ƒtƒ@ƒCƒ‹–¼Ì
- * @param[in]	szNewName	ì¬ˆÊ’u
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚µãƒ¼ãƒã®ãƒ•ã‚¡ã‚¤ãƒ«åˆã¯ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªåç§°ã‚’å¤‰æ›´ã—ã¾ã™ã€‚ã¾ãŸã€æŒ‡å®šã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã«ç§»å‹•ã—ã¾ã™ã€‚
+ * @param[in]	szOldName	ãƒ•ã‚¡ã‚¤ãƒ«åç§°
+ * @param[in]	szNewName	ä½œæˆä½ç½®
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ƒXƒNƒŠƒvƒgŒ¾Œê‚Å‚ÍƒTƒ|[ƒg‚µ‚Ü‚¹‚ñB
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã§ã¯ã‚µãƒãƒ¼ãƒˆã—ã¾ã›ã‚“ã€‚
  */
 D5RESULT D5APICALL RD5BrowserMove(
 			const char szOldName[D5_MAX_PATH],
 			const char szNewName[D5_MAX_PATH]
 			);
 
-// ƒT[ƒo[‚É¬‹K–Í‚Èƒtƒ@ƒCƒ‹‚ğì¬‚µ‚Ü‚·
+// ã‚µãƒ¼ãƒãƒ¼ã«å°è¦æ¨¡ãªãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œæˆã—ã¾ã™
 /**
- * ƒT[ƒo‚Éƒtƒ@ƒCƒ‹‚ğì¬‚µ‚Ü‚·B
- * @param[in]	szFileName	ƒtƒ@ƒCƒ‹–¼Ì
- * @param[in]	nStart		ì¬ˆÊ’u
- * @param[in]	nPutLen		‘‚«o‚·ƒf[ƒ^ƒTƒCƒY(byte)
- * @param[in]	acFileBody	‘‚«o‚·ƒf[ƒ^
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚µãƒ¼ãƒã«ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œæˆã—ã¾ã™ã€‚
+ * @param[in]	szFileName	ãƒ•ã‚¡ã‚¤ãƒ«åç§°
+ * @param[in]	nStart		ä½œæˆä½ç½®
+ * @param[in]	nPutLen		æ›¸ãå‡ºã™ãƒ‡ãƒ¼ã‚¿ã‚µã‚¤ã‚º(byte)
+ * @param[in]	acFileBody	æ›¸ãå‡ºã™ãƒ‡ãƒ¼ã‚¿
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ƒXƒNƒŠƒvƒgŒ¾Œê‚Å‚ÍƒTƒ|[ƒg‚µ‚Ü‚¹‚ñB
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã§ã¯ã‚µãƒãƒ¼ãƒˆã—ã¾ã›ã‚“ã€‚
  */
 D5RESULT D5APICALL RD5BrowserPutFileEx(
 			const char szFileName[D5_MAX_NAME_LENGTH],
@@ -2778,21 +2778,21 @@ D5RESULT D5APICALL RD5BrowserPutFileEx(
 			); 
 
 /**
- * ƒJƒ“ƒ}‹æØ‚èƒtƒ@ƒCƒ‹‚Öƒf[ƒ^‚ğƒGƒNƒXƒ|[ƒg‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nSetID		ƒZƒbƒgID
- * @param[in]	anIDList	€–ÚIDƒŠƒXƒg
- * @param[in]	nRowFrom	o—Í‚ğŠJn‚·‚és
- * @param[in]	nRowTo		o—Í‚ÌI—¹s
- * @param[in]	nDateSep	“ú•tƒf[ƒ^‚Ì‹æØ‚è•¶š‚ğw’è
- * @param[in]	szDBPath	o—Íƒtƒ@ƒCƒ‹‚Ö‚ÌƒpƒX
- * @param[in]	szDBName	o—Íƒtƒ@ƒCƒ‹–¼Ì
- * @param[in]	szDefFile	•‚“®¬”“_Œ^ƒf[ƒ^‚Ì’è‹`ƒtƒ@ƒCƒ‹
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚«ãƒ³ãƒåŒºåˆ‡ã‚Šãƒ•ã‚¡ã‚¤ãƒ«ã¸ãƒ‡ãƒ¼ã‚¿ã‚’ã‚¨ã‚¯ã‚¹ãƒãƒ¼ãƒˆã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @param[in]	anIDList	é …ç›®IDãƒªã‚¹ãƒˆ
+ * @param[in]	nRowFrom	å‡ºåŠ›ã‚’é–‹å§‹ã™ã‚‹è¡Œ
+ * @param[in]	nRowTo		å‡ºåŠ›ã®çµ‚äº†è¡Œ
+ * @param[in]	nDateSep	æ—¥ä»˜ãƒ‡ãƒ¼ã‚¿ã®åŒºåˆ‡ã‚Šæ–‡å­—ã‚’æŒ‡å®š
+ * @param[in]	szDBPath	å‡ºåŠ›ãƒ•ã‚¡ã‚¤ãƒ«ã¸ã®ãƒ‘ã‚¹
+ * @param[in]	szDBName	å‡ºåŠ›ãƒ•ã‚¡ã‚¤ãƒ«åç§°
+ * @param[in]	szDefFile	æµ®å‹•å°æ•°ç‚¹å‹ãƒ‡ãƒ¼ã‚¿ã®å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ƒXƒNƒŠƒvƒgŒ¾Œê‚Å‚ÍƒTƒ|[ƒg‚µ‚Ü‚¹‚ñB
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã§ã¯ã‚µãƒãƒ¼ãƒˆã—ã¾ã›ã‚“ã€‚
  */
 D5RESULT D5APICALL RD5ExportAsCSVwithF(
 		const int nTableID,
@@ -2807,21 +2807,21 @@ D5RESULT D5APICALL RD5ExportAsCSVwithF(
 		);	
 
 /**
- * TAB‹æØ‚èƒtƒ@ƒCƒ‹‚Öƒf[ƒ^‚ğƒGƒNƒXƒ|[ƒg‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nSetID		ƒZƒbƒgID
- * @param[in]	anIDList	€–ÚIDƒŠƒXƒg
- * @param[in]	nRowFrom	o—Í‚ğŠJn‚·‚és
- * @param[in]	nRowTo		o—Í‚ÌI—¹s
- * @param[in]	nDateSep	“ú•tƒf[ƒ^‚Ì‹æØ‚è•¶š‚ğw’è
- * @param[in]	szDBPath	o—Íƒtƒ@ƒCƒ‹‚Ö‚ÌƒpƒX
- * @param[in]	szDBName	o—Íƒtƒ@ƒCƒ‹–¼Ì
- * @param[in]	szDefFile	•‚“®¬”“_Œ^ƒf[ƒ^‚Ì’è‹`ƒtƒ@ƒCƒ‹
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * TABåŒºåˆ‡ã‚Šãƒ•ã‚¡ã‚¤ãƒ«ã¸ãƒ‡ãƒ¼ã‚¿ã‚’ã‚¨ã‚¯ã‚¹ãƒãƒ¼ãƒˆã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @param[in]	anIDList	é …ç›®IDãƒªã‚¹ãƒˆ
+ * @param[in]	nRowFrom	å‡ºåŠ›ã‚’é–‹å§‹ã™ã‚‹è¡Œ
+ * @param[in]	nRowTo		å‡ºåŠ›ã®çµ‚äº†è¡Œ
+ * @param[in]	nDateSep	æ—¥ä»˜ãƒ‡ãƒ¼ã‚¿ã®åŒºåˆ‡ã‚Šæ–‡å­—ã‚’æŒ‡å®š
+ * @param[in]	szDBPath	å‡ºåŠ›ãƒ•ã‚¡ã‚¤ãƒ«ã¸ã®ãƒ‘ã‚¹
+ * @param[in]	szDBName	å‡ºåŠ›ãƒ•ã‚¡ã‚¤ãƒ«åç§°
+ * @param[in]	szDefFile	æµ®å‹•å°æ•°ç‚¹å‹ãƒ‡ãƒ¼ã‚¿ã®å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ƒXƒNƒŠƒvƒgŒ¾Œê‚Å‚ÍƒTƒ|[ƒg‚µ‚Ü‚¹‚ñB
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã§ã¯ã‚µãƒãƒ¼ãƒˆã—ã¾ã›ã‚“ã€‚
  */
 D5RESULT D5APICALL RD5ExportAsTABwithF(
 		const int nTableID,
@@ -2836,22 +2836,22 @@ D5RESULT D5APICALL RD5ExportAsTABwithF(
 		);
 
 /**
- * ƒe[ƒuƒ‹‚Ìƒf[ƒ^‚ğA•‚“®¬”“_‚ÌŒ…”‚ğw’è‚µ‚ÄAƒJƒ^ƒƒO’è‹`ƒtƒ@ƒCƒ‹‚ÖƒGƒNƒXƒ|[ƒg‚µ‚Ü‚·B
- * @param[in]	nTableID		ƒe[ƒuƒ‹ID
- * @param[in]	nSetID			ƒZƒbƒgID
- * @param[in]	anIDList		o—Í‚·‚é€–ÚIDƒŠƒXƒg
- * @param[in]	nType			o—Í‚·‚éƒtƒ@ƒCƒ‹ƒ^ƒCƒv
- * @param[in]	nRowFrom		o—Í‚·‚és‚ÌŠJnˆÊ’u
- * @param[in]	nRowTo			o—Í‚·‚és‚ÌI—¹ˆÊ’u
- * @param[in]	nDateSep		“ú•tƒf[ƒ^‚Ì‹æØ‚è•¶š‚ğw’è
- * @param[in]	szCatalogPath	\‘¢’è‹`ƒtƒ@ƒCƒ‹‚ğo—Í‚·‚éƒpƒX
- * @param[in]	szCatalogName	\‘¢’è‹`ƒtƒ@ƒCƒ‹‚Ì–¼Ì
- * @param[in]	szDefFile		•‚“®¬”“_Œ^ƒf[ƒ^‚Ì’è‹`ƒtƒ@ƒCƒ‹
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ãƒ†ãƒ¼ãƒ–ãƒ«ã®ãƒ‡ãƒ¼ã‚¿ã‚’ã€æµ®å‹•å°æ•°ç‚¹ã®æ¡æ•°ã‚’æŒ‡å®šã—ã¦ã€ã‚«ã‚¿ãƒ­ã‚°å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã¸ã‚¨ã‚¯ã‚¹ãƒãƒ¼ãƒˆã—ã¾ã™ã€‚
+ * @param[in]	nTableID		ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID			ã‚»ãƒƒãƒˆID
+ * @param[in]	anIDList		å‡ºåŠ›ã™ã‚‹é …ç›®IDãƒªã‚¹ãƒˆ
+ * @param[in]	nType			å‡ºåŠ›ã™ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«ã‚¿ã‚¤ãƒ—
+ * @param[in]	nRowFrom		å‡ºåŠ›ã™ã‚‹è¡Œã®é–‹å§‹ä½ç½®
+ * @param[in]	nRowTo			å‡ºåŠ›ã™ã‚‹è¡Œã®çµ‚äº†ä½ç½®
+ * @param[in]	nDateSep		æ—¥ä»˜ãƒ‡ãƒ¼ã‚¿ã®åŒºåˆ‡ã‚Šæ–‡å­—ã‚’æŒ‡å®š
+ * @param[in]	szCatalogPath	æ§‹é€ å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã‚’å‡ºåŠ›ã™ã‚‹ãƒ‘ã‚¹
+ * @param[in]	szCatalogName	æ§‹é€ å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã®åç§°
+ * @param[in]	szDefFile		æµ®å‹•å°æ•°ç‚¹å‹ãƒ‡ãƒ¼ã‚¿ã®å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ƒXƒNƒŠƒvƒgŒ¾Œê‚Å‚ÍƒTƒ|[ƒg‚µ‚Ü‚¹‚ñB
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã§ã¯ã‚µãƒãƒ¼ãƒˆã—ã¾ã›ã‚“ã€‚
  */
 D5RESULT D5APICALL RD5SaveAsCatalogwithF(
 		const int nTableID,
@@ -2867,24 +2867,24 @@ D5RESULT D5APICALL RD5SaveAsCatalogwithF(
 		);
 
 /**
- * ƒe[ƒuƒ‹‚Ìƒf[ƒ^‚ğA•‚“®¬”“_‚ÌŒ…”‚ğw’è‚µ‚ÄAƒJƒ^ƒƒO’è‹`ƒtƒ@ƒCƒ‹‚ÖƒGƒNƒXƒ|[ƒg‚µ‚Ü‚·B
- * @param[in]	nTableID		ƒe[ƒuƒ‹ID
- * @param[in]	nSetID			ƒZƒbƒgID
- * @param[in]	anIDList		o—Í‚·‚é€–ÚIDƒŠƒXƒg
- * @param[in]	nType			o—Í‚·‚éƒtƒ@ƒCƒ‹ƒ^ƒCƒv
- * @param[in]	nRowFrom		o—Í‚·‚és‚ÌŠJnˆÊ’u
- * @param[in]	nRowTo			o—Í‚·‚és‚ÌI—¹ˆÊ’u
- * @param[in]	nDateSep		“ú•tƒf[ƒ^‚Ì‹æØ‚è•¶š‚ğw’è
- * @param[in]	szCatalogPath	\‘¢’è‹`ƒtƒ@ƒCƒ‹‚ğo—Í‚·‚éƒpƒX
- * @param[in]	szCatalogName	\‘¢’è‹`ƒtƒ@ƒCƒ‹‚Ì–¼Ì
- * @param[in]	szDefFile		•‚“®¬”“_Œ^ƒf[ƒ^‚Ì’è‹`ƒtƒ@ƒCƒ‹
- * @param[in]	szSourcePath	Œ´nƒf[ƒ^ƒtƒ@ƒCƒ‹‚Ì‘¶İ‚·‚éƒpƒX
- * @param[in]	szSourceName	Œ´nƒf[ƒ^ƒtƒ@ƒCƒ‹‚Ì–¼Ì
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ãƒ†ãƒ¼ãƒ–ãƒ«ã®ãƒ‡ãƒ¼ã‚¿ã‚’ã€æµ®å‹•å°æ•°ç‚¹ã®æ¡æ•°ã‚’æŒ‡å®šã—ã¦ã€ã‚«ã‚¿ãƒ­ã‚°å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã¸ã‚¨ã‚¯ã‚¹ãƒãƒ¼ãƒˆã—ã¾ã™ã€‚
+ * @param[in]	nTableID		ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID			ã‚»ãƒƒãƒˆID
+ * @param[in]	anIDList		å‡ºåŠ›ã™ã‚‹é …ç›®IDãƒªã‚¹ãƒˆ
+ * @param[in]	nType			å‡ºåŠ›ã™ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«ã‚¿ã‚¤ãƒ—
+ * @param[in]	nRowFrom		å‡ºåŠ›ã™ã‚‹è¡Œã®é–‹å§‹ä½ç½®
+ * @param[in]	nRowTo			å‡ºåŠ›ã™ã‚‹è¡Œã®çµ‚äº†ä½ç½®
+ * @param[in]	nDateSep		æ—¥ä»˜ãƒ‡ãƒ¼ã‚¿ã®åŒºåˆ‡ã‚Šæ–‡å­—ã‚’æŒ‡å®š
+ * @param[in]	szCatalogPath	æ§‹é€ å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã‚’å‡ºåŠ›ã™ã‚‹ãƒ‘ã‚¹
+ * @param[in]	szCatalogName	æ§‹é€ å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã®åç§°
+ * @param[in]	szDefFile		æµ®å‹•å°æ•°ç‚¹å‹ãƒ‡ãƒ¼ã‚¿ã®å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«
+ * @param[in]	szSourcePath	åŸå§‹ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã®å­˜åœ¨ã™ã‚‹ãƒ‘ã‚¹
+ * @param[in]	szSourceName	åŸå§‹ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã®åç§°
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ƒXƒNƒŠƒvƒgŒ¾Œê‚Å‚ÍƒTƒ|[ƒg‚µ‚Ü‚¹‚ñB
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã§ã¯ã‚µãƒãƒ¼ãƒˆã—ã¾ã›ã‚“ã€‚
  */
 D5RESULT D5APICALL RD5SaveAsCatalogwithFEx(
 		const int nTableID,
@@ -2902,12 +2902,12 @@ D5RESULT D5APICALL RD5SaveAsCatalogwithFEx(
 		);
 
 /**
- * D5Dƒf[ƒ^‚ğ‹¤—Lƒƒ‚ƒŠ—Ìˆæ‚©‚ç“Ç‚İ‚İ‚Ü‚·B
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * D5Dãƒ‡ãƒ¼ã‚¿ã‚’å…±æœ‰ãƒ¡ãƒ¢ãƒªé ˜åŸŸã‹ã‚‰èª­ã¿è¾¼ã¿ã¾ã™ã€‚
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5LoadDBFromSharedMemory();
 
@@ -2918,14 +2918,14 @@ D5RESULT D5APICALL RD5UnLoadSharedMemoryDB();
 D5RESULT D5APICALL RD5UnMapSharedMemory();
 
 /**
- * D5Dƒf[ƒ^‚ğ‹¤—Lƒƒ‚ƒŠ—Ìˆæ‚Ö¶¬‚µ‚Ü‚·B
- * @param[in]	szDBPath	D5Dƒtƒ@ƒCƒ‹‚Ì‘¶İ‚·‚éƒpƒX
- * @param[in]	szDBName	D5Dƒtƒ@ƒCƒ‹‚Ì–¼Ì
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * D5Dãƒ‡ãƒ¼ã‚¿ã‚’å…±æœ‰ãƒ¡ãƒ¢ãƒªé ˜åŸŸã¸ç”Ÿæˆã—ã¾ã™ã€‚
+ * @param[in]	szDBPath	D5Dãƒ•ã‚¡ã‚¤ãƒ«ã®å­˜åœ¨ã™ã‚‹ãƒ‘ã‚¹
+ * @param[in]	szDBName	D5Dãƒ•ã‚¡ã‚¤ãƒ«ã®åç§°
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5CreateSharedMemoryDB(
 			const char szDBPath[D5_MAX_PATH],
@@ -2933,50 +2933,50 @@ D5RESULT D5APICALL RD5CreateSharedMemoryDB(
 			 );
 
 /**
- * D5Dƒf[ƒ^‚ğ‹¤—Lƒƒ‚ƒŠ—Ìˆæ‚©‚ç‰ğ•ú‚µ‚Ü‚·B
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * D5Dãƒ‡ãƒ¼ã‚¿ã‚’å…±æœ‰ãƒ¡ãƒ¢ãƒªé ˜åŸŸã‹ã‚‰è§£æ”¾ã—ã¾ã™ã€‚
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5ReleaseSharedMemoryArea();
 
 /**
- * ƒT[ƒo‚ÌƒVƒXƒeƒ€ƒƒ‚ƒŠƒTƒCƒY‚ğæ“¾‚µ‚Ü‚·B
- * @param[out]	pMemInfo	ƒƒ‚ƒŠƒTƒCƒYî•ñ
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚µãƒ¼ãƒã®ã‚·ã‚¹ãƒ†ãƒ ãƒ¡ãƒ¢ãƒªã‚µã‚¤ã‚ºã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[out]	pMemInfo	ãƒ¡ãƒ¢ãƒªã‚µã‚¤ã‚ºæƒ…å ±
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5GetSystemMemInfo(TRMemInfo *pMemInfo);
 
 /**
- * ƒe[ƒuƒ‹‚ª‹¤—Lƒƒ‚ƒŠã‚É‚ ‚é‚©”»•Ê‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @retval	1	‹¤—Lƒƒ‚ƒŠ‚©‚çQÆ‚³‚ê‚Ä‚¢‚éB
- * @retval	0	‹¤—Lƒƒ‚ƒŠ‚©‚çQÆ‚³‚ê‚Ä‚¢‚È‚¢B
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ãƒ†ãƒ¼ãƒ–ãƒ«ãŒå…±æœ‰ãƒ¡ãƒ¢ãƒªä¸Šã«ã‚ã‚‹ã‹åˆ¤åˆ¥ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	1	å…±æœ‰ãƒ¡ãƒ¢ãƒªã‹ã‚‰å‚ç…§ã•ã‚Œã¦ã„ã‚‹ã€‚
+ * @retval	0	å…±æœ‰ãƒ¡ãƒ¢ãƒªã‹ã‚‰å‚ç…§ã•ã‚Œã¦ã„ãªã„ã€‚
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5IsSharedMemoryTable(int nTableID);
 
 /**
- * €–Úî•ñ‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID		ƒe[ƒuƒ‹ID
- * @param[in]	nGet			î•ñ‚ğæ“¾‚·‚é€–Ú”
- * @param[out]	pnFltCnt		î•ñ‚ğæ“¾‚µ‚½€–Ú”
- * @param[out]	aFilterInfo		€–Úî•ñ
- * @param[out]	aacAttrs		¬”“_ˆÈ‰º•\¦Œ…”‚Ìİ’èî•ñ
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * é …ç›®æƒ…å ±ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID		ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nGet			æƒ…å ±ã‚’å–å¾—ã™ã‚‹é …ç›®æ•°
+ * @param[out]	pnFltCnt		æƒ…å ±ã‚’å–å¾—ã—ãŸé …ç›®æ•°
+ * @param[out]	aFilterInfo		é …ç›®æƒ…å ±
+ * @param[out]	aacAttrs		å°æ•°ç‚¹ä»¥ä¸‹è¡¨ç¤ºæ¡æ•°ã®è¨­å®šæƒ…å ±
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * ƒXƒNƒŠƒvƒgŒ¾Œê‚Å‚ÍƒTƒ|[ƒg‚µ‚Ü‚¹‚ñB
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã§ã¯ã‚µãƒãƒ¼ãƒˆã—ã¾ã›ã‚“ã€‚
  */
 D5RESULT D5APICALL RD5GetAllFilterInfo(
 				const int nTableID,
@@ -2987,81 +2987,81 @@ D5RESULT D5APICALL RD5GetAllFilterInfo(
 				);
 
 /**
- * g—pƒƒ‚ƒŠƒTƒCƒY‚ğæ“¾‚µ‚Ü‚·B
- * @retval	0ˆÈã	ƒƒ‚ƒŠƒoƒCƒg”
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ä½¿ç”¨ãƒ¡ãƒ¢ãƒªã‚µã‚¤ã‚ºã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @retval	0ä»¥ä¸Š	ãƒ¡ãƒ¢ãƒªãƒã‚¤ãƒˆæ•°
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULTL D5APICALL RD5GetTotalMemorySize();
 
 /**
- * ‹¤—pƒƒ‚ƒŠ‚ğŠÜ‚ß‚½g—pƒƒ‚ƒŠƒTƒCƒY‚ğæ“¾‚µ‚Ü‚·B
- * @retval	0ˆÈã	ƒƒ‚ƒŠƒTƒCƒY(8byte®”Œ^) WindowsFint64, LinuxFlong long
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * å…±ç”¨ãƒ¡ãƒ¢ãƒªã‚’å«ã‚ãŸä½¿ç”¨ãƒ¡ãƒ¢ãƒªã‚µã‚¤ã‚ºã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @retval	0ä»¥ä¸Š	ãƒ¡ãƒ¢ãƒªã‚µã‚¤ã‚º(8byteæ•´æ•°å‹) Windowsï¼šint64, Linuxï¼šlong long
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULTL D5APICALL RD5GetTotalMemorySizeWithShared();
 
 /**
- * ƒe[ƒuƒ‹‚Ìg—pƒƒ‚ƒŠƒTƒCƒY‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @retval	0ˆÈã	ƒƒ‚ƒŠƒoƒCƒg”(8byte®”Œ^) WindowsFint64, LinuxFlong long
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * ãƒ†ãƒ¼ãƒ–ãƒ«ã®ä½¿ç”¨ãƒ¡ãƒ¢ãƒªã‚µã‚¤ã‚ºã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @retval	0ä»¥ä¸Š	ãƒ¡ãƒ¢ãƒªãƒã‚¤ãƒˆæ•°(8byteæ•´æ•°å‹) Windowsï¼šint64, Linuxï¼šlong long
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULTL D5APICALL RD5GetTableMemorySize(const  int nTableID);
 
 /**
- * €–Ú‚Ìg—pƒƒ‚ƒŠƒTƒCƒY‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nFilterID	€–ÚID
- * @retval	0ˆÈã	ƒƒ‚ƒŠƒoƒCƒg”i8byte®”j WindowsFint64, LinuxFlong long
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * é …ç›®ã®ä½¿ç”¨ãƒ¡ãƒ¢ãƒªã‚µã‚¤ã‚ºã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID	é …ç›®ID
+ * @retval	0ä»¥ä¸Š	ãƒ¡ãƒ¢ãƒªãƒã‚¤ãƒˆæ•°ï¼ˆ8byteæ•´æ•°ï¼‰ Windowsï¼šint64, Linuxï¼šlong long
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULTL D5APICALL RD5GetFilterMemorySize(const int nTableID, const int nFilterID);
 
 /**
- * ƒZƒbƒg‚Ìd—lƒƒ‚ƒŠƒTƒCƒY‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[out]	nSetID		ƒZƒbƒgID
- * @retval	0ˆÈã	w’è‚µ‚½ƒZƒbƒg‚Ìg—pƒƒ‚ƒŠƒTƒCƒY(8byte®”Œ^) WindowsFint64, LinuxFlong long
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * ã‚»ãƒƒãƒˆã®ä»•æ§˜ãƒ¡ãƒ¢ãƒªã‚µã‚¤ã‚ºã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[out]	nSetID		ã‚»ãƒƒãƒˆID
+ * @retval	0ä»¥ä¸Š	æŒ‡å®šã—ãŸã‚»ãƒƒãƒˆã®ä½¿ç”¨ãƒ¡ãƒ¢ãƒªã‚µã‚¤ã‚º(8byteæ•´æ•°å‹) Windowsï¼šint64, Linuxï¼šlong long
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULTL D5APICALL RD5GetSetMemorySize(const int nTableID, const int nSetID);
 
 /**
- * ƒGƒ“ƒWƒ“‚Åg—p‚µ‚½ƒƒ‚ƒŠ‚ğŠJ•ú‚µ‚Ü‚·B
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ã‚¨ãƒ³ã‚¸ãƒ³ã§ä½¿ç”¨ã—ãŸãƒ¡ãƒ¢ãƒªã‚’é–‹æ”¾ã—ã¾ã™ã€‚
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT  D5APICALL RD5Shutdown();
 
 /**
- * ‚‘¬ŒŸõ‚ÌÀséŒ¾‚ğs‚¢‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nSetID		ƒZƒbƒgID
- * @param[in]	nFilterID	€–ÚID
- * @param[in]	nMark		‚‘¬ŒŸõw’èƒtƒ‰ƒO
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * é«˜é€Ÿæ¤œç´¢ã®å®Ÿè¡Œå®£è¨€ã‚’è¡Œã„ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @param[in]	nFilterID	é …ç›®ID
+ * @param[in]	nMark		é«˜é€Ÿæ¤œç´¢æŒ‡å®šãƒ•ãƒ©ã‚°
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5HighSpeedSearchSetMark(
 				const int nTableID,
@@ -3071,16 +3071,16 @@ D5RESULT D5APICALL RD5HighSpeedSearchSetMark(
 				);
 
 /**
- * ‚‘¬ŒŸõ‚Ì‘ÎÛ‚©‚Ç‚¤‚©‚ğƒ`ƒFƒbƒN‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nSetID		ƒZƒbƒgID
- * @param[in]	nFilterID	€–ÚID
- * @retval	1	‚‘¬ŒŸõ‚Ì‘ÎÛ‚Å‚ ‚é
- * @retval	0	‚‘¬ŒŸõ‚Ì‘ÎÛ‚Å‚È‚¢
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * é«˜é€Ÿæ¤œç´¢ã®å¯¾è±¡ã‹ã©ã†ã‹ã‚’ãƒã‚§ãƒƒã‚¯ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID		ã‚»ãƒƒãƒˆID
+ * @param[in]	nFilterID	é …ç›®ID
+ * @retval	1	é«˜é€Ÿæ¤œç´¢ã®å¯¾è±¡ã§ã‚ã‚‹
+ * @retval	0	é«˜é€Ÿæ¤œç´¢ã®å¯¾è±¡ã§ãªã„
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5HighSpeedSearchHasMark(
 				const int nTableID,
@@ -3089,15 +3089,15 @@ D5RESULT D5APICALL RD5HighSpeedSearchHasMark(
 				);
 
 /**
- * ’ÊíŒŸõ^‚‘¬ŒŸõó‘Ô‚ÌØ‚è‘Ö‚¦‚ğs‚¢‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nFilterID	€–ÚID
- * @param[in]	nEnable		ŒŸõó‘Ô‚ÌØ‚è‘Ö‚¦ƒtƒ‰ƒO
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * é€šå¸¸æ¤œç´¢ï¼é«˜é€Ÿæ¤œç´¢çŠ¶æ…‹ã®åˆ‡ã‚Šæ›¿ãˆã‚’è¡Œã„ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID	é …ç›®ID
+ * @param[in]	nEnable		æ¤œç´¢çŠ¶æ…‹ã®åˆ‡ã‚Šæ›¿ãˆãƒ•ãƒ©ã‚°
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5HighSpeedSearchEnable(
 				const int nTableID,
@@ -3106,15 +3106,15 @@ D5RESULT D5APICALL RD5HighSpeedSearchEnable(
 				);
 
 /**
- * ’ÊíŒŸõ^‚‘¬ŒŸõ‚Ìó‘Ô‚ğ–â‚¢‡‚í‚¹‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nFilterID	€–ÚID
- * @retval	1	‚‘¬ŒŸõó‘Ô
- * @retval	0	’ÊíŒŸõó‘Ô
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * é€šå¸¸æ¤œç´¢ï¼é«˜é€Ÿæ¤œç´¢ã®çŠ¶æ…‹ã‚’å•ã„åˆã‚ã›ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID	é …ç›®ID
+ * @retval	1	é«˜é€Ÿæ¤œç´¢çŠ¶æ…‹
+ * @retval	0	é€šå¸¸æ¤œç´¢çŠ¶æ…‹
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5HighSpeedSearchIsEnabled(
 				const int nTableID,
@@ -3122,13 +3122,13 @@ D5RESULT D5APICALL RD5HighSpeedSearchIsEnabled(
 				);
 
 /**
- * ƒ‰ƒCƒZƒ“ƒXƒL[‚ÌƒpƒXƒ[ƒh”FØ‚ğs‚¢‚Ü‚·B
- * @param[in]	szLicenseKey	ƒ‰ƒCƒZƒ“ƒXƒL[
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚­ãƒ¼ã®ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰èªè¨¼ã‚’è¡Œã„ã¾ã™ã€‚
+ * @param[in]	szLicenseKey	ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚­ãƒ¼
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5SetPassword(
 			const char szLicenseKey[D5_PASSWORD_LENGTH + 1]
@@ -3140,23 +3140,23 @@ D5RESULT D5APICALL RD5GetSerial(
 			);
 
 /**
- * s”§ŒÀ’l‚ğæ“¾‚µ‚Ü‚·B
- * @retval	0		–³§ŒÀ
- * @retval	1ˆÈã	s”§ŒÀ’l
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * è¡Œæ•°åˆ¶é™å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @retval	0		ç„¡åˆ¶é™
+ * @retval	1ä»¥ä¸Š	è¡Œæ•°åˆ¶é™å€¤
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULTL D5APICALL RD5GetLimitRowSize();
 
 /**
- * ƒƒ‚ƒŠg—p—Ê§ŒÀ’l‚ğæ“¾‚µ‚Ü‚·B
- * @retval	0ˆÈã	ƒƒ‚ƒŠg—p—Ê§ŒÀ’l(byte)
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * ãƒ¡ãƒ¢ãƒªä½¿ç”¨é‡åˆ¶é™å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @retval	0ä»¥ä¸Š	ãƒ¡ãƒ¢ãƒªä½¿ç”¨é‡åˆ¶é™å€¤(byte)
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULTL D5APICALL RD5GetLimitMemSize();
 
@@ -3169,16 +3169,16 @@ D5RESULT D5APICALL	RD5GetLicenseInfo(
 );
 
 /**
- * NUMERIC€–Úî•ñ‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	nTableID		ƒe[ƒuƒ‹ID
- * @param[in]	nFilterID		ƒtƒBƒ‹ƒ^ID
- * @param[out]	pNumericInfo	NUMERIC€–Úî•ñ
- * @param[out]	szRoundMode		ŠÛ‚ßƒ‚[ƒh•¶š—ñ
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * NUMERICé …ç›®æƒ…å ±ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	nTableID		ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID		ãƒ•ã‚£ãƒ«ã‚¿ID
+ * @param[out]	pNumericInfo	NUMERICé …ç›®æƒ…å ±
+ * @param[out]	szRoundMode		ä¸¸ã‚ãƒ¢ãƒ¼ãƒ‰æ–‡å­—åˆ—
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * –{API‚Íg—p‚¹‚¸A{@link #RD5GetNumericInfoR1}‚ğg—p‚µ‚Ä‚­‚¾‚³‚¢B
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * æœ¬APIã¯ä½¿ç”¨ã›ãšã€{@link #RD5GetNumericInfoR1}ã‚’ä½¿ç”¨ã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL	RD5GetNumericInfo(
 	const int nTableID,
@@ -3188,15 +3188,15 @@ D5RESULT D5APICALL	RD5GetNumericInfo(
 );
 
 /**
- * NUMERIC€–Úî•ñ‚ğƒZƒbƒg‚µ‚Ü‚·B
- * @param[in]	nTableID		ƒe[ƒuƒ‹ID
- * @param[in]	nFilterID		ƒtƒBƒ‹ƒ^ID
- * @param[in]	pNumericInfo	NUMERIC€–Úî•ñ
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * NUMERICé …ç›®æƒ…å ±ã‚’ã‚»ãƒƒãƒˆã—ã¾ã™ã€‚
+ * @param[in]	nTableID		ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID		ãƒ•ã‚£ãƒ«ã‚¿ID
+ * @param[in]	pNumericInfo	NUMERICé …ç›®æƒ…å ±
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL	RD5SetNumericInfo(
 	const int nTableID,
@@ -3205,17 +3205,17 @@ D5RESULT D5APICALL	RD5SetNumericInfo(
 );
 
 /**
- * •‚“®¬”“_Œ^‚Ì€–Ú‚ğğŒ‚Æ‚µ‚ÄA’lƒWƒƒƒ“ƒv‹@”\‚ğƒI[ƒvƒ“‚µ‚Ü‚·B
- * @param[in]	nTableID		ŒŸõ‚·‚éƒe[ƒuƒ‹ID
- * @param[in]	nFilterID		ŒŸõ‘ÎÛ‚Æ‚È‚é•‚“®¬”“_Œ^‚Ì€–ÚID
- * @param[in]	nValSrchKind	ŒŸõğŒ®‚ğw’è‚·‚é’l
- * @param[in]	SrchVal1		1”Ô–Ú‚ÌŒŸõğŒ’l
- * @param[in]	SrchVal2		2”Ô–Ú‚ÌŒŸõğŒ’l
- * @retval	0ˆÈã	ŒŸõID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * æµ®å‹•å°æ•°ç‚¹å‹ã®é …ç›®ã‚’æ¡ä»¶ã¨ã—ã¦ã€å€¤ã‚¸ãƒ£ãƒ³ãƒ—æ©Ÿèƒ½ã‚’ã‚ªãƒ¼ãƒ—ãƒ³ã—ã¾ã™ã€‚
+ * @param[in]	nTableID		æ¤œç´¢ã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID		æ¤œç´¢å¯¾è±¡ã¨ãªã‚‹æµ®å‹•å°æ•°ç‚¹å‹ã®é …ç›®ID
+ * @param[in]	nValSrchKind	æ¤œç´¢æ¡ä»¶å¼ã‚’æŒ‡å®šã™ã‚‹å€¤
+ * @param[in]	SrchVal1		1ç•ªç›®ã®æ¤œç´¢æ¡ä»¶å€¤
+ * @param[in]	SrchVal2		2ç•ªç›®ã®æ¤œç´¢æ¡ä»¶å€¤
+ * @retval	0ä»¥ä¸Š	æ¤œç´¢ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5OpenNumericFindReal(
 			const	int		nTableID,
@@ -3226,20 +3226,20 @@ D5RESULT D5APICALL RD5OpenNumericFindReal(
 );
 
 /**
- * NUMERICŒ^‚Ì€–Ú‚ğ’Ç‰Á‚µ‚Ü‚·BNUMERICŒ^‚Ì€–Ú‚É•K—v‚ÈNumericInfo\‘¢‘Ì‚ğ“¯‚Éİ’è‚µ‚Ü‚·B
- * @param[in]	nTableID		’Ç‰Á‚·‚éƒe[ƒuƒ‹ID
- * @param[in]	nLoc			€–Ú‘}“üˆÊ’u
- * @param[in]	szFilterName	V‹K‚É’Ç‰Á‚·‚é€–Ú–¼Ì
- * @param[in]	nDataArraySize	’Ç‰Á‚·‚éƒŒƒR[ƒh”z—ñ‚ÌƒTƒCƒY
- * @param[in]	nScale			NumericInfo\‘¢‘Ì‚Éİ’è‚·‚éScale’l
- * @param[in]	nRoundMode		NumericInfo\‘¢‘Ì‚Éİ’è‚·‚éRoundMode’l
- * @param[in]	szFilePath		’Ç‰Á‚·‚éƒf[ƒ^‚Ìƒtƒ@ƒCƒ‹ƒpƒX
- * @param[in]	szFileName		’Ç‰Á‚·‚éƒf[ƒ^‚Ìƒtƒ@ƒCƒ‹–¼Ì
- * @retval	0ˆÈã	¶¬‚³‚ê‚½€–ÚID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * NUMERICå‹ã®é …ç›®ã‚’è¿½åŠ ã—ã¾ã™ã€‚NUMERICå‹ã®é …ç›®ã«å¿…è¦ãªNumericInfoæ§‹é€ ä½“ã‚’åŒæ™‚ã«è¨­å®šã—ã¾ã™ã€‚
+ * @param[in]	nTableID		è¿½åŠ ã™ã‚‹ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nLoc			é …ç›®æŒ¿å…¥ä½ç½®
+ * @param[in]	szFilterName	æ–°è¦ã«è¿½åŠ ã™ã‚‹é …ç›®åç§°
+ * @param[in]	nDataArraySize	è¿½åŠ ã™ã‚‹ãƒ¬ã‚³ãƒ¼ãƒ‰é…åˆ—ã®ã‚µã‚¤ã‚º
+ * @param[in]	nScale			NumericInfoæ§‹é€ ä½“ã«è¨­å®šã™ã‚‹Scaleå€¤
+ * @param[in]	nRoundMode		NumericInfoæ§‹é€ ä½“ã«è¨­å®šã™ã‚‹RoundModeå€¤
+ * @param[in]	szFilePath		è¿½åŠ ã™ã‚‹ãƒ‡ãƒ¼ã‚¿ã®ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹
+ * @param[in]	szFileName		è¿½åŠ ã™ã‚‹ãƒ‡ãƒ¼ã‚¿ã®ãƒ•ã‚¡ã‚¤ãƒ«åç§°
+ * @retval	0ä»¥ä¸Š	ç”Ÿæˆã•ã‚ŒãŸé …ç›®ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5AddRealFilter2Numeric(
 			const int	nTableID,
@@ -3253,16 +3253,16 @@ D5RESULT D5APICALL RD5AddRealFilter2Numeric(
 );
 
 /**
- * NUMERICŒ^‚Ìƒf[ƒ^Œ^‚É•ÏŠ·‚µ‚Ä€–Ú‚ğ•¡»‚µ‚Ü‚·B
- * @param[in]	nTableID	ƒe[ƒuƒ‹ID
- * @param[in]	nFilterID	•¡»Œ³‚Ì€–ÚID
- * @param[in]	nScale		€–Ú‚Éİ’è‚·‚éScale’l
- * @param[in]	nRoundMode	€–Ú‚Éİ’è‚·‚éRoundMode’l
- * @retval	1ˆÈã	¶¬‚³‚ê‚½€–ÚID
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * NUMERICå‹ã®ãƒ‡ãƒ¼ã‚¿å‹ã«å¤‰æ›ã—ã¦é …ç›®ã‚’è¤‡è£½ã—ã¾ã™ã€‚
+ * @param[in]	nTableID	ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nFilterID	è¤‡è£½å…ƒã®é …ç›®ID
+ * @param[in]	nScale		é …ç›®ã«è¨­å®šã™ã‚‹Scaleå€¤
+ * @param[in]	nRoundMode	é …ç›®ã«è¨­å®šã™ã‚‹RoundModeå€¤
+ * @retval	1ä»¥ä¸Š	ç”Ÿæˆã•ã‚ŒãŸé …ç›®ID
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- * @par	ƒXƒNƒŠƒvƒgŒ¾Œê‚©‚çg—p‚·‚éÛ‚Ì’ˆÓ–€:
- * “Á‚É‚È‚µ
+ * @par	ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¨€èªã‹ã‚‰ä½¿ç”¨ã™ã‚‹éš›ã®æ³¨æ„äº‹é …:
+ * ç‰¹ã«ãªã—
  */
 D5RESULT D5APICALL RD5DupRealFilterExNumeric(
 			const int	nTableID,
@@ -4025,51 +4025,51 @@ D5RESULT D5APICALL RD5ShmDumpSMCS(const char* pchPathDumpFile);
 D5RESULT D5APICALL RD5ReInitializeMS();
 
 /**
- * •¡”ƒf[ƒ^‚ğæ“¾‚µ‚Ü‚·B
- * @param[in]	TableID			ƒe[ƒuƒ‹ID
- * @param[in]	FltID			€–ÚID
- * @param[in]	SetID			ƒZƒbƒgID
- * @param[in]	RowNo			ƒZƒbƒg“à‡˜”Ô†
- * @param[in]	RCount			æ“¾ƒŒƒR[ƒh”
- * @param[in]	BufSize			•¶š—ñƒf[ƒ^ƒGƒŠƒA‚ÌƒTƒCƒY
- * @param[out]	iDataType		æ“¾‚µ‚½ƒf[ƒ^Œ^
- * @param[out]	nGot			æ“¾‚µ‚½ƒf[ƒ^”
- * @param[out]	pOutBuf			æ“¾‚µ‚½•¶š—ñŒ^ˆÈŠO‚Ìƒf[ƒ^ ‚Ü‚½‚Í •¶š—ñŒ^ƒf[ƒ^‚ÌacCharBuf“àƒf[ƒ^ŠJnˆÊ’u
- * @param[out]	charbuf			æ“¾‚µ‚½•¶š—ñƒf[ƒ^
- * @retval	0ˆÈã	®”E•‚“®¬”“_Œ^Fæ“¾‚µ‚½s‚Ì‚¤‚¿A’Pˆê‚ÅÅ‘å‚Ìƒf[ƒ^ƒTƒCƒY(byte) •¶š—ñŒ^FNULLI’[‚ğŠÜ‚Ü‚È‚¢ÅIs‚Ìƒf[ƒ^ƒTƒCƒY(byte)
- * @retval	•‰		ƒGƒ‰[ƒR[ƒh
+ * è¤‡æ•°ãƒ‡ãƒ¼ã‚¿ã‚’å–å¾—ã—ã¾ã™ã€‚
+ * @param[in]	TableID			ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	FltID			é …ç›®ID
+ * @param[in]	SetID			ã‚»ãƒƒãƒˆID
+ * @param[in]	RowNo			ã‚»ãƒƒãƒˆå†…é †åºç•ªå·
+ * @param[in]	RCount			å–å¾—ãƒ¬ã‚³ãƒ¼ãƒ‰æ•°
+ * @param[in]	BufSize			æ–‡å­—åˆ—ãƒ‡ãƒ¼ã‚¿ã‚¨ãƒªã‚¢ã®ã‚µã‚¤ã‚º
+ * @param[out]	iDataType		å–å¾—ã—ãŸãƒ‡ãƒ¼ã‚¿å‹
+ * @param[out]	nGot			å–å¾—ã—ãŸãƒ‡ãƒ¼ã‚¿æ•°
+ * @param[out]	pOutBuf			å–å¾—ã—ãŸæ–‡å­—åˆ—å‹ä»¥å¤–ã®ãƒ‡ãƒ¼ã‚¿ ã¾ãŸã¯ æ–‡å­—åˆ—å‹ãƒ‡ãƒ¼ã‚¿ã®acCharBufå†…ãƒ‡ãƒ¼ã‚¿é–‹å§‹ä½ç½®
+ * @param[out]	charbuf			å–å¾—ã—ãŸæ–‡å­—åˆ—ãƒ‡ãƒ¼ã‚¿
+ * @retval	0ä»¥ä¸Š	æ•´æ•°ãƒ»æµ®å‹•å°æ•°ç‚¹å‹ï¼šå–å¾—ã—ãŸè¡Œã®ã†ã¡ã€å˜ä¸€ã§æœ€å¤§ã®ãƒ‡ãƒ¼ã‚¿ã‚µã‚¤ã‚º(byte) æ–‡å­—åˆ—å‹ï¼šNULLçµ‚ç«¯ã‚’å«ã¾ãªã„æœ€çµ‚è¡Œã®ãƒ‡ãƒ¼ã‚¿ã‚µã‚¤ã‚º(byte)
+ * @retval	è² 		ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
  */
 D5RESULT D5APICALL RD5GetData1MEx(
-            const int	TableID,						//  IN:ƒe[ƒuƒ‹‚h‚c
+            const int	TableID,						//  IN:ãƒ†ãƒ¼ãƒ–ãƒ«ï¼©ï¼¤
             const int	FltID,							//  IN:FilterID
-            const int	SetID,							//  IN:-1 ‚È‚çƒJƒŒƒ“ƒgƒZƒbƒg
-            const int	RowNo,							//  IN:s”Ô†i‚P‚©‚çn‚Ü‚éj
-			const int	RCount,							//  IN:æ“¾ƒŒƒR[ƒh”
-			const int	BufSize,						//	INT:•¶š—ñƒf[ƒ^ƒGƒŠƒA‚ÌƒTƒCƒY
-            int*		iDataType,						//  OUT:ƒf[ƒ^‚Ìƒ^ƒCƒv”Ô†
-			int*		nGot,							//	OUT:æ“¾‚Å‚«‚½ƒf[ƒ^”
-			void*		pOutBuf,						//	OUT:ƒf[ƒ^(ŒÄ‚Ño‚µ‘¤‚Å—ÌˆæŠm•Û) •¶š—ñ‚Ì‚ÍAcharbuf“à‚Å‚ÌŠJnˆÊ’u
-			char*		charbuf							//  OUT:•¶š—ñƒf[ƒ^(ŒÄ‚Ño‚µ‘¤‚Å—ÌˆæŠm•Û)
-          );		 //  OUT:•‰‚ÌAƒGƒ‰[
+            const int	SetID,							//  IN:-1 ãªã‚‰ã‚«ãƒ¬ãƒ³ãƒˆã‚»ãƒƒãƒˆ
+            const int	RowNo,							//  IN:è¡Œç•ªå·ï¼ˆï¼‘ã‹ã‚‰å§‹ã¾ã‚‹ï¼‰
+			const int	RCount,							//  IN:å–å¾—ãƒ¬ã‚³ãƒ¼ãƒ‰æ•°
+			const int	BufSize,						//	INT:æ–‡å­—åˆ—ãƒ‡ãƒ¼ã‚¿ã‚¨ãƒªã‚¢ã®ã‚µã‚¤ã‚º
+            int*		iDataType,						//  OUT:ãƒ‡ãƒ¼ã‚¿ã®ã‚¿ã‚¤ãƒ—ç•ªå·
+			int*		nGot,							//	OUT:å–å¾—ã§ããŸãƒ‡ãƒ¼ã‚¿æ•°
+			void*		pOutBuf,						//	OUT:ãƒ‡ãƒ¼ã‚¿(å‘¼ã³å‡ºã—å´ã§é ˜åŸŸç¢ºä¿) æ–‡å­—åˆ—ã®æ™‚ã¯ã€charbufå†…ã§ã®é–‹å§‹ä½ç½®
+			char*		charbuf							//  OUT:æ–‡å­—åˆ—ãƒ‡ãƒ¼ã‚¿(å‘¼ã³å‡ºã—å´ã§é ˜åŸŸç¢ºä¿)
+          );		 //  OUT:è² ã®æ™‚ã€ã‚¨ãƒ©ãƒ¼
 
 /**
- * ŒvZˆ—‚ğs‚¢‚Ü‚·B
- * @param[in]	nTableID	ŒvZ‚ğs‚¤ƒe[ƒuƒ‹ID
- * @param[in]	nSetID		ŒvZ‚ğs‚¤ƒZƒbƒgID
- * @param[in]	nCalStart	ŒvZŠJnˆÊ’u
- * @param[in]	nCalCount	ŒvZ‚·‚éƒŒƒR[ƒh”
- * @param[in]	szFormula	ŒvZ®
- * @param[in]	iResultDataType	 ŒvZŒ‹‰Êƒf[ƒ^‚Ìƒ^ƒCƒv
- * @param[out]	pvOutput		ŒvZŒ‹‰Ê‚ğo—Í‚·‚é”z—ñ—Ìˆæ
- * @param[in]	iStrAreaSize	pcStrArea—Ìˆæ‚ÌƒTƒCƒYiƒoƒCƒg’PˆÊj
- * @param[out]	pcStrArea	ŒvZŒ‹‰Ê•¶š—ñ‚ğŠi”[‚·‚é—Ìˆæ
- * @param[out]	szErrorRep	ƒGƒ‰[à–¾
- * @retval	0	¬Œ÷
- * @retval	•‰	ƒGƒ‰[ƒR[ƒh
+ * è¨ˆç®—å‡¦ç†ã‚’è¡Œã„ã¾ã™ã€‚
+ * @param[in]	nTableID	è¨ˆç®—ã‚’è¡Œã†ãƒ†ãƒ¼ãƒ–ãƒ«ID
+ * @param[in]	nSetID		è¨ˆç®—ã‚’è¡Œã†ã‚»ãƒƒãƒˆID
+ * @param[in]	nCalStart	è¨ˆç®—é–‹å§‹ä½ç½®
+ * @param[in]	nCalCount	è¨ˆç®—ã™ã‚‹ãƒ¬ã‚³ãƒ¼ãƒ‰æ•°
+ * @param[in]	szFormula	è¨ˆç®—å¼
+ * @param[in]	iResultDataType	 è¨ˆç®—çµæœãƒ‡ãƒ¼ã‚¿ã®ã‚¿ã‚¤ãƒ—
+ * @param[out]	pvOutput		è¨ˆç®—çµæœã‚’å‡ºåŠ›ã™ã‚‹é…åˆ—é ˜åŸŸ
+ * @param[in]	iStrAreaSize	pcStrAreaé ˜åŸŸã®ã‚µã‚¤ã‚ºï¼ˆãƒã‚¤ãƒˆå˜ä½ï¼‰
+ * @param[out]	pcStrArea	è¨ˆç®—çµæœæ–‡å­—åˆ—ã‚’æ ¼ç´ã™ã‚‹é ˜åŸŸ
+ * @param[out]	szErrorRep	ã‚¨ãƒ©ãƒ¼èª¬æ˜
+ * @retval	0	æˆåŠŸ
+ * @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
  * 
- *@ŒvZŒ‹‰Ê‚ğ”z—ñ‚à‚ç‚¢‚Ü‚·
- * ErrorRep‚Í–³Œø‚È‚Ì‚Å‹ó•¶š—ñ‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+ *ã€€è¨ˆç®—çµæœã‚’é…åˆ—ã‚‚ã‚‰ã„ã¾ã™
+ * ErrorRepã¯ç„¡åŠ¹ãªã®ã§ç©ºæ–‡å­—åˆ—ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
  */
 D5RESULT D5APICALL RD5CalcPtr (
         const int   TablelID,
@@ -4077,21 +4077,21 @@ D5RESULT D5APICALL RD5CalcPtr (
         const int   CalStart,
         const int   CalCount,
         const char  PCFormula[D5_MAX_STRING_SIZE],
-        const int	iResultDataType,		//ŒvZŒ‹‰Êƒf[ƒ^‚Ìƒ^ƒCƒv	int=3,EEE
-        void*   pvOutput,					//ŒvZŒ‹‰Ê‚ğo—Í‚·‚é”z—ñ—Ìˆæ
-        size_t   iStrAreaSize,				//pcStrArea—Ìˆæ‚ÌƒTƒCƒYiƒoƒCƒg’PˆÊj
-        char *   pcStrArea,					//ŒvZŒ‹‰Ê•¶š—ñ‚ğŠi”[‚·‚é—Ìˆæ
+        const int	iResultDataType,		//è¨ˆç®—çµæœãƒ‡ãƒ¼ã‚¿ã®ã‚¿ã‚¤ãƒ—	int=3,ãƒ»ãƒ»ãƒ»
+        void*   pvOutput,					//è¨ˆç®—çµæœã‚’å‡ºåŠ›ã™ã‚‹é…åˆ—é ˜åŸŸ
+        size_t   iStrAreaSize,				//pcStrAreaé ˜åŸŸã®ã‚µã‚¤ã‚ºï¼ˆãƒã‚¤ãƒˆå˜ä½ï¼‰
+        char *   pcStrArea,					//è¨ˆç®—çµæœæ–‡å­—åˆ—ã‚’æ ¼ç´ã™ã‚‹é ˜åŸŸ
         char       ErrorRep[D5_MAX_STRING_SIZE]
         );
 
 /**
-* REALƒe[ƒuƒ‹‚ğƒƒ‚ƒŠ‚ÉŠi”[‚µ‚Ü‚·B
-* @param[in]	nTableID	Ši”[‚µ‚½‚¢ƒe[ƒuƒ‹‚ÌID
-* @param[in]	pMemPtr	@@Ši”[‚·‚éƒƒ‚ƒŠ‚Ìƒ|ƒCƒ“ƒ^
-* @param[in]	szMemSize@ g—p‰Â”\ƒƒ‚ƒŠƒTƒCƒY
-* @param[out]	pEndMemPtr	I—¹ˆÊ’u‚Ö‚Ìƒ|ƒCƒ“ƒ^B 
-* @retval	0	¬Œ÷
-* @retval	•‰	ƒGƒ‰[ƒR[ƒh
+* REALãƒ†ãƒ¼ãƒ–ãƒ«ã‚’ãƒ¡ãƒ¢ãƒªã«æ ¼ç´ã—ã¾ã™ã€‚
+* @param[in]	nTableID	æ ¼ç´ã—ãŸã„ãƒ†ãƒ¼ãƒ–ãƒ«ã®ID
+* @param[in]	pMemPtr	ã€€ã€€æ ¼ç´ã™ã‚‹ãƒ¡ãƒ¢ãƒªã®ãƒã‚¤ãƒ³ã‚¿
+* @param[in]	szMemSizeã€€ ä½¿ç”¨å¯èƒ½ãƒ¡ãƒ¢ãƒªã‚µã‚¤ã‚º
+* @param[out]	pEndMemPtr	çµ‚äº†ä½ç½®ã¸ã®ãƒã‚¤ãƒ³ã‚¿ã€‚ 
+* @retval	0	æˆåŠŸ
+* @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
 * 
 */
 D5RESULT D5APICALL RD5SaveRealTable2Mem(
@@ -4101,12 +4101,12 @@ D5RESULT D5APICALL RD5SaveRealTable2Mem(
 										 void** pEndMemPtr
 										);
 /**
-* ƒ[ƒNƒXƒy[ƒX‚ğƒƒ‚ƒŠ‚ÉŠi”[‚µ‚Ü‚·B
-* @param[in]	pMemPtr	@@Ši”[‚·‚éƒƒ‚ƒŠ‚Ìƒ|ƒCƒ“ƒ^
-* @param[in]	szMemSize@ g—p‰Â”\ƒƒ‚ƒŠƒTƒCƒY
-* @param[out]	pEndMemPtr	I—¹ˆÊ’u‚Ö‚Ìƒ|ƒCƒ“ƒ^B 
-* @retval	0	¬Œ÷
-* @retval	•‰	ƒGƒ‰[ƒR[ƒh
+* ãƒ¯ãƒ¼ã‚¯ã‚¹ãƒšãƒ¼ã‚¹ã‚’ãƒ¡ãƒ¢ãƒªã«æ ¼ç´ã—ã¾ã™ã€‚
+* @param[in]	pMemPtr	ã€€ã€€æ ¼ç´ã™ã‚‹ãƒ¡ãƒ¢ãƒªã®ãƒã‚¤ãƒ³ã‚¿
+* @param[in]	szMemSizeã€€ ä½¿ç”¨å¯èƒ½ãƒ¡ãƒ¢ãƒªã‚µã‚¤ã‚º
+* @param[out]	pEndMemPtr	çµ‚äº†ä½ç½®ã¸ã®ãƒã‚¤ãƒ³ã‚¿ã€‚ 
+* @retval	0	æˆåŠŸ
+* @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
 * 
 */
 D5RESULT D5APICALL RD5SaveDB2Mem(
@@ -4117,11 +4117,11 @@ D5RESULT D5APICALL RD5SaveDB2Mem(
 
 
 /**
-* REALƒe[ƒuƒ‹‚ğw’è‚³‚ê‚½ƒƒ‚ƒŠ‚©‚çƒ[ƒh‚µ‚Ü‚·B
-* @param[in]	pMemPtr	@@ƒe[ƒuƒ‹‚ªŠi”[‚µ‚Ä‚¢‚éƒƒ‚ƒŠ‚Ìƒ|ƒCƒ“ƒ^
-* @param[out]	pEndMemPtr	I—¹ˆÊ’u‚Ö‚Ìƒ|ƒCƒ“ƒ^B 
-* @retval	ƒ[ƒh‚³‚ê‚½ƒe[ƒuƒ‹‚h‚c
-* @retval	•‰	ƒGƒ‰[ƒR[ƒh
+* REALãƒ†ãƒ¼ãƒ–ãƒ«ã‚’æŒ‡å®šã•ã‚ŒãŸãƒ¡ãƒ¢ãƒªã‹ã‚‰ãƒ­ãƒ¼ãƒ‰ã—ã¾ã™ã€‚
+* @param[in]	pMemPtr	ã€€ã€€ãƒ†ãƒ¼ãƒ–ãƒ«ãŒæ ¼ç´ã—ã¦ã„ã‚‹ãƒ¡ãƒ¢ãƒªã®ãƒã‚¤ãƒ³ã‚¿
+* @param[out]	pEndMemPtr	çµ‚äº†ä½ç½®ã¸ã®ãƒã‚¤ãƒ³ã‚¿ã€‚ 
+* @retval	ãƒ­ãƒ¼ãƒ‰ã•ã‚ŒãŸãƒ†ãƒ¼ãƒ–ãƒ«ï¼©ï¼¤
+* @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
 * 
 */
 D5RESULT D5APICALL RD5LoadRealTableFromMem(
@@ -4130,11 +4130,11 @@ D5RESULT D5APICALL RD5LoadRealTableFromMem(
 											);
 
 /**
-* ƒ[ƒNƒXƒy[ƒX‚ğw’è‚³‚ê‚½ƒƒ‚ƒŠ‚©‚çƒ[ƒh‚µ‚Ü‚·B
-* @param[in]	pMemPtr	@@ƒ[ƒNƒXƒy[ƒX‚ªŠi”[‚µ‚Ä‚¢‚éƒƒ‚ƒŠ‚Ìƒ|ƒCƒ“ƒ^
-* @param[out]	pEndMemPtr	I—¹ˆÊ’u‚Ö‚Ìƒ|ƒCƒ“ƒ^B 
-* @retval	0	¬Œ÷
-* @retval	•‰	ƒGƒ‰[ƒR[ƒh
+* ãƒ¯ãƒ¼ã‚¯ã‚¹ãƒšãƒ¼ã‚¹ã‚’æŒ‡å®šã•ã‚ŒãŸãƒ¡ãƒ¢ãƒªã‹ã‚‰ãƒ­ãƒ¼ãƒ‰ã—ã¾ã™ã€‚
+* @param[in]	pMemPtr	ã€€ã€€ãƒ¯ãƒ¼ã‚¯ã‚¹ãƒšãƒ¼ã‚¹ãŒæ ¼ç´ã—ã¦ã„ã‚‹ãƒ¡ãƒ¢ãƒªã®ãƒã‚¤ãƒ³ã‚¿
+* @param[out]	pEndMemPtr	çµ‚äº†ä½ç½®ã¸ã®ãƒã‚¤ãƒ³ã‚¿ã€‚ 
+* @retval	0	æˆåŠŸ
+* @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
 * 
 */
 D5RESULT D5APICALL RD5LoadDBFromMem(
@@ -4145,11 +4145,11 @@ D5RESULT D5APICALL RD5LoadDBFromMem(
 
 
 /**
-* ƒe[ƒuƒ‹‚ÌSetIDì¬‚ğİ’è‚·‚éset‚h‚c‚©‚çn‚ß‚éB
-* @param[in]	@nTableID	Ši”[‚µ‚½‚¢ƒe[ƒuƒ‹‚ÌID
-* @param[in]	@nNewSetID	n‚ß‚é‚r‚…‚”‚h‚c”Ô†
-* @retval	0 @¬Œ÷
-* @retval	•‰	ƒGƒ‰[ƒR[ƒh
+* ãƒ†ãƒ¼ãƒ–ãƒ«ã®SetIDä½œæˆã‚’è¨­å®šã™ã‚‹setï¼©ï¼¤ã‹ã‚‰å§‹ã‚ã‚‹ã€‚
+* @param[in]	ã€€nTableID	æ ¼ç´ã—ãŸã„ãƒ†ãƒ¼ãƒ–ãƒ«ã®ID
+* @param[in]	ã€€nNewSetID	å§‹ã‚ã‚‹ï¼³ï½…ï½”ï¼©ï¼¤ç•ªå·
+* @retval	0 ã€€æˆåŠŸ
+* @retval	è² 	ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
 * 
 */
 D5RESULT D5APICALL RD5ResetSetID(const int nTableID,
