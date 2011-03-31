@@ -124,7 +124,13 @@ task jnaerator_clean{
   ant.delete(dir:"${ant.properties['env.USERPROFILE']}/.jnaerator/extractedLibraries")
   ant.delete(dir:"${ant.properties['env.USERPROFILE']}/.jnaerator/temp")
   ant.delete(dir:"${projectDir}/libraries")
-  ant.delete(dir:"${projectDir}/dist")
+  //ant.delete(dir:"${projectDir}/dist")
+  ant.delete() {
+    fileset(dir: "${projectDir}/dist")
+  }
+  ant.delete() {
+    fileset(dir: "${projectDir}",includes: '_jnaerator.*')
+  }
 }
 
 task jnaerator_cnv(depensOn:jnaerator_clean) {
