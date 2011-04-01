@@ -137,12 +137,21 @@ task jnaerator_cnv(depensOn:jnaerator_clean) {
   env_init()
   lib_copy()
   String[] argsArray=[
+/*
+									//[TODO]NG!!  all header not include,linux not running
                   '-library','Di5Engine3'
                   ,"$INCPATH/rdi5api.h","$INCPATH/rdi5apiext.h","$INCPATH/di5api.h","$INCPATH/numeric.h","$INCPATH/di5error.h"
                   ,"master/win32/Di5Engine3.dll"
+
                   ,'-library','Di5Numeric'
                   ,"$INCPATH/numeric.h","$INCPATH/numconv.h"
                   ,"master/win32/Di5Numeric.dll"
+*/
+                  '-library','Di5Engine3'
+									,"$INCPATH/rdi5api.h","$INCPATH/di5api.h","$INCPATH/rdi5apiext.h"
+									,"master/win32/Di5Engine3.dll",
+                  '-library','Di5Numeric'//,"$INCPATH/numeric.h"
+									,"master/win32/Di5Numeric.dll",
                   ,'-o', './tmp',
                   '-I./inc',
                   '-jar','dist/lfm.jar',

@@ -1,5 +1,7 @@
 Extracting jar:file:/home/test/dist/lfm.jar!/libraries/Linux-amd64/
 Extracting jar:file:/home/test/dist/lfm.jar!/libraries/Linux-amd64/libDi5Numeric.so
 Extracting jar:file:/home/test/dist/lfm.jar!/libraries/Linux-amd64/libDi5Engine3.so
-Caught: java.lang.UnsatisfiedLinkError: Error looking up 'RD5GetVersionR1': /home/test/.jnaerator/extractedLibraries/libDi5Engine3.so: undefined symbol: RD5GetVersionR1
-	at runtest.run(runtest.groovy:9)
+[version=50463236]
+[serial=<com.sun.jna.Pointer@42d3695a peer=140712839670112>/]
+[version2=50463236]
+[serial2=<com.sun.jna.Memory@91f600 size=1024 peer=9565696>/(C)2001-2010 Turbo Data Laboratories, Inc.]

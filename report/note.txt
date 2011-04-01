@@ -6,23 +6,15 @@ out_win64.log
 	Win2008R2 64bit
 	Oracle jdk6 u24
 
-out_cent64_1.log 
+out_cent64.log 
 	CentOS    64bit
 	Oracle jdk6 u23(prepare install /opt/jdk)
 	runtest.groovy all
-out_cent64_2.log 
-	CentOS    64bit
-	Oracle jdk6 u23(prepare install /opt/jdk)
-	RD5GetVersion Call only
 
-out_ubuntu64_1.log 
+out_ubuntu64.log 
 	Ubuntu    64bit
 	Open jdk6 u20
 	runtest.groovy all
-out_ubuntu64_2.log 
-	Ubuntu    64bit
-	Open jdk6 u20
-	RD5GetVersion Call only
 
 
 out_opensuse64_1.log 

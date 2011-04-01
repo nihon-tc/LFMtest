@@ -1,0 +1,9 @@
+[test@localhost dist]$ ./run.sh
+Extracting jar:file:/opt/dist/lfm.jar!/libraries/Linux-amd64/
+Extracting jar:file:/opt/dist/lfm.jar!/libraries/Linux-amd64/libDi5Numeric.so
+Extracting jar:file:/opt/dist/lfm.jar!/libraries/Linux-amd64/libDi5Engine3.so
+[version=50463236]
+[serial=<com.sun.jna.Pointer@b211b40a peer=46912620300640>/]
+[version2=50463236]
+[serial2=<com.sun.jna.Memory@56c62aa0 size=1024 peer=1455827616>/(C)2001-2010 Turbo Data Laboratories, Inc.]
+

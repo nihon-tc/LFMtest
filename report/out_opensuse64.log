@@ -1,0 +1,7 @@
+xtracting jar:file:/home/test/dist/lfm.jar!/libraries/Linux-amd64/
+Extracting jar:file:/home/test/dist/lfm.jar!/libraries/Linux-amd64/libDi5Numeric.so
+Extracting jar:file:/home/test/dist/lfm.jar!/libraries/Linux-amd64/libDi5Engine3.so
+[version=50463236]
+[serial=<com.sun.jna.Pointer@dc64e8db peer=140169955273056>/]
+[version2=50463236]
+[serial2=<com.sun.jna.Memory@d82ab34b size=1024 peer=140169884349392>/(C)2001-2010 Turbo Data Laboratories, Inc.]
