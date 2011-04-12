@@ -1,5 +1,7 @@
 defaultTasks 'jnaerator_cnv'
+
 apply plugin: 'groovy'
+apply plugin: 'java'
 
 def jdkVersion = 1.6
 def enc = 'UTF-8'
@@ -96,7 +98,7 @@ def lib_copy(){
   }
 }
 
-def lib_add(){
+def lib_add={destDir->
   ant.exec(executable:"jar") {
           arg(value:"uf")
           arg(value:"dist/lfm.jar")
@@ -105,7 +107,7 @@ def lib_add(){
 
   //debug setting additonal
   srcDir = "setting"
-  destDir = "dist"
+  //destDir = "dist"
   ant.copy(todir: destDir, overwrite: true ) {
     fileset(dir: srcDir, includes: '*.bat,*.jar,*.groovy,*.sh')
   }
@@ -171,7 +173,7 @@ task jnaerator_cnv(depensOn:jnaerator_clean) {
   //JNAerator.main(argsArray)
 */
 
-  lib_add()
+  lib_add("dist")
 }
 
 
