@@ -28,14 +28,14 @@ win32JNA
 			you gets dll/so from turbo-data
 			master into copy
 		2)commnand running 
-			jnaer.bat jnaerator_cnv
+			jna_lib.bat
 					or
 			gradle jnaerator_cnv
 		3)create lib/lfm.jar
 
 	groovy including jar
 		1)commnand running 
-		jnaer.bat jar
+		jna_run.bat
 			or
 		gradle jar
 

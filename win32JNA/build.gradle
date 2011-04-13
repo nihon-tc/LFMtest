@@ -184,8 +184,6 @@ task jnaerator_cnv(depensOn:jnaerator_clean) {
 
 }
 
-
-
 jar {
     from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
     setting_copy("build/libs")

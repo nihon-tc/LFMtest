@@ -25,12 +25,6 @@ println "------------------------------"
 println "[version=${Di5Engine3.RD5GetVersionR1()}]"
 println "[serial=${Di5Engine3.RD5GetSerialR1()}]"
 
-/*
-Integer version_f
-String serial_f
-
-Di5Engine3.RD5GetVersion(version_f,serial_f)
-
-println "[version_f=${version_f}]"
-println "[serial_f=${serial_f}]"
-*/
+Object[] ret =Di5Engine3.RD5GetVersion()
+println "[version_f=${ret[0]}]"
+println "[serial_f=${ret[1]}]"

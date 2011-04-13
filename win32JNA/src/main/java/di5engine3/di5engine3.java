@@ -30,12 +30,15 @@ public class Di5Engine3{
 	 * @param[out]	anVersion	バージョン配列
 	 * @param[out]	szCopyright	コピーライトメッセージ
 	*/
-	public static void RD5GetVersion(Integer version,String serial){
+	public static Object[] RD5GetVersion(){
 		IntByReference version_ = new IntByReference();
 		Pointer serial_ = new Memory(Di5Engine3Library.D5_VERSION_STRING_SIZE);
 
 		Di5Engine3Library.INSTANCE.RD5GetVersion(version_,serial_);
-		version = version_.getValue();
-		serial = serial_.getString(0);
+
+		//System.out.println("[version_="+ version_.getValue() +"]");
+		//System.out.println("[serial_="+ serial_.getString(0) + "]");
+
+		return new Object[]{version_.getValue(),serial_.getString(0)};
 	}
 }
