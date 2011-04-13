@@ -1,14 +1,24 @@
-defaultTasks 'jnaerator_cnv'
+//defaultTasks 'jnaerator_cnv'
 
 apply plugin: 'groovy'
-apply plugin: 'java'
+//apply plugin: 'java'
+
+//apply plugin: より前の行に archivesBaseName を記述しても有効になりません。
+version = "0.1"
+archivesBaseName = "lfm-all"
+//tasksBaseName ="lfm"
+
 
 def jdkVersion = 1.6
 def enc = 'UTF-8'
 sourceCompatibility = jdkVersion
 targetCompatibility = jdkVersion
-[compileJava, compileGroovy, compileTestJava, compileTestGroovy].each{ it.options.encoding = enc }
+
+[compileGroovy, compileTestGroovy].each{ it.options.encoding = enc }
 [compileGroovy, compileTestGroovy].each{ it.groovyOptions.encoding = enc }
+
+[compileJava, compileTestJava].each{ it.options.encoding = enc }
+
 
 task wrapper(type: Wrapper) {
     gradleVersion = '1.0-milestone-2'
@@ -20,17 +30,28 @@ buildscript {
       //mavenCentral()
   }
   dependencies {
-    classpath("com.ochafik.lang.jnaerator:jnaerator:0.9.5")
+    classpath("com.ochafik.lang.jnaerator:jnaerator:0.9.7")
   }
 }
 
 
 repositories {
+    flatDir(dirs: file('lib'))
     mavenCentral()
+    mavenRepo urls: [ "http://download.java.net/maven/2/",
+                      "http://repository.jboss.org/maven2/",
+                      "http://repository.jboss.org/nexus/content/groups/public-jboss/",
+                      "http://nativelibs4java.sourceforge.net/maven"
+                    ]
 }
 
+//ローカルの指定は module
 dependencies {
-    groovy group: 'org.codehaus.groovy', name: 'groovy-all', version: '1.7.10'
+    groovy 'org.codehaus.groovy:groovy-all:1.7.10'
+    //groovy 'com.jnaerator:jnaerator-runtime:0.9.7'
+    //groovy 'net.java.dev.jna:jna:'
+    //groovy 'di5engine3:Di5Engine3Library:'
+    groovy module(":lfm:") 
     testCompile 'junit:junit:4.8.1'
 }
 
@@ -81,35 +102,15 @@ def env_init(){
   println "OSTYPE=${getCurrentOSAndArchString()}"
 }
 
-def lib_copy(){
-  def lib_dir = [
-                  'win32':'win32'
-                  ,'win64':'win64'
-                  ,'Linux-amd64':'x86_64'
-                  ,'Linux-x86_64':'x86_64'
-                  //,'darwin-fat':'x86_64'    //Mac(yet not provider so)
-                ]
-  lib_dir.each{k,v->
-    srcDir = "master/$v"
-    destDir = "libraries/$k"
-    ant.copy(todir: destDir, overwrite: true ) {
-      fileset(dir: srcDir, includes: '*.dll,*.so')
-    }
-  }
-}
 
-def lib_add={destDir->
-  ant.exec(executable:"jar") {
-          arg(value:"uf")
-          arg(value:"dist/lfm.jar")
-          arg(value:"libraries")
-  }
 
+def setting_copy={destDir->
   //debug setting additonal
   srcDir = "setting"
   //destDir = "dist"
   ant.copy(todir: destDir, overwrite: true ) {
-    fileset(dir: srcDir, includes: '*.bat,*.jar,*.groovy,*.sh')
+    //fileset(dir: srcDir, includes: '*.bat,*.jar,*.groovy,*.sh')
+    fileset(dir: srcDir, includes: '*.bat,*.groovy,*.sh')
   }
 
 }
@@ -120,16 +121,17 @@ def INCPATH="./inc"
 import com.ochafik.lang.jnaerator.JNAerator
 import com.ochafik.lang.jnaerator.JNAeratorConfig
 
-task jnaerator_clean{
+task jnaerator_clean(depensOn:clean){
   ant.property(environment:'env')
   ant.echo ant.properties['env.USERPROFILE']
   ant.delete(dir:"${ant.properties['env.USERPROFILE']}/.jnaerator/extractedLibraries")
   ant.delete(dir:"${ant.properties['env.USERPROFILE']}/.jnaerator/temp")
-  ant.delete(dir:"${projectDir}/libraries")
+  ant.delete(file:"${projectDir}/lib/lfm*.jar")
+  //ant.delete(dir:"${projectDir}/lib/${archivesBaseName}*.jar")
   //ant.delete(dir:"${projectDir}/dist")
-  ant.delete() {
-    fileset(dir: "${projectDir}/dist")
-  }
+  //ant.delete() {
+  //  fileset(dir: "${projectDir}/dist")
+  //}
   ant.delete() {
     fileset(dir: "${projectDir}",includes: '_jnaerator.*')
   }
@@ -137,10 +139,11 @@ task jnaerator_clean{
 
 task jnaerator_cnv(depensOn:jnaerator_clean) {
   env_init()
-  lib_copy()
+
+  // see http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCV/config.jnaerator
   String[] argsArray=[
 /*
-									//[TODO]NG!!  all header not include,linux not running
+                  //[TODO]NG!!  all header not include,linux not running
                   '-library','Di5Engine3'
                   ,"$INCPATH/rdi5api.h","$INCPATH/rdi5apiext.h","$INCPATH/di5api.h","$INCPATH/numeric.h","$INCPATH/di5error.h"
                   ,"master/win32/Di5Engine3.dll"
@@ -150,20 +153,26 @@ task jnaerator_cnv(depensOn:jnaerator_clean) {
                   ,"master/win32/Di5Numeric.dll"
 */
                   '-library','Di5Engine3'
-									,"$INCPATH/rdi5api.h","$INCPATH/di5api.h","$INCPATH/rdi5apiext.h"
-									,"master/win32/Di5Engine3.dll",
+                  ,"$INCPATH/rdi5api.h","$INCPATH/di5api.h","$INCPATH/rdi5apiext.h"
+                  ,"master/win32/Di5Engine3.dll",
                   '-library','Di5Numeric'//,"$INCPATH/numeric.h"
-									,"master/win32/Di5Numeric.dll",
+                  ,"master/win32/Di5Numeric.dll",
+
+                  ,"-arch","win64" ,"master/win64/*.dll"
+                  ,"-arch","Linux-amd64" ,"master/x86_64/*.so"
+                  ,"-arch","Linux-x86_64" ,"master/x86_64/*.so"
+                  //,"-arch","darwin-fat" ,"master/x86_64/*.so"
+
                   ,'-o', './tmp',
                   '-I./inc',
-                  '-jar','dist/lfm.jar',
+                  '-jar','lib/lfm.jar',
                   '-v',
                   '-DD5APICALL=__stdcall'
                 ] 
 
   ant.exec(executable:"java") {
           arg(value:"-jar")
-          arg(value:"libs/jnaerator-0.9.5.jar")
+          arg(value:"libs/jnaerator-0.9.7.jar")
           argsArray.each{arg(value:it)}
   }
 /*
@@ -173,16 +182,13 @@ task jnaerator_cnv(depensOn:jnaerator_clean) {
   //JNAerator.main(argsArray)
 */
 
-  lib_add("dist")
 }
 
 
-//
-// 以降は
-// executable jar をつくる場合に必要な記述が必要です
-//
-//jar {
-//    from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-//}
+
+jar {
+    from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    setting_copy("build/libs")
+}
 //manifest.mainAttributes("Main-Class" : "main")
 

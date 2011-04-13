@@ -22,13 +22,22 @@ need enviroments
 
 win32JNA
 	testing 
-		dist folder copy to test enviroments
-	recompile
+		build/libs folder copy to test enviroments
+	recompile jar
 		1)dll(so) master change?
 			you gets dll/so from turbo-data
 			master into copy
-		2)jnaer.bat running
-		3)create dist foloder
+		2)commnand running 
+			jnaer.bat jnaerator_cnv
+					or
+			gradle jnaerator_cnv
+		3)create lib/lfm.jar
+
+	groovy including jar
+		1)commnand running 
+		jnaer.bat jar
+			or
+		gradle jar
 
 report:
 	dist
