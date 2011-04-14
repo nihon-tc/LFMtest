@@ -4,6 +4,7 @@ import com.sun.jna.*;
 import com.sun.jna.ptr.*;
 import di5engine3.Di5Engine3Library;
 
+@SuppressWarnings("deprecation")
 public class Di5Engine3{
 
 	/**
