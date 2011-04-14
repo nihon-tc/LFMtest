@@ -188,5 +188,6 @@ jar {
     from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
     setting_copy("build/libs")
 }
-//manifest.mainAttributes("Main-Class" : "main")
+
+manifest.mainAttributes("Main-Class" : "groovy.ui.GroovyMain")
 
