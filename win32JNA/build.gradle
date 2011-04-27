@@ -123,11 +123,12 @@ import com.ochafik.lang.jnaerator.JNAerator
 import com.ochafik.lang.jnaerator.JNAeratorConfig
 
 task jnaerator_clean(depensOn:clean){
+//clean << {
   ant.property(environment:'env')
   ant.echo ant.properties['env.USERPROFILE']
   ant.delete(dir:"${ant.properties['env.USERPROFILE']}/.jnaerator/extractedLibraries")
   ant.delete(dir:"${ant.properties['env.USERPROFILE']}/.jnaerator/temp")
-  ant.delete(file:"${projectDir}/lib/lfm*.jar")
+  ant.delete(file:"${projectDir}/lib/lfm.jar")
   //ant.delete(dir:"${projectDir}/lib/${archivesBaseName}*.jar")
   //ant.delete(dir:"${projectDir}/dist")
   //ant.delete() {
@@ -138,7 +139,16 @@ task jnaerator_clean(depensOn:clean){
   }
 }
 
-task jnaerator_cnv(depensOn:jnaerator_clean) {
+task jnaerator_cnv() {
+//task jnaerator_cnv(depensOn:jnaerator_clean) {
+//task jnaerator_cnv(){
+	ant.echo "--a"
+	if(new File("${projectDir}/lib/lfm.jar").exists()){
+		ant.echo "--b"
+		return
+	}
+	ant.echo "--c"
+
   env_init()
 
   // see http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCV/config.jnaerator
