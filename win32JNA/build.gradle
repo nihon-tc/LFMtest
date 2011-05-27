@@ -47,13 +47,13 @@ repositories {
 
 //ローカルの指定は module
 dependencies {
-    groovy 'org.codehaus.groovy:groovy-all:1.7.10'
+    groovy 'org.codehaus.groovy:groovy-all:1.8.0'
     //groovy 'com.jnaerator:jnaerator-runtime:0.9.7'
     //groovy 'net.java.dev.jna:jna:'
     //groovy 'di5engine3:Di5Engine3Library:'
     groovy module(":lfm:") 
     testCompile 'junit:junit:4.8.1'
-    testCompile 'org.spockframework:spock-core:0.5-groovy-1.7'
+    testCompile 'org.spockframework:spock-core:0.5-groovy-1.8'
 }
 
 /*
@@ -122,8 +122,7 @@ def INCPATH="./inc"
 import com.ochafik.lang.jnaerator.JNAerator
 import com.ochafik.lang.jnaerator.JNAeratorConfig
 
-task jnaerator_clean(depensOn:clean){
-//clean << {
+task jnaerator_clean << {
   ant.property(environment:'env')
   ant.echo ant.properties['env.USERPROFILE']
   ant.delete(dir:"${ant.properties['env.USERPROFILE']}/.jnaerator/extractedLibraries")
@@ -138,10 +137,11 @@ task jnaerator_clean(depensOn:clean){
     fileset(dir: "${projectDir}",includes: '_jnaerator.*')
   }
 }
+//cleanタスクに依存させる
+clean.dependsOn jnaerator_clean
 
-task jnaerator_cnv() {
-//task jnaerator_cnv(depensOn:jnaerator_clean) {
-//task jnaerator_cnv(){
+
+task jnaerator_cnv << {
 	ant.echo "--a"
 	if(new File("${projectDir}/lib/lfm.jar").exists()){
 		ant.echo "--b"
@@ -194,6 +194,10 @@ task jnaerator_cnv() {
 */
 
 }
+//compileJavaタスクに依存させる
+compileJava.dependsOn jnaerator_cnv
+
+
 
 jar {
     from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }

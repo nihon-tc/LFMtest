@@ -13,10 +13,10 @@ DL version
 
 ----
 need enviroments 
-	jdk6u24
+	jdk6u25
 	gradlew.bat or sh gradlew
 		or
-	jdk6u24
+	jdk6u25
 	gradle milestorne 1 http://www.gradle.org/
 
 
@@ -27,11 +27,8 @@ win32JNA
 		1)dll(so) master change?
 			you gets dll/so from turbo-data
 			master into copy
-		2)commnand running 
-			jna_lib.bat
-					or
-			gradle jnaerator_cnv
-		3)create lib/lfm.jar
+		2) if exists lib/lfm.jar, 'gradle clean' call.
+		*)'gradle compile' not exist lib/lfm.jar , auto create it.
 
 	groovy including jar
 		1)commnand running 
